@@ -1,0 +1,15 @@
+package io.openepcis.model;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class LinkTypeDefinition {
+    private String linkTypeId;
+    private Object rangeType;
+    private String dataType;
+    private String domain;
+    private String description;
+    private String type;
+}
