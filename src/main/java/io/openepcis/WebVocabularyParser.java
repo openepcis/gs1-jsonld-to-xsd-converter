@@ -179,7 +179,7 @@ public class WebVocabularyParser {
             }
         }
         // Sort linkTypes based on the "property" key
-        linkTypes.sort(Comparator.comparing(m -> ((String) (m).get(LINK_TYPE_ID))));
+        sortStringProperties(linkTypes, LINK_TYPE_ID);
         return linkTypes;
     }
 
@@ -222,7 +222,7 @@ public class WebVocabularyParser {
                     }
 
                     // Sort the codes list based on the "property" value of each codeSchema
-                    codes.sort(Comparator.comparing(m -> ((String) m.get(PROPERTY))));
+                    sortStringProperties(codes, PROPERTY);
                     allCodes.put(typeCodeName, codes);
                 }
             }
@@ -272,7 +272,7 @@ public class WebVocabularyParser {
                     allProperties.add(propertySchema);
                 }
                 // Sort the codes list based on the "property" value of each codeSchema
-                allProperties.sort(Comparator.comparing(m -> ((String) ((Map<String, Object>) m).get(PROPERTY))));
+                sortMapProperties(allProperties);
                 classProperties.put(className, allProperties);
             }
         }
@@ -314,10 +314,10 @@ public class WebVocabularyParser {
             for (String rrs : classes) {
                 final List<Object> existingProperties = (List<Object>) classProperties.get(rrs);
                 existingProperties.addAll(allProperties);
-            }
 
-            // Sort the codes list based on the "property" value of each codeSchema
-            allProperties.sort(Comparator.comparing(m -> ((String) ((Map<String, Object>) m).get(PROPERTY))));
+                // Sort the codes list based on the "property" value of each codeSchema
+                sortMapProperties(existingProperties);
+            }
         }
     }
 
@@ -332,10 +332,11 @@ public class WebVocabularyParser {
             @SuppressWarnings("unchecked") final List<Map<String, Object>> classProperties = (List<Map<String, Object>>) entry.getValue();
 
             for (Map<String, Object> property : classProperties) {
-                final Object propertyName = property.get(RANGE_TYPE);
+                final Object propertyNameObj = property.get(RANGE_TYPE);
+                final String propertyName = propertyNameObj instanceof String ? propertyNameObj.toString() : null;
 
                 // Check if the property belongs to CLASS type in allClassProperties
-                if (propertyName != null && (propertyName instanceof List || allClassProperties.containsKey(propertyName))) {
+                if (propertyNameObj != null && (propertyNameObj instanceof List || allClassProperties.containsKey(propertyName))) {
                     property.put(DATA_TYPE, COMPLEX);
                     property.put(TYPE, CLASS);
                 } else if (propertyName != null && allTypeCodes.containsKey(propertyName)) {
@@ -450,4 +451,15 @@ public class WebVocabularyParser {
 
         return "";
     }
+
+    //Sort the Class-Properties Map based on alphabetically
+    private void sortMapProperties(final List<Object> allProperties) {
+        allProperties.sort(Comparator.comparing(m -> ((String) ((Map<String, Object>) m).get(PROPERTY))));
+    }
+
+    //Sort the properties list alphabetically
+    private void sortStringProperties(final List<Map<String, Object>> properties, final String sortType) {
+        properties.sort(Comparator.comparing(m -> ((String) (m).get(sortType))));
+    }
+
 }
