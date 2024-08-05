@@ -14,6 +14,7 @@
         <lombok.version>1.18.34</lombok.version>
         <jackson.version>2.17.2</jackson.version>
         <jena.version>5.0.0</jena.version>
+        <jakarta.xml.bind.version>4.0.2</jakarta.xml.bind.version>
         <junit.version>5.10.3</junit.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -76,6 +77,13 @@
             <version>${jena.version}</version>
         </dependency>
 
+        <!-- Jakarta XML Binding API for generating Java classes from XSD -->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>${jakarta.xml.bind.version}</version>
+        </dependency>
+
         <!-- For writing the tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -83,7 +91,27 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb-maven-plugin</artifactId>
+                <version>4.0.8</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <schemaDirectory>${basedir}</schemaDirectory>
+                    <bindingDirectory>${basedir}/src/main/resources/schema</bindingDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

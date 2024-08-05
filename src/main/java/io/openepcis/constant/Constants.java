@@ -5,8 +5,8 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Constants {
-    public static final String TYPE_CODE = ":TypeCode";
-    public static final String LINK_TYPE = ":linkType";
+    public static final String TYPE_CODE = "TypeCode";
+    public static final String LINK_TYPE = "linkType";
     public static final String PROPERTY = "property";
     public static final String RANGE_TYPE = "rangeType";
     public static final String DATA_TYPE = "dataType";

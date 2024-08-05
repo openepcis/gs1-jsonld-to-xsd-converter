@@ -38,7 +38,12 @@ public class XSDGenerator {
         // Create XSD schema root element with all the namespaces
         final Element schemaRoot = doc.createElement("xsd:schema");
         relationDefinition.getNamespaces().entrySet().stream().forEach(entry -> {
-            schemaRoot.setAttribute("xmlns:" + entry.getKey(), entry.getValue());
+            // Remove the '#' character from the value if it is present in the XMLSchema namespace
+            String namespaceUri = entry.getValue();
+            if ("xsd".equals(entry.getKey()) && "http://www.w3.org/2001/XMLSchema#".equals(namespaceUri)) {
+                namespaceUri = "http://www.w3.org/2001/XMLSchema";
+            }
+            schemaRoot.setAttribute("xmlns:" + entry.getKey(), namespaceUri);
         });
         doc.appendChild(schemaRoot);
 
@@ -76,7 +81,7 @@ public class XSDGenerator {
                     restrictionElement.setAttribute("base", "xsd:string");
 
                     for (PropertyDefinition property : properties) {
-                        final Element enumElement = doc.createElement("xsd:numeration");
+                        final Element enumElement = doc.createElement("xsd:enumeration");
                         enumElement.setAttribute("value", property.getProperty());
                         restrictionElement.appendChild(enumElement);
                     }

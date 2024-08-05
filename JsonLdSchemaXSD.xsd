@@ -1,0 +1,2178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cc="http://creativecommons.org/ns#" xmlns:cert="http://www.w3.org/ns/auth/cert#" xmlns:dbp="http://dbpedia.org/property/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/elements/1.1/" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:exif="http://www.w3.org/2003/12/exif/ns#" xmlns:fn="http://www.w3.org/2005/xpath-functions#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:geonames="http://www.geonames.org/ontology#" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:gs1="https://gs1.org/voc/" xmlns:log="http://www.w3.org/2000/10/swap/log#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rei="http://www.w3.org/2004/06/rei#" xmlns:rsa="http://www.w3.org/ns/auth/rsa#" xmlns:rss="http://purl.org/rss/1.0/" xmlns:schema="http://schema.org/" xmlns:sfn="http://www.w3.org/ns/sparql#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:swrc="http://swrc.ontoware.org/ontology#" xmlns:types="http://rdfs.org/sioc/types#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:xhtml="http://www.w3.org/1999/xhtml#">
+    <xsd:complexType name="AdditionalProductClassificationDetails">
+        <xsd:sequence>
+            <xsd:element name="additionalProductClassificationCode" type="xsd:string"/>
+            <xsd:element name="additionalProductClassificationCodeDescription" type="xsd:string"/>
+            <xsd:element name="additionalProductClassificationValue" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AdditiveDetails">
+        <xsd:sequence>
+            <xsd:element name="additiveLevelOfContainment" type="LevelOfContainmentCode"/>
+            <xsd:element name="additiveName" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AllergenDetails">
+        <xsd:sequence>
+            <xsd:element name="allergenLevelOfContainmentCode" type="LevelOfContainmentCode"/>
+            <xsd:element name="allergenType" type="AllergenTypeCode"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AuthenticityDetails">
+        <xsd:sequence>
+            <xsd:element name="authenticitySecurityFeatureInstructions" type="xsd:string"/>
+            <xsd:element name="authenticitySecurityFeatureInstructionsURL" type="xsd:string"/>
+            <xsd:element name="authenticitySecurityFeatureRegularExpression" type="xsd:string"/>
+            <xsd:element name="authenticitySecurityFeatureType" type="SecurityMarking"/>
+            <xsd:element name="authenticitySecurityFeatureValue" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AwardPrizeDetails">
+        <xsd:sequence>
+            <xsd:element name="awardPrizeCode" type="xsd:string"/>
+            <xsd:element name="awardPrizeCountryCode" type="Country"/>
+            <xsd:element name="awardPrizeDescription" type="xsd:string"/>
+            <xsd:element name="awardPrizeJury" type="xsd:string"/>
+            <xsd:element name="awardPrizeName" type="xsd:string"/>
+            <xsd:element name="awardPrizeYear" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Beverage">
+        <xsd:sequence>
+            <xsd:element name="alcoholicBeverageSubregion" type="xsd:string"/>
+            <xsd:element name="beverageVintage" type="xsd:string"/>
+            <xsd:element name="isCarbonated" type="NonbinaryLogicCode"/>
+            <xsd:element name="isDecaffeinated" type="NonbinaryLogicCode"/>
+            <xsd:element name="isFromConcentrate" type="NonbinaryLogicCode"/>
+            <xsd:element name="isVintage" type="NonbinaryLogicCode"/>
+            <xsd:element name="percentageOfAlcoholByVolume" type="xsd:string"/>
+            <xsd:element name="vintner" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Brand">
+        <xsd:sequence>
+            <xsd:element name="brandName" type="xsd:string"/>
+            <xsd:element name="subBrandName" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="CertificationDetails">
+        <xsd:sequence>
+            <xsd:element name="certificationAgency" type="xsd:string"/>
+            <xsd:element name="certificationAgencyURL" type="Organization"/>
+            <xsd:element name="certificationAuditDate" type="xsd:string"/>
+            <xsd:element name="certificationEndDate" type="xsd:string"/>
+            <xsd:element name="certificationIdentification" type="xsd:string"/>
+            <xsd:element name="certificationStandard" type="xsd:string"/>
+            <xsd:element name="certificationStartDate" type="xsd:string"/>
+            <xsd:element name="certificationStatement" type="xsd:string"/>
+            <xsd:element name="certificationStatus" type="CertificationStatus"/>
+            <xsd:element name="certificationSubject" type="xsd:string"/>
+            <xsd:element name="certificationType" type="xsd:string"/>
+            <xsd:element name="certificationURI" type="xsd:string"/>
+            <xsd:element name="certificationValue" type="xsd:string"/>
+            <xsd:element name="initialCertificationDate" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Clothing">
+        <xsd:sequence>
+            <xsd:element name="clothingCut" type="xsd:string"/>
+            <xsd:element name="collarType" type="xsd:string"/>
+            <xsd:element name="isMaternity" type="NonbinaryLogicCode"/>
+            <xsd:element name="textileMaterial" type="TextileMaterialDetails"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ColourCodeDetails">
+        <xsd:sequence>
+            <xsd:element name="colourCodeList" type="ColourCodeListCode"/>
+            <xsd:element name="colourCodeValue" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ContactPoint">
+        <xsd:sequence>
+            <xsd:element name="availableLanguage" type="xsd:string"/>
+            <xsd:element name="contactTitle" type="xsd:string"/>
+            <xsd:element name="contactType" type="xsd:string"/>
+            <xsd:element name="email" type="xsd:string"/>
+            <xsd:element name="faxNumber" type="xsd:string"/>
+            <xsd:element name="responsibility" type="xsd:string"/>
+            <xsd:element name="telephone" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Country">
+        <xsd:sequence>
+            <xsd:element name="countryCode" type="xsd:string"/>
+            <xsd:element name="countrySubdivisionCode" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="DietTypeCodeDetails">
+        <xsd:sequence>
+            <xsd:element name="dietType" type="DietTypeCode"/>
+            <xsd:element name="dietTypeSubcode" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Discount">
+        <xsd:sequence>
+            <xsd:element name="discountRepeatsPerMultipleMinimum" type="xsd:string"/>
+            <xsd:element name="discountType" type="DiscountTypeCode"/>
+            <xsd:element name="eligibleTradeChannel" type="TradeChannelCode"/>
+            <xsd:element name="exactDiscountAmount" type="PriceSpecification"/>
+            <xsd:element name="exactDiscountPercentage" type="xsd:string"/>
+            <xsd:element name="exclusionDescription" type="xsd:string"/>
+            <xsd:element name="isOnlyAvailableThroughRetailer" type="xsd:string"/>
+            <xsd:element name="isOnlyWithMailingListSignup" type="xsd:string"/>
+            <xsd:element name="isOnlyWithPaymentCard" type="PaymentMethod"/>
+            <xsd:element name="isOnlyWithRetailerLoyaltyCard" type="xsd:string"/>
+            <xsd:element name="isOnlyWithRetailerPaymentCard" type="xsd:string"/>
+            <xsd:element name="isPromoterExclusiveOffer" type="xsd:string"/>
+            <xsd:element name="maximumDiscountAmount" type="PriceSpecification"/>
+            <xsd:element name="maximumDiscountPercentage" type="xsd:string"/>
+            <xsd:element name="maximumQualifyingItems" type="xsd:string"/>
+            <xsd:element name="maximumQualifyingSpend" type="PriceSpecification"/>
+            <xsd:element name="minimumDiscountAmount" type="PriceSpecification"/>
+            <xsd:element name="minimumDiscountPercentage" type="xsd:string"/>
+            <xsd:element name="minimumQualifyingItems" type="xsd:string"/>
+            <xsd:element name="minimumQualifyingSpend" type="PriceSpecification"/>
+            <xsd:element name="offerRedemptionType" type="OfferRedemptionTypeCode"/>
+            <xsd:element name="offerRestrictionDescription" type="xsd:string"/>
+            <xsd:element name="qualifyingBrandName" type="xsd:string"/>
+            <xsd:element name="qualifyingGPCs" type="xsd:string"/>
+            <xsd:element name="qualifyingProductCategoryDescription" type="xsd:string"/>
+            <xsd:element name="qualifyingProductClassificationCode" type="AdditionalProductClassificationDetails"/>
+            <xsd:element name="qualifyingProductGTINs" type="xsd:string"/>
+            <xsd:element name="qualifyingSubBrandName" type="xsd:string"/>
+            <xsd:element name="selectedProductsOnly" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FoodAndBeveragePreparationInformation">
+        <xsd:sequence>
+            <xsd:element name="convenienceLevelPercent" type="xsd:string"/>
+            <xsd:element name="manufacturerPreparationCode" type="PreparationTypeCode"/>
+            <xsd:element name="maximumOptimumConsumptionTemperature" type="QuantitativeValue"/>
+            <xsd:element name="minimumOptimumConsumptionTemperature" type="QuantitativeValue"/>
+            <xsd:element name="preparationCode" type="PreparationTypeCode"/>
+            <xsd:element name="preparationConsumptionPrecautions" type="xsd:string"/>
+            <xsd:element name="preparationInstructions" type="xsd:string"/>
+            <xsd:element name="yield" type="ProductYieldDetails"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FoodBeverageTobaccoIngredientDetails">
+        <xsd:sequence>
+            <xsd:element name="ingredientContentPercentage" type="xsd:string"/>
+            <xsd:element name="ingredientName" type="xsd:string"/>
+            <xsd:element name="ingredientSequence" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FoodBeverageTobaccoProduct">
+        <xsd:sequence>
+            <xsd:element name="allergenSpecificationAgency" type="xsd:string"/>
+            <xsd:element name="allergenSpecificationName" type="xsd:string"/>
+            <xsd:element name="allergenStatement" type="xsd:string"/>
+            <xsd:element name="biotinPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="calciumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="carbohydratesPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="chloridePerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="cholesterolPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="chromiumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="copperPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="dietCode" type="DietTypeCodeDetails"/>
+            <xsd:element name="dietTypeDescription" type="xsd:string"/>
+            <xsd:element name="drainedWeight" type="QuantitativeValue"/>
+            <xsd:element name="energyFromFatPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="energyPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="fatPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="fibrePerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="fluoridePerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="folicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="foodBeverageRefrigerationClaim" type="FoodBeverageRefrigerationClaimCode"/>
+            <xsd:element name="foodBeverageTargetUse" type="FoodBeverageTargetUseCode"/>
+            <xsd:element name="geneticallyModifiedDeclaration" type="LevelOfContainmentCode"/>
+            <xsd:element name="hasAllergen" type="AllergenDetails"/>
+            <xsd:element name="ingredient" type="FoodBeverageTobaccoIngredientDetails"/>
+            <xsd:element name="ingredientOfConcern" type="xsd:string"/>
+            <xsd:element name="ingredientStatement" type="xsd:string"/>
+            <xsd:element name="iodinePerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="ironPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="irradiatedCode" type="NonbinaryLogicCode"/>
+            <xsd:element name="isInstant" type="NonbinaryLogicCode"/>
+            <xsd:element name="isSliced" type="NonbinaryLogicCode"/>
+            <xsd:element name="juiceContentPercent" type="xsd:string"/>
+            <xsd:element name="magnesiumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="manganesePerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="molybdenumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="monounsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="niacinPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="numberOfServingsPerPackage" type="xsd:string"/>
+            <xsd:element name="numberOfServingsPerPackageMeasurementPrecision" type="MeasurementPrecisionCode"/>
+            <xsd:element name="numberOfServingsRangeDescription" type="xsd:string"/>
+            <xsd:element name="nutrientBasisQuantity" type="QuantitativeValue"/>
+            <xsd:element name="nutrientBasisQuantityType" type="NutrientBasisQuantityCode"/>
+            <xsd:element name="nutrientMeasurementPrecision" type="MeasurementPrecisionCode"/>
+            <xsd:element name="nutritionalClaim" type="NutritionalClaimTypeCode"/>
+            <xsd:element name="nutritionalClaimStatement" type="xsd:string"/>
+            <xsd:element name="packagingMarkedDietAllergenType" type="PackagingMarkedDietAllergenCode"/>
+            <xsd:element name="packagingMarkedFreeFrom" type="PackagingMarkedFreeFromCode"/>
+            <xsd:element name="pantothenicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="phosphorusPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="polyolsPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="polyunsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="potassiumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="preparationInformation" type="FoodAndBeveragePreparationInformation"/>
+            <xsd:element name="preservationTechnique" type="PreservationTechniqueCode"/>
+            <xsd:element name="proteinPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="reheatingClaim" type="NonbinaryLogicCode"/>
+            <xsd:element name="riboflavinPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="saltPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="saturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="seleniumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="servingSize" type="QuantitativeValue"/>
+            <xsd:element name="servingSizeDescription" type="xsd:string"/>
+            <xsd:element name="servingSuggestion" type="xsd:string"/>
+            <xsd:element name="sodiumPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="sourceAnimal" type="SourceAnimalCode"/>
+            <xsd:element name="starchPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="sugarsPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="thiaminPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="transFatPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminAPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminB12PerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminB6PerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminCPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminDPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminEPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="vitaminKPerNutrientBasis" type="NutritionMeasurementType"/>
+            <xsd:element name="zincPerNutrientBasis" type="NutritionMeasurementType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Footwear">
+        <xsd:sequence>
+            <xsd:element name="footwearFasteningType" type="FootwearFasteningTypeCode"/>
+            <xsd:element name="footwearUpperType" type="UpperTypeCode"/>
+            <xsd:element name="upperMaterialType" type="TextileMaterialDetails"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FruitsVegetables">
+        <xsd:sequence>
+            <xsd:element name="isPittedStoned" type="NonbinaryLogicCode"/>
+            <xsd:element name="isSeedless" type="NonbinaryLogicCode"/>
+            <xsd:element name="isShelledPeeled" type="NonbinaryLogicCode"/>
+            <xsd:element name="isWashedReadyToEat" type="NonbinaryLogicCode"/>
+            <xsd:element name="maturationMethod" type="MaturationMethodCode"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="GeoCoordinates">
+        <xsd:sequence>
+            <xsd:element name="coordinateReferenceSystem" type="xsd:string"/>
+            <xsd:element name="elevation" type="xsd:string"/>
+            <xsd:element name="latitude" type="xsd:string"/>
+            <xsd:element name="longitude" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="GeoShape">
+        <xsd:sequence>
+            <xsd:element name="circle" type="xsd:string"/>
+            <xsd:element name="line" type="xsd:string"/>
+            <xsd:element name="polygon" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="LocationID_Details">
+        <xsd:sequence>
+            <xsd:element name="locationID" type="xsd:string"/>
+            <xsd:element name="locationID_Qualifier" type="xsd:string"/>
+            <xsd:element name="locationID_Type" type="LocationID_Type"/>
+            <xsd:element name="locationID_URI" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="LocationStatusHistory">
+        <xsd:sequence>
+            <xsd:element name="locationStatus" type="StatusType"/>
+            <xsd:element name="statusTimestamp" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MeatPoultry">
+        <xsd:sequence>
+            <xsd:element name="anatomicalForm" type="AnatomicalFormCode"/>
+            <xsd:element name="bonelessClaim" type="NonbinaryLogicCode"/>
+            <xsd:element name="meatPoultryType" type="xsd:string"/>
+            <xsd:element name="minimumMeatPoultryContent" type="QuantitativeValue"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="MilkButterCreamYogurtCheeseEggsSubstitutes">
+        <xsd:sequence>
+            <xsd:element name="cheeseFirmness" type="CheeseFirmnessCode"/>
+            <xsd:element name="cheeseMaturationPeriodDescription" type="xsd:string"/>
+            <xsd:element name="fatInMilkContent" type="xsd:string"/>
+            <xsd:element name="fatpercentageInDryMatter" type="xsd:string"/>
+            <xsd:element name="isHomogenised" type="NonbinaryLogicCode"/>
+            <xsd:element name="isRindEdible" type="NonbinaryLogicCode"/>
+            <xsd:element name="sharpnessOfCheese" type="SharpnessOfCheeseCode"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="NutritionMeasurementType">
+        <xsd:sequence>
+            <xsd:element name="dailyValueIntakePercent" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Offer">
+        <xsd:sequence>
+            <xsd:element name="acceptedPaymentMethod" type="PaymentMethod"/>
+            <xsd:element name="availabilityEnds" type="xsd:string"/>
+            <xsd:element name="availabilityStarts" type="xsd:string"/>
+            <xsd:element name="availableAtOrFrom" type="Place"/>
+            <xsd:element name="eligibleQuantity" type="QuantitativeValue"/>
+            <xsd:element name="eligibleQuantityMaximum" type="QuantitativeValue"/>
+            <xsd:element name="eligibleQuantityMinimum" type="QuantitativeValue"/>
+            <xsd:element name="itemOffered" type="Product"/>
+            <xsd:element name="offerDescription" type="xsd:string"/>
+            <xsd:element name="offerDiscount" type="Discount"/>
+            <xsd:element name="offerRedemptionURL" type="ReferencedFileDetails"/>
+            <xsd:element name="paymentTerms" type="xsd:string"/>
+            <xsd:element name="priceSpecification" type="PriceSpecification"/>
+            <xsd:element name="seeker" type="Organization"/>
+            <xsd:element name="seller" type="Organization"/>
+            <xsd:element name="warranty" type="WarrantyPromise"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OrganicClaimDetails">
+        <xsd:sequence>
+            <xsd:element name="organicClaimAgency" type="OrganicClaimAgencyCode"/>
+            <xsd:element name="organicPercentClaim" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Organization">
+        <xsd:sequence>
+            <xsd:element name="additionalOrganizationID" type="OrganizationID_Details"/>
+            <xsd:element name="additionalOrganizationIdentificationTypeValue" type="xsd:string"/>
+            <xsd:element name="address" type="PostalAddress"/>
+            <xsd:element name="afterHoursContact" type="ContactPoint"/>
+            <xsd:element name="certification" type="CertificationDetails"/>
+            <xsd:element name="contactPoint" type="ContactPoint"/>
+            <xsd:element name="department" type="xsd:string"/>
+            <xsd:element name="glnType" type="GLN_TypeCode"/>
+            <xsd:element name="globalLocationNumber" type="xsd:string"/>
+            <xsd:element name="hasPrimaryLocation" type="Place"/>
+            <xsd:element name="lesseeOf" type="Place"/>
+            <xsd:element name="lessorFor" type="Place"/>
+            <xsd:element name="location" type="Place"/>
+            <xsd:element name="makesOffer" type="Offer"/>
+            <xsd:element name="managedBy" type="Organization"/>
+            <xsd:element name="manages" type="Organization"/>
+            <xsd:element name="occupies" type="Place"/>
+            <xsd:element name="organizationHistory" type="OrganizationStatusHistory"/>
+            <xsd:element name="organizationName" type="xsd:string"/>
+            <xsd:element name="organizationRole" type="OrganizationRoleType"/>
+            <xsd:element name="ownedBy" type="Organization"/>
+            <xsd:element name="owns" type="Organization"/>
+            <xsd:element name="parentOrganization" type="Organization"/>
+            <xsd:element name="partyGLN" type="xsd:string"/>
+            <xsd:element name="replacedByOrganization" type="Organization"/>
+            <xsd:element name="replacedOrganization" type="Organization"/>
+            <xsd:element name="responsibleForLocation" type="Place"/>
+            <xsd:element name="subOrganization" type="Organization"/>
+            <xsd:element name="usesManagedLocation" type="Place"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OrganizationID_Details">
+        <xsd:sequence>
+            <xsd:element name="organizationID" type="xsd:string"/>
+            <xsd:element name="organizationID_Qualifier" type="xsd:string"/>
+            <xsd:element name="organizationID_Type" type="OrganizationID_Type"/>
+            <xsd:element name="organizationID_URI" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="OrganizationStatusHistory">
+        <xsd:sequence>
+            <xsd:element name="organizationStatus" type="StatusType"/>
+            <xsd:element name="statusTimestamp" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="PackagingDetails">
+        <xsd:sequence>
+            <xsd:element name="hasReturnablePackageDeposit" type="ReturnablePackageDepositDetails"/>
+            <xsd:element name="packagingFeature" type="PackagingFeatureCode"/>
+            <xsd:element name="packagingFunction" type="PackagingFunctionCode"/>
+            <xsd:element name="packagingMaterial" type="PackagingMaterialDetails"/>
+            <xsd:element name="packagingRecyclingProcessType" type="PackagingRecyclingProcessTypeCode"/>
+            <xsd:element name="packagingRecyclingScheme" type="PackagingRecyclingSchemeCode"/>
+            <xsd:element name="packagingShape" type="PackagingShapeCode"/>
+            <xsd:element name="packagingType" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="PackagingMaterialDetails">
+        <xsd:sequence>
+            <xsd:element name="packagingMaterialCompositionQuantity" type="QuantitativeValue"/>
+            <xsd:element name="packagingMaterialThickness" type="QuantitativeValue"/>
+            <xsd:element name="packagingMaterialType" type="PackagingMaterialTypeCode"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Place">
+        <xsd:sequence>
+            <xsd:element name="additionalLocationID" type="LocationID_Details"/>
+            <xsd:element name="address" type="PostalAddress"/>
+            <xsd:element name="afterHoursContact" type="ContactPoint"/>
+            <xsd:element name="baseLocation" type="Place"/>
+            <xsd:element name="certification" type="CertificationDetails"/>
+            <xsd:element name="contactPoint" type="ContactPoint"/>
+            <xsd:element name="containedInPlace" type="Place"/>
+            <xsd:element name="containsPlace" type="Place"/>
+            <xsd:element name="digitalAddress" type="xsd:string"/>
+            <xsd:element name="digitalLocationName" type="xsd:string"/>
+            <xsd:element name="geo" type="Place"/>
+            <xsd:element name="glnType" type="GLN_TypeCode"/>
+            <xsd:element name="globalLocationNumber" type="xsd:string"/>
+            <xsd:element name="leasedFrom" type="Organization"/>
+            <xsd:element name="leasedTo" type="Organization"/>
+            <xsd:element name="locationGLN" type="xsd:string"/>
+            <xsd:element name="locationHistory" type="LocationStatusHistory"/>
+            <xsd:element name="locationRole" type="xsd:string"/>
+            <xsd:element name="managedBy" type="Organization"/>
+            <xsd:element name="managedFor" type="Organization"/>
+            <xsd:element name="occupiedBy" type="Organization"/>
+            <xsd:element name="ownedBy" type="Organization"/>
+            <xsd:element name="physicalLocationName" type="xsd:string"/>
+            <xsd:element name="primaryLocationOf" type="Organization"/>
+            <xsd:element name="relatedOrganization" type="Organization"/>
+            <xsd:element name="replacedByPlace" type="Place"/>
+            <xsd:element name="replacedPlace" type="Place"/>
+            <xsd:element name="responsibleOrganization" type="Organization"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="PostalAddress">
+        <xsd:sequence>
+            <xsd:element name="addressCountry" type="Country"/>
+            <xsd:element name="addressLocality" type="xsd:string"/>
+            <xsd:element name="addressRegion" type="xsd:string"/>
+            <xsd:element name="addressSuburb" type="xsd:string"/>
+            <xsd:element name="countyCode" type="xsd:string"/>
+            <xsd:element name="crossStreet" type="xsd:string"/>
+            <xsd:element name="organizationName" type="xsd:string"/>
+            <xsd:element name="postOfficeBoxNumber" type="xsd:string"/>
+            <xsd:element name="postalCode" type="xsd:string"/>
+            <xsd:element name="postalName" type="xsd:string"/>
+            <xsd:element name="streetAddress" type="xsd:string"/>
+            <xsd:element name="streetAddressLine2" type="xsd:string"/>
+            <xsd:element name="streetAddressLine3" type="xsd:string"/>
+            <xsd:element name="streetAddressLine4" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="PriceSpecification">
+        <xsd:sequence>
+            <xsd:element name="dutyFeeTaxAmount" type="xsd:string"/>
+            <xsd:element name="dutyFeeTaxDescription" type="xsd:string"/>
+            <xsd:element name="dutyFeeTaxRate" type="xsd:string"/>
+            <xsd:element name="eligibleQuantity" type="QuantitativeValue"/>
+            <xsd:element name="eligibleQuantityMaximum" type="QuantitativeValue"/>
+            <xsd:element name="eligibleQuantityMinimum" type="QuantitativeValue"/>
+            <xsd:element name="maxPrice" type="xsd:string"/>
+            <xsd:element name="minPrice" type="xsd:string"/>
+            <xsd:element name="price" type="xsd:string"/>
+            <xsd:element name="priceCurrency" type="xsd:string"/>
+            <xsd:element name="validFrom" type="xsd:string"/>
+            <xsd:element name="validThrough" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Product">
+        <xsd:sequence>
+            <xsd:element name="additionalProductClassification" type="AdditionalProductClassificationDetails"/>
+            <xsd:element name="additionalProductDescription" type="xsd:string"/>
+            <xsd:element name="additive" type="AdditiveDetails"/>
+            <xsd:element name="audioFile" type="ReferencedFileDetails"/>
+            <xsd:element name="authenticity" type="AuthenticityDetails"/>
+            <xsd:element name="awardPrize" type="AwardPrizeDetails"/>
+            <xsd:element name="bestBeforeDate" type="xsd:string"/>
+            <xsd:element name="brand" type="Brand"/>
+            <xsd:element name="brandOwner" type="Organization"/>
+            <xsd:element name="certification" type="CertificationDetails"/>
+            <xsd:element name="colourCode" type="ColourCodeDetails"/>
+            <xsd:element name="colourDescription" type="xsd:string"/>
+            <xsd:element name="consumerHandlingStorage" type="ReferencedFileDetails"/>
+            <xsd:element name="consumerPackageDisclaimer" type="xsd:string"/>
+            <xsd:element name="consumerProductVariant" type="xsd:string"/>
+            <xsd:element name="consumerSafetyInformation" type="xsd:string"/>
+            <xsd:element name="consumerSalesCondition" type="ConsumerSalesConditionsCode"/>
+            <xsd:element name="consumerStorageInstructions" type="xsd:string"/>
+            <xsd:element name="consumerUsageInstructions" type="xsd:string"/>
+            <xsd:element name="countryOfAssembly" type="Country"/>
+            <xsd:element name="countryOfLastProcessing" type="Country"/>
+            <xsd:element name="countryOfOrigin" type="Country"/>
+            <xsd:element name="countryOfOriginStatement" type="xsd:string"/>
+            <xsd:element name="customerSupportCentre" type="Organization"/>
+            <xsd:element name="dependentProprietaryProduct" type="Product"/>
+            <xsd:element name="descriptiveSize" type="xsd:string"/>
+            <xsd:element name="dueDate" type="xsd:string"/>
+            <xsd:element name="equivalentProduct" type="Product"/>
+            <xsd:element name="expirationDate" type="xsd:string"/>
+            <xsd:element name="expirationDateTime" type="xsd:string"/>
+            <xsd:element name="firstFreezeDate" type="xsd:string"/>
+            <xsd:element name="functionalName" type="xsd:string"/>
+            <xsd:element name="gpcCategoryCode" type="xsd:string"/>
+            <xsd:element name="gpcCategoryDescription" type="xsd:string"/>
+            <xsd:element name="grossArea" type="QuantitativeValue"/>
+            <xsd:element name="grossVolume" type="QuantitativeValue"/>
+            <xsd:element name="grossWeight" type="QuantitativeValue"/>
+            <xsd:element name="growingMethod" type="GrowingMethodCode"/>
+            <xsd:element name="gtin" type="xsd:string"/>
+            <xsd:element name="harvestDate" type="xsd:string"/>
+            <xsd:element name="harvestDateEnd" type="xsd:string"/>
+            <xsd:element name="harvestDateStart" type="xsd:string"/>
+            <xsd:element name="hasBatchLotNumber" type="xsd:string"/>
+            <xsd:element name="hasSerialNumber" type="xsd:string"/>
+            <xsd:element name="hasThirdPartyControlledSerialNumber" type="xsd:string"/>
+            <xsd:element name="healthClaimDescription" type="xsd:string"/>
+            <xsd:element name="image" type="ReferencedFileDetails"/>
+            <xsd:element name="inPackageDepth" type="QuantitativeValue"/>
+            <xsd:element name="inPackageDiameter" type="QuantitativeValue"/>
+            <xsd:element name="inPackageHeight" type="QuantitativeValue"/>
+            <xsd:element name="inPackageWidth" type="QuantitativeValue"/>
+            <xsd:element name="includedAccessories" type="xsd:string"/>
+            <xsd:element name="instructionsForUse" type="ReferencedFileDetails"/>
+            <xsd:element name="isProductRecalled" type="xsd:string"/>
+            <xsd:element name="jws" type="xsd:string"/>
+            <xsd:element name="manufacturer" type="Organization"/>
+            <xsd:element name="manufacturersWarranty" type="WarrantyPromise"/>
+            <xsd:element name="manufacturingPlant" type="Organization"/>
+            <xsd:element name="massPerUnitArea" type="QuantitativeValue"/>
+            <xsd:element name="netArea" type="QuantitativeValue"/>
+            <xsd:element name="netContent" type="QuantitativeValue"/>
+            <xsd:element name="netWeight" type="QuantitativeValue"/>
+            <xsd:element name="organicClaim" type="OrganicClaimDetails"/>
+            <xsd:element name="outOfPackageDepth" type="QuantitativeValue"/>
+            <xsd:element name="outOfPackageDiameter" type="QuantitativeValue"/>
+            <xsd:element name="outOfPackageHeight" type="QuantitativeValue"/>
+            <xsd:element name="outOfPackageWidth" type="QuantitativeValue"/>
+            <xsd:element name="packaging" type="PackagingDetails"/>
+            <xsd:element name="packagingDate" type="xsd:string"/>
+            <xsd:element name="packagingMarkedLabelAccreditation" type="PackagingMarkedLabelAccreditationCode"/>
+            <xsd:element name="primaryAlternateProduct" type="Product"/>
+            <xsd:element name="productDescription" type="xsd:string"/>
+            <xsd:element name="productFeatureBenefit" type="xsd:string"/>
+            <xsd:element name="productFormDescription" type="xsd:string"/>
+            <xsd:element name="productID" type="xsd:string"/>
+            <xsd:element name="productMarketingMessage" type="xsd:string"/>
+            <xsd:element name="productName" type="xsd:string"/>
+            <xsd:element name="productRange" type="xsd:string"/>
+            <xsd:element name="productSustainabilityInfo" type="xsd:string"/>
+            <xsd:element name="productionDate" type="xsd:string"/>
+            <xsd:element name="productionDateTime" type="xsd:string"/>
+            <xsd:element name="productionVariantDescription" type="xsd:string"/>
+            <xsd:element name="productionVariantEffectiveDateTime" type="xsd:string"/>
+            <xsd:element name="provenanceStatement" type="xsd:string"/>
+            <xsd:element name="referencedFile" type="ReferencedFileDetails"/>
+            <xsd:element name="regulatedProductName" type="xsd:string"/>
+            <xsd:element name="replacedByProduct" type="Product"/>
+            <xsd:element name="replacedProduct" type="Product"/>
+            <xsd:element name="sellByDate" type="xsd:string"/>
+            <xsd:element name="sizeCode" type="SizeCodeDetails"/>
+            <xsd:element name="supplierSpecifiedMinimumConsumerStorageDays" type="xsd:string"/>
+            <xsd:element name="targetMarket" type="TargetMarketDetails"/>
+            <xsd:element name="variantDescription" type="xsd:string"/>
+            <xsd:element name="warningCopyDescription" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ProductYieldDetails">
+        <xsd:sequence>
+            <xsd:element name="productYield" type="QuantitativeValue"/>
+            <xsd:element name="productYieldType" type="ProductYieldTypeCode"/>
+            <xsd:element name="productYieldVariationPercentage" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="QuantitativeValue">
+        <xsd:sequence>
+            <xsd:element name="unitCode" type="xsd:string"/>
+            <xsd:element name="value" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ReferencedFileDetails">
+        <xsd:sequence>
+            <xsd:element name="fileLanguageCode" type="xsd:string"/>
+            <xsd:element name="filePixelHeight" type="xsd:string"/>
+            <xsd:element name="filePixelWidth" type="xsd:string"/>
+            <xsd:element name="referencedFileEffectiveEndDateTime" type="xsd:string"/>
+            <xsd:element name="referencedFileEffectiveStartDateTime" type="xsd:string"/>
+            <xsd:element name="referencedFileSize" type="QuantitativeValue"/>
+            <xsd:element name="referencedFileType" type="ReferencedFileTypeCode"/>
+            <xsd:element name="referencedFileURL" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ReturnablePackageDepositDetails">
+        <xsd:sequence>
+            <xsd:element name="returnablePackageDepositAmount" type="PriceSpecification"/>
+            <xsd:element name="returnablePackageDepositRegion" type="Country"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Seafood">
+        <xsd:sequence>
+            <xsd:element name="catchZone" type="xsd:string"/>
+            <xsd:element name="fishType" type="xsd:string"/>
+            <xsd:element name="freshOrSeawaterFarmed" type="FreshOrSeawaterFarmedCode"/>
+            <xsd:element name="minimumFishContent" type="QuantitativeValue"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="SizeCodeDetails">
+        <xsd:sequence>
+            <xsd:element name="sizeCodeListCode" type="xsd:string"/>
+            <xsd:element name="sizeCodeValue" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="SizeDetails">
+        <xsd:sequence>
+            <xsd:element name="sizeDimension" type="QuantitativeValue"/>
+            <xsd:element name="sizeGroup" type="SizeGroupCode"/>
+            <xsd:element name="sizeSystem" type="SizeSystemCode"/>
+            <xsd:element name="sizeType" type="SizeTypeCode"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="TargetMarketDetails">
+        <xsd:sequence>
+            <xsd:element name="consumerFirstAvailabilityDateTime" type="xsd:string"/>
+            <xsd:element name="targetMarketCountries" type="Country"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="TextileMaterialDetails">
+        <xsd:sequence>
+            <xsd:element name="textileMaterialDescription" type="xsd:string"/>
+            <xsd:element name="textileMaterialPercentage" type="xsd:string"/>
+            <xsd:element name="textileMaterialThreadCount" type="xsd:string"/>
+            <xsd:element name="textileMaterialWeight" type="QuantitativeValue"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="TypeCode">
+        <xsd:sequence>
+            <xsd:element name="originalCodeValue" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="WarrantyPromise">
+        <xsd:sequence>
+            <xsd:element name="durationOfWarranty" type="QuantitativeValue"/>
+            <xsd:element name="warrantyScopeDescription" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="WearableProduct">
+        <xsd:sequence>
+            <xsd:element name="consumerLifestage" type="ConsumerLifestageCode"/>
+            <xsd:element name="isPatterned" type="NonbinaryLogicCode"/>
+            <xsd:element name="isThermal" type="NonbinaryLogicCode"/>
+            <xsd:element name="isWaterproof" type="NonbinaryLogicCode"/>
+            <xsd:element name="isWearableItemDisposable" type="NonbinaryLogicCode"/>
+            <xsd:element name="seasonCalendarYear" type="xsd:string"/>
+            <xsd:element name="seasonName" type="xsd:string"/>
+            <xsd:element name="seasonParameter" type="SeasonParameterCode"/>
+            <xsd:element name="size" type="SizeDetails"/>
+            <xsd:element name="sportingActivityType" type="SportingActivityTypeCode"/>
+            <xsd:element name="styleDescription" type="xsd:string"/>
+            <xsd:element name="targetConsumerAge" type="xsd:string"/>
+            <xsd:element name="targetConsumerGender" type="TargetConsumerGenderCode"/>
+            <xsd:element name="textileMaterialContent" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="AllergenTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="1,3-BIS-(2,4-DIAMINOPHENOXY)PROPANE"/>
+            <xsd:enumeration value="1-NAPHTHOL"/>
+            <xsd:enumeration value="2,6-DIMETHOXY-3,5-PYRIDINEDIAMINE_HCL"/>
+            <xsd:enumeration value="2-HYDROXYETHYL-PICRAMIC_ACID"/>
+            <xsd:enumeration value="2-METHYL-5-HYDROXYETHYLAMINOPHENOL"/>
+            <xsd:enumeration value="3-AMINO-2,4-DICHLOROPHENOL"/>
+            <xsd:enumeration value="3-AMINOPHENOL"/>
+            <xsd:enumeration value="4-AMINO-3-NITROPHENOL"/>
+            <xsd:enumeration value="4-HYDROXY-PROPYLAMINO-3-NITROPHENOL"/>
+            <xsd:enumeration value="ABALONE"/>
+            <xsd:enumeration value="ALMONDS"/>
+            <xsd:enumeration value="ALPHA_ISOMETHYL_IONONE"/>
+            <xsd:enumeration value="AMYLCINNAMYL_ALCOHOL"/>
+            <xsd:enumeration value="AMYL_CINNAMAL"/>
+            <xsd:enumeration value="ANCHOVY"/>
+            <xsd:enumeration value="ANISE_ALCOHOL"/>
+            <xsd:enumeration value="BARLEY"/>
+            <xsd:enumeration value="BARNACLE"/>
+            <xsd:enumeration value="BASA"/>
+            <xsd:enumeration value="BASS"/>
+            <xsd:enumeration value="BEECH_NUTS"/>
+            <xsd:enumeration value="BEEF"/>
+            <xsd:enumeration value="BENZYL_ALCOHOL"/>
+            <xsd:enumeration value="BENZYL_BENZOATE"/>
+            <xsd:enumeration value="BENZYL_CINNAMATE"/>
+            <xsd:enumeration value="BENZYL_SALICYLATE"/>
+            <xsd:enumeration value="BLUEFISH"/>
+            <xsd:enumeration value="BRAZIL_NUTS"/>
+            <xsd:enumeration value="BREAM"/>
+            <xsd:enumeration value="BUTTERNUTS"/>
+            <xsd:enumeration value="BUTYLPHENYL_METHYLPROPIONATE"/>
+            <xsd:enumeration value="CARP"/>
+            <xsd:enumeration value="CARROTS"/>
+            <xsd:enumeration value="CASHEW_NUTS"/>
+            <xsd:enumeration value="CATFISH"/>
+            <xsd:enumeration value="CELERY"/>
+            <xsd:enumeration value="CEREALS_CONTAINING_GLUTEN"/>
+            <xsd:enumeration value="CHAR"/>
+            <xsd:enumeration value="CHESTNUTS"/>
+            <xsd:enumeration value="CHICKEN_MEAT"/>
+            <xsd:enumeration value="CHINQUAPINS"/>
+            <xsd:enumeration value="CHUB"/>
+            <xsd:enumeration value="CINNAMAL"/>
+            <xsd:enumeration value="CINNAMYL_ALCOHOL"/>
+            <xsd:enumeration value="CISCO"/>
+            <xsd:enumeration value="CITRAL"/>
+            <xsd:enumeration value="CITRONELLOL"/>
+            <xsd:enumeration value="CLAM"/>
+            <xsd:enumeration value="COCKLE"/>
+            <xsd:enumeration value="COCOA"/>
+            <xsd:enumeration value="COCONUTS"/>
+            <xsd:enumeration value="COD"/>
+            <xsd:enumeration value="CONCH"/>
+            <xsd:enumeration value="CORIANDER"/>
+            <xsd:enumeration value="CORN"/>
+            <xsd:enumeration value="COTTON_SEEDS"/>
+            <xsd:enumeration value="COUMARIN"/>
+            <xsd:enumeration value="CRAB"/>
+            <xsd:enumeration value="CRAWFISH"/>
+            <xsd:enumeration value="CRUSTACEANS"/>
+            <xsd:enumeration value="D-LIMONENE"/>
+            <xsd:enumeration value="DIAMINOPHENOLS"/>
+            <xsd:enumeration value="EEL"/>
+            <xsd:enumeration value="EGGS"/>
+            <xsd:enumeration value="EUGENOL"/>
+            <xsd:enumeration value="EVERNIA_FURFURACEA"/>
+            <xsd:enumeration value="EVERNIA_PRUNASTRI"/>
+            <xsd:enumeration value="FARNESOL"/>
+            <xsd:enumeration value="FISH"/>
+            <xsd:enumeration value="FLOUNDER"/>
+            <xsd:enumeration value="GERANIOL"/>
+            <xsd:enumeration value="GINKGO_NUTS"/>
+            <xsd:enumeration value="GLUTAMATE"/>
+            <xsd:enumeration value="GLUTEN"/>
+            <xsd:enumeration value="GROUPER"/>
+            <xsd:enumeration value="HADDOCK"/>
+            <xsd:enumeration value="HAKE"/>
+            <xsd:enumeration value="HALIBUT"/>
+            <xsd:enumeration value="HAZELNUTS"/>
+            <xsd:enumeration value="HC_BLUE_NO_11"/>
+            <xsd:enumeration value="HC_BLUE_NO_12"/>
+            <xsd:enumeration value="HERRING"/>
+            <xsd:enumeration value="HEXYL_CINNAMAL"/>
+            <xsd:enumeration value="HICKORY_NUTS"/>
+            <xsd:enumeration value="HYDROXYBENZOMORPHOLINE"/>
+            <xsd:enumeration value="HYDROXYCITRONELLAL"/>
+            <xsd:enumeration value="HYDROXYETHYL-2-NITRO-P-TOLUIDINE"/>
+            <xsd:enumeration value="HYDROXYISOHEXYL_3-CYCLOHEXENE_CARBOXALDEHYDE_ISOEUGENOL_LIMONENE_LINAL"/>
+            <xsd:enumeration value="HYDROXYPROPYL_BIS(N-HYDROXYETHYL-P-PHENYLDIAMINE)_HCL"/>
+            <xsd:enumeration value="ISOEUGENOL"/>
+            <xsd:enumeration value="KAMUT"/>
+            <xsd:enumeration value="KRILL"/>
+            <xsd:enumeration value="LACTOSE"/>
+            <xsd:enumeration value="LAND"/>
+            <xsd:enumeration value="LICHEE_NUTS"/>
+            <xsd:enumeration value="LIMPETS"/>
+            <xsd:enumeration value="LINALOOL"/>
+            <xsd:enumeration value="LOBSTER"/>
+            <xsd:enumeration value="LUPINE"/>
+            <xsd:enumeration value="MACADAMIA_NUTS"/>
+            <xsd:enumeration value="MACKEREL"/>
+            <xsd:enumeration value="MAHI_MAHI"/>
+            <xsd:enumeration value="MARLIN"/>
+            <xsd:enumeration value="MELATONIN"/>
+            <xsd:enumeration value="METHYL_2_OCTYNOATE"/>
+            <xsd:enumeration value="METHYL_HEPTIN_CARBONATE"/>
+            <xsd:enumeration value="MILK"/>
+            <xsd:enumeration value="MOLLUSCS"/>
+            <xsd:enumeration value="MONKFISH_(ANGLERFISH,_LOTTE)"/>
+            <xsd:enumeration value="MUSSELS"/>
+            <xsd:enumeration value="MUSTARD"/>
+            <xsd:enumeration value="NO_DECLARED_ALLERGENS"/>
+            <xsd:enumeration value="OAT"/>
+            <xsd:enumeration value="OCTOPUS"/>
+            <xsd:enumeration value="ORANGE_ROUGHY"/>
+            <xsd:enumeration value="OYSTERS"/>
+            <xsd:enumeration value="P-METHYLAMINOPHENOL"/>
+            <xsd:enumeration value="P-PHENYLENEDIAMINE"/>
+            <xsd:enumeration value="PEANUTS"/>
+            <xsd:enumeration value="PEAS"/>
+            <xsd:enumeration value="PECAN_NUTS"/>
+            <xsd:enumeration value="PERCH"/>
+            <xsd:enumeration value="PERIWINKLE"/>
+            <xsd:enumeration value="PIKE"/>
+            <xsd:enumeration value="PILI_NUTS"/>
+            <xsd:enumeration value="PINE_NUTS"/>
+            <xsd:enumeration value="PISTACHIOS"/>
+            <xsd:enumeration value="PLAICE"/>
+            <xsd:enumeration value="POD_FRUITS"/>
+            <xsd:enumeration value="POLLOCK"/>
+            <xsd:enumeration value="POMPANO"/>
+            <xsd:enumeration value="POPPY_SEEDS"/>
+            <xsd:enumeration value="PORGY"/>
+            <xsd:enumeration value="PORK"/>
+            <xsd:enumeration value="PRAWNS"/>
+            <xsd:enumeration value="PULSES"/>
+            <xsd:enumeration value="QUAHAUGS"/>
+            <xsd:enumeration value="QUEENSLAND_NUTS"/>
+            <xsd:enumeration value="ROCKFISH"/>
+            <xsd:enumeration value="RYE"/>
+            <xsd:enumeration value="SALICYLATE"/>
+            <xsd:enumeration value="SALMON"/>
+            <xsd:enumeration value="SARDINE"/>
+            <xsd:enumeration value="SCALLOPS"/>
+            <xsd:enumeration value="SEED_PRODUCTS"/>
+            <xsd:enumeration value="SESAME_SEEDS"/>
+            <xsd:enumeration value="SHARK"/>
+            <xsd:enumeration value="SHEA_NUTS"/>
+            <xsd:enumeration value="SHELLFISH"/>
+            <xsd:enumeration value="SHRIMP"/>
+            <xsd:enumeration value="SMELT"/>
+            <xsd:enumeration value="SNAPPER"/>
+            <xsd:enumeration value="SOLE"/>
+            <xsd:enumeration value="SOYBEANS"/>
+            <xsd:enumeration value="SPELT"/>
+            <xsd:enumeration value="SQUID_(CALAMARI)"/>
+            <xsd:enumeration value="STURGEON"/>
+            <xsd:enumeration value="SULPHUR_DIOXIDE"/>
+            <xsd:enumeration value="SUNFLOWER_SEEDS"/>
+            <xsd:enumeration value="SWORDFISH"/>
+            <xsd:enumeration value="TILAPIA"/>
+            <xsd:enumeration value="TOLUENE-2,5-DIAMINE"/>
+            <xsd:enumeration value="TREE_NUTS"/>
+            <xsd:enumeration value="TREE_NUT_TRACES"/>
+            <xsd:enumeration value="TRITICALE"/>
+            <xsd:enumeration value="TROUT"/>
+            <xsd:enumeration value="TUNA"/>
+            <xsd:enumeration value="TURBOT"/>
+            <xsd:enumeration value="WALLEYE"/>
+            <xsd:enumeration value="WALNUTS"/>
+            <xsd:enumeration value="WHEAT"/>
+            <xsd:enumeration value="WHELKS"/>
+            <xsd:enumeration value="WHITEFISH"/>
+            <xsd:enumeration value="WHITING"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="AnatomicalFormCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BELLY"/>
+            <xsd:enumeration value="BLOOD"/>
+            <xsd:enumeration value="BONE"/>
+            <xsd:enumeration value="BRAIN"/>
+            <xsd:enumeration value="CARCASS_NONPOULTRY"/>
+            <xsd:enumeration value="DIAPHRAM"/>
+            <xsd:enumeration value="ESOPHAGUS"/>
+            <xsd:enumeration value="FAT"/>
+            <xsd:enumeration value="FEET"/>
+            <xsd:enumeration value="FOREQUARTER"/>
+            <xsd:enumeration value="GIZZARD"/>
+            <xsd:enumeration value="HEAD"/>
+            <xsd:enumeration value="HEADMEAT_CHEEKMEAT"/>
+            <xsd:enumeration value="HEART"/>
+            <xsd:enumeration value="HINDQUARTER"/>
+            <xsd:enumeration value="HORN"/>
+            <xsd:enumeration value="INTESTINE_LARGE"/>
+            <xsd:enumeration value="INTESTINE_SMALL"/>
+            <xsd:enumeration value="KIDNEY"/>
+            <xsd:enumeration value="LIPS"/>
+            <xsd:enumeration value="LIVER"/>
+            <xsd:enumeration value="LUNGS"/>
+            <xsd:enumeration value="MIXED_OFFAL"/>
+            <xsd:enumeration value="MIXED_PARTS_FOR_GROUNDING_MINCING"/>
+            <xsd:enumeration value="NECK"/>
+            <xsd:enumeration value="PANCREAS"/>
+            <xsd:enumeration value="SKIN"/>
+            <xsd:enumeration value="STOMACH"/>
+            <xsd:enumeration value="TAIL"/>
+            <xsd:enumeration value="TENDONS"/>
+            <xsd:enumeration value="TESTICLES"/>
+            <xsd:enumeration value="THYMUS"/>
+            <xsd:enumeration value="TONGUE"/>
+            <xsd:enumeration value="TRIPE"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+            <xsd:enumeration value="WHOLE_BIRD"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_NONPOULTRY_MEATPART_PIECE"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_POULTRY_PART"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_PRIMAL"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_RIBCUT"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_ROASTCUT"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_SLICE_CHOPCUT"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_SLICE_CUTLET"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_STEAK_CHOPCUT"/>
+            <xsd:enumeration value="WHOLE_MUSCLE_SUBPRIMAL"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="CertificationStatus">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ACTIVE"/>
+            <xsd:enumeration value="INACTIVE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="CheeseFirmnessCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="EXTRA_HARD"/>
+            <xsd:enumeration value="FIRM_SEMIHARD"/>
+            <xsd:enumeration value="HARD"/>
+            <xsd:enumeration value="SOFT"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ColourCodeListCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BUYER"/>
+            <xsd:enumeration value="IFPS"/>
+            <xsd:enumeration value="NCS"/>
+            <xsd:enumeration value="NRF"/>
+            <xsd:enumeration value="PANTONE_HEXACHROME"/>
+            <xsd:enumeration value="PANTONE_MATCHING"/>
+            <xsd:enumeration value="PANTONE_PROCESS_COLOUR"/>
+            <xsd:enumeration value="PANTONE_TEXTILE"/>
+            <xsd:enumeration value="RAL"/>
+            <xsd:enumeration value="SELLER"/>
+            <xsd:enumeration value="WWS"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ConsumerLifestageCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ADULT"/>
+            <xsd:enumeration value="ALL_AGES"/>
+            <xsd:enumeration value="BABY_INFANT"/>
+            <xsd:enumeration value="CHILD_1_To_2_YEARS"/>
+            <xsd:enumeration value="CHILD_2_YEARS_ONWARDS"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ConsumerSalesConditionsCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BTC"/>
+            <xsd:enumeration value="OTC"/>
+            <xsd:enumeration value="PRESCRIPTION_REQUIRED"/>
+            <xsd:enumeration value="RESTRICTED_TO_SELL_16"/>
+            <xsd:enumeration value="RESTRICTED_TO_SELL_18"/>
+            <xsd:enumeration value="RESTRICTED_TO_SELL_21"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DietTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="COELIAC"/>
+            <xsd:enumeration value="DIETETIC"/>
+            <xsd:enumeration value="FREE_FROM_GLUTEN"/>
+            <xsd:enumeration value="HALAL"/>
+            <xsd:enumeration value="KOSHER"/>
+            <xsd:enumeration value="ORGANIC"/>
+            <xsd:enumeration value="VEGAN"/>
+            <xsd:enumeration value="VEGETARIAN"/>
+            <xsd:enumeration value="WITHOUT_BEEF"/>
+            <xsd:enumeration value="WITHOUT_PORK"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DiscountTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BOGO"/>
+            <xsd:enumeration value="DISCOUNTED_ITEM"/>
+            <xsd:enumeration value="FREE_GIFT"/>
+            <xsd:enumeration value="FREE_SHIPPING"/>
+            <xsd:enumeration value="OTHER"/>
+            <xsd:enumeration value="PERCENTAGE_OFF"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="FoodBeverageRefrigerationClaimCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CAN_BE_REFRIGERATED"/>
+            <xsd:enumeration value="MUST_BE_REFRIGERATED"/>
+            <xsd:enumeration value="SHELF_STABLE"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="FoodBeverageTargetUseCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ANY_MEAL"/>
+            <xsd:enumeration value="BREAKFAST"/>
+            <xsd:enumeration value="MAIN_MEAL"/>
+            <xsd:enumeration value="PORTABLE_MEAL"/>
+            <xsd:enumeration value="SNACK"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="FootwearFasteningTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="MULTIPLE_FASTENING"/>
+            <xsd:enumeration value="SHOE_LACE"/>
+            <xsd:enumeration value="SLIP_ON_WITHOUT_ELASTIC"/>
+            <xsd:enumeration value="SLIP_ON_WITH_ELASTIC"/>
+            <xsd:enumeration value="STRAP"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+            <xsd:enumeration value="VELCRO"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="FreshOrSeawaterFarmedCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="FRESHWATER_FARMED"/>
+            <xsd:enumeration value="SEAWATER_FARMED"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="GLN_TypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="DIGITAL_LOCATION"/>
+            <xsd:enumeration value="FIXED_PHYSICAL_LOCATION"/>
+            <xsd:enumeration value="FUNCTION"/>
+            <xsd:enumeration value="LEGAL_ENTITY"/>
+            <xsd:enumeration value="MOBILE_PHYSICAL_LOCATION"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="GrowingMethodCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CAGE_FREE"/>
+            <xsd:enumeration value="CLONED_FOODS"/>
+            <xsd:enumeration value="CONVENTIONAL"/>
+            <xsd:enumeration value="FARM_RAISED"/>
+            <xsd:enumeration value="FIELD_GROWN"/>
+            <xsd:enumeration value="FLY_FREE"/>
+            <xsd:enumeration value="FREE_RANGE"/>
+            <xsd:enumeration value="GRASS_FED"/>
+            <xsd:enumeration value="GREENHOUSE"/>
+            <xsd:enumeration value="HUMANELY_RAISED"/>
+            <xsd:enumeration value="HYDROPONIC"/>
+            <xsd:enumeration value="INTEGRATED_PEST_MANAGEMENT"/>
+            <xsd:enumeration value="ORGANIC"/>
+            <xsd:enumeration value="SHADE_GROWN"/>
+            <xsd:enumeration value="SUSTAINABLE"/>
+            <xsd:enumeration value="WILD"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="LevelOfContainmentCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CONTAINS"/>
+            <xsd:enumeration value="FREE_FROM"/>
+            <xsd:enumeration value="MAY_CONTAIN"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="LocationID_Type">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BIC_FACILITY"/>
+            <xsd:enumeration value="CRD_LOCATION_CODE"/>
+            <xsd:enumeration value="ENI_NUMBER"/>
+            <xsd:enumeration value="FR_SIRET"/>
+            <xsd:enumeration value="IATA_CODE"/>
+            <xsd:enumeration value="IMO_NUMBER"/>
+            <xsd:enumeration value="ISPS_CODE"/>
+            <xsd:enumeration value="ISRS_LOCATION_CODE"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_1"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_10"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_2"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_3"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_4"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_5"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_6"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_7"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_8"/>
+            <xsd:enumeration value="LOCATION_FOR_INTERNAL_USE_9"/>
+            <xsd:enumeration value="MMSI_NUMBER"/>
+            <xsd:enumeration value="OAR_ID"/>
+            <xsd:enumeration value="OPEN_LOCATION_CODE"/>
+            <xsd:enumeration value="SMDG_CODE"/>
+            <xsd:enumeration value="UN_LOCODE"/>
+            <xsd:enumeration value="US_CIF_CODE"/>
+            <xsd:enumeration value="US_EST_NUMBER"/>
+            <xsd:enumeration value="US_FEI"/>
+            <xsd:enumeration value="US_HIN_IDENTIFICATION"/>
+            <xsd:enumeration value="US_MINE_ID"/>
+            <xsd:enumeration value="US_TCN_CODE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MaturationMethodCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="JET_FRESH"/>
+            <xsd:enumeration value="PRECONDITIONED"/>
+            <xsd:enumeration value="TREE_VINE_RIPE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MeasurementPrecisionCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="APPROXIMATELY"/>
+            <xsd:enumeration value="EXACT"/>
+            <xsd:enumeration value="LESS_THAN"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MeasurementType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AbsoluteHumidity"/>
+            <xsd:enumeration value="AbsorbedDose"/>
+            <xsd:enumeration value="AbsorbedDoseRate"/>
+            <xsd:enumeration value="Acceleration"/>
+            <xsd:enumeration value="Altitude"/>
+            <xsd:enumeration value="AmountOfSubstance"/>
+            <xsd:enumeration value="AmountOfSubstancePerUnitVolume"/>
+            <xsd:enumeration value="Angle"/>
+            <xsd:enumeration value="AngularAcceleration"/>
+            <xsd:enumeration value="AngularMomentum"/>
+            <xsd:enumeration value="AngularVelocity"/>
+            <xsd:enumeration value="Area"/>
+            <xsd:enumeration value="Capacitance"/>
+            <xsd:enumeration value="Conductance"/>
+            <xsd:enumeration value="Conductivity"/>
+            <xsd:enumeration value="Count"/>
+            <xsd:enumeration value="Density"/>
+            <xsd:enumeration value="Dimensionless"/>
+            <xsd:enumeration value="DoseEquivalent"/>
+            <xsd:enumeration value="DoseEquivalentRate"/>
+            <xsd:enumeration value="DynamicViscosity"/>
+            <xsd:enumeration value="ElectricCharge"/>
+            <xsd:enumeration value="ElectricCurrent"/>
+            <xsd:enumeration value="ElectricCurrentDensity"/>
+            <xsd:enumeration value="ElectricFieldStrength"/>
+            <xsd:enumeration value="Energy"/>
+            <xsd:enumeration value="Exposure"/>
+            <xsd:enumeration value="Force"/>
+            <xsd:enumeration value="Frequency"/>
+            <xsd:enumeration value="Illuminance"/>
+            <xsd:enumeration value="Inductance"/>
+            <xsd:enumeration value="Irradiance"/>
+            <xsd:enumeration value="KinematicViscosity"/>
+            <xsd:enumeration value="Length"/>
+            <xsd:enumeration value="LinearMomentum"/>
+            <xsd:enumeration value="Luminance"/>
+            <xsd:enumeration value="LuminousFlux"/>
+            <xsd:enumeration value="LuminousIntensity"/>
+            <xsd:enumeration value="MagneticFlux"/>
+            <xsd:enumeration value="MagneticFluxDensity"/>
+            <xsd:enumeration value="MagneticVectorPotential"/>
+            <xsd:enumeration value="Mass"/>
+            <xsd:enumeration value="MassConcentration"/>
+            <xsd:enumeration value="MassFlowRate"/>
+            <xsd:enumeration value="MassPerAreaTime"/>
+            <xsd:enumeration value="MemoryCapacity"/>
+            <xsd:enumeration value="MolalityOfSolute"/>
+            <xsd:enumeration value="MolarEnergy"/>
+            <xsd:enumeration value="MolarMass"/>
+            <xsd:enumeration value="MolarVolume"/>
+            <xsd:enumeration value="Power"/>
+            <xsd:enumeration value="Pressure"/>
+            <xsd:enumeration value="RadiantFlux"/>
+            <xsd:enumeration value="RadiantIntensity"/>
+            <xsd:enumeration value="Radioactivity"/>
+            <xsd:enumeration value="RelativeHumidity"/>
+            <xsd:enumeration value="Resistance"/>
+            <xsd:enumeration value="Resistivity"/>
+            <xsd:enumeration value="SolidAngle"/>
+            <xsd:enumeration value="SpecificVolume"/>
+            <xsd:enumeration value="Speed"/>
+            <xsd:enumeration value="SurfaceDensity"/>
+            <xsd:enumeration value="SurfaceTension"/>
+            <xsd:enumeration value="Temperature"/>
+            <xsd:enumeration value="Time"/>
+            <xsd:enumeration value="Torque"/>
+            <xsd:enumeration value="Voltage"/>
+            <xsd:enumeration value="Volume"/>
+            <xsd:enumeration value="VolumeFlowRate"/>
+            <xsd:enumeration value="VolumeFraction"/>
+            <xsd:enumeration value="VolumetricFlux"/>
+            <xsd:enumeration value="Wavenumber"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="NonbinaryLogicCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="FALSE"/>
+            <xsd:enumeration value="NOT_APPLICABLE"/>
+            <xsd:enumeration value="TRUE"/>
+            <xsd:enumeration value="UNSPECIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="NutrientBasisQuantityCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BY_MEASURE"/>
+            <xsd:enumeration value="BY_SERVING"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="NutritionalClaimTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ADDITIVE_FREE"/>
+            <xsd:enumeration value="ARTIFICIALLY_SWEETENED"/>
+            <xsd:enumeration value="CHOLESTEROL_FREE"/>
+            <xsd:enumeration value="COLOURING_AGENT_FREE"/>
+            <xsd:enumeration value="CONTAINS_GLYZYRRHIZIN"/>
+            <xsd:enumeration value="CONTAINS_LIQUORICE"/>
+            <xsd:enumeration value="CONTAINS_SOY"/>
+            <xsd:enumeration value="EGG_FREE"/>
+            <xsd:enumeration value="ENERGY_FREE"/>
+            <xsd:enumeration value="ENERGY_REDUCED"/>
+            <xsd:enumeration value="ENRICHED_OR_FORTIFIED_IN_VITAMINS_AND_OR_MINERALS"/>
+            <xsd:enumeration value="FAT_FREE"/>
+            <xsd:enumeration value="FREE_FROM_GLUTEN"/>
+            <xsd:enumeration value="GUARANTEED_LACTOSE_FREE"/>
+            <xsd:enumeration value="HIGH_FIBRE"/>
+            <xsd:enumeration value="HIGH_PROTEIN"/>
+            <xsd:enumeration value="HIGH_VITAMINS_AND_OR_MINERALS"/>
+            <xsd:enumeration value="LACTOSE_FREE"/>
+            <xsd:enumeration value="LIGHT_LITE"/>
+            <xsd:enumeration value="LOW_ENERGY"/>
+            <xsd:enumeration value="LOW_FAT"/>
+            <xsd:enumeration value="LOW_LACTOSE"/>
+            <xsd:enumeration value="LOW_PROTEIN"/>
+            <xsd:enumeration value="LOW_SATURATED_FAT"/>
+            <xsd:enumeration value="LOW_SODIUM_SALT"/>
+            <xsd:enumeration value="LOW_SUGARS"/>
+            <xsd:enumeration value="MILK_FREE"/>
+            <xsd:enumeration value="MILK_PROTEIN_FREE"/>
+            <xsd:enumeration value="NATURAL_SOURCE_OF_VITAMINS_AND_OR_MINERALS"/>
+            <xsd:enumeration value="NON_ALCOHOLIC"/>
+            <xsd:enumeration value="NUT_FREE"/>
+            <xsd:enumeration value="PEANUT_FREE"/>
+            <xsd:enumeration value="PRESERVATIVE_FREE"/>
+            <xsd:enumeration value="SATURATED_FAT_FREE"/>
+            <xsd:enumeration value="SODIUM_FREE_OR_SALT_FREE"/>
+            <xsd:enumeration value="SOURCE_OF_FIBRE"/>
+            <xsd:enumeration value="SOURCE_OF_PROTEIN"/>
+            <xsd:enumeration value="SOY_FREE"/>
+            <xsd:enumeration value="STRONGLY_SALTED"/>
+            <xsd:enumeration value="SUGARS_FREE"/>
+            <xsd:enumeration value="SWEETENED_WITH_AGAVE_SYRUP"/>
+            <xsd:enumeration value="SWEETENED_WITH_CANE_SUGAR"/>
+            <xsd:enumeration value="SWEETENED_WITH_CORN_SYRUP"/>
+            <xsd:enumeration value="SWEETENED_WITH_FRUCTOSE"/>
+            <xsd:enumeration value="SWEETENED_WITH_FRUIT_JUICE"/>
+            <xsd:enumeration value="SWEETENED_WITH_FRUIT_SYRUP"/>
+            <xsd:enumeration value="SWEETENED_WITH_HONEY"/>
+            <xsd:enumeration value="SWEETENED_WITH_MALT"/>
+            <xsd:enumeration value="SWEETENED_WITH_RAW_BEET_SUGAR"/>
+            <xsd:enumeration value="SWEETENED_WITH_WHITE_SUGAR"/>
+            <xsd:enumeration value="VERY_LOW_GLUTEN"/>
+            <xsd:enumeration value="VERY_LOW_SODIUM_SALT"/>
+            <xsd:enumeration value="WHEAT_FREE"/>
+            <xsd:enumeration value="WITH_NO_ADDED_SUGARS"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="OfferRedemptionTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="COUPON_CODE"/>
+            <xsd:enumeration value="GIFT_CARD"/>
+            <xsd:enumeration value="REBATE"/>
+            <xsd:enumeration value="SALE"/>
+            <xsd:enumeration value="SINGLE_USE_CODE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="OrganicClaimAgencyCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BFA"/>
+            <xsd:enumeration value="BIOLAND"/>
+            <xsd:enumeration value="DEMETER_BUND"/>
+            <xsd:enumeration value="DEMETER_INTERNATIONAL"/>
+            <xsd:enumeration value="ECOLAND"/>
+            <xsd:enumeration value="ECOVIN"/>
+            <xsd:enumeration value="EPA"/>
+            <xsd:enumeration value="FDA"/>
+            <xsd:enumeration value="FSA"/>
+            <xsd:enumeration value="GAA"/>
+            <xsd:enumeration value="IFOA"/>
+            <xsd:enumeration value="IFOAM"/>
+            <xsd:enumeration value="NATURLAND"/>
+            <xsd:enumeration value="QAI"/>
+            <xsd:enumeration value="SUDITIROL"/>
+            <xsd:enumeration value="USDA"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="OrganizationID_Type">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AU_ABN"/>
+            <xsd:enumeration value="AU_ACN"/>
+            <xsd:enumeration value="CRD_PARTNER_CODE"/>
+            <xsd:enumeration value="CRN"/>
+            <xsd:enumeration value="DID"/>
+            <xsd:enumeration value="DUNS"/>
+            <xsd:enumeration value="DUNS_PLUS_FOUR"/>
+            <xsd:enumeration value="EORI"/>
+            <xsd:enumeration value="EO_ID"/>
+            <xsd:enumeration value="EU_VAT_IDENTIFICATION_NUMBER"/>
+            <xsd:enumeration value="FR_RCS"/>
+            <xsd:enumeration value="FR_SIREN"/>
+            <xsd:enumeration value="IMO_COMPANY_NUMBER"/>
+            <xsd:enumeration value="LEI"/>
+            <xsd:enumeration value="NL_KVK_NUMBER"/>
+            <xsd:enumeration value="NL_OIN_NUMBER"/>
+            <xsd:enumeration value="NZ_GST_NUMBER"/>
+            <xsd:enumeration value="NZ_IRD_NUMBER"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_1"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_10"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_2"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_3"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_4"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_5"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_6"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_7"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_8"/>
+            <xsd:enumeration value="ORG_FOR_INTERNAL_USE_9"/>
+            <xsd:enumeration value="PHYTOSANITARY_REGISTRATION_NUMBER"/>
+            <xsd:enumeration value="TIN"/>
+            <xsd:enumeration value="UK_CRN"/>
+            <xsd:enumeration value="US_498_ID"/>
+            <xsd:enumeration value="US_499_FILER_ID"/>
+            <xsd:enumeration value="US_BEA_ID"/>
+            <xsd:enumeration value="US_CAGE"/>
+            <xsd:enumeration value="US_CID"/>
+            <xsd:enumeration value="US_CRD"/>
+            <xsd:enumeration value="US_DEA"/>
+            <xsd:enumeration value="US_DODAAC"/>
+            <xsd:enumeration value="US_EIN"/>
+            <xsd:enumeration value="US_EPA_ID"/>
+            <xsd:enumeration value="US_FCC_FRN"/>
+            <xsd:enumeration value="US_FDIC"/>
+            <xsd:enumeration value="US_FHFA_ID"/>
+            <xsd:enumeration value="US_FMC_ID"/>
+            <xsd:enumeration value="US_GIIN"/>
+            <xsd:enumeration value="US_LAB_ID"/>
+            <xsd:enumeration value="US_LIC"/>
+            <xsd:enumeration value="US_MFG_ID"/>
+            <xsd:enumeration value="US_MIC"/>
+            <xsd:enumeration value="US_NPI"/>
+            <xsd:enumeration value="US_RN"/>
+            <xsd:enumeration value="US_RSSD_ID"/>
+            <xsd:enumeration value="US_SCAC"/>
+            <xsd:enumeration value="US_UEI"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="OrganizationRoleType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ACCEPTING_PARTY"/>
+            <xsd:enumeration value="BILL_OF_LADING_RECIPIENT"/>
+            <xsd:enumeration value="BILL_TO"/>
+            <xsd:enumeration value="BRAND_OWNER"/>
+            <xsd:enumeration value="BREEDER"/>
+            <xsd:enumeration value="BROKER_AGENT"/>
+            <xsd:enumeration value="BUYER"/>
+            <xsd:enumeration value="BUYERS_AGENT_REPRESENTATIVE"/>
+            <xsd:enumeration value="CARRIER"/>
+            <xsd:enumeration value="CENTRAL_PAYMENT_SERVICE"/>
+            <xsd:enumeration value="CHECKING_PARTY"/>
+            <xsd:enumeration value="CHEQUE_ORDER"/>
+            <xsd:enumeration value="CONSIGNEE"/>
+            <xsd:enumeration value="CONSOLIDATOR"/>
+            <xsd:enumeration value="CONSUMER"/>
+            <xsd:enumeration value="CORPORATE_IDENTITY"/>
+            <xsd:enumeration value="CUSTOMS"/>
+            <xsd:enumeration value="CUSTOMS_BROKER"/>
+            <xsd:enumeration value="CUTTER"/>
+            <xsd:enumeration value="DECLARANTS_AGENT_REPRESENTATIVE"/>
+            <xsd:enumeration value="DELIVERY_PARTY"/>
+            <xsd:enumeration value="DESIGNER"/>
+            <xsd:enumeration value="DESPATCH_PARTY"/>
+            <xsd:enumeration value="DISTRIBUTOR"/>
+            <xsd:enumeration value="DOCK_DOOR"/>
+            <xsd:enumeration value="EMPTY_EQUIPMENT_DESPATCH_PARTY"/>
+            <xsd:enumeration value="EMPTY_EQUIPMENT_RETURN_PARTY"/>
+            <xsd:enumeration value="EQUIPMENT_OWNER"/>
+            <xsd:enumeration value="EXPORTER"/>
+            <xsd:enumeration value="FACTOR"/>
+            <xsd:enumeration value="FATTENER"/>
+            <xsd:enumeration value="FREIGHT_FORWARDER"/>
+            <xsd:enumeration value="GOODS_OWNER"/>
+            <xsd:enumeration value="GROWER"/>
+            <xsd:enumeration value="HEAD_OFFICE"/>
+            <xsd:enumeration value="IMPORTER"/>
+            <xsd:enumeration value="INFORMATION_PROVIDER"/>
+            <xsd:enumeration value="INSURER"/>
+            <xsd:enumeration value="INTERMEDIARY_BANK_1"/>
+            <xsd:enumeration value="INTERMEDIARY_BANK_2"/>
+            <xsd:enumeration value="INVENTORY_CONTROLLER"/>
+            <xsd:enumeration value="INVENTORY_REPORTING_PARTY"/>
+            <xsd:enumeration value="INVOICEE"/>
+            <xsd:enumeration value="ISSUER_OF_INVOICE"/>
+            <xsd:enumeration value="LOGISTICS_SERVICE_PROVIDER"/>
+            <xsd:enumeration value="MANUFACTURER_OF_GOODS"/>
+            <xsd:enumeration value="MANUFACTURING_PLANT"/>
+            <xsd:enumeration value="MARK_FOR"/>
+            <xsd:enumeration value="MESSAGE_FROM"/>
+            <xsd:enumeration value="MESSAGE_RECIPIENT"/>
+            <xsd:enumeration value="MINCER"/>
+            <xsd:enumeration value="OPERATING_DIVISION"/>
+            <xsd:enumeration value="OPERATOR"/>
+            <xsd:enumeration value="ORDERING_PARTY"/>
+            <xsd:enumeration value="OWNER_OF_EQUIPMENT"/>
+            <xsd:enumeration value="OWNER_OF_MEANS_OF_TRANSPORT"/>
+            <xsd:enumeration value="PARTY_DECLARING_THE_VALUE_ADDED_TAX"/>
+            <xsd:enumeration value="PARTY_FOR_WHOM_ITEM_IS_ULTIMATELY_INTENDED"/>
+            <xsd:enumeration value="PARTY_RECEIVING_PRIVATE_DATA"/>
+            <xsd:enumeration value="PARTY_RECOVERING_THE_VALUE_ADDED_TAX"/>
+            <xsd:enumeration value="PARTY_TO_RECEIVE_ALL_DOCUMENTS"/>
+            <xsd:enumeration value="PARTY_TO_RECEIVE_COMMERCIAL_INVOICE"/>
+            <xsd:enumeration value="PARTY_TO_RECEIVE_ELECTRONIC_MEMO_OF_INVOICE"/>
+            <xsd:enumeration value="PARTY_TO_RECEIVE_FREIGHT_BILL"/>
+            <xsd:enumeration value="PARTY_TO_RECEIVE_REFUND"/>
+            <xsd:enumeration value="PAYEE"/>
+            <xsd:enumeration value="PAYER"/>
+            <xsd:enumeration value="POINT_OF_SALE"/>
+            <xsd:enumeration value="PRICE_LOCATION_PARTY"/>
+            <xsd:enumeration value="PROXY"/>
+            <xsd:enumeration value="PUBLIC_WAREHOUSE"/>
+            <xsd:enumeration value="PURCHASE_ORDER_RECEIVER"/>
+            <xsd:enumeration value="REGISTERED_AGENT"/>
+            <xsd:enumeration value="REMIT_TO"/>
+            <xsd:enumeration value="RETURNABLE_ASSET_SERVICE_CENTRE"/>
+            <xsd:enumeration value="SELLER"/>
+            <xsd:enumeration value="SERVICE_PROVIDER"/>
+            <xsd:enumeration value="SHIP_FROM"/>
+            <xsd:enumeration value="SHIP_TO"/>
+            <xsd:enumeration value="SLAUGHTERER"/>
+            <xsd:enumeration value="STORE"/>
+            <xsd:enumeration value="SUBSTITUTE_SUPPLIER"/>
+            <xsd:enumeration value="SUPPLIER"/>
+            <xsd:enumeration value="TRANSPORTATION_CARRIER"/>
+            <xsd:enumeration value="VISITING_ADDRESS"/>
+            <xsd:enumeration value="WAREHOUSE_AND_OR_DEPOT"/>
+            <xsd:enumeration value="WAREHOUSE_KEEPER"/>
+            <xsd:enumeration value="WHOLESALER"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingFeatureCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BASE"/>
+            <xsd:enumeration value="BEAM"/>
+            <xsd:enumeration value="BUNG_SEAL"/>
+            <xsd:enumeration value="CAP"/>
+            <xsd:enumeration value="CARRIER"/>
+            <xsd:enumeration value="CONSUMPTION_UTENSIL"/>
+            <xsd:enumeration value="CORE"/>
+            <xsd:enumeration value="CREEL"/>
+            <xsd:enumeration value="EDGE_PROTECTION"/>
+            <xsd:enumeration value="HANDLE"/>
+            <xsd:enumeration value="INNER_CONTAINER"/>
+            <xsd:enumeration value="INTERNAL_DIVIDER"/>
+            <xsd:enumeration value="LABEL"/>
+            <xsd:enumeration value="LID"/>
+            <xsd:enumeration value="LINER"/>
+            <xsd:enumeration value="LUG"/>
+            <xsd:enumeration value="NESTING_EDGE"/>
+            <xsd:enumeration value="PEG"/>
+            <xsd:enumeration value="PULL_OFF_TAB"/>
+            <xsd:enumeration value="RING_HOLDER"/>
+            <xsd:enumeration value="RIVET"/>
+            <xsd:enumeration value="SLEEVE"/>
+            <xsd:enumeration value="SPOUT"/>
+            <xsd:enumeration value="TAG"/>
+            <xsd:enumeration value="WICKER_OUTER_CONTAINER"/>
+            <xsd:enumeration value="WRAP"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingFunctionCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ANTISEPTIC"/>
+            <xsd:enumeration value="ANTI_TAMPERING"/>
+            <xsd:enumeration value="COATED"/>
+            <xsd:enumeration value="COMPRESSED"/>
+            <xsd:enumeration value="DISPENSER"/>
+            <xsd:enumeration value="GIFT_WRAPPED"/>
+            <xsd:enumeration value="ISOTHERMIC"/>
+            <xsd:enumeration value="MODIFIED_ATMOSPHERE"/>
+            <xsd:enumeration value="OXYGEN_INFUSED"/>
+            <xsd:enumeration value="PEEL_OFF"/>
+            <xsd:enumeration value="PINPACK"/>
+            <xsd:enumeration value="PROTECTED"/>
+            <xsd:enumeration value="REINFORCED"/>
+            <xsd:enumeration value="SIFT_PROOF"/>
+            <xsd:enumeration value="TAMPER_EVIDENT"/>
+            <xsd:enumeration value="WATER_RESISTANT"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingMarkedDietAllergenCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="APPROVED_BY_ASTHMA_AND_ALLERGY_ASSOC"/>
+            <xsd:enumeration value="APPROVED_FOR_TUBE_FEEDING"/>
+            <xsd:enumeration value="BIOLOGICAL"/>
+            <xsd:enumeration value="CALORIES_PER_PORTION"/>
+            <xsd:enumeration value="CONTAINS_LATEX"/>
+            <xsd:enumeration value="CONTAINS_PVC"/>
+            <xsd:enumeration value="CONTAINS_PVC_WITHOUT_PHTHALATES"/>
+            <xsd:enumeration value="CONTAINS_PVC_WITH_PHTHALATES"/>
+            <xsd:enumeration value="DIET_PRODUCT_450_800_KCAL_PER_DAY"/>
+            <xsd:enumeration value="DIET_PRODUCT_800_1200_KCAL_PER_DAY"/>
+            <xsd:enumeration value="GEZONDE_KEUZE_KLAVERTJE"/>
+            <xsd:enumeration value="HALAL"/>
+            <xsd:enumeration value="IK_KIES_BEWUST"/>
+            <xsd:enumeration value="KOSHER"/>
+            <xsd:enumeration value="LACTASE_ENZYME"/>
+            <xsd:enumeration value="LOW_ON_PHENYLALANINE"/>
+            <xsd:enumeration value="LOW_ON_SUGAR"/>
+            <xsd:enumeration value="MOTHERS_MILK_SUBSTITUTE"/>
+            <xsd:enumeration value="NUTRITION_SUPPLEMENT"/>
+            <xsd:enumeration value="NYCKELHAL_MARK"/>
+            <xsd:enumeration value="VEGETARIAN"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingMarkedFreeFromCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="FREE_FROM_ARTIFICIAL_COLOURING"/>
+            <xsd:enumeration value="FREE_FROM_ARTIFICIAL_FLAVOURING"/>
+            <xsd:enumeration value="FREE_FROM_ARTIFICIAL_PRESERVATIVES"/>
+            <xsd:enumeration value="FREE_FROM_CHOLESTEROL"/>
+            <xsd:enumeration value="FREE_FROM_CLONED_FOOD"/>
+            <xsd:enumeration value="FREE_FROM_DAIRY"/>
+            <xsd:enumeration value="FREE_FROM_EGG"/>
+            <xsd:enumeration value="FREE_FROM_FISH"/>
+            <xsd:enumeration value="FREE_FROM_GLUTEN"/>
+            <xsd:enumeration value="FREE_FROM_LACTOSE"/>
+            <xsd:enumeration value="FREE_FROM_LATEX"/>
+            <xsd:enumeration value="FREE_FROM_LEGUME_PROTEIN"/>
+            <xsd:enumeration value="FREE_FROM_MILK"/>
+            <xsd:enumeration value="FREE_FROM_MILK_PROTEIN"/>
+            <xsd:enumeration value="FREE_FROM_NATURAL_GLUTEN"/>
+            <xsd:enumeration value="FREE_FROM_PEANUTS"/>
+            <xsd:enumeration value="FREE_FROM_PROTEIN"/>
+            <xsd:enumeration value="FREE_FROM_PVC"/>
+            <xsd:enumeration value="FREE_FROM_SOYA"/>
+            <xsd:enumeration value="FREE_FROM_SUGAR"/>
+            <xsd:enumeration value="FREE_FROM_TRANSFAT"/>
+            <xsd:enumeration value="REDUCED_LACTOSE"/>
+            <xsd:enumeration value="REDUCED_PROTEIN"/>
+            <xsd:enumeration value="REDUCED_TRANSFAT"/>
+            <xsd:enumeration value="VERY_LOW_GLUTEN"/>
+            <xsd:enumeration value="WITHOUT_ADDED_SALT"/>
+            <xsd:enumeration value="WITHOUT_ADDED_SUGAR"/>
+            <xsd:enumeration value="WITHOUT_ADDED_SWEETENER"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingMarkedLabelAccreditationCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AMA_ORGANIC_SEAL"/>
+            <xsd:enumeration value="AUS_KAUP_ESTONIA"/>
+            <xsd:enumeration value="BDIH_LOGO"/>
+            <xsd:enumeration value="BETER_LEVEN_1_STER"/>
+            <xsd:enumeration value="BETER_LEVEN_2_STER"/>
+            <xsd:enumeration value="BETER_LEVEN_3_STER"/>
+            <xsd:enumeration value="BIO_AUSTRIA_LABEL"/>
+            <xsd:enumeration value="BIO_LABEL_GERMAN"/>
+            <xsd:enumeration value="BIO_SUISSE_BUD_SEAL"/>
+            <xsd:enumeration value="BLUE_ANGEL"/>
+            <xsd:enumeration value="BORD_BIA_APPROVED"/>
+            <xsd:enumeration value="BORD_BIA_APPROVED_MEAT"/>
+            <xsd:enumeration value="BRA_MILJOVAL_LABEL_SWEDISH"/>
+            <xsd:enumeration value="CROSSED_GRAIN_SYMBOL"/>
+            <xsd:enumeration value="DEMETER_LABEL"/>
+            <xsd:enumeration value="ECOCERT_CERTIFICATE"/>
+            <xsd:enumeration value="ECO_LABEL_LADYBUG"/>
+            <xsd:enumeration value="EC_NATIONAL_HEALTH_MARK"/>
+            <xsd:enumeration value="EESTI_OKOMARK"/>
+            <xsd:enumeration value="EESTI_PARIM_TOIDUAINE"/>
+            <xsd:enumeration value="EKO"/>
+            <xsd:enumeration value="EU_ECO_LABEL"/>
+            <xsd:enumeration value="EU_ORGANIC_FARMING"/>
+            <xsd:enumeration value="FAIR_TRADE_MARK"/>
+            <xsd:enumeration value="FALKEN"/>
+            <xsd:enumeration value="FINNISH_HEART_SYMBOL"/>
+            <xsd:enumeration value="FOREST_STEWARDSHIP_COUNCIL_LABEL"/>
+            <xsd:enumeration value="GMO_MARKED"/>
+            <xsd:enumeration value="GOODS_FROM_FINLAND_BLUE_SWAN"/>
+            <xsd:enumeration value="GREEN_DOT"/>
+            <xsd:enumeration value="GREEN_RESTAURANT_ASSOCIATION_ENDORSED"/>
+            <xsd:enumeration value="GREEN_SEAL_CERTIFIED"/>
+            <xsd:enumeration value="GUARANTEED_IRISH"/>
+            <xsd:enumeration value="KRAV_MARK"/>
+            <xsd:enumeration value="LABEL_OF_THE_ALLERGY_AND_ASTHMA_FEDERATION"/>
+            <xsd:enumeration value="LEAPING_BUNNY"/>
+            <xsd:enumeration value="LOODUSSOBRALIK_TOODE_ESTONIA"/>
+            <xsd:enumeration value="LOVE_IRISH_FOOD"/>
+            <xsd:enumeration value="MADE_IN_FINLAND_FLAG_WITH_KEY"/>
+            <xsd:enumeration value="MARINE_STEWARDSHIP_COUNCIL_LABEL"/>
+            <xsd:enumeration value="MAX_HAVELAAR"/>
+            <xsd:enumeration value="NATRUE_LABEL"/>
+            <xsd:enumeration value="NYCKELHALET"/>
+            <xsd:enumeration value="OEKO_TEX_LABEL"/>
+            <xsd:enumeration value="OFFICIAL_ECO_LABEL_SUN"/>
+            <xsd:enumeration value="PEFC"/>
+            <xsd:enumeration value="PROTECTED_DESIGNATION_OF_ORIGIN"/>
+            <xsd:enumeration value="PROTECTED_GEOGRAPHICAL_INDICATION"/>
+            <xsd:enumeration value="PROTECTED_HARVEST_CERTIFIED"/>
+            <xsd:enumeration value="QUALITY_MARK_IRELAND"/>
+            <xsd:enumeration value="RAINFOREST_ALLIANCE"/>
+            <xsd:enumeration value="SCHARRELVLEES"/>
+            <xsd:enumeration value="SOIL_ASSOCIATION_ORGANIC_SYMBOL"/>
+            <xsd:enumeration value="SUSTAINABLE_PALM_OIL_RSPO"/>
+            <xsd:enumeration value="SVANEN"/>
+            <xsd:enumeration value="SWEDISH_SEAL_OF_QUALITY"/>
+            <xsd:enumeration value="TRADITIONAL_SPECIALTY_GUARANTEED"/>
+            <xsd:enumeration value="TUNNUSTATUD_EESTI_MAITSE"/>
+            <xsd:enumeration value="TUNNUSTATUD_MAITSE"/>
+            <xsd:enumeration value="UNIQUELY_FINNISH"/>
+            <xsd:enumeration value="USDA"/>
+            <xsd:enumeration value="UTZ_CERTIFIED"/>
+            <xsd:enumeration value="VAELG_FULDKORN_FORST"/>
+            <xsd:enumeration value="WWF_PANDA_LABEL"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingMaterialTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BAMBOO"/>
+            <xsd:enumeration value="CELLULOSE_HYDRATE"/>
+            <xsd:enumeration value="CERAMIC"/>
+            <xsd:enumeration value="CLOTH_OR_FABRIC"/>
+            <xsd:enumeration value="COMPOSITE"/>
+            <xsd:enumeration value="CORK_NATURAL"/>
+            <xsd:enumeration value="CORRUGATED_BOARD_DOUBLE_WALL"/>
+            <xsd:enumeration value="CORRUGATED_BOARD_OTHER"/>
+            <xsd:enumeration value="CORRUGATED_BOARD_SINGLE_WALL"/>
+            <xsd:enumeration value="CORRUGATED_BOARD_TRIPLE_WALL"/>
+            <xsd:enumeration value="FIBRE_BURLAP"/>
+            <xsd:enumeration value="FIBRE_COTTON"/>
+            <xsd:enumeration value="FIBRE_FLAX"/>
+            <xsd:enumeration value="FIBRE_HEMP"/>
+            <xsd:enumeration value="FIBRE_JUTE"/>
+            <xsd:enumeration value="FIBRE_OTHER"/>
+            <xsd:enumeration value="FOAM"/>
+            <xsd:enumeration value="GLASS"/>
+            <xsd:enumeration value="GLASS_BOROSILICATE"/>
+            <xsd:enumeration value="GLASS_COLOURED"/>
+            <xsd:enumeration value="GLASS_CRYSTAL"/>
+            <xsd:enumeration value="LAMINATED_CARTON"/>
+            <xsd:enumeration value="METAL_ALUMINUM"/>
+            <xsd:enumeration value="METAL_BRASS"/>
+            <xsd:enumeration value="METAL_COMPOSITE"/>
+            <xsd:enumeration value="METAL_IRON"/>
+            <xsd:enumeration value="METAL_LEAD"/>
+            <xsd:enumeration value="METAL_OTHER"/>
+            <xsd:enumeration value="METAL_STAINLESS_STEEL"/>
+            <xsd:enumeration value="METAL_STEEL"/>
+            <xsd:enumeration value="METAL_TIN"/>
+            <xsd:enumeration value="METAL_ZAMAC"/>
+            <xsd:enumeration value="MINERAL_CALCIUM_CARBONATE"/>
+            <xsd:enumeration value="MINERAL_OTHER"/>
+            <xsd:enumeration value="MINERAL_TALC"/>
+            <xsd:enumeration value="NATURAL_RUBBER"/>
+            <xsd:enumeration value="OTHER"/>
+            <xsd:enumeration value="PAPER_CORRUGATED"/>
+            <xsd:enumeration value="PAPER_KRAFT"/>
+            <xsd:enumeration value="PAPER_KRAFT_WET_STRENGTH"/>
+            <xsd:enumeration value="PAPER_MOLDED_PULP"/>
+            <xsd:enumeration value="PAPER_OTHER"/>
+            <xsd:enumeration value="PAPER_PAPER"/>
+            <xsd:enumeration value="PAPER_PAPERBOARD"/>
+            <xsd:enumeration value="PAPER_RAYON"/>
+            <xsd:enumeration value="PLANT_LEAVES"/>
+            <xsd:enumeration value="PLASTIC_BIOPLASTIC"/>
+            <xsd:enumeration value="PLASTIC_OTHER"/>
+            <xsd:enumeration value="PLASTIC_THERMOPLASTICS"/>
+            <xsd:enumeration value="POLYMER_APET"/>
+            <xsd:enumeration value="POLYMER_BOPP"/>
+            <xsd:enumeration value="POLYMER_CELLULOSE_ACETATE"/>
+            <xsd:enumeration value="POLYMER_CPET"/>
+            <xsd:enumeration value="POLYMER_EPE"/>
+            <xsd:enumeration value="POLYMER_EPOXY"/>
+            <xsd:enumeration value="POLYMER_EPS"/>
+            <xsd:enumeration value="POLYMER_EVA"/>
+            <xsd:enumeration value="POLYMER_EVOH"/>
+            <xsd:enumeration value="POLYMER_HDPE"/>
+            <xsd:enumeration value="POLYMER_IONOMER"/>
+            <xsd:enumeration value="POLYMER_LDPE"/>
+            <xsd:enumeration value="POLYMER_LLDPE"/>
+            <xsd:enumeration value="POLYMER_MDPE"/>
+            <xsd:enumeration value="POLYMER_MIX"/>
+            <xsd:enumeration value="POLYMER_NYLON"/>
+            <xsd:enumeration value="POLYMER_OPP"/>
+            <xsd:enumeration value="POLYMER_OTHER"/>
+            <xsd:enumeration value="POLYMER_PA"/>
+            <xsd:enumeration value="POLYMER_PAN"/>
+            <xsd:enumeration value="POLYMER_PC"/>
+            <xsd:enumeration value="POLYMER_PCL"/>
+            <xsd:enumeration value="POLYMER_PE"/>
+            <xsd:enumeration value="POLYMER_PEN"/>
+            <xsd:enumeration value="POLYMER_PET"/>
+            <xsd:enumeration value="POLYMER_PETG"/>
+            <xsd:enumeration value="POLYMER_PHA"/>
+            <xsd:enumeration value="POLYMER_PLA"/>
+            <xsd:enumeration value="POLYMER_PMMA"/>
+            <xsd:enumeration value="POLYMER_POM"/>
+            <xsd:enumeration value="POLYMER_PP"/>
+            <xsd:enumeration value="POLYMER_PS"/>
+            <xsd:enumeration value="POLYMER_PU"/>
+            <xsd:enumeration value="POLYMER_PVA"/>
+            <xsd:enumeration value="POLYMER_PVC"/>
+            <xsd:enumeration value="POLYMER_PVDC"/>
+            <xsd:enumeration value="POLYMER_SAN"/>
+            <xsd:enumeration value="POLYMER_SILICONE"/>
+            <xsd:enumeration value="POLYMER_TPS"/>
+            <xsd:enumeration value="POLYMER_XPS"/>
+            <xsd:enumeration value="RUBBER"/>
+            <xsd:enumeration value="VINYL"/>
+            <xsd:enumeration value="WOOD_HARDBOARD"/>
+            <xsd:enumeration value="WOOD_HARDWOOD"/>
+            <xsd:enumeration value="WOOD_MEDIUM_DENSITY_FIBREBOARD"/>
+            <xsd:enumeration value="WOOD_ORIENTED_STRANDBOARD"/>
+            <xsd:enumeration value="WOOD_OTHER"/>
+            <xsd:enumeration value="WOOD_PARTICLE_BOARD"/>
+            <xsd:enumeration value="WOOD_PLYWOOD"/>
+            <xsd:enumeration value="WOOD_SOFTWOOD"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingRecyclingProcessTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="COMPOSTABLE"/>
+            <xsd:enumeration value="ENERGY_RECOVERABLE"/>
+            <xsd:enumeration value="RECYCLABLE"/>
+            <xsd:enumeration value="REUSABLE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingRecyclingSchemeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ALKO"/>
+            <xsd:enumeration value="A_PULLO"/>
+            <xsd:enumeration value="EKO_PULLO"/>
+            <xsd:enumeration value="PALPA"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PackagingShapeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BAR"/>
+            <xsd:enumeration value="COIL"/>
+            <xsd:enumeration value="CONE"/>
+            <xsd:enumeration value="CYLINDRICAL"/>
+            <xsd:enumeration value="POLYGON"/>
+            <xsd:enumeration value="RECTANGULAR"/>
+            <xsd:enumeration value="SPHERICAL"/>
+            <xsd:enumeration value="TABLET"/>
+            <xsd:enumeration value="UNSPECIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PaymentMethod">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BANKERS_DRAFT"/>
+            <xsd:enumeration value="BANK_CHEQUE"/>
+            <xsd:enumeration value="BANK_GIRO"/>
+            <xsd:enumeration value="BOOKENTRY_CREDIT"/>
+            <xsd:enumeration value="BOOKENTRY_DEBIT"/>
+            <xsd:enumeration value="BOP"/>
+            <xsd:enumeration value="CASH"/>
+            <xsd:enumeration value="CERTIFIED_CHEQUE"/>
+            <xsd:enumeration value="CHEQUE"/>
+            <xsd:enumeration value="CREDIT_CARD"/>
+            <xsd:enumeration value="CREDIT_CARD_AMEX"/>
+            <xsd:enumeration value="CREDIT_CARD_DINERS_CLUB"/>
+            <xsd:enumeration value="CREDIT_CARD_DISCOVER"/>
+            <xsd:enumeration value="CREDIT_CARD_MASTERCARD"/>
+            <xsd:enumeration value="CREDIT_CARD_VISA"/>
+            <xsd:enumeration value="DEBIT_CARD"/>
+            <xsd:enumeration value="DEBIT_CARD_MAESTRO"/>
+            <xsd:enumeration value="DEBIT_CARD_MASTERCARD"/>
+            <xsd:enumeration value="DEBIT_CARD_VISA"/>
+            <xsd:enumeration value="DEBIT_CARD_VISA_ELECTRON"/>
+            <xsd:enumeration value="ELECTRONIC_CREDIT_ACH"/>
+            <xsd:enumeration value="ELECTRONIC_DEBIT_ACH"/>
+            <xsd:enumeration value="FED_WIRE_NON_REPETITIVE"/>
+            <xsd:enumeration value="FED_WIRE_REPETITIVE"/>
+            <xsd:enumeration value="INTERNATIONAL_WIRE"/>
+            <xsd:enumeration value="LETTER_OF_CREDIT"/>
+            <xsd:enumeration value="ONLINE_PAYMENT"/>
+            <xsd:enumeration value="ONLINE_PAYMENT_APPLE_PAY"/>
+            <xsd:enumeration value="ONLINE_PAYMENT_GOOGLE_WALLET"/>
+            <xsd:enumeration value="ONLINE_PAYMENT_PAYPAL"/>
+            <xsd:enumeration value="POSTGIRO"/>
+            <xsd:enumeration value="WIRE_TRANSFER_CREDIT"/>
+            <xsd:enumeration value="WIRE_TRANSFER_DEBIT"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PreparationTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AS_DRAINED"/>
+            <xsd:enumeration value="BAKE"/>
+            <xsd:enumeration value="BARBECUE"/>
+            <xsd:enumeration value="BLANCH"/>
+            <xsd:enumeration value="BLIND_BAKE"/>
+            <xsd:enumeration value="BOIL"/>
+            <xsd:enumeration value="BRAISE"/>
+            <xsd:enumeration value="BROIL"/>
+            <xsd:enumeration value="DEEP_FRY"/>
+            <xsd:enumeration value="DOUBLE_STEAM"/>
+            <xsd:enumeration value="FREEZE"/>
+            <xsd:enumeration value="FRY"/>
+            <xsd:enumeration value="GRIDDLE_FRY"/>
+            <xsd:enumeration value="GRILL"/>
+            <xsd:enumeration value="HEAT_AND_SERVE"/>
+            <xsd:enumeration value="MICROWAVE"/>
+            <xsd:enumeration value="PAN_FRY"/>
+            <xsd:enumeration value="POACH"/>
+            <xsd:enumeration value="PREPARED"/>
+            <xsd:enumeration value="PRESSURE_COOK"/>
+            <xsd:enumeration value="PRESSURE_FRY"/>
+            <xsd:enumeration value="READY_TO_DRINK"/>
+            <xsd:enumeration value="READY_TO_EAT"/>
+            <xsd:enumeration value="RECONSTITUTE"/>
+            <xsd:enumeration value="REFRIGERATE"/>
+            <xsd:enumeration value="ROAST"/>
+            <xsd:enumeration value="ROTISSERIE"/>
+            <xsd:enumeration value="SAUTE"/>
+            <xsd:enumeration value="SEAR"/>
+            <xsd:enumeration value="SIMMER"/>
+            <xsd:enumeration value="SMOKE"/>
+            <xsd:enumeration value="STEAM"/>
+            <xsd:enumeration value="STEW"/>
+            <xsd:enumeration value="STIR_FRY"/>
+            <xsd:enumeration value="THAW"/>
+            <xsd:enumeration value="UNPREPARED"/>
+            <xsd:enumeration value="UNSPECIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="PreservationTechniqueCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ACIDIFICATION"/>
+            <xsd:enumeration value="ALCOHOL_CURING"/>
+            <xsd:enumeration value="ATTESTED_MILK"/>
+            <xsd:enumeration value="BOILING"/>
+            <xsd:enumeration value="BRINING"/>
+            <xsd:enumeration value="CANNING"/>
+            <xsd:enumeration value="COLD_SMOKE_CURING"/>
+            <xsd:enumeration value="CONSERVE"/>
+            <xsd:enumeration value="DEHYDRATION"/>
+            <xsd:enumeration value="DRYING"/>
+            <xsd:enumeration value="FERMENTATION"/>
+            <xsd:enumeration value="FREEZE_DRYING"/>
+            <xsd:enumeration value="FREEZING"/>
+            <xsd:enumeration value="HIGH_TEMPERATURE_TREATED_MILK"/>
+            <xsd:enumeration value="HOT_SMOKE_CURING"/>
+            <xsd:enumeration value="IONISATION"/>
+            <xsd:enumeration value="IRRADIATION"/>
+            <xsd:enumeration value="PASTEURISATION"/>
+            <xsd:enumeration value="QUICK_FREEZING"/>
+            <xsd:enumeration value="SALT_CURING"/>
+            <xsd:enumeration value="SOUS_VIDE"/>
+            <xsd:enumeration value="STERILISATION"/>
+            <xsd:enumeration value="SUGAR_CURING"/>
+            <xsd:enumeration value="ULTRA_HIGH_TEMPERATURE"/>
+            <xsd:enumeration value="UNDER_MODIFIED_ATMOSPHERE"/>
+            <xsd:enumeration value="VACUUM_PACKED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ProductYieldTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AFTER_COOKING"/>
+            <xsd:enumeration value="AFTER_DILUTION"/>
+            <xsd:enumeration value="DRAINED_WEIGHT"/>
+            <xsd:enumeration value="UNSPECIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ReferencedFileTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="360_DEGREE_IMAGE"/>
+            <xsd:enumeration value="AMBIENCE_MOOD_IMAGE"/>
+            <xsd:enumeration value="APPLICATION_IMAGE"/>
+            <xsd:enumeration value="ASSEMBLY_INSTRUCTIONS"/>
+            <xsd:enumeration value="AUDIO"/>
+            <xsd:enumeration value="AWARD_CERTIFICATE"/>
+            <xsd:enumeration value="BARCODE"/>
+            <xsd:enumeration value="CERTIFICATION"/>
+            <xsd:enumeration value="CHEMICAL_ASSESSMENT_SUMMARY"/>
+            <xsd:enumeration value="CHEMICAL_SAFETY_REPORT"/>
+            <xsd:enumeration value="CHILD_NUTRITION_LABEL"/>
+            <xsd:enumeration value="CLEANING_DISINFECTION_STERILISATION_INSTRUCTIONS"/>
+            <xsd:enumeration value="CLINICIAN_MEDICINE_INFORMATION"/>
+            <xsd:enumeration value="CONSUMER_HANDLING_AND_STORAGE"/>
+            <xsd:enumeration value="CONTENT_TEXTURE_IMAGE"/>
+            <xsd:enumeration value="CROSSSECTION_VIEW"/>
+            <xsd:enumeration value="DECLARATION_OF_CONFORMITY"/>
+            <xsd:enumeration value="DIET_CERTIFICATE"/>
+            <xsd:enumeration value="DISPOSAL_INSTRUCTIONS"/>
+            <xsd:enumeration value="DOCUMENT"/>
+            <xsd:enumeration value="DOP_SHEET"/>
+            <xsd:enumeration value="DRUG_FACT_LABEL"/>
+            <xsd:enumeration value="ECOLOGICAL_FACT_SHEET"/>
+            <xsd:enumeration value="ENERGY_LABEL"/>
+            <xsd:enumeration value="FOOD_CONTACT_CONFORMITY_CERTIFICATE"/>
+            <xsd:enumeration value="GROUP_CHARACTERISTIC_SHEET"/>
+            <xsd:enumeration value="HAZARDOUS_SUBSTANCES_DATA"/>
+            <xsd:enumeration value="IFU"/>
+            <xsd:enumeration value="IFU_INCLUDING_CLEANING_DISINFECTION_STERILISATION_INSTRUCTIONS"/>
+            <xsd:enumeration value="INGREDIENTS_LABEL"/>
+            <xsd:enumeration value="INTERNAL_VIEW"/>
+            <xsd:enumeration value="LIGHTING_FACT_LABEL"/>
+            <xsd:enumeration value="LOGO"/>
+            <xsd:enumeration value="MARKETING_INFORMATION"/>
+            <xsd:enumeration value="MATERIAL_SAMPLES"/>
+            <xsd:enumeration value="MOBILE_DEVICE_IMAGE"/>
+            <xsd:enumeration value="MOBILE_READY_HERO_IMAGE"/>
+            <xsd:enumeration value="MONTAGE_IMAGE"/>
+            <xsd:enumeration value="NUTRITION_FACT_LABEL"/>
+            <xsd:enumeration value="NUTRITION_FACT_LABEL_WITH_INGREDIENTS"/>
+            <xsd:enumeration value="OPTIMISED_HERO_IMAGE"/>
+            <xsd:enumeration value="ORGANIC_CERTIFICATE"/>
+            <xsd:enumeration value="OTHER_EXTERNAL_INFORMATION"/>
+            <xsd:enumeration value="OUT_OF_PACKAGE_IMAGE"/>
+            <xsd:enumeration value="PACKAGING_ARTWORK"/>
+            <xsd:enumeration value="PATIENT_INFORMATION_LEAFLET"/>
+            <xsd:enumeration value="PETFOOD_FEEDING_INSTRUCTIONS"/>
+            <xsd:enumeration value="PLANOGRAM"/>
+            <xsd:enumeration value="PREPARATION_INSTRUCTIONS"/>
+            <xsd:enumeration value="PRODUCT_FORMULATION_STATEMENT"/>
+            <xsd:enumeration value="PRODUCT_IMAGE"/>
+            <xsd:enumeration value="PRODUCT_IMAGE_FORMED"/>
+            <xsd:enumeration value="PRODUCT_LABEL_IMAGE"/>
+            <xsd:enumeration value="PRODUCT_WEBSITE"/>
+            <xsd:enumeration value="QR_CODE"/>
+            <xsd:enumeration value="QUALITY_CONTROL_PLAN"/>
+            <xsd:enumeration value="RECIPE_WEBSITE"/>
+            <xsd:enumeration value="RECYCLABILITY_ASSESSMENT_CERTIFICATE"/>
+            <xsd:enumeration value="REGULATORY_INSPECTION_AUDIT"/>
+            <xsd:enumeration value="RISK_ANALYSIS_DOCUMENT"/>
+            <xsd:enumeration value="SAFETY_DATA_SHEET"/>
+            <xsd:enumeration value="SAFETY_SUMMARY_SHEET"/>
+            <xsd:enumeration value="SAMPLE_SHIPPING_ORDER"/>
+            <xsd:enumeration value="SIDEKICK_IMAGE"/>
+            <xsd:enumeration value="SOCIAL_MEDIA_IMAGE"/>
+            <xsd:enumeration value="SUMMARY_OF_PRODUCT_CHARACTERISTICS"/>
+            <xsd:enumeration value="SUPPLEMENT_FACT_LABEL"/>
+            <xsd:enumeration value="TECHNICAL_DATA_SHEET"/>
+            <xsd:enumeration value="TECHNICAL_DRAWING"/>
+            <xsd:enumeration value="TESTING_METHODOLOGY_RESULTS"/>
+            <xsd:enumeration value="TRADE_ITEM_DESCRIPTION"/>
+            <xsd:enumeration value="TRADE_ITEM_IMAGE_WITH_DIMENSIONS"/>
+            <xsd:enumeration value="VIDEO"/>
+            <xsd:enumeration value="VISUAL_VERIFICATION_IMAGE"/>
+            <xsd:enumeration value="WARRANTY_INFORMATION"/>
+            <xsd:enumeration value="WEBSITE"/>
+            <xsd:enumeration value="ZOOM_VIEW"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SeasonParameterCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ALL_YEAR"/>
+            <xsd:enumeration value="AUTUMN"/>
+            <xsd:enumeration value="AUTUMN_WINTER"/>
+            <xsd:enumeration value="SPRING"/>
+            <xsd:enumeration value="SPRING_SUMMER"/>
+            <xsd:enumeration value="SUMMER"/>
+            <xsd:enumeration value="WINTER"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SecurityMarking">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="HOLOGRAM"/>
+            <xsd:enumeration value="MICROPRINTING"/>
+            <xsd:enumeration value="UVINK"/>
+            <xsd:enumeration value="WATERMARK"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SensorAlertType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ALARM_CONDITION"/>
+            <xsd:enumeration value="ERROR_CONDITION"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SharpnessOfCheeseCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="EXTRA_EXTRA_SHARP"/>
+            <xsd:enumeration value="EXTRA_SHARP"/>
+            <xsd:enumeration value="MILD"/>
+            <xsd:enumeration value="REGULAR"/>
+            <xsd:enumeration value="SHARP"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SizeGroupCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BOYS"/>
+            <xsd:enumeration value="GIRLS"/>
+            <xsd:enumeration value="INFANTS"/>
+            <xsd:enumeration value="JUNIORS"/>
+            <xsd:enumeration value="MATERNITY"/>
+            <xsd:enumeration value="MENS"/>
+            <xsd:enumeration value="MENS_TALL"/>
+            <xsd:enumeration value="MISSES"/>
+            <xsd:enumeration value="PETITE"/>
+            <xsd:enumeration value="WOMENS"/>
+            <xsd:enumeration value="WOMENS_TALL"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SizeSystemCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AUSTRALIA"/>
+            <xsd:enumeration value="CONTINENTAL"/>
+            <xsd:enumeration value="EUROPE"/>
+            <xsd:enumeration value="JAPAN"/>
+            <xsd:enumeration value="MEXICO"/>
+            <xsd:enumeration value="UK"/>
+            <xsd:enumeration value="US"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SizeTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="BACK"/>
+            <xsd:enumeration value="CHEST_BUST"/>
+            <xsd:enumeration value="COLLAR"/>
+            <xsd:enumeration value="CUP"/>
+            <xsd:enumeration value="HIPS"/>
+            <xsd:enumeration value="INSEAM"/>
+            <xsd:enumeration value="LENGTH"/>
+            <xsd:enumeration value="ONE_DIMENSION"/>
+            <xsd:enumeration value="OUTSIDE_LEG"/>
+            <xsd:enumeration value="SLEEVE"/>
+            <xsd:enumeration value="WAIST"/>
+            <xsd:enumeration value="WIDTH"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SourceAnimalCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ALLIGATOR"/>
+            <xsd:enumeration value="ASS"/>
+            <xsd:enumeration value="BEAR"/>
+            <xsd:enumeration value="BEEF_COW"/>
+            <xsd:enumeration value="BOAR"/>
+            <xsd:enumeration value="BUFFALO"/>
+            <xsd:enumeration value="CALF"/>
+            <xsd:enumeration value="CAMEL"/>
+            <xsd:enumeration value="CHICKEN"/>
+            <xsd:enumeration value="COCKEREL"/>
+            <xsd:enumeration value="COW"/>
+            <xsd:enumeration value="CROCODILE"/>
+            <xsd:enumeration value="DEER"/>
+            <xsd:enumeration value="DOG"/>
+            <xsd:enumeration value="DUCK"/>
+            <xsd:enumeration value="DUCKLING"/>
+            <xsd:enumeration value="FISH"/>
+            <xsd:enumeration value="FOWL"/>
+            <xsd:enumeration value="FROG"/>
+            <xsd:enumeration value="GOAT"/>
+            <xsd:enumeration value="GOOSE"/>
+            <xsd:enumeration value="GROUSE"/>
+            <xsd:enumeration value="GUINEAFOWL"/>
+            <xsd:enumeration value="HARE"/>
+            <xsd:enumeration value="HORSE"/>
+            <xsd:enumeration value="INVERTEBRATE"/>
+            <xsd:enumeration value="LAMB"/>
+            <xsd:enumeration value="LAND_SNAIL"/>
+            <xsd:enumeration value="MILK_COW"/>
+            <xsd:enumeration value="MOOSE"/>
+            <xsd:enumeration value="OSTRICH"/>
+            <xsd:enumeration value="OTHER"/>
+            <xsd:enumeration value="PARTRIDGE"/>
+            <xsd:enumeration value="PHEASANT"/>
+            <xsd:enumeration value="PIGEON"/>
+            <xsd:enumeration value="PORK"/>
+            <xsd:enumeration value="POUSSIN"/>
+            <xsd:enumeration value="QUAIL"/>
+            <xsd:enumeration value="RABBIT"/>
+            <xsd:enumeration value="RAT"/>
+            <xsd:enumeration value="REINDEER"/>
+            <xsd:enumeration value="ROE_DEER"/>
+            <xsd:enumeration value="SHEEP"/>
+            <xsd:enumeration value="SHELLFISH"/>
+            <xsd:enumeration value="SNAKE"/>
+            <xsd:enumeration value="SNIPE"/>
+            <xsd:enumeration value="SPARROW"/>
+            <xsd:enumeration value="THRUSH"/>
+            <xsd:enumeration value="TURKEY"/>
+            <xsd:enumeration value="TURTLE"/>
+            <xsd:enumeration value="WOODCOCK"/>
+            <xsd:enumeration value="YAK"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SportingActivityTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="AMERICAN_FOOTBALL"/>
+            <xsd:enumeration value="ARCHERY"/>
+            <xsd:enumeration value="BADMINTON"/>
+            <xsd:enumeration value="BASEBALL"/>
+            <xsd:enumeration value="BASKETBALL"/>
+            <xsd:enumeration value="BOXING"/>
+            <xsd:enumeration value="CLIMBING"/>
+            <xsd:enumeration value="CRICKET"/>
+            <xsd:enumeration value="CYCLING"/>
+            <xsd:enumeration value="DIVING"/>
+            <xsd:enumeration value="EQUESTRIAN"/>
+            <xsd:enumeration value="FENCING"/>
+            <xsd:enumeration value="FISHING"/>
+            <xsd:enumeration value="FOOTBALL"/>
+            <xsd:enumeration value="GOLF"/>
+            <xsd:enumeration value="GYMNASTICS"/>
+            <xsd:enumeration value="HOCKEY"/>
+            <xsd:enumeration value="ICE_HOCKEY"/>
+            <xsd:enumeration value="ICE_SKATING"/>
+            <xsd:enumeration value="MOTOR_CYCLING"/>
+            <xsd:enumeration value="RUGBY"/>
+            <xsd:enumeration value="RUNNING"/>
+            <xsd:enumeration value="SKIING"/>
+            <xsd:enumeration value="SQUASH"/>
+            <xsd:enumeration value="SURFING"/>
+            <xsd:enumeration value="SWIMMING"/>
+            <xsd:enumeration value="TENNIS"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+            <xsd:enumeration value="UNIDENTIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="StatusType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="ACTIVE"/>
+            <xsd:enumeration value="INACTIVE"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TargetConsumerGenderCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="FEMALE"/>
+            <xsd:enumeration value="MALE"/>
+            <xsd:enumeration value="UNISEX"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="TradeChannelCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="INSTORE_ONLY"/>
+            <xsd:enumeration value="OMNICHANNEL"/>
+            <xsd:enumeration value="ONLINE_ONLY"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="UpperTypeCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CLOSED_TOE_CLOSED_BACK_OPEN_INSTEP"/>
+            <xsd:enumeration value="CLOSED_TOE_OPEN_BACK"/>
+            <xsd:enumeration value="CLOSED_TOE_STRAP_BACK"/>
+            <xsd:enumeration value="FULLY_CLOSED"/>
+            <xsd:enumeration value="OPEN_TOE_FULLY_CLOSED_BACK"/>
+            <xsd:enumeration value="OPEN_TOE_OPEN_BACK"/>
+            <xsd:enumeration value="OPEN_TOE_STRAP_BACK"/>
+            <xsd:enumeration value="UNCLASSIFIED"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="activityIdeas" type="xsd:anyURI"/>
+    <xsd:element name="allergenInfo" type="xsd:anyURI"/>
+    <xsd:element name="appDownload" type="xsd:anyURI"/>
+    <xsd:element name="brandHomepageClinical" type="xsd:anyURI"/>
+    <xsd:element name="brandHomepagePatient" type="xsd:anyURI"/>
+    <xsd:element name="careersInfo" type="xsd:anyURI"/>
+    <xsd:element name="certificationInfo" type="xsd:anyURI"/>
+    <xsd:element name="consumerHandlingStorageInfo" type="xsd:anyURI"/>
+    <xsd:element name="defaultLink" type="xsd:anyURI"/>
+    <xsd:element name="defaultLinkMulti" type="xsd:anyURI"/>
+    <xsd:element name="epcis" type="xsd:anyURI"/>
+    <xsd:element name="epil" type="xsd:anyURI"/>
+    <xsd:element name="eventsInfo" type="xsd:anyURI"/>
+    <xsd:element name="faqs" type="xsd:anyURI"/>
+    <xsd:element name="handledBy" type="xsd:anyURI"/>
+    <xsd:element name="hasRetailers" type="xsd:anyURI"/>
+    <xsd:element name="homepage" type="xsd:anyURI"/>
+    <xsd:element name="ingredientsInfo" type="xsd:anyURI"/>
+    <xsd:element name="instructions" type="xsd:anyURI"/>
+    <xsd:element name="jws" type="xsd:anyURI"/>
+    <xsd:element name="leaveReview" type="xsd:anyURI"/>
+    <xsd:element name="locationInfo" type="xsd:anyURI"/>
+    <xsd:element name="logisticsInfo" type="xsd:anyURI"/>
+    <xsd:element name="loyaltyProgram" type="xsd:anyURI"/>
+    <xsd:element name="masterData" type="xsd:anyURI"/>
+    <xsd:element name="menuInfo" type="xsd:anyURI"/>
+    <xsd:element name="nutritionalInfo" type="xsd:anyURI"/>
+    <xsd:element name="openingHoursInfo" type="xsd:anyURI"/>
+    <xsd:element name="paymentLink" type="xsd:anyURI"/>
+    <xsd:element name="pip" type="xsd:anyURI"/>
+    <xsd:element name="productSustainabilityInfo" type="xsd:anyURI"/>
+    <xsd:element name="promotion" type="xsd:anyURI"/>
+    <xsd:element name="purchaseSuppliesOrAccessories" type="xsd:anyURI"/>
+    <xsd:element name="quickStartGuide" type="xsd:anyURI"/>
+    <xsd:element name="recallStatus" type="xsd:anyURI"/>
+    <xsd:element name="recipeInfo" type="xsd:anyURI"/>
+    <xsd:element name="registerProduct" type="xsd:anyURI"/>
+    <xsd:element name="registryEntry" type="xsd:anyURI"/>
+    <xsd:element name="relatedImage" type="xsd:anyURI"/>
+    <xsd:element name="relatedVideo" type="xsd:anyURI"/>
+    <xsd:element name="review" type="xsd:anyURI"/>
+    <xsd:element name="safetyInfo" type="xsd:anyURI"/>
+    <xsd:element name="scheduleTime" type="xsd:anyURI"/>
+    <xsd:element name="serviceInfo" type="xsd:anyURI"/>
+    <xsd:element name="smartLabel" type="xsd:anyURI"/>
+    <xsd:element name="smpc" type="xsd:anyURI"/>
+    <xsd:element name="socialMedia" type="xsd:anyURI"/>
+    <xsd:element name="statisticInfo" type="xsd:anyURI"/>
+    <xsd:element name="subscribe" type="xsd:anyURI"/>
+    <xsd:element name="support" type="xsd:anyURI"/>
+    <xsd:element name="sustainabilityInfo" type="xsd:anyURI"/>
+    <xsd:element name="traceability" type="xsd:anyURI"/>
+    <xsd:element name="tutorial" type="xsd:anyURI"/>
+    <xsd:element name="userAgreement" type="xsd:anyURI"/>
+    <xsd:element name="verificationService" type="xsd:anyURI"/>
+    <xsd:element name="whatsInTheBox" type="xsd:anyURI"/>
+</xsd:schema>

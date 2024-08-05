@@ -365,17 +365,9 @@ public class WebVocabularyParser {
 
         if (uri == null && allUnionClasses.containsKey(resource)) {
             return allUnionClasses.get(resource).stream()
-                    .map(r -> {
-                        final String nsPrefix = model.getNsURIPrefix(r.getNameSpace());
-                        return nsPrefix != null ? nsPrefix + ":" + r.getLocalName() : r.getLocalName();
-                    }).toList();
+                    .map(r -> r.getLocalName()).toList();
         }
 
-
-        final String prefix = model.getNsURIPrefix(resource.getNameSpace());
-        if (prefix != null) {
-            return prefix + ":" + resource.getLocalName();
-        }
         return resource.getLocalName() != null ? resource.getLocalName() : uri;
     }
 
@@ -423,8 +415,7 @@ public class WebVocabularyParser {
             final Resource domain = domainStatement.getResource();
             final String domainName = domain.getLocalName();
             if (domainName != null) {
-                final String nsPrefix = model.getNsURIPrefix(property.getNameSpace());
-                return nsPrefix + ":" + domainName;
+                return domainName;
             }
         }
         return "";
