@@ -20,3 +20,11 @@ webVocabularyParser.parseJsonLdData(jsonLdURL);
 ```
 
 Based on the provided contents initially a relationship will be established amount the various RDF tuples and then using these relationships XSD will be generated and stored onto the file.
+
+### Generate Java sources from XSD
+
+For generating the Java classes from XSD file run the following command:
+
+```java
+mvn generate-sources
+```
