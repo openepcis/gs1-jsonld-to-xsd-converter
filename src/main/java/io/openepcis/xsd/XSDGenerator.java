@@ -40,8 +40,8 @@ public class XSDGenerator {
         relationDefinition.getNamespaces().entrySet().stream().forEach(entry -> {
             // Remove the '#' character from the value if it is present in the XMLSchema namespace
             String namespaceUri = entry.getValue();
-            if ("xsd".equals(entry.getKey()) && "http://www.w3.org/2001/XMLSchema#".equals(namespaceUri)) {
-                namespaceUri = "http://www.w3.org/2001/XMLSchema";
+            if(namespaceUri.endsWith("/") || namespaceUri.endsWith("#")){
+                namespaceUri = namespaceUri.substring(0, namespaceUri.length() -1);
             }
             schemaRoot.setAttribute("xmlns:" + entry.getKey(), namespaceUri);
         });
