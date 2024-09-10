@@ -9,7 +9,7 @@ import java.util.Map;
 @Getter
 @Setter
 public class RelationDefinition {
-    private Map<String, List<PropertyDefinition>> classes;
+    private Map<String, ClassDefinition> classes;
     private Map<String, List<PropertyDefinition>> typeCodes;
     private List<LinkTypeDefinition> linkTypes;
     private Map<String, String> namespaces;

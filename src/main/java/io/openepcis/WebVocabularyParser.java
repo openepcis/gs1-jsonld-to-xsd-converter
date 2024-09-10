@@ -23,6 +23,7 @@ import java.util.*;
 
 import static io.openepcis.constant.Constants.*;
 
+@SuppressWarnings("unchecked")
 public class WebVocabularyParser {
 
     private Map<Resource, List<Resource>> allUnionClasses = null;
@@ -114,7 +115,6 @@ public class WebVocabularyParser {
         final InputStream jsonStream = new ByteArrayInputStream(jsonString.getBytes(StandardCharsets.UTF_8));
         final XSDGenerator xsdGenerator = new XSDGenerator();
         xsdGenerator.generateXSD(jsonStream);
-
     }
 
     /**
@@ -161,16 +161,16 @@ public class WebVocabularyParser {
 
         while (linkTypeIterator.hasNext()) {
             final Resource linkResource = linkTypeIterator.nextResource();
-            final String linkName = (String) getPrefixedName(model, linkResource);
+            final String linkName = (String) getPrefixedName(linkResource);
             final Statement subPropertyOfStmt = linkResource.getProperty(RDFS.subPropertyOf);
             final Resource parentResource = subPropertyOfStmt.getObject().asResource();
 
-            if (Objects.requireNonNull((String) getPrefixedName(model, parentResource)).contains(LINK_TYPE)) {
+            if (Objects.requireNonNull((String) getPrefixedName(parentResource)).contains(LINK_TYPE)) {
                 final Map<String, Object> linkSchema = new HashMap<>();
 
                 linkSchema.put(LINK_TYPE_ID, linkName);
                 linkSchema.put(RANGE_TYPE, getRangeDataType(model, linkResource));
-                linkSchema.put(DOMAIN, getDomainName(model, linkResource));
+                linkSchema.put(DOMAIN, getDomainName(linkResource));
                 linkSchema.put(DATA_TYPE, SIMPLE);
                 linkSchema.put(TYPE, SIMPLE);
                 linkSchema.put(DESCRIPTION, getDescription(linkResource));
@@ -199,8 +199,8 @@ public class WebVocabularyParser {
             final Resource parentResource = subClassOfStmt.getObject().asResource();
 
             //Check if they belong to TypeCode if so get their children and build a Map
-            if (Objects.requireNonNull((String) getPrefixedName(model, parentResource)).contains(TYPE_CODE)) {
-                final String typeCodeName = (String) getPrefixedName(model, typeCode);
+            if (Objects.requireNonNull((String) getPrefixedName(parentResource)).contains(TYPE_CODE)) {
+                final String typeCodeName = (String) getPrefixedName(typeCode);
                 final List<Map<String, Object>> codes = new ArrayList<>();
 
                 if (typeCodeName != null) {
@@ -251,7 +251,7 @@ public class WebVocabularyParser {
                 continue;
             }
 
-            final String className = (String) getPrefixedName(model, cls);
+            final String className = (String) getPrefixedName(cls);
             if (className != null) {
                 //Get all the properties associated with the class
                 final List<Object> allProperties = new ArrayList<>();
@@ -261,19 +261,49 @@ public class WebVocabularyParser {
                 while (propertyIterator.hasNext()) {
                     final Resource property = propertyIterator.nextResource();
                     final Statement rangeStmt = property.getProperty(RDFS.range);
-                    final String propertyName = (String) getPrefixedName(model, property);
-                    final Object rangeType = getPrefixedName(model, rangeStmt.getObject().asResource());
+                    final String propertyName = (String) getPrefixedName(property);
+                    final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
 
                     final Map<String, Object> propertySchema = new LinkedHashMap<>();
                     propertySchema.put(PROPERTY, propertyName);
                     propertySchema.put(RANGE_TYPE, rangeType);
-                    propertySchema.put(DOMAIN, getDomainName(model, property));
+                    propertySchema.put(DOMAIN, getDomainName(property));
                     propertySchema.put(DESCRIPTION, getDescription(property));
                     allProperties.add(propertySchema);
                 }
                 // Sort the codes list based on the "property" value of each codeSchema
                 sortMapProperties(allProperties);
-                classProperties.put(className, allProperties);
+
+                // Get the superclass (rdfs:subClassOf) of the current class, if it exists
+                final Statement subClassOfStmt = cls.getProperty(RDFS.subClassOf);
+                final Map<String, Object> classSchema = new LinkedHashMap<>();
+                String superClassName = null; //To add the superclasses one or more
+                boolean isSubClass = false;
+
+                if(subClassOfStmt != null){
+                    final Resource superClass = subClassOfStmt.getObject().asResource();
+
+                    if (superClass != null && !(superClass.getURI().equals("http://www.w3.org/2002/07/owl#Thing")) && !(superClass.getURI().equals("http://schema.org/MediaObject"))) {
+                        superClassName = (String) getPrefixedName(superClass);
+                        isSubClass = true;
+                    }
+                }
+
+                //Based on subClass is present or not add the superClass
+                if (isSubClass) {
+                    classSchema.put(IS_SUBCLASS, true);  // Indicate that this is a subclass
+                    classSchema.put(SUPERCLASS, superClassName);
+                } else {
+                    // No superclass, handle it accordingly
+                    classSchema.put(IS_SUBCLASS, false);
+                    classSchema.put(SUPERCLASS, null);
+                }
+
+                // Add the properties to the class schema
+                classSchema.put(PROPERTIES, allProperties);
+
+                // Add this class schema to the main classProperties map
+                classProperties.put(className, classSchema);
             }
         }
 
@@ -293,26 +323,27 @@ public class WebVocabularyParser {
         // Find the matching property belonging to respective union class
         for (final Resource rs : resourceList) {
             final ResIterator propertyIterator = model.listSubjectsWithProperty(RDFS.domain, rs);
-            final List<String> classes = (List<String>) getPrefixedName(model, rs);
+            final List<String> classes = (List<String>) getPrefixedName(rs);
             final List<Object> allProperties = new ArrayList<>();
 
             while (propertyIterator.hasNext()) {
                 final Resource property = propertyIterator.nextResource();
                 final Statement rangeStmt = property.getProperty(RDFS.range);
-                final String propertyName = (String) getPrefixedName(model, property);
-                final Object rangeType = getPrefixedName(model, rangeStmt.getObject().asResource());
+                final String propertyName = (String) getPrefixedName(property);
+                final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
                 final Map<String, Object> propertySchema = new LinkedHashMap<>();
 
                 propertySchema.put(PROPERTY, propertyName);
                 propertySchema.put(RANGE_TYPE, rangeType);
-                propertySchema.put(DOMAIN, getDomainName(model, property));
+                propertySchema.put(DOMAIN, getDomainName(property));
                 propertySchema.put(DESCRIPTION, getDescription(property));
                 allProperties.add(propertySchema);
             }
 
             // Append the property to existing properties in the class-property relation
             for (String rrs : classes) {
-                final List<Object> existingProperties = (List<Object>) classProperties.get(rrs);
+                final Map<String, Object> existingClassInfo = (LinkedHashMap<String, Object>) classProperties.get(rrs);
+                final List<Object> existingProperties = (List<Object>) existingClassInfo.get(PROPERTIES);
                 existingProperties.addAll(allProperties);
 
                 // Sort the codes list based on the "property" value of each codeSchema
@@ -329,9 +360,11 @@ public class WebVocabularyParser {
      */
     private void typeAssigner(final Map<String, Object> allClassProperties, final Map<String, Object> allTypeCodes) {
         for (Map.Entry<String, Object> entry : allClassProperties.entrySet()) {
-            @SuppressWarnings("unchecked") final List<Map<String, Object>> classProperties = (List<Map<String, Object>>) entry.getValue();
+            final Map<String, Object> existingClassInfo = (LinkedHashMap<String, Object>) entry.getValue();
+            final List<Object> classProperties = (List<Object>) existingClassInfo.get(PROPERTIES);
 
-            for (Map<String, Object> property : classProperties) {
+            for (Object objectProperty : classProperties) {
+                final Map<String, Object> property = (LinkedHashMap<String, Object>) objectProperty;
                 final Object propertyNameObj = property.get(RANGE_TYPE);
                 final String propertyName = propertyNameObj instanceof String ? propertyNameObj.toString() : null;
 
@@ -356,16 +389,15 @@ public class WebVocabularyParser {
     /**
      * Function to get the @Id value from the provided resource. If @Id of resource is null then check for unionClass
      *
-     * @param model    model of the JSON-LD schema
      * @param resource resource whose @ID needs to be found out
      * @return return matching Resource as String or List<String> for union classes
      */
-    private Object getPrefixedName(final Model model, final Resource resource) {
+    private Object getPrefixedName(final Resource resource) {
         final String uri = resource.getURI();
 
         if (uri == null && allUnionClasses.containsKey(resource)) {
             return allUnionClasses.get(resource).stream()
-                    .map(r -> r.getLocalName()).toList();
+                    .map(Resource::getLocalName).toList();
         }
 
         return resource.getLocalName() != null ? resource.getLocalName() : uri;
@@ -408,7 +440,7 @@ public class WebVocabularyParser {
         return rangeType;
     }
 
-    private String getDomainName(final Model model, final Resource property) {
+    private String getDomainName(final Resource property) {
         final Statement domainStatement = property.getProperty(RDFS.domain);
 
         if (domainStatement != null) {

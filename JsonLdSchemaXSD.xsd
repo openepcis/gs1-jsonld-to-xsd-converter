@@ -39,16 +39,20 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Beverage">
-        <xsd:sequence>
-            <xsd:element name="alcoholicBeverageSubregion" type="xsd:string"/>
-            <xsd:element name="beverageVintage" type="xsd:string"/>
-            <xsd:element name="isCarbonated" type="NonbinaryLogicCode"/>
-            <xsd:element name="isDecaffeinated" type="NonbinaryLogicCode"/>
-            <xsd:element name="isFromConcentrate" type="NonbinaryLogicCode"/>
-            <xsd:element name="isVintage" type="NonbinaryLogicCode"/>
-            <xsd:element name="percentageOfAlcoholByVolume" type="xsd:string"/>
-            <xsd:element name="vintner" type="xsd:string"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="FoodBeverageTobaccoProduct">
+                <xsd:sequence>
+                    <xsd:element name="alcoholicBeverageSubregion" type="xsd:string"/>
+                    <xsd:element name="beverageVintage" type="xsd:string"/>
+                    <xsd:element name="isCarbonated" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isDecaffeinated" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isFromConcentrate" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isVintage" type="NonbinaryLogicCode"/>
+                    <xsd:element name="percentageOfAlcoholByVolume" type="xsd:string"/>
+                    <xsd:element name="vintner" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Brand">
         <xsd:sequence>
@@ -75,12 +79,16 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Clothing">
-        <xsd:sequence>
-            <xsd:element name="clothingCut" type="xsd:string"/>
-            <xsd:element name="collarType" type="xsd:string"/>
-            <xsd:element name="isMaternity" type="NonbinaryLogicCode"/>
-            <xsd:element name="textileMaterial" type="TextileMaterialDetails"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="WearableProduct">
+                <xsd:sequence>
+                    <xsd:element name="clothingCut" type="xsd:string"/>
+                    <xsd:element name="collarType" type="xsd:string"/>
+                    <xsd:element name="isMaternity" type="NonbinaryLogicCode"/>
+                    <xsd:element name="textileMaterial" type="TextileMaterialDetails"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="ColourCodeDetails">
         <xsd:sequence>
@@ -164,101 +172,113 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoProduct">
-        <xsd:sequence>
-            <xsd:element name="allergenSpecificationAgency" type="xsd:string"/>
-            <xsd:element name="allergenSpecificationName" type="xsd:string"/>
-            <xsd:element name="allergenStatement" type="xsd:string"/>
-            <xsd:element name="biotinPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="calciumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="carbohydratesPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="chloridePerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="cholesterolPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="chromiumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="copperPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="dietCode" type="DietTypeCodeDetails"/>
-            <xsd:element name="dietTypeDescription" type="xsd:string"/>
-            <xsd:element name="drainedWeight" type="QuantitativeValue"/>
-            <xsd:element name="energyFromFatPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="energyPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="fatPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="fibrePerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="fluoridePerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="folicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="foodBeverageRefrigerationClaim" type="FoodBeverageRefrigerationClaimCode"/>
-            <xsd:element name="foodBeverageTargetUse" type="FoodBeverageTargetUseCode"/>
-            <xsd:element name="geneticallyModifiedDeclaration" type="LevelOfContainmentCode"/>
-            <xsd:element name="hasAllergen" type="AllergenDetails"/>
-            <xsd:element name="ingredient" type="FoodBeverageTobaccoIngredientDetails"/>
-            <xsd:element name="ingredientOfConcern" type="xsd:string"/>
-            <xsd:element name="ingredientStatement" type="xsd:string"/>
-            <xsd:element name="iodinePerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="ironPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="irradiatedCode" type="NonbinaryLogicCode"/>
-            <xsd:element name="isInstant" type="NonbinaryLogicCode"/>
-            <xsd:element name="isSliced" type="NonbinaryLogicCode"/>
-            <xsd:element name="juiceContentPercent" type="xsd:string"/>
-            <xsd:element name="magnesiumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="manganesePerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="molybdenumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="monounsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="niacinPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="numberOfServingsPerPackage" type="xsd:string"/>
-            <xsd:element name="numberOfServingsPerPackageMeasurementPrecision" type="MeasurementPrecisionCode"/>
-            <xsd:element name="numberOfServingsRangeDescription" type="xsd:string"/>
-            <xsd:element name="nutrientBasisQuantity" type="QuantitativeValue"/>
-            <xsd:element name="nutrientBasisQuantityType" type="NutrientBasisQuantityCode"/>
-            <xsd:element name="nutrientMeasurementPrecision" type="MeasurementPrecisionCode"/>
-            <xsd:element name="nutritionalClaim" type="NutritionalClaimTypeCode"/>
-            <xsd:element name="nutritionalClaimStatement" type="xsd:string"/>
-            <xsd:element name="packagingMarkedDietAllergenType" type="PackagingMarkedDietAllergenCode"/>
-            <xsd:element name="packagingMarkedFreeFrom" type="PackagingMarkedFreeFromCode"/>
-            <xsd:element name="pantothenicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="phosphorusPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="polyolsPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="polyunsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="potassiumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="preparationInformation" type="FoodAndBeveragePreparationInformation"/>
-            <xsd:element name="preservationTechnique" type="PreservationTechniqueCode"/>
-            <xsd:element name="proteinPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="reheatingClaim" type="NonbinaryLogicCode"/>
-            <xsd:element name="riboflavinPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="saltPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="saturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="seleniumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="servingSize" type="QuantitativeValue"/>
-            <xsd:element name="servingSizeDescription" type="xsd:string"/>
-            <xsd:element name="servingSuggestion" type="xsd:string"/>
-            <xsd:element name="sodiumPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="sourceAnimal" type="SourceAnimalCode"/>
-            <xsd:element name="starchPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="sugarsPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="thiaminPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="transFatPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminAPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminB12PerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminB6PerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminCPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminDPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminEPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="vitaminKPerNutrientBasis" type="NutritionMeasurementType"/>
-            <xsd:element name="zincPerNutrientBasis" type="NutritionMeasurementType"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="Product">
+                <xsd:sequence>
+                    <xsd:element name="allergenSpecificationAgency" type="xsd:string"/>
+                    <xsd:element name="allergenSpecificationName" type="xsd:string"/>
+                    <xsd:element name="allergenStatement" type="xsd:string"/>
+                    <xsd:element name="biotinPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="calciumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="carbohydratesPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="chloridePerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="cholesterolPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="chromiumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="copperPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="dietCode" type="DietTypeCodeDetails"/>
+                    <xsd:element name="dietTypeDescription" type="xsd:string"/>
+                    <xsd:element name="drainedWeight" type="QuantitativeValue"/>
+                    <xsd:element name="energyFromFatPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="energyPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="fatPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="fibrePerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="fluoridePerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="folicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="foodBeverageRefrigerationClaim" type="FoodBeverageRefrigerationClaimCode"/>
+                    <xsd:element name="foodBeverageTargetUse" type="FoodBeverageTargetUseCode"/>
+                    <xsd:element name="geneticallyModifiedDeclaration" type="LevelOfContainmentCode"/>
+                    <xsd:element name="hasAllergen" type="AllergenDetails"/>
+                    <xsd:element name="ingredient" type="FoodBeverageTobaccoIngredientDetails"/>
+                    <xsd:element name="ingredientOfConcern" type="xsd:string"/>
+                    <xsd:element name="ingredientStatement" type="xsd:string"/>
+                    <xsd:element name="iodinePerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="ironPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="irradiatedCode" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isInstant" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isSliced" type="NonbinaryLogicCode"/>
+                    <xsd:element name="juiceContentPercent" type="xsd:string"/>
+                    <xsd:element name="magnesiumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="manganesePerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="molybdenumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="monounsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="niacinPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="numberOfServingsPerPackage" type="xsd:string"/>
+                    <xsd:element name="numberOfServingsPerPackageMeasurementPrecision" type="MeasurementPrecisionCode"/>
+                    <xsd:element name="numberOfServingsRangeDescription" type="xsd:string"/>
+                    <xsd:element name="nutrientBasisQuantity" type="QuantitativeValue"/>
+                    <xsd:element name="nutrientBasisQuantityType" type="NutrientBasisQuantityCode"/>
+                    <xsd:element name="nutrientMeasurementPrecision" type="MeasurementPrecisionCode"/>
+                    <xsd:element name="nutritionalClaim" type="NutritionalClaimTypeCode"/>
+                    <xsd:element name="nutritionalClaimStatement" type="xsd:string"/>
+                    <xsd:element name="packagingMarkedDietAllergenType" type="PackagingMarkedDietAllergenCode"/>
+                    <xsd:element name="packagingMarkedFreeFrom" type="PackagingMarkedFreeFromCode"/>
+                    <xsd:element name="pantothenicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="phosphorusPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="polyolsPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="polyunsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="potassiumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="preparationInformation" type="FoodAndBeveragePreparationInformation"/>
+                    <xsd:element name="preservationTechnique" type="PreservationTechniqueCode"/>
+                    <xsd:element name="proteinPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="reheatingClaim" type="NonbinaryLogicCode"/>
+                    <xsd:element name="riboflavinPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="saltPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="saturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="seleniumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="servingSize" type="QuantitativeValue"/>
+                    <xsd:element name="servingSizeDescription" type="xsd:string"/>
+                    <xsd:element name="servingSuggestion" type="xsd:string"/>
+                    <xsd:element name="sodiumPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="sourceAnimal" type="SourceAnimalCode"/>
+                    <xsd:element name="starchPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="sugarsPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="thiaminPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="transFatPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminAPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminB12PerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminB6PerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminCPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminDPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminEPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="vitaminKPerNutrientBasis" type="NutritionMeasurementType"/>
+                    <xsd:element name="zincPerNutrientBasis" type="NutritionMeasurementType"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Footwear">
-        <xsd:sequence>
-            <xsd:element name="footwearFasteningType" type="FootwearFasteningTypeCode"/>
-            <xsd:element name="footwearUpperType" type="UpperTypeCode"/>
-            <xsd:element name="upperMaterialType" type="TextileMaterialDetails"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="WearableProduct">
+                <xsd:sequence>
+                    <xsd:element name="footwearFasteningType" type="FootwearFasteningTypeCode"/>
+                    <xsd:element name="footwearUpperType" type="UpperTypeCode"/>
+                    <xsd:element name="upperMaterialType" type="TextileMaterialDetails"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="FruitsVegetables">
-        <xsd:sequence>
-            <xsd:element name="isPittedStoned" type="NonbinaryLogicCode"/>
-            <xsd:element name="isSeedless" type="NonbinaryLogicCode"/>
-            <xsd:element name="isShelledPeeled" type="NonbinaryLogicCode"/>
-            <xsd:element name="isWashedReadyToEat" type="NonbinaryLogicCode"/>
-            <xsd:element name="maturationMethod" type="MaturationMethodCode"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="FoodBeverageTobaccoProduct">
+                <xsd:sequence>
+                    <xsd:element name="isPittedStoned" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isSeedless" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isShelledPeeled" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isWashedReadyToEat" type="NonbinaryLogicCode"/>
+                    <xsd:element name="maturationMethod" type="MaturationMethodCode"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="GeoCoordinates">
         <xsd:sequence>
@@ -290,28 +310,40 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="MeatPoultry">
-        <xsd:sequence>
-            <xsd:element name="anatomicalForm" type="AnatomicalFormCode"/>
-            <xsd:element name="bonelessClaim" type="NonbinaryLogicCode"/>
-            <xsd:element name="meatPoultryType" type="xsd:string"/>
-            <xsd:element name="minimumMeatPoultryContent" type="QuantitativeValue"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="FoodBeverageTobaccoProduct">
+                <xsd:sequence>
+                    <xsd:element name="anatomicalForm" type="AnatomicalFormCode"/>
+                    <xsd:element name="bonelessClaim" type="NonbinaryLogicCode"/>
+                    <xsd:element name="meatPoultryType" type="xsd:string"/>
+                    <xsd:element name="minimumMeatPoultryContent" type="QuantitativeValue"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="MilkButterCreamYogurtCheeseEggsSubstitutes">
-        <xsd:sequence>
-            <xsd:element name="cheeseFirmness" type="CheeseFirmnessCode"/>
-            <xsd:element name="cheeseMaturationPeriodDescription" type="xsd:string"/>
-            <xsd:element name="fatInMilkContent" type="xsd:string"/>
-            <xsd:element name="fatpercentageInDryMatter" type="xsd:string"/>
-            <xsd:element name="isHomogenised" type="NonbinaryLogicCode"/>
-            <xsd:element name="isRindEdible" type="NonbinaryLogicCode"/>
-            <xsd:element name="sharpnessOfCheese" type="SharpnessOfCheeseCode"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="FoodBeverageTobaccoProduct">
+                <xsd:sequence>
+                    <xsd:element name="cheeseFirmness" type="CheeseFirmnessCode"/>
+                    <xsd:element name="cheeseMaturationPeriodDescription" type="xsd:string"/>
+                    <xsd:element name="fatInMilkContent" type="xsd:string"/>
+                    <xsd:element name="fatpercentageInDryMatter" type="xsd:string"/>
+                    <xsd:element name="isHomogenised" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isRindEdible" type="NonbinaryLogicCode"/>
+                    <xsd:element name="sharpnessOfCheese" type="SharpnessOfCheeseCode"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="NutritionMeasurementType">
-        <xsd:sequence>
-            <xsd:element name="dailyValueIntakePercent" type="xsd:string"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="QuantitativeValue">
+                <xsd:sequence>
+                    <xsd:element name="dailyValueIntakePercent" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Offer">
         <xsd:sequence>
@@ -601,12 +633,16 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Seafood">
-        <xsd:sequence>
-            <xsd:element name="catchZone" type="xsd:string"/>
-            <xsd:element name="fishType" type="xsd:string"/>
-            <xsd:element name="freshOrSeawaterFarmed" type="FreshOrSeawaterFarmedCode"/>
-            <xsd:element name="minimumFishContent" type="QuantitativeValue"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="FoodBeverageTobaccoProduct">
+                <xsd:sequence>
+                    <xsd:element name="catchZone" type="xsd:string"/>
+                    <xsd:element name="fishType" type="xsd:string"/>
+                    <xsd:element name="freshOrSeawaterFarmed" type="FreshOrSeawaterFarmedCode"/>
+                    <xsd:element name="minimumFishContent" type="QuantitativeValue"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="SizeCodeDetails">
         <xsd:sequence>
@@ -648,22 +684,26 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="WearableProduct">
-        <xsd:sequence>
-            <xsd:element name="consumerLifestage" type="ConsumerLifestageCode"/>
-            <xsd:element name="isPatterned" type="NonbinaryLogicCode"/>
-            <xsd:element name="isThermal" type="NonbinaryLogicCode"/>
-            <xsd:element name="isWaterproof" type="NonbinaryLogicCode"/>
-            <xsd:element name="isWearableItemDisposable" type="NonbinaryLogicCode"/>
-            <xsd:element name="seasonCalendarYear" type="xsd:string"/>
-            <xsd:element name="seasonName" type="xsd:string"/>
-            <xsd:element name="seasonParameter" type="SeasonParameterCode"/>
-            <xsd:element name="size" type="SizeDetails"/>
-            <xsd:element name="sportingActivityType" type="SportingActivityTypeCode"/>
-            <xsd:element name="styleDescription" type="xsd:string"/>
-            <xsd:element name="targetConsumerAge" type="xsd:string"/>
-            <xsd:element name="targetConsumerGender" type="TargetConsumerGenderCode"/>
-            <xsd:element name="textileMaterialContent" type="xsd:string"/>
-        </xsd:sequence>
+        <xsd:complexContent>
+            <xsd:extension base="Product">
+                <xsd:sequence>
+                    <xsd:element name="consumerLifestage" type="ConsumerLifestageCode"/>
+                    <xsd:element name="isPatterned" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isThermal" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isWaterproof" type="NonbinaryLogicCode"/>
+                    <xsd:element name="isWearableItemDisposable" type="NonbinaryLogicCode"/>
+                    <xsd:element name="seasonCalendarYear" type="xsd:string"/>
+                    <xsd:element name="seasonName" type="xsd:string"/>
+                    <xsd:element name="seasonParameter" type="SeasonParameterCode"/>
+                    <xsd:element name="size" type="SizeDetails"/>
+                    <xsd:element name="sportingActivityType" type="SportingActivityTypeCode"/>
+                    <xsd:element name="styleDescription" type="xsd:string"/>
+                    <xsd:element name="targetConsumerAge" type="xsd:string"/>
+                    <xsd:element name="targetConsumerGender" type="TargetConsumerGenderCode"/>
+                    <xsd:element name="textileMaterialContent" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
     </xsd:complexType>
     <xsd:simpleType name="AllergenTypeCode">
         <xsd:restriction base="xsd:string">
@@ -2119,60 +2159,64 @@
             <xsd:enumeration value="UNCLASSIFIED"/>
         </xsd:restriction>
     </xsd:simpleType>
-    <xsd:element name="activityIdeas" type="xsd:anyURI"/>
-    <xsd:element name="allergenInfo" type="xsd:anyURI"/>
-    <xsd:element name="appDownload" type="xsd:anyURI"/>
-    <xsd:element name="brandHomepageClinical" type="xsd:anyURI"/>
-    <xsd:element name="brandHomepagePatient" type="xsd:anyURI"/>
-    <xsd:element name="careersInfo" type="xsd:anyURI"/>
-    <xsd:element name="certificationInfo" type="xsd:anyURI"/>
-    <xsd:element name="consumerHandlingStorageInfo" type="xsd:anyURI"/>
-    <xsd:element name="defaultLink" type="xsd:anyURI"/>
-    <xsd:element name="defaultLinkMulti" type="xsd:anyURI"/>
-    <xsd:element name="epcis" type="xsd:anyURI"/>
-    <xsd:element name="epil" type="xsd:anyURI"/>
-    <xsd:element name="eventsInfo" type="xsd:anyURI"/>
-    <xsd:element name="faqs" type="xsd:anyURI"/>
-    <xsd:element name="handledBy" type="xsd:anyURI"/>
-    <xsd:element name="hasRetailers" type="xsd:anyURI"/>
-    <xsd:element name="homepage" type="xsd:anyURI"/>
-    <xsd:element name="ingredientsInfo" type="xsd:anyURI"/>
-    <xsd:element name="instructions" type="xsd:anyURI"/>
-    <xsd:element name="jws" type="xsd:anyURI"/>
-    <xsd:element name="leaveReview" type="xsd:anyURI"/>
-    <xsd:element name="locationInfo" type="xsd:anyURI"/>
-    <xsd:element name="logisticsInfo" type="xsd:anyURI"/>
-    <xsd:element name="loyaltyProgram" type="xsd:anyURI"/>
-    <xsd:element name="masterData" type="xsd:anyURI"/>
-    <xsd:element name="menuInfo" type="xsd:anyURI"/>
-    <xsd:element name="nutritionalInfo" type="xsd:anyURI"/>
-    <xsd:element name="openingHoursInfo" type="xsd:anyURI"/>
-    <xsd:element name="paymentLink" type="xsd:anyURI"/>
-    <xsd:element name="pip" type="xsd:anyURI"/>
-    <xsd:element name="productSustainabilityInfo" type="xsd:anyURI"/>
-    <xsd:element name="promotion" type="xsd:anyURI"/>
-    <xsd:element name="purchaseSuppliesOrAccessories" type="xsd:anyURI"/>
-    <xsd:element name="quickStartGuide" type="xsd:anyURI"/>
-    <xsd:element name="recallStatus" type="xsd:anyURI"/>
-    <xsd:element name="recipeInfo" type="xsd:anyURI"/>
-    <xsd:element name="registerProduct" type="xsd:anyURI"/>
-    <xsd:element name="registryEntry" type="xsd:anyURI"/>
-    <xsd:element name="relatedImage" type="xsd:anyURI"/>
-    <xsd:element name="relatedVideo" type="xsd:anyURI"/>
-    <xsd:element name="review" type="xsd:anyURI"/>
-    <xsd:element name="safetyInfo" type="xsd:anyURI"/>
-    <xsd:element name="scheduleTime" type="xsd:anyURI"/>
-    <xsd:element name="serviceInfo" type="xsd:anyURI"/>
-    <xsd:element name="smartLabel" type="xsd:anyURI"/>
-    <xsd:element name="smpc" type="xsd:anyURI"/>
-    <xsd:element name="socialMedia" type="xsd:anyURI"/>
-    <xsd:element name="statisticInfo" type="xsd:anyURI"/>
-    <xsd:element name="subscribe" type="xsd:anyURI"/>
-    <xsd:element name="support" type="xsd:anyURI"/>
-    <xsd:element name="sustainabilityInfo" type="xsd:anyURI"/>
-    <xsd:element name="traceability" type="xsd:anyURI"/>
-    <xsd:element name="tutorial" type="xsd:anyURI"/>
-    <xsd:element name="userAgreement" type="xsd:anyURI"/>
-    <xsd:element name="verificationService" type="xsd:anyURI"/>
-    <xsd:element name="whatsInTheBox" type="xsd:anyURI"/>
+    <xsd:complexType name="Thing">
+        <xsd:choice>
+            <xsd:element name="activityIdeas" type="xsd:anyURI"/>
+            <xsd:element name="allergenInfo" type="xsd:anyURI"/>
+            <xsd:element name="appDownload" type="xsd:anyURI"/>
+            <xsd:element name="brandHomepageClinical" type="xsd:anyURI"/>
+            <xsd:element name="brandHomepagePatient" type="xsd:anyURI"/>
+            <xsd:element name="careersInfo" type="xsd:anyURI"/>
+            <xsd:element name="certificationInfo" type="xsd:anyURI"/>
+            <xsd:element name="consumerHandlingStorageInfo" type="xsd:anyURI"/>
+            <xsd:element name="defaultLink" type="xsd:anyURI"/>
+            <xsd:element name="defaultLinkMulti" type="xsd:anyURI"/>
+            <xsd:element name="epcis" type="xsd:anyURI"/>
+            <xsd:element name="epil" type="xsd:anyURI"/>
+            <xsd:element name="eventsInfo" type="xsd:anyURI"/>
+            <xsd:element name="faqs" type="xsd:anyURI"/>
+            <xsd:element name="handledBy" type="xsd:anyURI"/>
+            <xsd:element name="hasRetailers" type="xsd:anyURI"/>
+            <xsd:element name="homepage" type="xsd:anyURI"/>
+            <xsd:element name="ingredientsInfo" type="xsd:anyURI"/>
+            <xsd:element name="instructions" type="xsd:anyURI"/>
+            <xsd:element name="jws" type="xsd:anyURI"/>
+            <xsd:element name="leaveReview" type="xsd:anyURI"/>
+            <xsd:element name="locationInfo" type="xsd:anyURI"/>
+            <xsd:element name="logisticsInfo" type="xsd:anyURI"/>
+            <xsd:element name="loyaltyProgram" type="xsd:anyURI"/>
+            <xsd:element name="masterData" type="xsd:anyURI"/>
+            <xsd:element name="menuInfo" type="xsd:anyURI"/>
+            <xsd:element name="nutritionalInfo" type="xsd:anyURI"/>
+            <xsd:element name="openingHoursInfo" type="xsd:anyURI"/>
+            <xsd:element name="paymentLink" type="xsd:anyURI"/>
+            <xsd:element name="pip" type="xsd:anyURI"/>
+            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI"/>
+            <xsd:element name="promotion" type="xsd:anyURI"/>
+            <xsd:element name="purchaseSuppliesOrAccessories" type="xsd:anyURI"/>
+            <xsd:element name="quickStartGuide" type="xsd:anyURI"/>
+            <xsd:element name="recallStatus" type="xsd:anyURI"/>
+            <xsd:element name="recipeInfo" type="xsd:anyURI"/>
+            <xsd:element name="registerProduct" type="xsd:anyURI"/>
+            <xsd:element name="registryEntry" type="xsd:anyURI"/>
+            <xsd:element name="relatedImage" type="xsd:anyURI"/>
+            <xsd:element name="relatedVideo" type="xsd:anyURI"/>
+            <xsd:element name="review" type="xsd:anyURI"/>
+            <xsd:element name="safetyInfo" type="xsd:anyURI"/>
+            <xsd:element name="scheduleTime" type="xsd:anyURI"/>
+            <xsd:element name="serviceInfo" type="xsd:anyURI"/>
+            <xsd:element name="smartLabel" type="xsd:anyURI"/>
+            <xsd:element name="smpc" type="xsd:anyURI"/>
+            <xsd:element name="socialMedia" type="xsd:anyURI"/>
+            <xsd:element name="statisticInfo" type="xsd:anyURI"/>
+            <xsd:element name="subscribe" type="xsd:anyURI"/>
+            <xsd:element name="support" type="xsd:anyURI"/>
+            <xsd:element name="sustainabilityInfo" type="xsd:anyURI"/>
+            <xsd:element name="traceability" type="xsd:anyURI"/>
+            <xsd:element name="tutorial" type="xsd:anyURI"/>
+            <xsd:element name="userAgreement" type="xsd:anyURI"/>
+            <xsd:element name="verificationService" type="xsd:anyURI"/>
+            <xsd:element name="whatsInTheBox" type="xsd:anyURI"/>
+        </xsd:choice>
+    </xsd:complexType>
 </xsd:schema>

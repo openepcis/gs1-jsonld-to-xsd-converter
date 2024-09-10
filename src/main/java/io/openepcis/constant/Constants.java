@@ -14,6 +14,9 @@ public class Constants {
     public static final String SIMPLE = "simple";
     public static final String COMPLEX = "complex";
     public static final String DESCRIPTION = "description";
+    public static final String IS_SUBCLASS = "isSubclass";
+    public static final String SUPERCLASS = "superClass";
+    public static final String PROPERTIES = "properties";
     public static final String CLASSES = "classes";
     public static final String TYPE_CODES = "typeCodes";
     public static final String LINK_TYPES = "linkTypes";
@@ -22,4 +25,5 @@ public class Constants {
     public static final String CLASS = "class";
     public static final String DOMAIN = "domain";
     public static final String NAMESPACES = "namespaces";
+    public static final String XSD_STRING = "xsd:string";
 }
