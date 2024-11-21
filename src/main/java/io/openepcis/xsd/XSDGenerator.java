@@ -171,13 +171,13 @@ public class XSDGenerator {
     //Map the datatype to corresponding XSD datatype.
     private String mapSimpleType(final String rangeType) {
         return switch (rangeType) {
-            case "xsd:date" -> "xsd:date";
-            case "xsd:anyURI" -> "xsd:anyURI";
-            case "xsd:float" -> "xsd:float";
-            case "xsd:boolean" -> "xsd:boolean";
-            case "xsd:integer" -> "xsd:integer";
-            case "xsd:gYear" -> "xsd:gYear";
-            case "xsd:dateTime" -> "xsd:dateTime";
+            case "xsd:date", "date" -> "xsd:date";
+            case "xsd:anyURI", "anyURI" -> "xsd:anyURI";
+            case "xsd:float", "float" -> "xsd:float";
+            case "xsd:boolean", "boolean" -> "xsd:boolean";
+            case "xsd:integer", "integer" -> "xsd:integer";
+            case "xsd:gYear", "gYear" -> "xsd:gYear";
+            case "xsd:dateTime", "dateTime" -> "xsd:dateTime";
             default -> XSD_STRING;
         };
     }

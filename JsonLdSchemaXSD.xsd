@@ -22,7 +22,7 @@
     <xsd:complexType name="AuthenticityDetails">
         <xsd:sequence>
             <xsd:element name="authenticitySecurityFeatureInstructions" type="xsd:string"/>
-            <xsd:element name="authenticitySecurityFeatureInstructionsURL" type="xsd:string"/>
+            <xsd:element name="authenticitySecurityFeatureInstructionsURL" type="xsd:anyURI"/>
             <xsd:element name="authenticitySecurityFeatureRegularExpression" type="xsd:string"/>
             <xsd:element name="authenticitySecurityFeatureType" type="SecurityMarking"/>
             <xsd:element name="authenticitySecurityFeatureValue" type="xsd:string"/>
@@ -35,7 +35,7 @@
             <xsd:element name="awardPrizeDescription" type="xsd:string"/>
             <xsd:element name="awardPrizeJury" type="xsd:string"/>
             <xsd:element name="awardPrizeName" type="xsd:string"/>
-            <xsd:element name="awardPrizeYear" type="xsd:string"/>
+            <xsd:element name="awardPrizeYear" type="xsd:gYear"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Beverage">
@@ -48,7 +48,7 @@
                     <xsd:element name="isDecaffeinated" type="NonbinaryLogicCode"/>
                     <xsd:element name="isFromConcentrate" type="NonbinaryLogicCode"/>
                     <xsd:element name="isVintage" type="NonbinaryLogicCode"/>
-                    <xsd:element name="percentageOfAlcoholByVolume" type="xsd:string"/>
+                    <xsd:element name="percentageOfAlcoholByVolume" type="xsd:float"/>
                     <xsd:element name="vintner" type="xsd:string"/>
                 </xsd:sequence>
             </xsd:extension>
@@ -64,18 +64,18 @@
         <xsd:sequence>
             <xsd:element name="certificationAgency" type="xsd:string"/>
             <xsd:element name="certificationAgencyURL" type="Organization"/>
-            <xsd:element name="certificationAuditDate" type="xsd:string"/>
-            <xsd:element name="certificationEndDate" type="xsd:string"/>
+            <xsd:element name="certificationAuditDate" type="xsd:date"/>
+            <xsd:element name="certificationEndDate" type="xsd:date"/>
             <xsd:element name="certificationIdentification" type="xsd:string"/>
             <xsd:element name="certificationStandard" type="xsd:string"/>
-            <xsd:element name="certificationStartDate" type="xsd:string"/>
+            <xsd:element name="certificationStartDate" type="xsd:date"/>
             <xsd:element name="certificationStatement" type="xsd:string"/>
             <xsd:element name="certificationStatus" type="CertificationStatus"/>
             <xsd:element name="certificationSubject" type="xsd:string"/>
             <xsd:element name="certificationType" type="xsd:string"/>
-            <xsd:element name="certificationURI" type="xsd:string"/>
+            <xsd:element name="certificationURI" type="xsd:anyURI"/>
             <xsd:element name="certificationValue" type="xsd:string"/>
-            <xsd:element name="initialCertificationDate" type="xsd:string"/>
+            <xsd:element name="initialCertificationDate" type="xsd:date"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Clothing">
@@ -121,25 +121,25 @@
     </xsd:complexType>
     <xsd:complexType name="Discount">
         <xsd:sequence>
-            <xsd:element name="discountRepeatsPerMultipleMinimum" type="xsd:string"/>
+            <xsd:element name="discountRepeatsPerMultipleMinimum" type="xsd:boolean"/>
             <xsd:element name="discountType" type="DiscountTypeCode"/>
             <xsd:element name="eligibleTradeChannel" type="TradeChannelCode"/>
             <xsd:element name="exactDiscountAmount" type="PriceSpecification"/>
-            <xsd:element name="exactDiscountPercentage" type="xsd:string"/>
+            <xsd:element name="exactDiscountPercentage" type="xsd:float"/>
             <xsd:element name="exclusionDescription" type="xsd:string"/>
-            <xsd:element name="isOnlyAvailableThroughRetailer" type="xsd:string"/>
-            <xsd:element name="isOnlyWithMailingListSignup" type="xsd:string"/>
+            <xsd:element name="isOnlyAvailableThroughRetailer" type="xsd:boolean"/>
+            <xsd:element name="isOnlyWithMailingListSignup" type="xsd:boolean"/>
             <xsd:element name="isOnlyWithPaymentCard" type="PaymentMethod"/>
-            <xsd:element name="isOnlyWithRetailerLoyaltyCard" type="xsd:string"/>
-            <xsd:element name="isOnlyWithRetailerPaymentCard" type="xsd:string"/>
-            <xsd:element name="isPromoterExclusiveOffer" type="xsd:string"/>
+            <xsd:element name="isOnlyWithRetailerLoyaltyCard" type="xsd:boolean"/>
+            <xsd:element name="isOnlyWithRetailerPaymentCard" type="xsd:boolean"/>
+            <xsd:element name="isPromoterExclusiveOffer" type="xsd:boolean"/>
             <xsd:element name="maximumDiscountAmount" type="PriceSpecification"/>
-            <xsd:element name="maximumDiscountPercentage" type="xsd:string"/>
-            <xsd:element name="maximumQualifyingItems" type="xsd:string"/>
+            <xsd:element name="maximumDiscountPercentage" type="xsd:float"/>
+            <xsd:element name="maximumQualifyingItems" type="xsd:integer"/>
             <xsd:element name="maximumQualifyingSpend" type="PriceSpecification"/>
             <xsd:element name="minimumDiscountAmount" type="PriceSpecification"/>
-            <xsd:element name="minimumDiscountPercentage" type="xsd:string"/>
-            <xsd:element name="minimumQualifyingItems" type="xsd:string"/>
+            <xsd:element name="minimumDiscountPercentage" type="xsd:float"/>
+            <xsd:element name="minimumQualifyingItems" type="xsd:integer"/>
             <xsd:element name="minimumQualifyingSpend" type="PriceSpecification"/>
             <xsd:element name="offerRedemptionType" type="OfferRedemptionTypeCode"/>
             <xsd:element name="offerRestrictionDescription" type="xsd:string"/>
@@ -149,12 +149,12 @@
             <xsd:element name="qualifyingProductClassificationCode" type="AdditionalProductClassificationDetails"/>
             <xsd:element name="qualifyingProductGTINs" type="xsd:string"/>
             <xsd:element name="qualifyingSubBrandName" type="xsd:string"/>
-            <xsd:element name="selectedProductsOnly" type="xsd:string"/>
+            <xsd:element name="selectedProductsOnly" type="xsd:boolean"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FoodAndBeveragePreparationInformation">
         <xsd:sequence>
-            <xsd:element name="convenienceLevelPercent" type="xsd:string"/>
+            <xsd:element name="convenienceLevelPercent" type="xsd:float"/>
             <xsd:element name="manufacturerPreparationCode" type="PreparationTypeCode"/>
             <xsd:element name="maximumOptimumConsumptionTemperature" type="QuantitativeValue"/>
             <xsd:element name="minimumOptimumConsumptionTemperature" type="QuantitativeValue"/>
@@ -166,9 +166,9 @@
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoIngredientDetails">
         <xsd:sequence>
-            <xsd:element name="ingredientContentPercentage" type="xsd:string"/>
+            <xsd:element name="ingredientContentPercentage" type="xsd:float"/>
             <xsd:element name="ingredientName" type="xsd:string"/>
-            <xsd:element name="ingredientSequence" type="xsd:string"/>
+            <xsd:element name="ingredientSequence" type="xsd:integer"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoProduct">
@@ -206,13 +206,13 @@
                     <xsd:element name="irradiatedCode" type="NonbinaryLogicCode"/>
                     <xsd:element name="isInstant" type="NonbinaryLogicCode"/>
                     <xsd:element name="isSliced" type="NonbinaryLogicCode"/>
-                    <xsd:element name="juiceContentPercent" type="xsd:string"/>
+                    <xsd:element name="juiceContentPercent" type="xsd:float"/>
                     <xsd:element name="magnesiumPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="manganesePerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="molybdenumPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="monounsaturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="niacinPerNutrientBasis" type="NutritionMeasurementType"/>
-                    <xsd:element name="numberOfServingsPerPackage" type="xsd:string"/>
+                    <xsd:element name="numberOfServingsPerPackage" type="xsd:float"/>
                     <xsd:element name="numberOfServingsPerPackageMeasurementPrecision" type="MeasurementPrecisionCode"/>
                     <xsd:element name="numberOfServingsRangeDescription" type="xsd:string"/>
                     <xsd:element name="nutrientBasisQuantity" type="QuantitativeValue"/>
@@ -282,7 +282,7 @@
     </xsd:complexType>
     <xsd:complexType name="GeoCoordinates">
         <xsd:sequence>
-            <xsd:element name="coordinateReferenceSystem" type="xsd:string"/>
+            <xsd:element name="coordinateReferenceSystem" type="xsd:anyURI"/>
             <xsd:element name="elevation" type="xsd:string"/>
             <xsd:element name="latitude" type="xsd:string"/>
             <xsd:element name="longitude" type="xsd:string"/>
@@ -300,13 +300,13 @@
             <xsd:element name="locationID" type="xsd:string"/>
             <xsd:element name="locationID_Qualifier" type="xsd:string"/>
             <xsd:element name="locationID_Type" type="LocationID_Type"/>
-            <xsd:element name="locationID_URI" type="xsd:string"/>
+            <xsd:element name="locationID_URI" type="xsd:anyURI"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="LocationStatusHistory">
         <xsd:sequence>
             <xsd:element name="locationStatus" type="StatusType"/>
-            <xsd:element name="statusTimestamp" type="xsd:string"/>
+            <xsd:element name="statusTimestamp" type="xsd:dateTime"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="MeatPoultry">
@@ -327,8 +327,8 @@
                 <xsd:sequence>
                     <xsd:element name="cheeseFirmness" type="CheeseFirmnessCode"/>
                     <xsd:element name="cheeseMaturationPeriodDescription" type="xsd:string"/>
-                    <xsd:element name="fatInMilkContent" type="xsd:string"/>
-                    <xsd:element name="fatpercentageInDryMatter" type="xsd:string"/>
+                    <xsd:element name="fatInMilkContent" type="xsd:float"/>
+                    <xsd:element name="fatpercentageInDryMatter" type="xsd:float"/>
                     <xsd:element name="isHomogenised" type="NonbinaryLogicCode"/>
                     <xsd:element name="isRindEdible" type="NonbinaryLogicCode"/>
                     <xsd:element name="sharpnessOfCheese" type="SharpnessOfCheeseCode"/>
@@ -340,7 +340,7 @@
         <xsd:complexContent>
             <xsd:extension base="QuantitativeValue">
                 <xsd:sequence>
-                    <xsd:element name="dailyValueIntakePercent" type="xsd:string"/>
+                    <xsd:element name="dailyValueIntakePercent" type="xsd:float"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>
@@ -348,8 +348,8 @@
     <xsd:complexType name="Offer">
         <xsd:sequence>
             <xsd:element name="acceptedPaymentMethod" type="PaymentMethod"/>
-            <xsd:element name="availabilityEnds" type="xsd:string"/>
-            <xsd:element name="availabilityStarts" type="xsd:string"/>
+            <xsd:element name="availabilityEnds" type="xsd:dateTime"/>
+            <xsd:element name="availabilityStarts" type="xsd:dateTime"/>
             <xsd:element name="availableAtOrFrom" type="Place"/>
             <xsd:element name="eligibleQuantity" type="QuantitativeValue"/>
             <xsd:element name="eligibleQuantityMaximum" type="QuantitativeValue"/>
@@ -368,7 +368,7 @@
     <xsd:complexType name="OrganicClaimDetails">
         <xsd:sequence>
             <xsd:element name="organicClaimAgency" type="OrganicClaimAgencyCode"/>
-            <xsd:element name="organicPercentClaim" type="xsd:string"/>
+            <xsd:element name="organicPercentClaim" type="xsd:float"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Organization">
@@ -409,13 +409,13 @@
             <xsd:element name="organizationID" type="xsd:string"/>
             <xsd:element name="organizationID_Qualifier" type="xsd:string"/>
             <xsd:element name="organizationID_Type" type="OrganizationID_Type"/>
-            <xsd:element name="organizationID_URI" type="xsd:string"/>
+            <xsd:element name="organizationID_URI" type="xsd:anyURI"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="OrganizationStatusHistory">
         <xsd:sequence>
             <xsd:element name="organizationStatus" type="StatusType"/>
-            <xsd:element name="statusTimestamp" type="xsd:string"/>
+            <xsd:element name="statusTimestamp" type="xsd:dateTime"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="PackagingDetails">
@@ -489,18 +489,18 @@
     </xsd:complexType>
     <xsd:complexType name="PriceSpecification">
         <xsd:sequence>
-            <xsd:element name="dutyFeeTaxAmount" type="xsd:string"/>
+            <xsd:element name="dutyFeeTaxAmount" type="xsd:float"/>
             <xsd:element name="dutyFeeTaxDescription" type="xsd:string"/>
-            <xsd:element name="dutyFeeTaxRate" type="xsd:string"/>
+            <xsd:element name="dutyFeeTaxRate" type="xsd:float"/>
             <xsd:element name="eligibleQuantity" type="QuantitativeValue"/>
             <xsd:element name="eligibleQuantityMaximum" type="QuantitativeValue"/>
             <xsd:element name="eligibleQuantityMinimum" type="QuantitativeValue"/>
-            <xsd:element name="maxPrice" type="xsd:string"/>
-            <xsd:element name="minPrice" type="xsd:string"/>
-            <xsd:element name="price" type="xsd:string"/>
+            <xsd:element name="maxPrice" type="xsd:float"/>
+            <xsd:element name="minPrice" type="xsd:float"/>
+            <xsd:element name="price" type="xsd:float"/>
             <xsd:element name="priceCurrency" type="xsd:string"/>
-            <xsd:element name="validFrom" type="xsd:string"/>
-            <xsd:element name="validThrough" type="xsd:string"/>
+            <xsd:element name="validFrom" type="xsd:dateTime"/>
+            <xsd:element name="validThrough" type="xsd:dateTime"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Product">
@@ -511,7 +511,7 @@
             <xsd:element name="audioFile" type="ReferencedFileDetails"/>
             <xsd:element name="authenticity" type="AuthenticityDetails"/>
             <xsd:element name="awardPrize" type="AwardPrizeDetails"/>
-            <xsd:element name="bestBeforeDate" type="xsd:string"/>
+            <xsd:element name="bestBeforeDate" type="xsd:date"/>
             <xsd:element name="brand" type="Brand"/>
             <xsd:element name="brandOwner" type="Organization"/>
             <xsd:element name="certification" type="CertificationDetails"/>
@@ -531,11 +531,11 @@
             <xsd:element name="customerSupportCentre" type="Organization"/>
             <xsd:element name="dependentProprietaryProduct" type="Product"/>
             <xsd:element name="descriptiveSize" type="xsd:string"/>
-            <xsd:element name="dueDate" type="xsd:string"/>
+            <xsd:element name="dueDate" type="xsd:date"/>
             <xsd:element name="equivalentProduct" type="Product"/>
-            <xsd:element name="expirationDate" type="xsd:string"/>
-            <xsd:element name="expirationDateTime" type="xsd:string"/>
-            <xsd:element name="firstFreezeDate" type="xsd:string"/>
+            <xsd:element name="expirationDate" type="xsd:date"/>
+            <xsd:element name="expirationDateTime" type="xsd:date"/>
+            <xsd:element name="firstFreezeDate" type="xsd:date"/>
             <xsd:element name="functionalName" type="xsd:string"/>
             <xsd:element name="gpcCategoryCode" type="xsd:string"/>
             <xsd:element name="gpcCategoryDescription" type="xsd:string"/>
@@ -544,9 +544,9 @@
             <xsd:element name="grossWeight" type="QuantitativeValue"/>
             <xsd:element name="growingMethod" type="GrowingMethodCode"/>
             <xsd:element name="gtin" type="xsd:string"/>
-            <xsd:element name="harvestDate" type="xsd:string"/>
-            <xsd:element name="harvestDateEnd" type="xsd:string"/>
-            <xsd:element name="harvestDateStart" type="xsd:string"/>
+            <xsd:element name="harvestDate" type="xsd:date"/>
+            <xsd:element name="harvestDateEnd" type="xsd:date"/>
+            <xsd:element name="harvestDateStart" type="xsd:date"/>
             <xsd:element name="hasBatchLotNumber" type="xsd:string"/>
             <xsd:element name="hasSerialNumber" type="xsd:string"/>
             <xsd:element name="hasThirdPartyControlledSerialNumber" type="xsd:string"/>
@@ -558,8 +558,8 @@
             <xsd:element name="inPackageWidth" type="QuantitativeValue"/>
             <xsd:element name="includedAccessories" type="xsd:string"/>
             <xsd:element name="instructionsForUse" type="ReferencedFileDetails"/>
-            <xsd:element name="isProductRecalled" type="xsd:string"/>
-            <xsd:element name="jws" type="xsd:string"/>
+            <xsd:element name="isProductRecalled" type="xsd:boolean"/>
+            <xsd:element name="jws" type="xsd:anyURI"/>
             <xsd:element name="manufacturer" type="Organization"/>
             <xsd:element name="manufacturersWarranty" type="WarrantyPromise"/>
             <xsd:element name="manufacturingPlant" type="Organization"/>
@@ -573,7 +573,7 @@
             <xsd:element name="outOfPackageHeight" type="QuantitativeValue"/>
             <xsd:element name="outOfPackageWidth" type="QuantitativeValue"/>
             <xsd:element name="packaging" type="PackagingDetails"/>
-            <xsd:element name="packagingDate" type="xsd:string"/>
+            <xsd:element name="packagingDate" type="xsd:date"/>
             <xsd:element name="packagingMarkedLabelAccreditation" type="PackagingMarkedLabelAccreditationCode"/>
             <xsd:element name="primaryAlternateProduct" type="Product"/>
             <xsd:element name="productDescription" type="xsd:string"/>
@@ -583,19 +583,19 @@
             <xsd:element name="productMarketingMessage" type="xsd:string"/>
             <xsd:element name="productName" type="xsd:string"/>
             <xsd:element name="productRange" type="xsd:string"/>
-            <xsd:element name="productSustainabilityInfo" type="xsd:string"/>
-            <xsd:element name="productionDate" type="xsd:string"/>
-            <xsd:element name="productionDateTime" type="xsd:string"/>
+            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI"/>
+            <xsd:element name="productionDate" type="xsd:date"/>
+            <xsd:element name="productionDateTime" type="xsd:date"/>
             <xsd:element name="productionVariantDescription" type="xsd:string"/>
-            <xsd:element name="productionVariantEffectiveDateTime" type="xsd:string"/>
+            <xsd:element name="productionVariantEffectiveDateTime" type="xsd:dateTime"/>
             <xsd:element name="provenanceStatement" type="xsd:string"/>
             <xsd:element name="referencedFile" type="ReferencedFileDetails"/>
             <xsd:element name="regulatedProductName" type="xsd:string"/>
             <xsd:element name="replacedByProduct" type="Product"/>
             <xsd:element name="replacedProduct" type="Product"/>
-            <xsd:element name="sellByDate" type="xsd:string"/>
+            <xsd:element name="sellByDate" type="xsd:date"/>
             <xsd:element name="sizeCode" type="SizeCodeDetails"/>
-            <xsd:element name="supplierSpecifiedMinimumConsumerStorageDays" type="xsd:string"/>
+            <xsd:element name="supplierSpecifiedMinimumConsumerStorageDays" type="xsd:integer"/>
             <xsd:element name="targetMarket" type="TargetMarketDetails"/>
             <xsd:element name="variantDescription" type="xsd:string"/>
             <xsd:element name="warningCopyDescription" type="xsd:string"/>
@@ -605,25 +605,25 @@
         <xsd:sequence>
             <xsd:element name="productYield" type="QuantitativeValue"/>
             <xsd:element name="productYieldType" type="ProductYieldTypeCode"/>
-            <xsd:element name="productYieldVariationPercentage" type="xsd:string"/>
+            <xsd:element name="productYieldVariationPercentage" type="xsd:float"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="QuantitativeValue">
         <xsd:sequence>
             <xsd:element name="unitCode" type="xsd:string"/>
-            <xsd:element name="value" type="xsd:string"/>
+            <xsd:element name="value" type="xsd:float"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ReferencedFileDetails">
         <xsd:sequence>
             <xsd:element name="fileLanguageCode" type="xsd:string"/>
-            <xsd:element name="filePixelHeight" type="xsd:string"/>
-            <xsd:element name="filePixelWidth" type="xsd:string"/>
-            <xsd:element name="referencedFileEffectiveEndDateTime" type="xsd:string"/>
-            <xsd:element name="referencedFileEffectiveStartDateTime" type="xsd:string"/>
+            <xsd:element name="filePixelHeight" type="xsd:integer"/>
+            <xsd:element name="filePixelWidth" type="xsd:integer"/>
+            <xsd:element name="referencedFileEffectiveEndDateTime" type="xsd:dateTime"/>
+            <xsd:element name="referencedFileEffectiveStartDateTime" type="xsd:dateTime"/>
             <xsd:element name="referencedFileSize" type="QuantitativeValue"/>
             <xsd:element name="referencedFileType" type="ReferencedFileTypeCode"/>
-            <xsd:element name="referencedFileURL" type="xsd:string"/>
+            <xsd:element name="referencedFileURL" type="xsd:anyURI"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ReturnablePackageDepositDetails">
@@ -660,14 +660,14 @@
     </xsd:complexType>
     <xsd:complexType name="TargetMarketDetails">
         <xsd:sequence>
-            <xsd:element name="consumerFirstAvailabilityDateTime" type="xsd:string"/>
+            <xsd:element name="consumerFirstAvailabilityDateTime" type="xsd:dateTime"/>
             <xsd:element name="targetMarketCountries" type="Country"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="TextileMaterialDetails">
         <xsd:sequence>
             <xsd:element name="textileMaterialDescription" type="xsd:string"/>
-            <xsd:element name="textileMaterialPercentage" type="xsd:string"/>
+            <xsd:element name="textileMaterialPercentage" type="xsd:float"/>
             <xsd:element name="textileMaterialThreadCount" type="xsd:string"/>
             <xsd:element name="textileMaterialWeight" type="QuantitativeValue"/>
         </xsd:sequence>
@@ -692,7 +692,7 @@
                     <xsd:element name="isThermal" type="NonbinaryLogicCode"/>
                     <xsd:element name="isWaterproof" type="NonbinaryLogicCode"/>
                     <xsd:element name="isWearableItemDisposable" type="NonbinaryLogicCode"/>
-                    <xsd:element name="seasonCalendarYear" type="xsd:string"/>
+                    <xsd:element name="seasonCalendarYear" type="xsd:gYear"/>
                     <xsd:element name="seasonName" type="xsd:string"/>
                     <xsd:element name="seasonParameter" type="SeasonParameterCode"/>
                     <xsd:element name="size" type="SizeDetails"/>
