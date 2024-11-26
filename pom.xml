@@ -109,6 +109,7 @@
                 <configuration>
                     <schemaDirectory>${basedir}</schemaDirectory>
                     <bindingDirectory>${basedir}/src/main/resources/schema</bindingDirectory>
+                    <bindingIncludes>custom-binding.xjb</bindingIncludes>
                 </configuration>
             </plugin>
         </plugins>
