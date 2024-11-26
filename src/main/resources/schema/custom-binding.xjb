@@ -5,5 +5,8 @@
 
         <!-- Map xsd:datetime to java.time.LocalDateTime instead of XMLGregorianCalendar during java class generation -->
         <jaxb:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime" parseMethod="java.time.LocalDateTime.parse"/>
+
+        <!-- Map xsd:gYear to java.time.Year instead of XMLGregorianCalendar during java class generation -->
+        <jaxb:javaType name="java.time.Year" xmlType="xs:gYear" parseMethod="java.time.Year.parse"/>
     </jaxb:globalBindings>
 </jaxb:bindings>
