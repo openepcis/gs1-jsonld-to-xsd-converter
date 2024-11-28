@@ -58,9 +58,9 @@
       },
       "dc:lastModified": {
         "@type": "xsd:date",
-        "@value": "2024-03-20"
+        "@value": "2024-05-28"
       },
-      "owl:versionInfo": "1.10",
+      "owl:versionInfo": "1.11",
       "vann:preferredNamespacePrefix": "gs1",
       "vann:preferredNamespaceUri": {
         "@id": "gs1:"
@@ -15143,6 +15143,23 @@
       }
     },
     {
+      "@id": "gs1:LocationRoleType",
+      "rdfs:isDefinedBy": {
+        "@id": "http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:PartyRoleCode&release=2"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Location Role Code"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Indicates the role and/or purpose of a location (i.e., fixed or mobile physical location or digital location) identified with a GLN."
+      },
+      "rdfs:subClassOf": {
+        "@id": "gs1:TypeCode"
+      }
+    },
+    {
       "@id": "gs1:MaturationMethodCode",
       "rdfs:isDefinedBy": {
         "@id": "http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:MaturationMethodCode&release=1"
@@ -20087,7 +20104,7 @@
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Système d'identification du répertoire des établissements"
+        "@value": "SystÃƒÂ¨me d'identification du rÃƒÂ©pertoire des ÃƒÂ©tablissements"
       },
       "skos:prefLabel": "FR_SIRET"
     },
@@ -20304,7 +20321,7 @@
       "@type": "gs1:LocationID_Type",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The Open Location Code is a geocode system for identifying an area anywhere on the Earth. It was developed at Google's Zürich engineering office, and released late October 2014. Location codes created by the OLC system are referred to as 'plus codes'."
+        "@value": "The Open Location Code is a geocode system for identifying an area anywhere on the Earth. It was developed at Google's ZÃƒÂ¼rich engineering office, and released late October 2014. Location codes created by the OLC system are referred to as 'plus codes'."
       },
       "rdfs:label": {
         "@language": "en",
@@ -20415,6 +20432,2078 @@
         "@value": "Terminal Control Number (TCN) / Terminal Locations Directory. USA - IRS."
       },
       "skos:prefLabel": "US_TCN_CODE"
+    },
+    {
+      "@id": "gs1:LocationRoleType-AGED_CARE_SERVICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Service or facility providing aged care."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aged Care Service"
+      },
+      "skos:prefLabel": "AGED_CARE_SERVICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-AIRCRAFT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A vehicle or machine that is able to fly by gaining support from the air."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Aircraft"
+      },
+      "skos:prefLabel": "AIRCRAFT",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-AIRPORT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with airfield and terminal facilities for aircraft take-off and landing, serving as an air transport terminal at which aircraft may call to receive services such as loading and discharging passengers, crews or cargo, refuelling, restocking, repair etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Airport"
+      },
+      "skos:prefLabel": "AIRPORT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-AIRPORT_GATE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Entrance to a movable passage like a tunnel or bridge leading to the aircraft"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Airport Gate"
+      },
+      "skos:prefLabel": "AIRPORT_GATE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-AMBULANCE_SERVICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Provides initial patient care and transportation to a medical facility"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ambulance Service"
+      },
+      "skos:prefLabel": "AMBULANCE_SERVICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-AMUSEMENT_ENTERTAINMENT_GAMING",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Provides recreation and entertainment services "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Amusement Entertainment Gaming"
+      },
+      "skos:prefLabel": "AMUSEMENT_ENTERTAINMENT_GAMING",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ASSEMBLY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area where components are put together into an end product, appropriate to the process concerned."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Assembly"
+      },
+      "skos:prefLabel": "ASSEMBLY",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ATM",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An automated teller machine (ATM) is an electronic banking outlet that allows customers to complete basic transactions without the aid of a branch representative or teller. ATMs are known in different parts of the world as automated bank machines (ABM) or cash machines."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "ATM"
+      },
+      "skos:prefLabel": "ATM",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BACKROOM",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a store (all formats - club, etc.) used to hold product until it is purchased or can be moved to the sales floor."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Backroom"
+      },
+      "skos:prefLabel": "BACKROOM",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BANK",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location offering financial services to consumers and/or businesses."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bank"
+      },
+      "skos:prefLabel": "BANK",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BERTH",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A berth is a specialised space or part of a wharf space assigned to or taken up by a ship or vessel when anchored or stationary alongside a quay, wharf, jetty, or other structure. As a berth is usually a straight line segment between two points, a wharf may consist of several individual berths and represent a grouping of berths."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Berth"
+      },
+      "skos:prefLabel": "BERTH",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BIRTH_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The place the animal was born/hatched.  Note: the term animal includes but is not limited to mammals, birds, fish and crustaceans. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Birth Area"
+      },
+      "skos:prefLabel": "BIRTH_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BOAT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A watercraft of a large range of types and sizes, but generally smaller than a ship,"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Boat"
+      },
+      "skos:prefLabel": "BOAT",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BOTTLING_SITE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location or area within a larger location where beverages are bottled."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bottling Site"
+      },
+      "skos:prefLabel": "BOTTLING_SITE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BOX_CRUSHER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A Baler used to compact recycled materials (e.g. corrugated boxes, slip sheets and packaging material)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Box Crusher"
+      },
+      "skos:prefLabel": "BOX_CRUSHER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-BRANCH_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for an organization segment that operates in a different physical location or jurisdiction than its parent organization, although is considered as an extension of the parent organization (i.e., same legal entity.)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Branch Location"
+      },
+      "skos:prefLabel": "BRANCH_LOCATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CASH_CARRY_STORE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Location where goods are paid for in full at the time of purchase and taken away by the purchaser."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Cash and Carry Store"
+      },
+      "skos:prefLabel": "CASH_CARRY_STORE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CITY_CENTER_SHOP",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The product is intended to be sold in a city center. A city center shop is centrally located in the commercial, cultural and often the historical, political and geographic heart of a city, especially those in the Western world. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "City Center Shop"
+      },
+      "skos:prefLabel": "CITY_CENTER_SHOP",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CLINIC",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location serving as a health facility, often associated with a hospital, care practitioner or medical school for example, that is primarily focused on the care of outpatients, where medical treatment or advice can be administered, especially of a specialist nature."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Clinic"
+      },
+      "skos:prefLabel": "CLINIC",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CLINICAL_TRIAL_SITE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location designated by a healthcare provider as a site where clinical trials are conducted. In many cases clinical trial sites are hospital facilities with specialised hospital pharmacies, or retail pharmacies on site, but may also include trial specific sites such as a clinical trial subject's residence."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Clinical Trial Site"
+      },
+      "skos:prefLabel": "CLINICAL_TRIAL_SITE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-COLLECTION_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where purchased products may be collected by the purchaser or a delegated party."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Collection Center"
+      },
+      "skos:prefLabel": "COLLECTION_CENTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CONSOLIDATING_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A facility where smaller shipments or consignments are combined into larger consignments bound for a destination."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Consolidating Center"
+      },
+      "skos:prefLabel": "CONSOLIDATING_CENTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CONSTRUCTION_SITE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A construction site is an area or piece of land on which construction works are being carried out."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Construction Site"
+      },
+      "skos:prefLabel": "CONSTRUCTION_SITE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CONTAINER_DECK",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area on board a shipping vessel where containers are loaded."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Container Deck"
+      },
+      "skos:prefLabel": "CONTAINER_DECK",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CONTROLLED_SUBSTANCE_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A caged and locked area in which regulated, controlled substance pharmaceuticals are held while awaiting shipment."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Controlled Substance Area"
+      },
+      "skos:prefLabel": "CONTROLLED_SUBSTANCE_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CONVENIENCE_STORE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for a type of small format retail store often located with or connected to a gas/fuel station. Convenience stores usually provide extended trading hours, operating earlier and later than traditional retail stores."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Convenience Store"
+      },
+      "skos:prefLabel": "CONVENIENCE_STORE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CONVEYOR_BELT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A continuous moving strip or surface that is used for transporting single cartons or a load of objects from one place to another."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Conveyor Belt"
+      },
+      "skos:prefLabel": "CONVEYOR_BELT",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CORRECTION_FACILITY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Provides detention and rehabilitative services to inmates"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Correction Facility"
+      },
+      "skos:prefLabel": "CORRECTION_FACILITY",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CUSTOMER_PICK-UP_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area, usually within a store or collection center, that is reserved specifically for consumers to collect goods purchased online (sometimes known as 'click and collect'), or goods purchased in store to be collected at a later time or date (e.g., paid in instalments, bulky goods, goods requiring staff assistance etc). A customer pick-up area may also enable access by vehicle."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Customer Pick-Up Area"
+      },
+      "skos:prefLabel": "CUSTOMER_PICK-UP_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-CUSTOMS_BORDER_CONTROL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where cross-border procedures and formalities may be executed and fulfilled. Examples of these include passport control, importation of goods, sanitary and phytosanitary (SPS) formalities etc. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Customs Border Control"
+      },
+      "skos:prefLabel": "CUSTOMS_BORDER_CONTROL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DENTAL_HEALTH_SERVICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Provides oral health treatment and support services"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dental health service"
+      },
+      "skos:prefLabel": "DENTAL_HEALTH_SERVICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DEPOT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where vehicles such as those used for transportation (e.g., trucks, trains) or services (e.g., mobile food truck, exhibition cart) can be housed, maintained and deployed from."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Depot"
+      },
+      "skos:prefLabel": "DEPOT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DISPENSER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Tablet, caplet or capsule dispensing machine in which bulk product has been placed to be dispensed on a prescription basis."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dispenser"
+      },
+      "skos:prefLabel": "DISPENSER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DISTRIBUTION_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A specialised warehouse space that serves as a hub for the strategic storage of goods, for the purpose of picking, packing and shipping to another location, or the final destination."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Distribution Center"
+      },
+      "skos:prefLabel": "DISTRIBUTION_CENTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DOCK",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility where transportation such as trucks or rail cars can be loaded with goods for dispatch (i.e., outbound shipping, or sending) or unloaded with goods delivered (i.e., inbound shipping or receiving). Sometimes known as a dock door, a loading or unloading dock or bay, these areas are also used to hold goods temporarily ahead of being stored, or loaded for delivery, so may also include controlled environments such as for cold storage. Docks are designated for use with inbound or outbound shipments, to enable transportation carriers to schedule their arrival for loading or unloading based on dock availability and other critical logistics details such as dock heights, storage conditions and type of equipment on hand. Dock use designations can change frequently based on facility capacity and day-to-day events."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dock"
+      },
+      "skos:prefLabel": "DOCK",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DOCTOR_OFFICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A room or clinic where a doctor works."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Doctor office"
+      },
+      "skos:prefLabel": "DOCTOR_OFFICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DRUG_STORE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Establishment that offers personal care goods, toiletries and non-controlled drugs which can be obtained without a prescription. Within the Netherlands this establishment is a different than a retail pharmacy (referred to in the code list as DRUG)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Drugstore"
+      },
+      "skos:prefLabel": "DRUG_STORE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-DUTY_FREE_STORE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for a type of retail store that is exempt from the payment of certain local or national taxes and duties, on the requirement that the goods sold will be sold to travellers who will take them out of the country. Duty-free stores are usually located within an international travel facility such as an airport or passenger terminal for rail or ferry. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Duty Free Store"
+      },
+      "skos:prefLabel": "DUTY_FREE_STORE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-EARLY_CHILDHOOD_EDUCATING_AND_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Premises used regularly for the education or care of children who are pre-school age or younger."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Early Childhood Education and Center"
+      },
+      "skos:prefLabel": "EARLY_CHILDHOOD_EDUCATING_AND_CENTER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-EDI_STATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Digital location where the EDI messages can be sent and received from."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EDI Station"
+      },
+      "skos:prefLabel": "EDI_STATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-EDUCATION_FACILITY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location used as a public or private education premise where primary, secondary or tertiary education is conducted."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Education Facility"
+      },
+      "skos:prefLabel": "EDUCATION_FACILITY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ELECTRONICS_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A specific area within the store for holding electronic products such as TV's, DVD players, etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Electronics Area"
+      },
+      "skos:prefLabel": "ELECTRONICS_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-EMERGENCY_DEPARTMENT_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area of a hospital especially equipped and staffed for emergency care."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Emergency Department Area"
+      },
+      "skos:prefLabel": "EMERGENCY_DEPARTMENT_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-END_CAP_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A specific internal location on the sales floor, typically at the end of an aisle, for displaying product. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "End Cap Area"
+      },
+      "skos:prefLabel": "END_CAP_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ENTRANCE_GATE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that is a type of opening to allow entry to an enclosed place such as a terminal, warehousing, healthcare facility, or agricultural facility or parts thereof for example. For a gate designated as an exit only, see EXIT_GATE. For a gate designated as both an entry and exit, see GATE. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Entrance Gate"
+      },
+      "skos:prefLabel": "ENTRANCE_GATE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-EXIT_GATE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that is a type of opening to allow exit from an enclosed place such as a terminal, warehousing, healthcare facility, or agricultural facility or parts thereof for example. For a gate designated as an entry only, see ENTRANCE_GATE. For a gate designated as both an entry and exit, see GATE. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Exit Gate"
+      },
+      "skos:prefLabel": "EXIT_GATE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FARM",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location used for agricultural production purposes, such as for growing crops, rearing animals or both. A farm often serves as a hub for a variety of agricultural activities and typically consists of various structures or areas such as barns, silos, feed areas or fields for example."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Farm"
+      },
+      "skos:prefLabel": "FARM",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FEEDLOT_SITE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location or area within a larger location where livestock are fed."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Feedlot Site"
+      },
+      "skos:prefLabel": "FEEDLOT_SITE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FIELD",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area of open land, that may be used for agricultural purposes, such as for growing crops and/or rearing animals. A field may or may not be part of a farm, as it may also exist as a fenced but open space for pasture, devoid of infrastructure such as a wild meadow."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Field"
+      },
+      "skos:prefLabel": "FIELD",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FIXED_READER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location equipped with any fixed read point configuration (reader and antennas) for the purpose of capturing data from an RFID device (e.g. read points at doorways or conveyors)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Fixed Reader"
+      },
+      "skos:prefLabel": "FIXED_READER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FIXED_TRANSPORT_FACILITIES",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with permanent facilities to load or discharge cargo, that does not fit within a maritime, rail, road, air, or multimodal type facility. For example, an oil platform or terminal."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Fixed Transport Facilities"
+      },
+      "skos:prefLabel": "FIXED_TRANSPORT_FACILITIES",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FOOD_BUSINESS",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for businesses selling prepared food to consumers such as cafes, restaurants, food trucks."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Food Business"
+      },
+      "skos:prefLabel": "FOOD_BUSINESS",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FREIGHT_HUB",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that is an interchange point at which equipment or goods are exchanged between drivers and/or transport operators."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Freight Hub"
+      },
+      "skos:prefLabel": "FREIGHT_HUB",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-FREIGHT_TERMINAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An assigned area in which shipping containers of any type and size are prepared for loading into a transportation vehicle (e.g., truck, train, vessel or aeroplane) or where the containers are stacked immediately after unloading from a transportation vehicle."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Freight Terminal"
+      },
+      "skos:prefLabel": "FREIGHT_TERMINAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-GARDEN_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An establishment where plants and gardening equipment are sold."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Garden Center"
+      },
+      "skos:prefLabel": "GARDEN_CENTER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-GATE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that is a type of opening to allow both entry to and exit  from an enclosed place such as a terminal, warehousing, healthcare facility, or agricultural facility or parts thereof, for example. For a gate designated as an entry only, see ENTRANCE_GATE. For a gate designated as an exit only, see EXIT_GATE."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Gate"
+      },
+      "skos:prefLabel": "GATE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-GENERAL_MDSE_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area where typically - non-food products other than perishable, dry groceries and health and beauty care products that are displayed in stores on standard shelving. Examples include household cleaning products, paper napkins, laundry detergents, and insect repellents"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "General Merchandise Area"
+      },
+      "skos:prefLabel": "GENERAL_MDSE_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-GOVERNMENT_DEPARTMENT_AGENCY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Location where a government body conducts operations."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Government Department Agency"
+      },
+      "skos:prefLabel": "GOVERNMENT_DEPARTMENT_AGENCY",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-GREENHOUSE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where plants are grown and cultivated, within an enclosed or semi-enclosed environment, often within a covered indoor space. Includes temporary or semi-permanent structures."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Greenhouse"
+      },
+      "skos:prefLabel": "GREENHOUSE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-GROCERY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area where household grocery products, such as fresh or shelf stable foods, domestic cleaning supplies, personal hygiene items, for example, that are displayed in stores on standard shelving."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Grocery      "
+      },
+      "skos:prefLabel": "GROCERY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-HANDLING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An operational area where internal activities associated with storing, moving, protecting or other handling of goods take place throughout the processes of manufacturing, warehousing or distribution. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Storage and Handling Area"
+      },
+      "skos:prefLabel": "HANDLING_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-HEAD_OFFICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that serves as the executive or main office of an organization."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Head Office"
+      },
+      "skos:prefLabel": "HEAD_OFFICE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-HOSPITAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where health care organizations provide patient treatment with specialised medical and nursing staff, medical equipment and inpatient care facilities."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hospital"
+      },
+      "skos:prefLabel": "HOSPITAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-HOSPITAL_CAFETERIA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A restaurant within a hospital or other medical facility in which the customers serve themselves or are served at a counter."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hospital Cafeteria"
+      },
+      "skos:prefLabel": "HOSPITAL_CAFETERIA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-HOSPITAL_DEPARTMENT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a hospital which provides specific treatment or support services  not individually included in the Location Type list."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hospital Department"
+      },
+      "skos:prefLabel": "HOSPITAL_DEPARTMENT",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-HOSPITAL_PHARMACY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location within a hospital where pharmaceuticals or medical devices can be dispensed by a pharmacy operator to hospital staff for inpatient treatment as well as directly to patients being discharged. Differs to a retail pharmacy as the site may be related to government funding, subsidized reimbursement lists or agencies, and may also dispense specialized pharmaceuticals (e.g., orphan drugs)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hospital Pharmacy"
+      },
+      "skos:prefLabel": "HOSPITAL_PHARMACY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-IMAGING_DIAGNOSTICS_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a healthcare facility, usually a hospital or radiology facility, designated for the purpose of imaging and diagnostics."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Imaging Diagnostics Area"
+      },
+      "skos:prefLabel": "IMAGING_DIAGNOSTICS_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-IMPREST_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Usually a ward-level location in which stock is held for use on that ward."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Imprest Location"
+      },
+      "skos:prefLabel": "IMPREST_LOCATION",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-INLAND_FISHERY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location devoted to the rearing and harvesting of aquatic animals and plants within an inland freshwater ecosystem (i.e., fresh or limnetic waters) for industrial, small-scall/artisanal or recreational purposes. Includes natural flowing or lotic waters such as rivers or streams (including their smaller elements such as springs, brooks, rivulets, or rills), artificial canals, and static or lentic waters such as natural lakes and tarns and artificial lakes or reservoirs such as rivers, lakes, etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Inland Fishery"
+      },
+      "skos:prefLabel": "INLAND_FISHERY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-INLAND_PORT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with permanent facilities, situated along inland waterways, where inland waterway ships and vessels may dock to receive services such as loading and discharging passengers, crews or cargo, refuelling, restocking, etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Inland Port"
+      },
+      "skos:prefLabel": "INLAND_PORT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-INTERMODAL_TERMINAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that is a specific type of terminal, which supports the transfer between various modes of transport such as rail, road, maritime, inland waterways."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Intermodal Terminal"
+      },
+      "skos:prefLabel": "INTERMODAL_TERMINAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-INTERNATIONAL_MAIL_PROCESSING_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with mail processing facilities recognized by the Universal Postal Union (UPU) that generates or receives dispatches and/or acts as a transit center for mail exchanged between other International Mail Processing Centers (IMPC)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "International Mail Processing Center"
+      },
+      "skos:prefLabel": "INTERNATIONAL_MAIL_PROCESSING_CENTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-LANE_OR_ROUTE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A specific transportation lane or route."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lane or route"
+      },
+      "skos:prefLabel": "LANE_OR_ROUTE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-LAY-AWAY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a store for holding or consolidating customer purchases for final payment and pickup."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Lay-Away "
+      },
+      "skos:prefLabel": "LAY-AWAY",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-LIBRARY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A building or room containing collections of books, periodicals, and sometimes films and recorded music for use or borrowing by the public or the members of an institution."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Library"
+      },
+      "skos:prefLabel": "LIBRARY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MAIN_RECEPTION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility, often near the entrance, that is used predominantly to greet visitors to the building."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Main Reception"
+      },
+      "skos:prefLabel": "MAIN_RECEPTION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MANUFACTURING_PLANT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location consisting of one or more buildings with facilities for manufacturing."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Manufacturing Plant"
+      },
+      "skos:prefLabel": "MANUFACTURING_PLANT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MARINE_FISHERY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location devoted to the rearing and harvesting of aquatic animals and plants within a marine saltwater ecosystem (i.e., open sea/pelagic zone), for industrial, small-scall/artisanal or recreational purposes."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Marine Fishery"
+      },
+      "skos:prefLabel": "MARINE_FISHERY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MARKET",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where multiple sellers can set-up mobile stalls, booths or stores, to sell various goods to consumers. Markets often include a wide variety of goods such as fresh produce, handcrafts, artisan products for example, and may also include 'pop-up' type stores that are temporary or move from market to market."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Market"
+      },
+      "skos:prefLabel": "MARKET",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MENTAL_HEALTH_SERVICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Provides mental health treatment and support services."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mental Health Service"
+      },
+      "skos:prefLabel": "MENTAL_HEALTH_SERVICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MILKING_SITE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Milking is the act of removing milk from mammary glands of various animal types."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Milking Site"
+      },
+      "skos:prefLabel": "MILKING_SITE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-MOBILE_READER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Any non-fixed (portable) reader configuration (reader and antennas) for the purpose of capturing EPC data (e.g. Hand held or forklift reader)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mobile Reader"
+      },
+      "skos:prefLabel": "MOBILE_READER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-NURSE_STATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Nurse station within a hospital or other healthcare service provider"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Nurse Station"
+      },
+      "skos:prefLabel": "NURSE_STATION",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-OFFICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A room, set of rooms, or building where the business of a commercial or industrial organization or an individual professional is conducted."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Office"
+      },
+      "skos:prefLabel": "OFFICE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ONLINE_PLATFORM",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A digital location offering online services that utilize the internet to facilitate interactions between two or more distinct but interdependent sets of users. Includes graphical user interfaces for human interaction and/or system interfaces for connection with other digital services (e.g., APIs). Examples include search engines, marketplaces, online financial systems, distribution management entities (DME) etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Online Platform"
+      },
+      "skos:prefLabel": "ONLINE_PLATFORM",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ONLINE_SHOP",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A digital location where a varied selection of goods or services can be sold to a consumer, by a single seller who may also operate physical stores offering the same varied selection of goods or services under their own brand name or from different brands. Differs to an online platform marketplace, which enables multiple sellers to offer goods and services through the same platform."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Online Shop"
+      },
+      "skos:prefLabel": "ONLINE_SHOP",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-OPERATING_THEATER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A facility usually within a hospital used to perform medical/surgical procedures."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Operating Theater"
+      },
+      "skos:prefLabel": "OPERATING_THEATER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PACKAGING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility where product is packaged."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Packaging Area"
+      },
+      "skos:prefLabel": "PACKAGING_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PACKHOUSE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location (standalone or part of a larger facility) where fresh foods such as fruit, vegetables, grains, meat or horticultural products, for example, are sorted, prepared and packed ahead of distribution to shops or markets for sale to end users."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Packhouse"
+      },
+      "skos:prefLabel": "PACKHOUSE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PALLET_WRAPPER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area where any automatic or manual method using bands of plastic film applied to product  used to encase palletised loads prior to shipment to protect against product damage."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pallet Wrapper"
+      },
+      "skos:prefLabel": "PALLET_WRAPPER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PATHOLOGY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Pathology area within a hospital or independently operated."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pathology"
+      },
+      "skos:prefLabel": "PATHOLOGY",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PERSONAL_SERVICES",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Business providing personal services such as beauty therapy, tattoo parlours, hair salons etc. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Personal Services"
+      },
+      "skos:prefLabel": "PERSONAL_SERVICES",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PETROL_STATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An establishment beside a road selling fuel for motor vehicles."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Petrol Station"
+      },
+      "skos:prefLabel": "PETROL_STATION",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PICK-UP_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where goods may be temporarily stored until collected or loaded to a shipment for the next part of a transportation process."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Pick-Up Location"
+      },
+      "skos:prefLabel": "PICK-UP_LOCATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PICKING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility in which product is picked to fulfil an order."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Picking Area"
+      },
+      "skos:prefLabel": "PICKING_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-POINT_OF_SALE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area, usually within a store, commonly known as a 'checkout', where barcodes on trade items can be scanned to enable a consumer purchase and to complete and record the transaction for the seller."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Point Of Sale"
+      },
+      "skos:prefLabel": "POINT_OF_SALE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PRIMARY_HEALTH_SERVICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A health service which provides a first point of consultation for patients. Includes community centres."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Primary Health Service"
+      },
+      "skos:prefLabel": "PRIMARY_HEALTH_SERVICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PRINTING_ROOM",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area which provides printed labels/tags for  the goods/cartons/pallets within a DC or manufacturer facility."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Printing Room"
+      },
+      "skos:prefLabel": "PRINTING_ROOM",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PRODUCTION_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility where the conversion of materials and or assembly of components to manufacture goods, products or services takes place."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Production Area"
+      },
+      "skos:prefLabel": "PRODUCTION_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PRODUCTION_LINE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area in a factory in which goods being manufactured is passed through a set linear sequence of mechanical or manual operations."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Production Line"
+      },
+      "skos:prefLabel": "PRODUCTION_LINE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PROMOTION_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A specific area or room that is used to hold special purchased product."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Promotion Area"
+      },
+      "skos:prefLabel": "PROMOTION_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-PUBLIC_WAREHOUSE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A building, or a part of one, where storage space is offered to other companies for compensation (fee), for the storage of their goods, merchandise, etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Public Warehouse"
+      },
+      "skos:prefLabel": "PUBLIC_WAREHOUSE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-QUALITY_CONTROL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area in which any product not meeting quality standards is held pending further evaluation."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Quality Control"
+      },
+      "skos:prefLabel": "QUALITY_CONTROL",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-QUARANTINE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area at a manufacturing, distribution or retail facility to hold product that may not be suitable for consumption until further inspection."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Quarantine"
+      },
+      "skos:prefLabel": "QUARANTINE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RAIL_STATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with one or more buildings/platforms where trains can stop for people to embark and disembark."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rail Station"
+      },
+      "skos:prefLabel": "RAIL_STATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RAIL_TERMINAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with one or more railway terminals such as freight terminals or rail stations (excluding passenger terminals), that provides connections with other rail vehicles and other modes of transport. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rail Terminal"
+      },
+      "skos:prefLabel": "RAIL_TERMINAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-READ_POINT_VERIFICATION_SPOT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A point at which a tagged object's location has been verified by an associated read of a separate fixed location tag. Read Point Verification Spot would be used when there is a business process to capture the current location of an object at rest (typically with a mobile reader)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Read Point Verification Spot"
+      },
+      "skos:prefLabel": "READ_POINT_VERIFICATION_SPOT",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-REARING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The place the animal was raised after birth to the end of the animalsÃ¢â‚¬â„¢ life. Note: the term animal includes but is not limited to mammals, birds, fish and crustaceans."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Rearing Area"
+      },
+      "skos:prefLabel": "REARING_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RECALLED_PRODUCT_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area in which recalled product is stored pending shipment back to the manufacturer or the manufacturerÃ¢â‚¬â„¢s designated returns centre for final disposition."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Recalled Product Area"
+      },
+      "skos:prefLabel": "RECALLED_PRODUCT_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RECEIVING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility where incoming goods are unloaded and checked for condition and completeness."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Receiving Area"
+      },
+      "skos:prefLabel": "RECEIVING_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RECEIVING_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where goods may be temporarily received and stored for the purpose of unloading shipments."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Receiving Location"
+      },
+      "skos:prefLabel": "RECEIVING_LOCATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-REPACKING_FACILITY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where goods may be combined with other goods and packed for sale or shipping distribution as a single pack. For locations where transport units are combined for shipping, see CONSOLIDATING_CENTER."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Repacking Facility"
+      },
+      "skos:prefLabel": "REPACKING_FACILITY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RESEARCH_FACILITY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An institute,  centre, or other location where research is conducted."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Research Facility"
+      },
+      "skos:prefLabel": "RESEARCH_FACILITY",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RESIDENCE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A dwelling or an apartment where one lives."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Residence"
+      },
+      "skos:prefLabel": "RESIDENCE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RETAIL_PHARMACY",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for a retail store that sells and/or dispenses pharmaceuticals and medical devices to the general public, often at the direction of physicians. Quite often also sells personal care goods, toiletries and non-controlled or over-the-counter (OTC) drugs."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Retail Pharmacy"
+      },
+      "skos:prefLabel": "RETAIL_PHARMACY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RETURNABLE_ASSET_SERVICE_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The location where a returnable asset is serviced."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Returnable Asset Service Center"
+      },
+      "skos:prefLabel": "RETURNABLE_ASSET_SERVICE_CENTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-RETURNS_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area where goods, that have been dispatched to be delivered, are received back into a facility for further processing. Examples of processing include sorting, cleaning, resale, onward transportation to other specialized facilities, destruction, etc. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Returns Area"
+      },
+      "skos:prefLabel": "RETURNS_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-ROAD_TERMINAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location that is connected to other locations by means of roads."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Road Terminal"
+      },
+      "skos:prefLabel": "ROAD_TERMINAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SALES_FLOOR",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a store (all formats -  club, etc.) where product is displayed for customer purchase."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sales Floor "
+      },
+      "skos:prefLabel": "SALES_FLOOR",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SALES_FLOOR_TRANSITION_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a store between two physical locations (e.g. Backroom and Sales Floor) - used for a read point only."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sales Floor Transition Area "
+      },
+      "skos:prefLabel": "SALES_FLOOR_TRANSITION_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SALES_YARD",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for individuals or companies to sell used goods."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sales Yard"
+      },
+      "skos:prefLabel": "SALES_YARD",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SEAPORT",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location with maritime facilities, at which both seagoing and inland waterway ships and seagoing vessels may dock to receive services such as loading and discharging passengers, crews or cargo, refuelling, restocking, repair."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Seaport"
+      },
+      "skos:prefLabel": "SEAPORT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SECURITY_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A designated internal location for the purpose of minimising direct access to the product."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Security Area"
+      },
+      "skos:prefLabel": "SECURITY_AREA",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SELF_SERVICE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The product should be placed in an area where the consumer can self serve themselves to their purchase needs. The product may have been portioned, cut or modified prior."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Self Service"
+      },
+      "skos:prefLabel": "SELF_SERVICE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SERVICE_COUNTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The product is recommended to be placed at a location where an employee from the trading partner will need to portion, cut, or modify the product to the end consumer based upon consumer need."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Service Counter"
+      },
+      "skos:prefLabel": "SERVICE_COUNTER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SHELF",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location specified within a larger area, used to hold or store objects. A shelf is generally a flat, rigid surface or structure which may usually be composed of wood, glass or metal, fixed at right angles to a wall or other vertical structure."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Shelf "
+      },
+      "skos:prefLabel": "SHELF",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SHIPPING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility where outgoing goods are checked for condition and completeness and loaded onto a conveyance for transport."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Shipping Area"
+      },
+      "skos:prefLabel": "SHIPPING_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SHIP_FROM_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The location from which physical goods are shipped. In cases when a shipment may be completed through a single consignment, the ship from location is the same location that is managed by the dispatch party or used by the consignor. However in cases when a shipment involves multiple consignments, there will various ship from locations, that do not necessarily correspond to the same locations associated with the consignors or dispatch parties."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ship From Location"
+      },
+      "skos:prefLabel": "SHIP_FROM_LOCATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SHIP_TO_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The location to which physical goods are shipped. In cases when a shipment may be completed through a single consignment, the ship to location is the same location that is managed by the delivery recipient party or used by the consignee. However in cases when a shipment involves multiple consignments, there will be various ship to locations, that do not necessarily correspond to the same locations associated with the consignees or delivery recipient parties."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ship To Location"
+      },
+      "skos:prefLabel": "SHIP_TO_LOCATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SILO",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location or area within a larger location, used to store grain within a tower or pit."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Silo"
+      },
+      "skos:prefLabel": "SILO",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SLAUGHTER_HOUSE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A facility where animals are slaughtered for meat as food."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Slaughterhouse"
+      },
+      "skos:prefLabel": "SLAUGHTER_HOUSE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-SPORTS_AND_RECERATIONAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location for individuals to engage in sports and recreational activities for leisure."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sports and Recreational"
+      },
+      "skos:prefLabel": "SPORTS_AND_RECERATIONAL",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-STAGING_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where goods may be stored temporarily between two separate stages or parts of an overall inbound or outbound goods process. E.g., received and approved goods may sit in a staging area before they are put away into the main storage area of the warehouse. Another example is when components for a manufacturing process are temporarily placed in a staging area between the warehouse and the manufacturing shop floor until those components can be taken to the correct workstations on the manufacturing shop floor."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Staging Area"
+      },
+      "skos:prefLabel": "STAGING_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-STATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An establishment or building where a specified activity or service is based."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Station"
+      },
+      "skos:prefLabel": "STATION",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-STORAGE_AREA",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a facility where material or goods are kept to fulfil a future need. Examples of facilities include shops, manufacturing plants, distribution centers, yards, depots, etc."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Storage Area"
+      },
+      "skos:prefLabel": "STORAGE_AREA",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-STORE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location where a varied selection of goods or services can be sold to a consumer."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Store"
+      },
+      "skos:prefLabel": "STORE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-TERMINAL",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location which serves as a pathway for handling transport processes that may involve cargo and people, such as passengers or crew, for example."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Terminal"
+      },
+      "skos:prefLabel": "TERMINAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-TRADE_ITEM_RETURN_LOCATION",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A code to qualify the locations to which a retailer or wholesaler can send unsold product. Examples are expired product, damaged, reclamation or general product returns."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trade Item Return Location"
+      },
+      "skos:prefLabel": "TRADE_ITEM_RETURN_LOCATION",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-TRAIN",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A form of rail transport consisting of a series of connected vehicles that generally run along a railroad (or railway) track to transport passengers or cargo (also known as 'freight' or 'goods'). "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Train"
+      },
+      "skos:prefLabel": "TRAIN",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-VENDING",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The retailing merchandise through vending machines."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Vending"
+      },
+      "skos:prefLabel": "VENDING",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-VENDOR_LEASED_SPACE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A trade channel where the trade item is sold through a retailer within a retailer for example a rack jobber."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Vendor Leased Space"
+      },
+      "skos:prefLabel": "VENDOR_LEASED_SPACE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-VINEYARD",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area where grape vines are grown in order to produce wine."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Vineyard"
+      },
+      "skos:prefLabel": "VINEYARD",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-VISITING_ADDRESS",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An enterprise's physical location where guests are received during set working hours."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Visiting Address"
+      },
+      "skos:prefLabel": "VISITING_ADDRESS",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-WARD",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Usually, a sub-location within a hospital typically one allocated to a particular type of patient."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ward"
+      },
+      "skos:prefLabel": "WARD",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-WAREHOUSE",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A location equipped with the appropriate equipment and fittings for large quantities of items such as raw materials or manufactured goods to be stored in the appropriate conditions prior to distribution e.g., cold storage. A warehouse is a facility that, along with appropriate storage and handling equipment includes personnel and management resources, enabling to stocking or storage of goods and control of inbound goods (e.g., such as those received from suppliers, production centets, etc.) and outbound goods (e.g., such as those being sent to production, sales, etc.)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Warehouse"
+      },
+      "skos:prefLabel": "WAREHOUSE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-WASTE_CENTER",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An area within a parent location designated for the central depositing of waste streams prior to collection. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Waste Center"
+      },
+      "skos:prefLabel": "WASTE_CENTER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-WHARF",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A wharf or quay is a fixed location with a structure built parallel to the waterfront of a harbour, navigable river or any body of water so that ships and vessels may lie alongside for docking, loading, and unloading purposes."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Wharf"
+      },
+      "skos:prefLabel": "WHARF",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:LocationRoleType-YARD",
+      "@type": "gs1:LocationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A tract of ground next to, surrounding, or surrounded by a building or buildings, used for holding product (e.g., ores, sand) or equipment (e.g. trailer, container, wagons) or transport means (e.g., trucks, tractors, locomotives)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Yard "
+      },
+      "skos:prefLabel": "YARD",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:Luminance",
@@ -21519,8 +23608,453 @@
       "skos:prefLabel": "SINGLE_USE_CODE"
     },
     {
+      "@id": "gs1:OrganicClaimAgencyCode-1",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "EPA Ã¢â‚¬â€œ US Environmental Protection Agency"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EPA"
+      },
+      "skos:prefLabel": "1"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-10",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Demeter-Bund - The Demeter movement as an entrepreneurial network promotes the development of bio-dynamic economy, to secure the livelihoods of the world and to strengthen the positive people in his ministry. In cooperation contribute producers, processors, traders and consumers in partnership to shape the market."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Demeter-Bund"
+      },
+      "skos:prefLabel": "10"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-11",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "GÃƒâ€žA - GÃƒÂ¤a is a diverse farming association for farmers, processors and traders inside.Focal point is Germany. GÃƒÂ¤a is a special design for the structure of the organic farming.  Biokreis- The Biokreis is an association for organic farming. Currently more than 800 farms, 80 and 200 processors, consumers are members of Biokreis, committed to working together on more than 33,000 for organic and sustainable farming."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "GÃƒâ€žA"
+      },
+      "skos:prefLabel": "11"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-12",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Naturland - Naturland is active the world over in promoting organic agriculture. Its members are farmers who produce a wide range of valuable products: coffee from Mexico and Peru, olive oil from Greece, tea from the slopes of IndiaÃ¢â‚¬â„¢s mountains, pineapple and other tropical fruit from Uganda, spices from Sri Lanka. Organic agriculture safeguards the existence of smallholders and helps with the sustainable management of what are often fragile ecosystems. On a global scale, over 50,000 Naturland farmers are cultivating an area of over 142,000 hectares."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Naturland"
+      },
+      "skos:prefLabel": "12"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-13",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Biopark - Biopark is an organic farmersÃ¢â‚¬â„¢ association based in the North of Germany, in Mecklenburg-Vorpommerania. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Biopark"
+      },
+      "skos:prefLabel": "13"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-14",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Ecovin - ECOVIN Federation Organic Viticulture Association: ECOVIN largest merger in 1985 as ecologically-working wine estates in Germany was founded. Approximately 220 member companies currently manage 1,600 hectares of vineyards in 11 German wine-growing areas."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ecovin"
+      },
+      "skos:prefLabel": "14"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-15",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "IFOAM - The International Federation of Organic Agriculture Movements (IFOAM) is a grassroots and democratic organisation that currently unites 750 member organisations in 116 countries. Note: this value will be deleted in the future and should not be used."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IFOAM"
+      },
+      "skos:prefLabel": "15"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-16",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Demeter International Demeter-International e. V. is a non profit organisation and its member organisations work together in the spirit of an international confederation with democratic principles. Membership requires a functioning Demeter certification programme."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Demeter International"
+      },
+      "skos:prefLabel": "16"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-17",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Bioland: The leading organic farmers' association in Germany for the economy of organic-based businesses without synthetic pesticides and synthetic chemical nitrogen fertilizer. The animals are kept humanely and processed food carefully. This provides an environmentally sound and sustainable food production. http://www.bioland.de."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bioland"
+      },
+      "skos:prefLabel": "17"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-19",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quality Certification Services. Note: this value will be deleted in the future and should not be used."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "QCS"
+      },
+      "skos:prefLabel": "19"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-2",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "FSA Ã¢â‚¬â€œ UK Food Standards Agency"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "FSA"
+      },
+      "skos:prefLabel": "2"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-20",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Washington State Dept. of Agriculture. Note: this value will be deleted in the future and should not be used."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "WSDA"
+      },
+      "skos:prefLabel": "20"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-21",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The Canada Organic Regime is the Government of Canada's response to requests by the organic sector and consumers to develop a regulated system for organic agricultural products. The Organic Products Regulations define specific requirements for organic products to be labelled as organic or that bear the Canada Organic logo. URL: http://www.inspection.gc.ca/food/organic-products/labelling-and-general-information/certified-choice/eng/1328082717777/1328082783032 "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "CFIA - Organic Regime"
+      },
+      "skos:prefLabel": "21"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-22",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The European Union Commission."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "EU Commission"
+      },
+      "skos:prefLabel": "22"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-23",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "OISCC - The Organic Industry Standards and Certification Council maintains the Australian National Standard for Organic and Biodynamic Produce, to ensure continued consumer confidence and International market access."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The Organic Industry Standards and Certification Council (OISCC)"
+      },
+      "skos:prefLabel": "23"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-24",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "ACO - Australian Certified Organic is AustraliaÃ¢â‚¬â„¢s largest certifier for organic and biodynamic produce and has over 1500 operators within its certification system. ACO is a not for profit fully-owned subsidiary of Australia Organic Ltd."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Australian Certified Organic (ACO)"
+      },
+      "skos:prefLabel": "24"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-25",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "NASAA Certified Organic (NCO) is a fully-owned subsidiary of The National Association for Sustainable Agriculture, Australia who provides the certification services."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "National Association for Sustainable Agriculture (NASAA)"
+      },
+      "skos:prefLabel": "25"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-26",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "OFC - The Organic Food Chain provides certification services in accordance with the National Standard for Organic and Bio-Dynamic Produce and other international organic certification standards."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "OFC"
+      },
+      "skos:prefLabel": "26"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-27",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "AUS-QUAL is a certification body accredited by JAS-ANZ, providing conformity assessment services for quality management and food safety (HACCP) management systems, as well as Product Cortication Systems for the wider Australian and New Zealand agricultural, horticultural and secondary processing sectors."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "AUS-QUAL"
+      },
+      "skos:prefLabel": "27"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-28",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The Bio-Dynamic Research Institute, founded in 1957, is involved in research and practical development of the Australian DEMETER Bio-Dynamic Method of Agriculture. In 1967 it was vested with the rights and supervision of the DEMETER Trademark in Australia. Part of this role is the certification of DEMETER quality products."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "BDRI"
+      },
+      "skos:prefLabel": "28"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-29",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Safe Food Production Queensland  works in partnership with the Department of Agriculture and Fisheries and Forestry (DAFF) and Queensland Health (QH) across the entire food chain, to ensure Queensland's food supply is safe."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SFQ"
+      },
+      "skos:prefLabel": "29"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-3",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "FDA Ã¢â‚¬â€œ US Food and Drug Agency"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "FDA"
+      },
+      "skos:prefLabel": "3"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-30",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Ã¢â‚¬â€¹The Danish Veterinary and Food Administration (DVFA) is part of the Ministry of Environment and Food. DVFA is responsible for food safety and health from farm to fork and maintains a list of Danish food companies, aquacultural farms etc. subject to organic inspection. Only authorities under the Ministry of Environment and Food carry out inspection under the government rules for organic production. The Danish AgriFish Agency inspects Ã¢â‚¬â€¹the primary production, while the Danish Veterinary and Food Administration (DVFA) inspects food companies."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Danish Veterinary and Food Administration (DVFA)"
+      },
+      "skos:prefLabel": "30"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-31",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Verbund Ãƒâ€“kohÃƒÂ¶fe e.V. is an organic cultivation association based in Wanzleben in the Magdeburg BÃƒÂ¶rde region"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ãƒâ€“kohÃƒÂ¶fe"
+      },
+      "skos:prefLabel": "31"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-32",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The biolabel of the Bavarian State Ministry for Food, Agriculture and Forestry meets the wish of consumers for a high quality of organic products and traceable origin. Only those products whose organic quality standards extend far beyond the statutory regulations and originate from the stated regions are permitted to bear this quality seal. Try out convincing organic products yourself, safe in the knowledge of their place of origin."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bayerisches Bio-Siegel"
+      },
+      "skos:prefLabel": "32"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-33",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The products marked with the bio-symbol Baden-WÃƒÂ¼rttemberg are regional organic foods with traceable origin. The use or labelling is based on the ecological standards of the EC eco-regulation supplemented by the requirement that the products have to be produced in fully converted farms and partly also to the stricter requirements of the ecological cultivation associations"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Bio Baden-WÃƒÂ¼rttemberg"
+      },
+      "skos:prefLabel": "33"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-34",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The EKO Certification Foundation is an independent private foundation established in 2012. The foundation has no profit objective. The EKO label for foods has been around for 30 years, and most people know as a hallmark for organic foods. The EKO certificate has been the owner of this collective mark. With the advent of the European Ecolabel (the green leaf with the asterisks), EKO has been given the opportunity to develop further. Producers should be in addition to biologically certified, also carry out additional efforts in the area of Ã¢â‚¬â€¹Ã¢â‚¬â€¹sustainability."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Stichting EKO keurmerk"
+      },
+      "skos:prefLabel": "34"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-4",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "International Foundation for Organic Agriculture"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "IFOA"
+      },
+      "skos:prefLabel": "4"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-5",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "BFA - Biological Farmers of Australia"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "BFA"
+      },
+      "skos:prefLabel": "5"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-6",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "USDA- US Department of Agriculture"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "USDA"
+      },
+      "skos:prefLabel": "6"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-7",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quality Assurance International www.qai-inc.com QAI is a leading USDA-accredited organic product certifying agency. Note: this value will be deleted in the future and should not be used."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "QAI"
+      },
+      "skos:prefLabel": "7"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-8",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "SÃƒÂ¼dtirol Bioland - Bioland Association of South Tyrol The Association of South Tyrol is the largest organic association for organic farmers having to farmers in South Tyrol and the only active in association with a national association office Terlan.Note: this value will be deleted in the future and should not be used."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "SÃƒÂ¼dtirol Bioland"
+      },
+      "skos:prefLabel": "8"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-9",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Ecoland - Ecoland is a membership organisation whose members elect a governing Board which is responsible for the design and implementation of the organic certification system."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ecoland"
+      },
+      "skos:prefLabel": "9"
+    },
+    {
+      "@id": "gs1:OrganicClaimAgencyCode-999",
+      "@type": "gs1:OrganicClaimAgencyCode",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Unspecified Agency"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Unspecified Agency"
+      },
+      "skos:prefLabel": "999"
+    },
+    {
       "@id": "gs1:OrganicClaimAgencyCode-BFA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-5"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Biological Farmers of Australia"
@@ -21534,6 +24068,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-BIOLAND",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-17"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Bioland: The leading organic farmers' association in Germany for the economy of organic-based businesses without synthetic pesticides and synthetic chemical nitrogen fertilizer. The animals are kept humanely and processed food carefully. This provides an environmentally sound and sustainable food production. http://www.bioland.de."
@@ -21547,6 +24084,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-DEMETER_BUND",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-10"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "The Demeter movement as an entrepreneurial network promotes the development of bio-dynamic economy, to secure the livelihoods of the world and to strengthen the positive people in his ministry. In cooperation contribute producers, processors, traders and consumers in partnership to shape the market."
@@ -21560,6 +24100,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-DEMETER_INTERNATIONAL",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-16"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Demeter International Demeter-International e. V. is a non profit organisation and its member organisations work together in the spirit of an international confederation with democratic principles. Membership requires a functioning Demeter certification programme. Same as GS1 Code 16"
@@ -21573,6 +24116,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-ECOLAND",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-9"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Ecoland is a membership organisation whose members elect a governing Board which is responsible for the design and implementation of the organic certification system."
@@ -21586,6 +24132,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-ECOVIN",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-14"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "ECOVIN Federation Organic Viticulture Association: ECOVIN largest merger in 1985 as ecologically-working wine estates in Germany was founded. Approximately 220 member companies currently manage 1,600 hectares of vineyards in 11 German wine-growing areas. Same as GS1 code 14"
@@ -21599,6 +24148,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-EPA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-1"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "US Environmental Protection Agency. Same as GS1 Code 1"
@@ -21612,6 +24164,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-FDA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-3"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "FDA US Food and Drug Agency"
@@ -21625,6 +24180,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-FSA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-2"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "UK Food Standards Agency"
@@ -21638,6 +24196,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-GAA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-11"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "GAA is a diverse farming association for farmers, processors and traders inside.Focal point is Germany. GAA is a special design for the structure of the organic farming. Biokreis- The Biokreis is an association for organic farming. Currently more than 800 farms, 80 and 200 processors, consumers are members of Biokreis, committed to working together on more than 33,000 for organic and sustainable farming."
@@ -21651,6 +24212,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-IFOA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-4"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "International Foundation for Organic Agriculture"
@@ -21664,6 +24228,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-IFOAM",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-15"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "The International Federation of Organic Agriculture Movements (IFOAM) is a grassroots and democratic organization that currently unites 750 member organizations in 116 countries. Same as GS1 code 15"
@@ -21677,6 +24244,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-NATURLAND",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-12"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Naturland - Naturland is active the world over in promoting organic agriculture. Its members are farmers who produce a wide range of valuable products: coffee from Mexico and Peru, olive oil from Greece, tea from the slopes of India's mountains, pineapple and other tropical fruit from Uganda, spices from Sri Lanka. Organic agriculture safeguards the existence of smallholders and helps with the sustainable management of what are often fragile ecosystems. On a global scale, over 50,000 Naturland farmers are cultivating an area of over 142,000 hectares.Same as GS1 Code 12"
@@ -21690,6 +24260,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-QAI",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-7"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Quality Assurance International. QAI is a leading USDA-accredited organic product certifying agency."
@@ -21703,6 +24276,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-SUDITIROL",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-8"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Bioland Association of South Tyrol The Association of South Tyrol is the largest organic association for organic farmers having to farmers in South Tyrol and the only active in association with a national association office Terlan."
@@ -21716,6 +24292,9 @@
     {
       "@id": "gs1:OrganicClaimAgencyCode-USDA",
       "@type": "gs1:OrganicClaimAgencyCode",
+      "owl:deprecated": {
+        "@id": "gs1:OrganicClaimAgencyCode-6"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "US Department of Agriculture."
@@ -21861,11 +24440,11 @@
       "@type": "gs1:OrganizationID_Type",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The RCS (Registre du commerce et des sociétés), otherwise known as the Greffe, is the registry for the company accounts and by-laws of all companies in France."
+        "@value": "The RCS (Registre du commerce et des sociÃƒÂ©tÃƒÂ©s), otherwise known as the Greffe, is the registry for the company accounts and by-laws of all companies in France."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Registre du commerce et des sociétés"
+        "@value": "Registre du commerce et des sociÃƒÂ©tÃƒÂ©s"
       },
       "skos:prefLabel": "FR_RCS"
     },
@@ -21878,7 +24457,7 @@
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Système d'identification du répertoire des entreprises"
+        "@value": "SystÃƒÂ¨me d'identification du rÃƒÂ©pertoire des entreprises"
       },
       "skos:prefLabel": "FR_SIREN"
     },
@@ -22199,7 +24778,7 @@
       "@type": "gs1:OrganizationID_Type",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Every stockbroker (€œregistered representative€) licensed to sell securities in the U.S. must have a CRD number, which is administered by the Financial Industry Regulatory Authority (FINRA)."
+        "@value": "Every stockbroker (Ã¢â€šÂ¬Ã…â€œregistered representativeÃ¢â€šÂ¬Ã‚Â) licensed to sell securities in the U.S. must have a CRD number, which is administered by the Financial Industry Regulatory Authority (FINRA)."
       },
       "rdfs:label": {
         "@language": "en",
@@ -22446,91 +25025,182 @@
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization accepting goods, products, services etc."
+        "@value": "Organization responsible for legally accepting goods or services at a physical location handled by a delivery party. The accepting process is part of a broader receiving process, focussed on preliminary checks of goods or services being delivered and occurs in the presence of the transport carrier. When physical goods are delivered, the accepting party will perform a visual check of the transport units (e.g., pallets) to identify any visual damages or defects, any discrepancies with the associated dispatch notice, and notify the transport carrier of any issues found, which can be challenged by the transport carrier if required. This process is defined by transport regulations, and if no issues are found, the goods are legally accepted, and transfer of ownership is completed (even if subject to further legal checks carried out by the checking party) and goods can proceed to checking and storing processes. An accepting party may be different to the party responsible for buying, ordering or paying for the goods or services. May also be different to the party responsible for physically receiving the goods on arrival or storing into inventory. For example, an accepting party may be a service provider to the buyer of goods, meaning goods may be accepted on behalf of the buyer, or prior to being taken over by the buyer."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Accepting Organization"
       },
-      "skos:prefLabel": "ACCEPTING_PARTY"
+      "skos:prefLabel": "ACCEPTING_PARTY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-ACCOUNTS_DEPARTMENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for the preparation of financial statements, maintenance of general ledgers, payment of bills, preparation of customer bills, payroll, and other activities related to the management of finances within an organization. May also be known as a finance department."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Accounts Department"
+      },
+      "skos:prefLabel": "ACCOUNTS_DEPARTMENT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-AGRICULTURAL_COOPERATIVE",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An agricultural cooperative, also known as a farmers' co-op, is a cooperative in which farmers pool their resources in certain areas of activity."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Agricultural Cooperative"
+      },
+      "skos:prefLabel": "AGRICULTURAL_COOPERATIVE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-AIRPORT_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization or civil authority responsible for the oversight and management of all duties and processes within an airport, for example terminal operations, security, safety, communications, ground transportation and other activities related to the welfare of passengers, airlines, tenants and the general public."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Airport Operator"
+      },
+      "skos:prefLabel": "AIRPORT_OPERATOR",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-AREA_HEALTH_SERVICE",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A grouping of entities, usually hospitals and associated healthcare service providers, which are defined as an Area Health Service and based on distinct geographic areas as defined by the region or country. May also be known as a regional health organization."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Area Health Service"
+      },
+      "skos:prefLabel": "AREA_HEALTH_SERVICE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-ARRIVING_GOODS_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization responsible for physically receiving  goods arriving at a physical location, where goods may be temporarily stored ahead of being legally accepted and formally checked. The arriving goods process, is the first part of a broader receiving process, focussed primarily on handling goods so they are prepared and ready for the subsequent accepting and checking processes. The arriving goods party may be different to an accepting or checking party as processes to legally accept a delivery, or to confirm receipt to inventory are not necessarily included."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Arriving Goods Organization"
+      },
+      "skos:prefLabel": "ARRIVING_GOODS_PARTY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BILL_OF_LADING_RECIPIENT",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization to receive Bill of Lading."
+        "@value": "Organization that needs to receive the Bill of Lading document (abbreviated as BOL or B/L). A BOL is used by many actors in the transport and supply chain sector to serve three main functions: as a conclusive receipt to acknowledge that goods have been physically loaded to a transport carrier; as evidence of the terms for the contract of carriage; and as a document of title, which may be used to claim ownership of the goods described on the BOL. Some common examples of BOL recipients include the shipper handing over goods to the transport carrier at the point of origin, or the buyer of goods who can use the BOL to claim release of the goods from the transport carrier at the destination."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Bill of Lading Recipient"
       },
-      "skos:prefLabel": "BILL_OF_LADING_RECIPIENT"
+      "skos:prefLabel": "BILL_OF_LADING_RECIPIENT",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BILL_TO",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization which receives goods and invoice."
+        "@value": "Organisation that needs to receive the Bill of Lading document (abbreviated as BOL or B/L). A BOL is used by many actors in the transport and supply chain sector to serve three main functions: as a conclusive receipt to acknowledge that goods have been physically loaded to a transport carrier; as evidence of the terms for the contract of carriage; and as a document of title, which may be used to claim ownership of the goods described on the BOL. Some common examples of BOL recipients include the shipper handing over goods to the transport carrier at the point of origin, or the buyer of goods who can use the BOL to claim release of the goods from the transport carrier at the destination. "
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Bill To"
       },
-      "skos:prefLabel": "BILL_TO"
+      "skos:prefLabel": "BILL_TO",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-BRANCH",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization segment, that operates in different locations or jurisdictions than its parent organization. A branch is an extension of an existing company and does not constitute a separate legal entity, unlike a subsidiary or sub-organization."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Branch"
+      },
+      "skos:prefLabel": "BRANCH",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BRAND_OWNER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The organisation that owns the specifications of the Organization regardless of where and by whom it is manufactured is normally responsible for the allocation of the Global Trade Item Number (GTIN)."
+        "@value": "An organization who provides any commodity under a registered brand name or label. A brand owner may sell their commodities directly to consumers, retailers or marketplaces; or they may simply provide the rights to their brand name, for example, for manufacturers to produce goods with their brand name, as contracted with a retailer."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Brand Owner"
       },
-      "skos:prefLabel": "BRAND_OWNER"
+      "skos:prefLabel": "BRAND_OWNER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BREEDER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The organization which breeds the animal."
+        "@value": "An organization which breeds animals, including aquatic vertebrates such as fish, according to their genealogy, characteristics, and offspring. A breeder is responsible for facilitating reproduction and birthing processes for a specific species. Includes care and rearing activities, but does not include cross-breeding for new species."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Breeder"
       },
-      "skos:prefLabel": "BREEDER"
+      "skos:prefLabel": "BREEDER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BROKER_AGENT",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A person who buys or sells for another entity without having title to the property."
+        "@value": "A broker or agent acts as an intermediary between its clients and other actors in cases where the client cannot or will not interact directly with those other actors. The services of brokers and agents vary widely. Examples include buying/selling products or services, representation of their clients towards authorities, agencies or other actors in a specific geography etc."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Broker Agent"
       },
-      "skos:prefLabel": "BROKER_AGENT"
+      "skos:prefLabel": "BROKER_AGENT",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BUYER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization to which merchandise are sold."
+        "@value": "The organization purchasing goods or services, from a seller. May be different to the party responsible for ordering, receiving or accepting the goods or services."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Buyer"
       },
-      "skos:prefLabel": "BUYER"
+      "skos:prefLabel": "BUYER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-BUYERS_AGENT_REPRESENTATIVE",
@@ -22543,11 +25213,29 @@
         "@language": "en",
         "@value": "Buyers Agent Representative"
       },
-      "skos:prefLabel": "BUYERS_AGENT_REPRESENTATIVE"
+      "skos:prefLabel": "BUYERS_AGENT_REPRESENTATIVE",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-BUYING_DEPARTMENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for acquiring goods and services for a business to operate, including the monitoring of supply chains and negotiating contracts with vendors. May also be known as a procurement or purchasing department."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Buying Department"
+      },
+      "skos:prefLabel": "BUYING_DEPARTMENT",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CARRIER",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-TRANSPORTATION_CARRIER"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "A company, which physically transports goods from one place to another."
@@ -22556,7 +25244,8 @@
         "@language": "en",
         "@value": "Carrier"
       },
-      "skos:prefLabel": "CARRIER"
+      "skos:prefLabel": "CARRIER",
+      "sw:term_status": "archaic"
     },
     {
       "@id": "gs1:OrganizationRoleType-CENTRAL_PAYMENT_SERVICE",
@@ -22569,59 +25258,120 @@
         "@language": "en",
         "@value": "Central Payment Service"
       },
-      "skos:prefLabel": "CENTRAL_PAYMENT_SERVICE"
+      "skos:prefLabel": "CENTRAL_PAYMENT_SERVICE",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CHECKING_PARTY",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization or contact designated on behalf of carrier or his agent to establish the actual figures for quantities, weight, volume and/or (cube) measurements of goods or containers which are to appear in the transport contract and on which charges will be based"
+        "@value": "Organization designated on behalf of a transport carrier, an agent or goods owner who is responsible for the detailed checks of goods being sent or received. For goods being sent (outbound deliveries), the checking process is part of a broader sending process and establishes the actual figures of a shipment or consignment, checking product codes, product condition, quantities, weight, volume and/or cubic measurements of goods or containers which are included in a transport or trade contract and on which charges will be based. For goods being received (inbound deliveries), the checking process is part of a broader receiving process, focussed on detailed verification of what has been delivered and accepted, to confirm the physical contents of the transport units matches the delivery advice. If there are any issues found, sometimes known as 'hidden vices', the checking party is responsible for notifying the relevant parties, within a designated time frame from the receipt date of the shipment. Unlike the preliminary checks carried out by the accepting party, the checking process occurs after the transport carrier has left the premises. A checking party may be different to the party responsible for buying, ordering or paying for the goods or services. May also be different to the party responsible for physically receiving the goods on arrival or storing into inventory. For example, a checking party may be a service provider to the buyer of goods, meaning goods may be checked on behalf of the buyer, or prior to being stored in inventory."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Checking Organization"
       },
-      "skos:prefLabel": "CHECKING_PARTY"
+      "skos:prefLabel": "CHECKING_PARTY",
+      "sw:term_status": "stable"
     },
     {
-      "@id": "gs1:OrganizationRoleType-CHEQUE_ORDER",
+      "@id": "gs1:OrganizationRoleType-CHECK_ORDER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization to which the cheque will be ordered, when different from the beneficiary."
+        "@value": "Organization to which the check will be ordered, when different from the beneficiary."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Cheque Order"
+        "@value": "Check Order"
       },
-      "skos:prefLabel": "CHEQUE_ORDER"
+      "skos:prefLabel": "CHECK_ORDER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-CLINICAL_TRIAL_SPONSOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A person, company, institution, group, or organization that oversees or pays for a clinical trial and collects and analyses the data."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Clinical Trial Sponsor "
+      },
+      "skos:prefLabel": "CLINICAL_TRIAL_SPONSOR",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-COMPLIANCE_AUTHORITY_OR_AGENCY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization, which is generally part of a government, that is responsible for ensuring compliance of products or services with the requirements specified in laws or regulations. These authorities may certify one or more conformance assessment body(ies) to perform the activities required to check compliance."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Compliance Authority or Agency"
+      },
+      "skos:prefLabel": "COMPLIANCE_AUTHORITY_OR_AGENCY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-CONFORMITY_ASSESSMENT_BODY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization that performs third-party conformity assessment activities, including testing, certification and inspection."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Conformity Assessment Body"
+      },
+      "skos:prefLabel": "CONFORMITY_ASSESSMENT_BODY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CONSIGNEE",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization to which goods are consigned."
+        "@value": "Organization who receives goods from another party. The consignee may take title/ownership of the goods upon delivery or they may have taken ownership earlier in the process based on international commercial terms (known as Incoterms) agreed between the buyer and seller of the goods. The party identified as the consignee is an important element in cross-border transportation procedures, such as customs clearance and payment of taxes, for example."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Consignee."
+        "@value": "Consignee"
       },
-      "skos:prefLabel": "CONSIGNEE"
+      "skos:prefLabel": "CONSIGNEE",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-CONSIGNOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization who dispatches goods to another party. The consignor will keep the title/ownership of the goods being transported and is legally liable until the goods are transferred to or paid for by the consignee or the final party."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Consignor"
+      },
+      "skos:prefLabel": "CONSIGNOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CONSOLIDATOR",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization consolidating various consignments, payments etc."
+        "@value": "An organization or department that combines transport units into larger consignments for shipping. A consolidator is different to a packer who packs physical goods for transportation and sale. Is also different to a repacker, who combines various goods into a single pack for sale or shipping. "
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Consolidator"
       },
-      "skos:prefLabel": "CONSOLIDATOR"
+      "skos:prefLabel": "CONSOLIDATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CONSUMER",
@@ -22634,24 +25384,43 @@
         "@language": "en",
         "@value": "Consumer"
       },
-      "skos:prefLabel": "CONSUMER"
+      "skos:prefLabel": "CONSUMER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CORPORATE_IDENTITY",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Identity of the organization to whom all other parties of the same commercial organization are linked."
+        "@value": "An organization that represents the identity of a commercial organization, commonly known as a holding or parent company, and links a number of other organizations or affiliated sub-organizations. "
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Corporate Identity"
       },
-      "skos:prefLabel": "CORPORATE_IDENTITY"
+      "skos:prefLabel": "CORPORATE_IDENTITY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-COUNTRY_ORGANIZATION",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization that operates and/or is responsible for processes, activities and operations within a specific country (or a small grouping of adjacent countries), under the structure of a multinational or global organization. A country organization may be a separate legal entity and considered as a sub-organization or subsidiary of a parent organization."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Country Organization"
+      },
+      "skos:prefLabel": "COUNTRY_ORGANIZATION",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CUSTOMS",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-CUSTOMS_AUTHORITY"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Identification of customs authority relevant to the transaction or shipment."
@@ -22660,20 +25429,36 @@
         "@language": "en",
         "@value": "Customs"
       },
-      "skos:prefLabel": "CUSTOMS"
+      "skos:prefLabel": "CUSTOMS",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-CUSTOMS_AUTHORITY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization, typically a government authority or agency commonly known as 'customs', who is responsible for the administration and enforcement of jurisdictional customs laws and regulations of a country or territory, for example collecting taxes on goods entering the country and preventing illicit goods from entering a country."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Customs Authority"
+      },
+      "skos:prefLabel": "CUSTOMS_AUTHORITY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CUSTOMS_BROKER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization responsible for the preparation of documents and/or electronic submissions, the calculation on behalf of the client of taxes, duties and excises, and facilitating communication between the importer/exporter and governmental authorities."
+        "@value": "An organization providing services for the preparation of documents and/or electronic submissions, the calculation of taxes, duties and excises on behalf of the client, and facilitating communication between the importer/exporter and governmental authorities."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Customs Broker"
       },
-      "skos:prefLabel": "CUSTOMS_BROKER"
+      "skos:prefLabel": "CUSTOMS_BROKER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-CUTTER",
@@ -22686,7 +25471,36 @@
         "@language": "en",
         "@value": "Cutter"
       },
-      "skos:prefLabel": "CUTTER"
+      "skos:prefLabel": "CUTTER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-DATA_CONSUMER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The organization receiving data from other organizations in any format and through any type of data sharing or transfer mechanism."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Consumer"
+      },
+      "skos:prefLabel": "DATA_CONSUMER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-DATA_PROVIDER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The organization providing data to other organizations in any format and through any type of data sharing or transfer mechanism."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Provider"
+      },
+      "skos:prefLabel": "DATA_PROVIDER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-DECLARANTS_AGENT_REPRESENTATIVE",
@@ -22699,11 +25513,15 @@
         "@language": "en",
         "@value": "Declarants Agent Representative"
       },
-      "skos:prefLabel": "DECLARANTS_AGENT_REPRESENTATIVE"
+      "skos:prefLabel": "DECLARANTS_AGENT_REPRESENTATIVE",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-DELIVERY_PARTY",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-DELIVERY_RECIPIENT_PARTY"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Organization to which goods are delivered."
@@ -22712,24 +25530,43 @@
         "@language": "en",
         "@value": "Delivery Organization"
       },
-      "skos:prefLabel": "DELIVERY_PARTY"
+      "skos:prefLabel": "DELIVERY_PARTY",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-DELIVERY_RECIPIENT_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization responsible for the physical location where goods or services are delivered by a transport carrier, and/or taken over by the buyer. The delivery recipient party may be different to the party responsible for buying, ordering,  accepting or paying for the goods or services; may also be different to the party responsible for receiving consigned shipments between carriers. For example, a delivery recipient party may be a service provider to the buyer of goods, liaising with freight forwarders to confirm transportation of goods."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Delivery Recipient Organization"
+      },
+      "skos:prefLabel": "DELIVERY_RECIPIENT_PARTY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-DESIGNER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A Organization who designs."
+        "@value": "An organization who designs."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Designer"
       },
-      "skos:prefLabel": "DESIGNER"
+      "skos:prefLabel": "DESIGNER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-DESPATCH_PARTY",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-DISPATCH_PARTY"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Organization where goods are collected or taken over by the carrier."
@@ -22738,24 +25575,57 @@
         "@language": "en",
         "@value": "Despatch Organization"
       },
-      "skos:prefLabel": "DESPATCH_PARTY"
+      "skos:prefLabel": "DESPATCH_PARTY",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-DISPATCH_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization responsible for the physical location where goods may be collected or taken over by the transport carrier for dispatch. The dispatch party may be different to the party responsible for selling or receiving payment for the goods or services; and may also be different to the party responsible for consigning shipments between carriers. For example, a dispatch party may be a service provider to the seller of goods, liaising with a freight forwarder to arrange transportation of the goods."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Dispatch Organization"
+      },
+      "skos:prefLabel": "DISPATCH_PARTY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-DISTRIBUTION_MANAGEMENT_ENTITY_PROVIDER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization providing a Distribution Management Entity (DME) system that is used to manage the distribution and disposition of clinical supplies. In many cases, this is the interactive technology IRT system, portal, a set of tools or different databases used to share information during a clinical trial."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Distribution Management Entity Provider"
+      },
+      "skos:prefLabel": "DISTRIBUTION_MANAGEMENT_ENTITY_PROVIDER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-DISTRIBUTOR",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization distributing goods, financial payments or documents."
+        "@value": "An organization in the distribution channel or supply chain that is an intermediary between a producer or manufacturer of goods and a downstream entity such as a retailer or reseller, responsible for facilitating services within distribution processes."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Distributor"
       },
-      "skos:prefLabel": "DISTRIBUTOR"
+      "skos:prefLabel": "DISTRIBUTOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-DOCK_DOOR",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:LocationRoleType-DOCK"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "A door or collection of doors where trucks or rail cars are loaded (shipping) or unloaded (receiving). Used to load or unload products for logistics."
@@ -22764,20 +25634,36 @@
         "@language": "en",
         "@value": "Dock Door"
       },
-      "skos:prefLabel": "DOCK_DOOR"
+      "skos:prefLabel": "DOCK_DOOR",
+      "sw:term_status": "archaic"
     },
     {
-      "@id": "gs1:OrganizationRoleType-EMPTY_EQUIPMENT_DESPATCH_PARTY",
+      "@id": "gs1:OrganizationRoleType-EMERGENCY_DEPARTMENT",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization from whose premises empty equipment will be or has been despatched."
+        "@value": "A department within a hospital organization that is responsible for providing emergency care to patients who require urgent medical attention."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Empty Equipment Despatch Organization"
+        "@value": "Emergency Department"
       },
-      "skos:prefLabel": "EMPTY_EQUIPMENT_DESPATCH_PARTY"
+      "skos:prefLabel": "EMERGENCY_DEPARTMENT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-EMPTY_EQUIPMENT_DISPATCH_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization from whose premises empty equipment will be or has been dispatched."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Empty Equipment Dispatch Organization"
+      },
+      "skos:prefLabel": "EMPTY_EQUIPMENT_DISPATCH_PARTY",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-EMPTY_EQUIPMENT_RETURN_PARTY",
@@ -22790,33 +25676,64 @@
         "@language": "en",
         "@value": "Empty Equipment Return Organization"
       },
-      "skos:prefLabel": "EMPTY_EQUIPMENT_RETURN_PARTY"
+      "skos:prefLabel": "EMPTY_EQUIPMENT_RETURN_PARTY",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-EQUIPMENT_OWNER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Owner of equipment (container, etc.)."
+        "@value": "Owner of equipment (e.g.,container, etc.)."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Equipment Owner"
       },
-      "skos:prefLabel": "EQUIPMENT_OWNER"
+      "skos:prefLabel": "EQUIPMENT_OWNER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-EXPORTER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization who makes - or on whose behalf a Customs clearing agent or other authorized person makes - an export declaration. This may include a manufacturer, seller or other person. Within a Customs union, consignor may have the same meaning as exporter"
+        "@value": "An organization that sends goods or services to another country for sale. An exporter, or a customs clearing agent or other authorised person acting on behalf of the exporter, is responsible for making an export declaration. This may include a manufacturer, seller or other person. Within a Customs union, consignor may have the same meaning as exporter."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Exporter"
       },
-      "skos:prefLabel": "EXPORTER"
+      "skos:prefLabel": "EXPORTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-E_TAILER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A retailer offering a varied selection of goods or services through an online store (i.e., via electronic transactions on the internet) for purchase by consumers, without the presence of a physical store."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "E-tailer"
+      },
+      "skos:prefLabel": "E_TAILER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-FACILITIES_MAINTENANCE_DEPARTMENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for the regular upkeep and maintenance of equipment, machinery, furnishings as well as building structures and grounds of a physical location. May include, but  not limited to, tasks such as cleaning, servicing, repairing, gardening, safety conformance checks and certifications etc. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Facilities Maintenance Department"
+      },
+      "skos:prefLabel": "FACILITIES_MAINTENANCE_DEPARTMENT",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-FACTOR",
@@ -22829,33 +25746,92 @@
         "@language": "en",
         "@value": "Factor"
       },
-      "skos:prefLabel": "FACTOR"
+      "skos:prefLabel": "FACTOR",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-FARM_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization who tends to plants and/or animals for the production of foodstuffs for eventual consumption (e.g., vegetables, meat or dairy), or livestock for labour or leisure purposes  (e.g., work horse or pet)."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Farm Operator"
+      },
+      "skos:prefLabel": "FARM_OPERATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-FATTENER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The Organization which fattens the animal."
+        "@value": "The organization which fattens the animal."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Fattener"
       },
-      "skos:prefLabel": "FATTENER"
+      "skos:prefLabel": "FATTENER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-FISHING_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization who collects non-domesticated creatures from bodies of water for eventual consumption."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Fishing Operator"
+      },
+      "skos:prefLabel": "FISHING_OPERATOR",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-FOODSERVICE_DISTRIBUTOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization that provides food and non-food products to restaurants, cafeterias, industrial caterers, hospitals, schools/colleges/universities, nursing homes, and anywhere food is served away from the home."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Foodservice Distributor"
+      },
+      "skos:prefLabel": "FOODSERVICE_DISTRIBUTOR",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-FOODSERVICE_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization which offers food and beverages to the public, either for purchase or as part of a service relationship with another party, for example for a private function."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Foodservice Operator"
+      },
+      "skos:prefLabel": "FOODSERVICE_OPERATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-FREIGHT_FORWARDER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A person or firm that arranges for a pick up or deliver goods by a carrier on instructions of a shipper or consignee from or to a point by various necessary conveyances and common carriers."
+        "@value": "An organization that organizes shipments for individuals or other organizations to transport goods from the collection of goods at a point of origin to a specified destination. Freight forwarders typically contract with transportation carriers to move goods."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Freight Forwarder"
       },
-      "skos:prefLabel": "FREIGHT_FORWARDER"
+      "skos:prefLabel": "FREIGHT_FORWARDER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-GOODS_OWNER",
@@ -22868,33 +25844,106 @@
         "@language": "en",
         "@value": "Goods Owner"
       },
-      "skos:prefLabel": "GOODS_OWNER"
+      "skos:prefLabel": "GOODS_OWNER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-GOVERNMENT_AGENCY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A permanent or semi-permanent organization that may be established by a national or state government within a federal system, that is responsible for the oversight and administration of specific functions. For example the UK's Driver and Vehicle Licensing Agency (DVLA). "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Government Agency"
+      },
+      "skos:prefLabel": "GOVERNMENT_AGENCY",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-GOVERNMENT_DEPARTMENT_OR_MINISTRY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization or department within a government body that manages a specific sector of public administration and may oversee other government agencies and organizations as part of a political portfolio. For example, the UK's Department for Transport (DfT), oversees the UK's Driver and Vehicle Licensing Agency (DVLA). Usually led by a high-ranking government official or politician such as a minister, secretary or commissioner and staffed with members of a non-political civil service to manage operations."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Government Department or Ministry"
+      },
+      "skos:prefLabel": "GOVERNMENT_DEPARTMENT_OR_MINISTRY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-GROWER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "An organization which is responsible for the growth or production of the unit specifically refers to vegetation. This organization may or may not be a producer or packer."
+        "@value": "An organization which is responsible for the growth and/or production of plants and crops such as fruit and vegetable produce, ornamental plants and trees, medicinal or cooking herbs etc. This organization may or may not be a producer or packer."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Grower"
       },
-      "skos:prefLabel": "GROWER"
+      "skos:prefLabel": "GROWER",
+      "sw:term_status": "stable"
     },
     {
-      "@id": "gs1:OrganizationRoleType-HEAD_OFFICE",
+      "@id": "gs1:OrganizationRoleType-HARVESTER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The executive or main office of an enterprise."
+        "@value": "Organization who collects ready for harvest foodstuffs from farms for utilization or consumption by subsequent parties. "
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Head Office"
+        "@value": "Harvester"
       },
-      "skos:prefLabel": "HEAD_OFFICE"
+      "skos:prefLabel": "HARVESTER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-HEALTHCARE_PROVIDER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization providing healthcare services for primary care, nursing care and speciality care and/or treatments. Includes specialized providers such as surgeons, midwives, therapists, dentists for example."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Healthcare Provider"
+      },
+      "skos:prefLabel": "HEALTHCARE_PROVIDER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-HOSPITAL_ORGANIZATION",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A healthcare organization responsible for a hospital facility providing patient treatment with specialized medical and nursing staff, medical equipment and inpatient care facilities."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hospital Organization"
+      },
+      "skos:prefLabel": "HOSPITAL_ORGANIZATION",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-HOSPITAL_PHARMACY_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization and individual legal entity engaged in the activities of ordering and dispensing medications for the treatment of patients within a hospital facility, often at the direction of or by working directly with physicians, nurses or other specialized healthcare providers. Differs to a retail pharmacy operator in a retail pharmacy, as hospital pharmacists require specific clinical training and qualifications to handle specialist activities such as formulating patient specific doses or medications, preparing intravenous (IV) compounds, for example."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Hospital Pharmacy Operator"
+      },
+      "skos:prefLabel": "HOSPITAL_PHARMACY_OPERATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-IMPORTER",
@@ -22907,20 +25956,22 @@
         "@language": "en",
         "@value": "Importer"
       },
-      "skos:prefLabel": "IMPORTER"
+      "skos:prefLabel": "IMPORTER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INFORMATION_PROVIDER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The Organization providing the information contained in the document."
+        "@value": "The organization providing the information contained in the document."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Information Provider"
       },
-      "skos:prefLabel": "INFORMATION_PROVIDER"
+      "skos:prefLabel": "INFORMATION_PROVIDER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INSURER",
@@ -22933,7 +25984,22 @@
         "@language": "en",
         "@value": "Insurer"
       },
-      "skos:prefLabel": "INSURER"
+      "skos:prefLabel": "INSURER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-INTERMEDIARY_BANK",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A financial institution between the ordered bank and the beneficiary's bank."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Intermediary Bank"
+      },
+      "skos:prefLabel": "INTERMEDIARY_BANK",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INTERMEDIARY_BANK_1",
@@ -22946,7 +26012,8 @@
         "@language": "en",
         "@value": "Intermediary Bank 1"
       },
-      "skos:prefLabel": "INTERMEDIARY_BANK_1"
+      "skos:prefLabel": "INTERMEDIARY_BANK_1",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INTERMEDIARY_BANK_2",
@@ -22959,7 +26026,8 @@
         "@language": "en",
         "@value": "Intermediary Bank 2"
       },
-      "skos:prefLabel": "INTERMEDIARY_BANK_2"
+      "skos:prefLabel": "INTERMEDIARY_BANK_2",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INVENTORY_CONTROLLER",
@@ -22972,7 +26040,8 @@
         "@language": "en",
         "@value": "Inventory Controller"
       },
-      "skos:prefLabel": "INVENTORY_CONTROLLER"
+      "skos:prefLabel": "INVENTORY_CONTROLLER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INVENTORY_REPORTING_PARTY",
@@ -22985,50 +26054,76 @@
         "@language": "en",
         "@value": "Inventory Reporting Organization"
       },
-      "skos:prefLabel": "INVENTORY_REPORTING_PARTY"
+      "skos:prefLabel": "INVENTORY_REPORTING_PARTY",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-INVOICEE",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization issuing an invoice."
+        "@value": "The organization to whom an invoice is issued, which may be different to the organization to whom the invoice is sent to for processing e.g., BILL_TO and INVOICE_MUST_BE_SENT_TO. May also be different to the party ordering, accepting, buying, or initiating payment for the goods or services."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Invoicee"
       },
-      "skos:prefLabel": "INVOICEE"
+      "skos:prefLabel": "INVOICEE",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-ISSUER_OF_INVOICE",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization which issues an invoice."
+        "@value": "The organization issuing an invoice. May be different to the party selling, dispatching, or receiving payment for the goods or services."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Issuer of Invoice"
       },
-      "skos:prefLabel": "ISSUER_OF_INVOICE"
+      "skos:prefLabel": "ISSUER_OF_INVOICE",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-LOGISTICS_SERVICE_PROVIDER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "An umbrella term for an entity, which provides a combination of many different logistics services for another entity."
+        "@value": "An umbrella term for an organization, which provides a combination of different logistics services for another organization, such as transportation, storage and handling, freight forwarding, packing and repacking etc. Commonly known as a third-party logistics service provider (3PL)."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Logistics Service Provider"
       },
-      "skos:prefLabel": "LOGISTICS_SERVICE_PROVIDER"
+      "skos:prefLabel": "LOGISTICS_SERVICE_PROVIDER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-MANUFACTURER_OF_FINISHED_GOODS",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization that has final responsibility for producing the finished goods, components or finished goods from raw materials and/or by assembling other components or finished goods. Finished goods are considered complete and ready for use. Includes third-party manufacturers, known as contract manufacturers, who handle the full production operations on behalf of another organization."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Manufacturer of Finished Goods"
+      },
+      "skos:prefLabel": "MANUFACTURER_OF_FINISHED_GOODS",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-MANUFACTURER_OF_GOODS",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": [
+        {
+          "@id": "gs1:OrganizationRoleType-MANUFACTURER_OF_FINISHED_GOODS"
+        },
+        {
+          "@id": "gs1:OrganizationRoleType-MANUFACTURER_OF_UNFINISHED_GOODS"
+        }
+      ],
       "rdfs:comment": {
         "@language": "en",
         "@value": "Organization who manufactures the goods."
@@ -23037,20 +26132,50 @@
         "@language": "en",
         "@value": "Manufacturer of Goods"
       },
-      "skos:prefLabel": "MANUFACTURER_OF_GOODS"
+      "skos:prefLabel": "MANUFACTURER_OF_GOODS",
+      "sw:term_status": "archaic"
     },
     {
-      "@id": "gs1:OrganizationRoleType-MANUFACTURING_PLANT",
+      "@id": "gs1:OrganizationRoleType-MANUFACTURER_OF_UNFINISHED_GOODS",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A physical location consisting of one or more buildings with facilities for manufacturing."
+        "@value": "An organization that produces semi-finished goods, components or semi-finished goods from raw materials and/or by assembling other components or semi-finished goods. Semi-finished goods are not consumer-ready. Includes third-party manufacturers, known as contract manufacturers, who handle the full production operations on behalf of another organization."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Manufacturing Plant"
+        "@value": "Manufacturer of Unfinished Goods"
       },
-      "skos:prefLabel": "MANUFACTURING_PLANT"
+      "skos:prefLabel": "MANUFACTURER_OF_UNFINISHED_GOODS",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-MARKETING_DEPARTMENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for promoting an organization's brand, products and/or services, through the planning, creating and monitoring of marketing activities such as for brand management, promotional material and campaigns , and website content and search optimisations."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Marketing Department"
+      },
+      "skos:prefLabel": "MARKETING_DEPARTMENT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-MARKETPLACE_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organization which provides an online platform specifically for independent sellers to offer a varied selection of products for purchase by consumers. May also operate as an e-tailer, if the marketplace operator's own brand(s) are also sold online."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Marketplace Operator"
+      },
+      "skos:prefLabel": "MARKETPLACE_OPERATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-MARK_FOR",
@@ -23063,7 +26188,22 @@
         "@language": "en",
         "@value": "Mark For"
       },
-      "skos:prefLabel": "MARK_FOR"
+      "skos:prefLabel": "MARK_FOR",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-MENTAL_HEALTH_SERVICE",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization providing mental health treatment and support services."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mental Health Service"
+      },
+      "skos:prefLabel": "MENTAL_HEALTH_SERVICE",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-MESSAGE_FROM",
@@ -23076,7 +26216,8 @@
         "@language": "en",
         "@value": "Message From."
       },
-      "skos:prefLabel": "MESSAGE_FROM"
+      "skos:prefLabel": "MESSAGE_FROM",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-MESSAGE_RECIPIENT",
@@ -23089,7 +26230,8 @@
         "@language": "en",
         "@value": "Message Recipient"
       },
-      "skos:prefLabel": "MESSAGE_RECIPIENT"
+      "skos:prefLabel": "MESSAGE_RECIPIENT",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-MINCER",
@@ -23102,46 +26244,50 @@
         "@language": "en",
         "@value": "Mincer"
       },
-      "skos:prefLabel": "MINCER"
+      "skos:prefLabel": "MINCER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-OPERATING_DIVISION",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "An entity that is part of another entity. For example, a Regional Marketing Office. Operating Divisions may have multiple days and times of operation."
+        "@value": "An operational department or business segment of an organization, which may have multiple days and times of operation, which differs to other departments or the main organization."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Operating Division"
       },
-      "skos:prefLabel": "OPERATING_DIVISION"
+      "skos:prefLabel": "OPERATING_DIVISION",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-OPERATOR",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A person or persons who own or operate a business establishment, which services consumers directly. For example a restaurant owner as part of a chain or an independent operation."
+        "@value": "An organization who operates a business establishment, or has specific capabilities to operate equipment, machinery or devices."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Operator"
       },
-      "skos:prefLabel": "OPERATOR"
+      "skos:prefLabel": "OPERATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-ORDERING_PARTY",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "To be used only if ordering organization and buyer are not identical."
+        "@value": "Organization responsible for ordering goods or services. The ordering party may be different to the party responsible for buying, accepting, receiving or paying for the goods or services; may also be different to the delivery party responsible receiving goods at a physical location. For example, an ordering party may be a service provider to the buyer of goods, meaning the goods are ordered on behalf of the buyer."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Ordering Organization"
       },
-      "skos:prefLabel": "ORDERING_PARTY"
+      "skos:prefLabel": "ORDERING_PARTY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-OWNER_OF_EQUIPMENT",
@@ -23154,20 +26300,36 @@
         "@language": "en",
         "@value": "Owner of equipment"
       },
-      "skos:prefLabel": "OWNER_OF_EQUIPMENT"
+      "skos:prefLabel": "OWNER_OF_EQUIPMENT",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-OWNER_OF_MEANS_OF_TRANSPORT",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization owning the means of transport. Not a synonym of carrier"
+        "@value": "An organization who owns the means of transport, which may be leased or loaned for use by a transportation carrier or service provider."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Owner of Means of Transport"
       },
-      "skos:prefLabel": "OWNER_OF_MEANS_OF_TRANSPORT"
+      "skos:prefLabel": "OWNER_OF_MEANS_OF_TRANSPORT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-PACKER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization or department that packs physical goods for transportation and sale. A packer is different to a consolidator who combines transport units into larger consignments for shipping, and is also different to a repacker, who combines various goods into a single pack for sale or shipping."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Packer"
+      },
+      "skos:prefLabel": "PACKER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_DECLARING_THE_VALUE_ADDED_TAX",
@@ -23180,16 +26342,22 @@
         "@language": "en",
         "@value": "Organization Declaring the Value Added Tax"
       },
-      "skos:prefLabel": "PARTY_DECLARING_THE_VALUE_ADDED_TAX"
+      "skos:prefLabel": "PARTY_DECLARING_THE_VALUE_ADDED_TAX",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_FOR_WHOM_ITEM_IS_ULTIMATELY_INTENDED",
       "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Party for whom item is ultimately intended."
+      },
       "rdfs:label": {
         "@language": "en",
         "@value": "Organization For Whom Item is Ultimately Intended"
       },
-      "skos:prefLabel": "PARTY_FOR_WHOM_ITEM_IS_ULTIMATELY_INTENDED"
+      "skos:prefLabel": "PARTY_FOR_WHOM_ITEM_IS_ULTIMATELY_INTENDED",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_RECEIVING_PRIVATE_DATA",
@@ -23202,7 +26370,8 @@
         "@language": "en",
         "@value": "Organization Receiving Private Data"
       },
-      "skos:prefLabel": "PARTY_RECEIVING_PRIVATE_DATA"
+      "skos:prefLabel": "PARTY_RECEIVING_PRIVATE_DATA",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_RECOVERING_THE_VALUE_ADDED_TAX",
@@ -23215,7 +26384,8 @@
         "@language": "en",
         "@value": "Organization Recovering the Value Added Tax"
       },
-      "skos:prefLabel": "PARTY_RECOVERING_THE_VALUE_ADDED_TAX"
+      "skos:prefLabel": "PARTY_RECOVERING_THE_VALUE_ADDED_TAX",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_TO_RECEIVE_ALL_DOCUMENTS",
@@ -23228,33 +26398,36 @@
         "@language": "en",
         "@value": "Organization to Receive All Documents"
       },
-      "skos:prefLabel": "PARTY_TO_RECEIVE_ALL_DOCUMENTS"
+      "skos:prefLabel": "PARTY_TO_RECEIVE_ALL_DOCUMENTS",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_TO_RECEIVE_COMMERCIAL_INVOICE",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization to whom payment for a commercial invoice or bill should be remitted."
+        "@value": "Organization that needs to receive the commercial invoice. A commercial invoice is issued by a seller to the buyer of the goods or services and is often used as part of a customs declaration for foreign trade. It is needed for a wide range of services provided by actors in supply chain, transport and logistics processes, who are not involved in the buying and selling transaction covered by regular invoices."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Organization to Receive Commercial Invoice"
       },
-      "skos:prefLabel": "PARTY_TO_RECEIVE_COMMERCIAL_INVOICE"
+      "skos:prefLabel": "PARTY_TO_RECEIVE_COMMERCIAL_INVOICE",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_TO_RECEIVE_ELECTRONIC_MEMO_OF_INVOICE",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization being informed about invoice issue (via EDI)."
+        "@value": "Organization that needs to receive notification for an invoice being issued, which may or may not be the same as the party identified as the invoice recipient, processor, or payer. For example, an external certification body, or a bank providing loans."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Organization to Receive Electronic Memo of Invoice"
       },
-      "skos:prefLabel": "PARTY_TO_RECEIVE_ELECTRONIC_MEMO_OF_INVOICE"
+      "skos:prefLabel": "PARTY_TO_RECEIVE_ELECTRONIC_MEMO_OF_INVOICE",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_TO_RECEIVE_FREIGHT_BILL",
@@ -23267,7 +26440,8 @@
         "@language": "en",
         "@value": "Organization to Receive Freight Bill"
       },
-      "skos:prefLabel": "PARTY_TO_RECEIVE_FREIGHT_BILL"
+      "skos:prefLabel": "PARTY_TO_RECEIVE_FREIGHT_BILL",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PARTY_TO_RECEIVE_REFUND",
@@ -23280,46 +26454,67 @@
         "@language": "en",
         "@value": "Organization to Receive Refund"
       },
-      "skos:prefLabel": "PARTY_TO_RECEIVE_REFUND"
+      "skos:prefLabel": "PARTY_TO_RECEIVE_REFUND",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PAYEE",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization, which receives payment."
+        "@value": "The organization receiving payment, and may be different to the party who sends the invoice, goods or services related to the payment."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Payee"
       },
-      "skos:prefLabel": "PAYEE"
+      "skos:prefLabel": "PAYEE",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PAYER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization which initiates payment."
+        "@value": "The organization initiating payment, and may be different to the party who receives the invoice, goods or services related to the payment."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Payer"
       },
-      "skos:prefLabel": "PAYER"
+      "skos:prefLabel": "PAYER",
+      "sw:term_status": "stable"
     },
     {
-      "@id": "gs1:OrganizationRoleType-POINT_OF_SALE",
+      "@id": "gs1:OrganizationRoleType-PHARMACY_OPERATOR",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-RETAIL_PHARMACY_OPERATOR"
+      },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Refers to the retail type checkout where bar code symbols are normally scanned."
+        "@value": "Organization engaged in the activities of ordering and dispensing medications for members of the public, often at the direction of physicians."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Point Of Sale"
+        "@value": "Pharmacy Operator"
       },
-      "skos:prefLabel": "POINT_OF_SALE"
+      "skos:prefLabel": "PHARMACY_OPERATOR",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-PORT_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization or civil authority responsible for the oversight and management of all duties and processes within a seaport or inland port, for example terminal operations, security, safety, communications, in-port transportation, vessel traffic services and other activities related to the welfare of passengers, shipping lines, tenants and the general public."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Port Operator"
+      },
+      "skos:prefLabel": "PORT_OPERATOR",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PRICE_LOCATION_PARTY",
@@ -23332,7 +26527,8 @@
         "@language": "en",
         "@value": "Price Location Organization"
       },
-      "skos:prefLabel": "PRICE_LOCATION_PARTY"
+      "skos:prefLabel": "PRICE_LOCATION_PARTY",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PROXY",
@@ -23345,20 +26541,8 @@
         "@language": "en",
         "@value": "Proxy"
       },
-      "skos:prefLabel": "PROXY"
-    },
-    {
-      "@id": "gs1:OrganizationRoleType-PUBLIC_WAREHOUSE",
-      "@type": "gs1:OrganizationRoleType",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A building, or a part of one, where storage space is offered to other companies for compensation (fee), for the storage of their goods, merchandise, etc."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Public Warehouse"
-      },
-      "skos:prefLabel": "PUBLIC_WAREHOUSE"
+      "skos:prefLabel": "PROXY",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-PURCHASE_ORDER_RECEIVER",
@@ -23371,7 +26555,50 @@
         "@language": "en",
         "@value": "Purchase Order Receiver"
       },
-      "skos:prefLabel": "PURCHASE_ORDER_RECEIVER"
+      "skos:prefLabel": "PURCHASE_ORDER_RECEIVER",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-RECALL_RECIPIENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organisation/Location/Individual receiving Recall notifications via local Recall Service."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Recall Recipient"
+      },
+      "skos:prefLabel": "RECALL_RECIPIENT",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-RECALL_SPONSOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Organisation sending Recall notifications via local Recall Service."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Recall Sponsor"
+      },
+      "skos:prefLabel": "RECALL_SPONSOR",
+      "sw:term_status": "unstable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-REGIONAL_ORGANIZATION",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization that operates and/or is responsible for processes, activities and operations within a specific geographical region and across a number of different countries, under the structure of a multinational or global organization. A regional organization may be a separate legal entity and considered as a sub-organization or subsidiary of a parent organization."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Regional OrganizationÃ‚Â "
+      },
+      "skos:prefLabel": "REGIONAL_ORGANIZATION",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-REGISTERED_AGENT",
@@ -23384,7 +26611,8 @@
         "@language": "en",
         "@value": "Registered Agent"
       },
-      "skos:prefLabel": "REGISTERED_AGENT"
+      "skos:prefLabel": "REGISTERED_AGENT",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-REMIT_TO",
@@ -23397,50 +26625,113 @@
         "@language": "en",
         "@value": "Remit To"
       },
-      "skos:prefLabel": "REMIT_TO"
+      "skos:prefLabel": "REMIT_TO",
+      "sw:term_status": "unstable"
     },
     {
-      "@id": "gs1:OrganizationRoleType-RETURNABLE_ASSET_SERVICE_CENTRE",
+      "@id": "gs1:OrganizationRoleType-REPACKER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The location where a returnable asset is serviced."
+        "@value": "Organization or department responsible for repacking goods for resale or for transportation purposes, without modifying the repacked products in any way. A repacker is different to packer who packs physical goods for transportation and sale; and is also different to a consolidator who combines transport units into larger consignments for shipping."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Returnable Asset Service Centre"
+        "@value": "Repacker"
       },
-      "skos:prefLabel": "RETURNABLE_ASSET_SERVICE_CENTRE"
+      "skos:prefLabel": "REPACKER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-RETAILER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization who makes a varied selection of products available for purchase by consumers, either through operating physical or online stores."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Retailer"
+      },
+      "skos:prefLabel": "RETAILER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-RETAIL_PHARMACY_OPERATOR",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization or individual legal entity engaged in the activities of ordering and dispensing medications for members of the public within a retail pharmacy, often at the direction of physicians. A retail pharmacy operator differs from a hospital pharmacy operator as they usually interact with the public to provide advice about their prescription, instead of working directly with healthcare specialists such as nurses and doctors to ensure the right medications are prescribed. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Retail Pharmacy Operator"
+      },
+      "skos:prefLabel": "RETAIL_PHARMACY_OPERATOR",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-SALES_DEPARTMENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for selling goods and services to meet customer needs. Includes activities to increase profitability, forecasting and meeting sales targets, building and maintaining customer relationships, encouraging repeat purchases and brand loyalty."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Sales Department"
+      },
+      "skos:prefLabel": "SALES_DEPARTMENT",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SELLER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization which sells products or services to a buyer."
+        "@value": "The organization selling goods or services, to a buyer. May be different to the party responsible for dispatching the goods or services."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Seller"
       },
-      "skos:prefLabel": "SELLER"
+      "skos:prefLabel": "SELLER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SERVICE_PROVIDER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "An organization providing services for another organization (e.g. re-packing supplier's products)."
+        "@value": "An organization providing services to another organization or directly to consumers. Some examples include (but are not limited to) consulting, advertising, legal, communications, transport, technology or processing services."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Service Provider"
       },
-      "skos:prefLabel": "SERVICE_PROVIDER"
+      "skos:prefLabel": "SERVICE_PROVIDER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-SHIPPER",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The party that initiates a contract for carriage with, and arranges for delivery of the goods to, a carrier or transport intermediary for transportation."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Shipper"
+      },
+      "skos:prefLabel": "SHIPPER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SHIP_FROM",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-SHIP_FROM_PARTY"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Organization from where goods will be or have been shipped."
@@ -23449,11 +26740,29 @@
         "@language": "en",
         "@value": "Ship From"
       },
-      "skos:prefLabel": "SHIP_FROM"
+      "skos:prefLabel": "SHIP_FROM",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-SHIP_FROM_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization which sends physical goods and invoices, and is often the same party as the consignor. However in some cases, a consignor may designate a third party to manage the facility where the goods are shipped from, which is different to the dispatch party responsible for the facility where the goods are dispatched from."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ship From Organization"
+      },
+      "skos:prefLabel": "SHIP_FROM_PARTY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SHIP_TO",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-SHIP_TO_PARTY"
+      },
       "rdfs:comment": {
         "@language": "en",
         "@value": "Organization which receives goods and invoices."
@@ -23462,33 +26771,67 @@
         "@language": "en",
         "@value": "Ship To"
       },
-      "skos:prefLabel": "SHIP_TO"
+      "skos:prefLabel": "SHIP_TO",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-SHIP_TO_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization which receives physical goods and invoices, and is often the same party as the consignee. However in some cases, a consignee may designate a third party to manage the facility where the goods are shipped to, which is different to the delivery recipient party responsible for the facility where goods are received."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Ship To Organization"
+      },
+      "skos:prefLabel": "SHIP_TO_PARTY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SLAUGHTERER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "The Organization who has undertaken or will undertake a slaughter."
+        "@value": "An organization which is responsible for slaughtering livestock and preparing carcasses for further processing, including specialized tasks such as the removal of organs, hides and/or specific premium cuts."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Slaughterer"
       },
-      "skos:prefLabel": "SLAUGHTERER"
+      "skos:prefLabel": "SLAUGHTERER",
+      "sw:term_status": "stable"
     },
     {
-      "@id": "gs1:OrganizationRoleType-STORE",
+      "@id": "gs1:OrganizationRoleType-STORAGE_AND_HANDLING",
       "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-STORAGE_AND_HANDLING_PARTY"
+      },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A physical entity that sells products to a consumer."
+        "@value": "The movement, protection, storage of products throughout manufacturing, warehousing and distribution"
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Store"
+        "@value": "Storage and Handling"
       },
-      "skos:prefLabel": "STORE"
+      "skos:prefLabel": "STORAGE_AND_HANDLING",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-STORAGE_AND_HANDLING_PARTY",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization or department responsible for the storage and handling of goods within a facility; may be included with other services offered by a logistics service provider or a leased warehouse space for example and is often a third party, that is external to the parties directly employed by the facility."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Storage and Handling Organization"
+      },
+      "skos:prefLabel": "STORAGE_AND_HANDLING_PARTY",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SUBSTITUTE_SUPPLIER",
@@ -23501,7 +26844,8 @@
         "@language": "en",
         "@value": "Substitute Supplier"
       },
-      "skos:prefLabel": "SUBSTITUTE_SUPPLIER"
+      "skos:prefLabel": "SUBSTITUTE_SUPPLIER",
+      "sw:term_status": "unstable"
     },
     {
       "@id": "gs1:OrganizationRoleType-SUPPLIER",
@@ -23514,72 +26858,123 @@
         "@language": "en",
         "@value": "Supplier"
       },
-      "skos:prefLabel": "SUPPLIER"
+      "skos:prefLabel": "SUPPLIER",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-SUPPLY_CHAIN",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for the end-to-end process of manufacturing and trading commercial goods, with a broad scope covering procurement processes as well as traditional logistics processes involving warehousing and transportation"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Supply Chain"
+      },
+      "skos:prefLabel": "SUPPLY_CHAIN",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-TECHNICAL_SUPPORT_DEPARTMENT",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A business function or segment responsible for providing assistance and support for their organization's technical equipment and/or system infrastructure, for example with hardware such as computers, mobile phones and servers or software issues and configurations. Technical support may be provided as a service for internal staff or for external customers."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Technical Support Department"
+      },
+      "skos:prefLabel": "TECHNICAL_SUPPORT_DEPARTMENT",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-TRADER",
+      "@type": "gs1:OrganizationRoleType",
+      "owl:deprecated": {
+        "@id": "gs1:OrganizationRoleType-TRADER_FINANCIAL"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organisation that engages in the buying and selling of financial assets in any financial market, either for themself or on behalf of another person or institution. "
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Trader"
+      },
+      "skos:prefLabel": "TRADER",
+      "sw:term_status": "archaic"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-TRADER_FINANCIAL",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization that engages in the buying and selling of financial assets in any financial market, either for themselves or on behalf of another person or institution."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Financial Trader"
+      },
+      "skos:prefLabel": "TRADER_FINANCIAL",
+      "sw:term_status": "stable"
+    },
+    {
+      "@id": "gs1:OrganizationRoleType-TRADER_GOODS",
+      "@type": "gs1:OrganizationRoleType",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An organization that engages in the buying and selling of tangible goods such as raw materials and fresh produce. Goods may be traded in any market, either for themselves or on behalf of another party."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Goods Trader"
+      },
+      "skos:prefLabel": "TRADER_GOODS",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-TRANSPORTATION_CARRIER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization undertaking or arranging transport of goods between named points."
+        "@value": "An organization that undertakes or arranges the physical transportation of goods from one identified place to another. A transportation carrier is usually contracted by a freight forwarder to move goods within a regular route, for a set rate."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Transportation Carrier"
       },
-      "skos:prefLabel": "TRANSPORTATION_CARRIER"
-    },
-    {
-      "@id": "gs1:OrganizationRoleType-VISITING_ADDRESS",
-      "@type": "gs1:OrganizationRoleType",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An enterprise's physical location where guests are received during set working hours"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Visiting Address"
-      },
-      "skos:prefLabel": "VISITING_ADDRESS"
-    },
-    {
-      "@id": "gs1:OrganizationRoleType-WAREHOUSE_AND_OR_DEPOT",
-      "@type": "gs1:OrganizationRoleType",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Industrial department of a company equipped with appropriate equipment and fittings in which goods are stored in appropriate conditions."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Warehouse and or Depot"
-      },
-      "skos:prefLabel": "WAREHOUSE_AND_OR_DEPOT"
+      "skos:prefLabel": "TRANSPORTATION_CARRIER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-WAREHOUSE_KEEPER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Organization taking responsibility for goods entered into a warehouse."
+        "@value": "Organization who is responsible for a warehouse location and the goods that are kept on-site within the facility."
       },
       "rdfs:label": {
         "@language": "en",
         "@value": "Warehouse Keeper"
       },
-      "skos:prefLabel": "WAREHOUSE_KEEPER"
+      "skos:prefLabel": "WAREHOUSE_KEEPER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:OrganizationRoleType-WHOLESALER",
       "@type": "gs1:OrganizationRoleType",
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Seller of articles, often in large quantities, to be retailed by others."
+        "@value": "An organization that sells products, often in large quantities, to be retailed by others."
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "WholeSaler"
+        "@value": "Wholesaler"
       },
-      "skos:prefLabel": "WHOLESALER"
+      "skos:prefLabel": "WHOLESALER",
+      "sw:term_status": "stable"
     },
     {
       "@id": "gs1:PackagingFeatureCode-BASE",
@@ -28903,7 +32298,7 @@
       },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A Mobile Ready Hero Image (MRHI) is a representation of a real world product that may differ from a standard pack shot, but that maintains the majority of the physical pack's key elements of design, shape and colour, and is therefore recognisable on a digital shelf. In addition the image should contain elements of The 4 Ws: Who is the brand, What it is, Which variety it is and how much. The Mobile Ready Hero Image (MRHI) is specified in the GS1 Mobile Ready Hero Image Guideline https://www.gs1.org/standards/Mobile-Ready-Hero-Image"
+        "@value": "A Mobile Ready Hero Image (MRHI) is a representation of a real world product that may differ from a standard pack shot, but that maintains the majority of the physical pack's key elements of design, shape and colour, and is therefore recognisable on a digital shelf. In addition the image should contain elements of The 4 Ws: Who is the brand,Ã‚Â What it is,Ã‚Â Which variety it isÃ‚Â andÃ‚Â how much. The Mobile Ready Hero Image (MRHI) is specified in the GS1 Mobile Ready Hero Image Guideline https://www.gs1.org/standards/Mobile-Ready-Hero-Image"
       },
       "skos:prefLabel": "MOBILE_READY_HERO_IMAGE"
     },

@@ -17,7 +17,7 @@ class XsdGenerationTest {
 
     @Test
     void generateXsdFromInputStream() throws ParserConfigurationException, IOException, TransformerException {
-        final InputStream inputStream = getClass().getResourceAsStream("/gs1Voc_v1_10.jsonld");
+        final InputStream inputStream = getClass().getResourceAsStream("/gs1Voc_v1_11.jsonld");
         WebVocabularyParser webVocabularyParser = new WebVocabularyParser();
         webVocabularyParser.parseJsonLdData(inputStream);
 
@@ -27,7 +27,7 @@ class XsdGenerationTest {
 
     @Test
     void generateXsdFromUrl() throws ParserConfigurationException, IOException, TransformerException {
-        final String jsonLdURL = "https://www.gs1.org/docs/gs1-smartsearch/gs1Voc_v1_10.jsonld";
+        final String jsonLdURL = "https://raw.githubusercontent.com/gs1/WebVoc/refs/heads/master/v1.11/gs1Voc_v1_11.jsonld";
         WebVocabularyParser webVocabularyParser = new WebVocabularyParser();
         webVocabularyParser.parseJsonLdData(jsonLdURL);
 
