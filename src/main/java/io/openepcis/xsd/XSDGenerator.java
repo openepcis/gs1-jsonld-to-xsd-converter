@@ -97,6 +97,16 @@ public class XSDGenerator {
 
             final String xsdType = getXsdType(property);
             element.setAttribute("type", xsdType);
+
+            // If deprecated property then add the additional annotation with documentation
+            if (property.isDeprecated()) {
+                final Element deprecatedAnnotation = doc.createElement("xsd:annotation");
+                final Element deprecatedDocumentation = doc.createElement("xsd:documentation");
+                deprecatedDocumentation.setTextContent(property.getDescription());
+                deprecatedAnnotation.appendChild(deprecatedDocumentation);
+                element.appendChild(deprecatedAnnotation);
+            }
+
             sequence.appendChild(element);
         }
 
@@ -133,6 +143,16 @@ public class XSDGenerator {
                     for (PropertyDefinition property : properties) {
                         final Element enumElement = doc.createElement("xsd:enumeration");
                         enumElement.setAttribute("value", property.getProperty());
+
+                        // If deprecated property then add the additional annotation with documentation
+                        if (property.isDeprecated()) {
+                            final Element deprecatedAnnotation = doc.createElement("xsd:annotation");
+                            final Element deprecatedDocumentation = doc.createElement("xsd:documentation");
+                            deprecatedDocumentation.setTextContent(property.getDescription());
+                            deprecatedAnnotation.appendChild(deprecatedDocumentation);
+                            enumElement.appendChild(deprecatedAnnotation);
+                        }
+
                         restrictionElement.appendChild(enumElement);
                     }
                     simpleTypeElement.appendChild(restrictionElement);
@@ -154,6 +174,15 @@ public class XSDGenerator {
                 // Explicitly set the attributes in the desired order
                 element.setAttributeNS(null, "name", linkType.getLinkTypeId());
                 element.setAttributeNS(null, "type", mapSimpleType((String) linkType.getRangeType()));
+
+                // If deprecated property then add the additional annotation with documentation
+                if (linkType.isDeprecated()) {
+                    final Element deprecatedAnnotation = doc.createElement("xsd:annotation");
+                    final Element deprecatedDocumentation = doc.createElement("xsd:documentation");
+                    deprecatedDocumentation.setTextContent(linkType.getDescription());
+                    deprecatedAnnotation.appendChild(deprecatedDocumentation);
+                    element.appendChild(deprecatedAnnotation);
+                }
                 choice.appendChild(element);
             }
         }

@@ -12,4 +12,5 @@ public class LinkTypeDefinition {
     private String domain;
     private String description;
     private String type;
+    private boolean deprecated;
 }

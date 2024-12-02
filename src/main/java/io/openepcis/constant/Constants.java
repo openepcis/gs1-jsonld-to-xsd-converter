@@ -21,6 +21,7 @@ public class Constants {
     public static final String TYPE_CODES = "typeCodes";
     public static final String LINK_TYPES = "linkTypes";
     public static final String LINK_TYPE_ID = "linkTypeId";
+    public static final String THING = "Thing";
     public static final String CODE = "code";
     public static final String CLASS = "class";
     public static final String DOMAIN = "domain";

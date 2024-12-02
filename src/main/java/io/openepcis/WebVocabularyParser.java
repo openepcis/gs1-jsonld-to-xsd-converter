@@ -166,7 +166,7 @@ public class WebVocabularyParser {
             final Resource parentResource = subPropertyOfStmt.getObject().asResource();
 
             //Ignore all non-matching linkType and deprecated LinkTypes from JSON-LD document
-            if (Objects.requireNonNull((String) getPrefixedName(parentResource)).contains(LINK_TYPE) && !isDeprecated(parentResource)) {
+            if (Objects.requireNonNull((String) getPrefixedName(parentResource)).contains(LINK_TYPE)) {
                 final Map<String, Object> linkSchema = new HashMap<>();
 
                 linkSchema.put(LINK_TYPE_ID, linkName);
@@ -175,6 +175,7 @@ public class WebVocabularyParser {
                 linkSchema.put(DATA_TYPE, SIMPLE);
                 linkSchema.put(TYPE, SIMPLE);
                 linkSchema.put(DESCRIPTION, getDescription(linkResource));
+                linkSchema.put(DEPRECATED, isDeprecated(linkResource)); // If property is Deprecated then mark flag it for XSD annotation
                 linkTypes.add(linkSchema);
             }
         }
@@ -213,15 +214,14 @@ public class WebVocabularyParser {
                         final StmtIterator codeStmtIterator = code.listProperties(SKOS.prefLabel);
                         final String propertyName = codeStmtIterator.nextStatement().getString();
 
-                        //Ignore the deprecated TypeCodes and add all the other elements
-                        if (!isDeprecated(parentResource)) {
-                            codeSchema.put(PROPERTY, propertyName);
-                            codeSchema.put(RANGE_TYPE, typeCodeName);
-                            codeSchema.put(DATA_TYPE, SIMPLE);
-                            codeSchema.put(TYPE, CODE);
-                            codeSchema.put(DESCRIPTION, getDescription(code));
-                            codes.add(codeSchema);
-                        }
+                        codeSchema.put(PROPERTY, propertyName);
+                        codeSchema.put(RANGE_TYPE, typeCodeName);
+                        codeSchema.put(DATA_TYPE, SIMPLE);
+                        codeSchema.put(TYPE, CODE);
+                        codeSchema.put(DESCRIPTION, getDescription(code));
+                        codeSchema.put(DEPRECATED, isDeprecated(code)); // If property is Deprecated then mark flag it for XSD annotation
+                        codes.add(codeSchema);
+
                     }
 
                     // Sort the codes list based on the "property" value of each codeSchema
@@ -269,14 +269,12 @@ public class WebVocabularyParser {
 
                     final Map<String, Object> propertySchema = new LinkedHashMap<>();
 
-                    //Ignore the deprecated properties and add all the other elements
-                    if (!isDeprecated(property)) {
-                        propertySchema.put(PROPERTY, propertyName);
-                        propertySchema.put(RANGE_TYPE, rangeType);
-                        propertySchema.put(DOMAIN, getDomainName(property));
-                        propertySchema.put(DESCRIPTION, getDescription(property));
-                        allProperties.add(propertySchema);
-                    }
+                    propertySchema.put(PROPERTY, propertyName);
+                    propertySchema.put(RANGE_TYPE, rangeType);
+                    propertySchema.put(DOMAIN, getDomainName(property));
+                    propertySchema.put(DESCRIPTION, getDescription(property));
+                    propertySchema.put(DEPRECATED, isDeprecated(property)); // If property is Deprecated then mark flag it for XSD annotation
+                    allProperties.add(propertySchema);
                 }
                 // Sort the codes list based on the "property" value of each codeSchema
                 sortMapProperties(allProperties);
@@ -342,14 +340,13 @@ public class WebVocabularyParser {
                 final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
                 final Map<String, Object> propertySchema = new LinkedHashMap<>();
 
-                //Ignore the deprecated properties and add all the other elements
-                if (!isDeprecated(property)) {
-                    propertySchema.put(PROPERTY, propertyName);
-                    propertySchema.put(RANGE_TYPE, rangeType);
-                    propertySchema.put(DOMAIN, getDomainName(property));
-                    propertySchema.put(DESCRIPTION, getDescription(property));
-                    allProperties.add(propertySchema);
-                }
+                propertySchema.put(PROPERTY, propertyName);
+                propertySchema.put(RANGE_TYPE, rangeType);
+                propertySchema.put(DOMAIN, getDomainName(property));
+                propertySchema.put(DESCRIPTION, getDescription(property));
+                propertySchema.put(DEPRECATED, isDeprecated(property)); // If property is Deprecated then mark flag it for XSD annotation
+                allProperties.add(propertySchema);
+
             }
 
             // Append the property to existing properties in the class-property relation
@@ -384,7 +381,7 @@ public class WebVocabularyParser {
                 if (propertyNameObj != null && (propertyNameObj instanceof List || allClassProperties.containsKey(propertyName))) {
                     property.put(DATA_TYPE, COMPLEX);
                     property.put(TYPE, CLASS);
-                } else if (propertyName != null && (allTypeCodes.containsKey(propertyName) || propertyName.equalsIgnoreCase("Thing"))) {
+                } else if (propertyName != null && (allTypeCodes.containsKey(propertyName) || propertyName.equalsIgnoreCase(THING))) {
                     // Check if the property belongs to CODE type in allTypeCodes
                     property.put(DATA_TYPE, COMPLEX);
                     property.put(TYPE, CODE);

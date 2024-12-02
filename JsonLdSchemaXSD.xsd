@@ -716,6 +716,11 @@
             <xsd:element name="productMarketingMessage" type="xsd:string"/>
             <xsd:element name="productName" type="xsd:string"/>
             <xsd:element name="productRange" type="xsd:string"/>
+            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI">
+                <xsd:annotation>
+                    <xsd:documentation>This term has been deprecated. Please use gs1:sustainabilityInfo instead.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
             <xsd:element name="productionDate" type="xsd:date"/>
             <xsd:element name="productionDateTime" type="xsd:date"/>
             <xsd:element name="productionVariantDescription" type="xsd:string"/>
@@ -2598,7 +2603,11 @@
             <xsd:element name="openingHoursInfo" type="xsd:anyURI"/>
             <xsd:element name="paymentLink" type="xsd:anyURI"/>
             <xsd:element name="pip" type="xsd:anyURI"/>
-            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI"/>
+            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI">
+                <xsd:annotation>
+                    <xsd:documentation>This term has been deprecated. Please use gs1:sustainabilityInfo instead.</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
             <xsd:element name="promotion" type="xsd:anyURI"/>
             <xsd:element name="purchaseSuppliesOrAccessories" type="xsd:anyURI"/>
             <xsd:element name="quickStartGuide" type="xsd:anyURI"/>

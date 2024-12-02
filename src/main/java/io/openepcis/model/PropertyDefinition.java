@@ -12,4 +12,5 @@ public class PropertyDefinition {
     private String description;
     private String dataType;
     private String type;
+    private boolean deprecated;
 }
