@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cc="http://creativecommons.org/ns" xmlns:cert="http://www.w3.org/ns/auth/cert" xmlns:dbp="http://dbpedia.org/property" xmlns:dc="http://purl.org/dc/elements/1.1" xmlns:dcterms="http://purl.org/dc/elements/1.1" xmlns:doap="http://usefulinc.com/ns/doap" xmlns:exif="http://www.w3.org/2003/12/exif/ns" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:foaf="http://xmlns.com/foaf/0.1" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos" xmlns:geonames="http://www.geonames.org/ontology" xmlns:gr="http://purl.org/goodrelations/v1" xmlns:gs1="https://gs1.org/voc" xmlns:log="http://www.w3.org/2000/10/swap/log" xmlns:owl="http://www.w3.org/2002/07/owl" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema" xmlns:rei="http://www.w3.org/2004/06/rei" xmlns:rsa="http://www.w3.org/ns/auth/rsa" xmlns:rss="http://purl.org/rss/1.0" xmlns:schema="http://schema.org" xmlns:sfn="http://www.w3.org/ns/sparql" xmlns:sioc="http://rdfs.org/sioc/ns" xmlns:skos="http://www.w3.org/2004/02/skos/core" xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns" xmlns:swrc="http://swrc.ontoware.org/ontology" xmlns:types="http://rdfs.org/sioc/types" xmlns:vann="http://purl.org/vocab/vann" xmlns:vcard="http://www.w3.org/2006/vcard/ns" xmlns:voaf="http://purl.org/vocommons/voaf" xmlns:wot="http://xmlns.com/wot/0.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gs1="https://gs1.org/voc">
     <xsd:complexType name="AdditionalProductClassificationDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A product classification for the product other than the Global Product Classification(GPC brick value).</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additionalProductClassificationCode" type="xsd:string"/>
             <xsd:element name="additionalProductClassificationCodeDescription" type="xsd:string"/>
@@ -8,18 +11,29 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="AdditiveDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A set of details about one of the additives within the product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additiveLevelOfContainment" type="LevelOfContainmentCode"/>
             <xsd:element name="additiveName" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="AllergenDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Details of an allergen for a product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="allergenLevelOfContainmentCode" type="LevelOfContainmentCode"/>
             <xsd:element name="allergenType" type="AllergenTypeCode"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="AuthenticityDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A set of details about covert or overt security features that may contribute to checking the authenticity of a product or product
+                instance.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="authenticitySecurityFeatureInstructions" type="xsd:string"/>
             <xsd:element name="authenticitySecurityFeatureInstructionsURL" type="xsd:anyURI"/>
@@ -29,6 +43,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="AwardPrizeDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Describes a prize or award won by a product or organization.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="awardPrizeCode" type="xsd:string"/>
             <xsd:element name="awardPrizeCountryCode" type="Country"/>
@@ -39,6 +56,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Beverage">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Any potable liquid.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
@@ -55,12 +75,18 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Brand">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Information on brands and sub-brands for a product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="brandName" type="xsd:string"/>
             <xsd:element name="subBrandName" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="CertificationDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Certification issued by a certifying body to a certification subject (Organization, Place, Product).</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="certificationAgency" type="xsd:string"/>
             <xsd:element name="certificationAgencyURL" type="Organization"/>
@@ -79,6 +105,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Clothing">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A product that is worn on the body.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="WearableProduct">
                 <xsd:sequence>
@@ -91,12 +120,18 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="ColourCodeDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A set of colour code details (colour code, party controlling the code list) for the product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="colourCodeList" type="ColourCodeListCode"/>
             <xsd:element name="colourCodeValue" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ContactPoint">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Information on an individual or department acting as point of contact for an organiation.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="availableLanguage" type="xsd:string"/>
             <xsd:element name="contactTitle" type="xsd:string"/>
@@ -108,18 +143,27 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Country">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Country is a complex data type that indicates a country and a country subdivision.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="countryCode" type="xsd:string"/>
             <xsd:element name="countrySubdivisionCode" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="DietTypeCodeDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A set of diet type code details (diet type code and diet type sub code) for the product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="dietType" type="DietTypeCode"/>
             <xsd:element name="dietTypeSubcode" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Discount">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Provides information on a discount applicable to an offer for example 2 percent.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="discountRepeatsPerMultipleMinimum" type="xsd:boolean"/>
             <xsd:element name="discountType" type="DiscountTypeCode"/>
@@ -153,6 +197,11 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FoodAndBeveragePreparationInformation">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Food and Beverage Preparation Information is a complex data type that indicates a preparation state code and preparation
+                instructions.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="convenienceLevelPercent" type="xsd:float"/>
             <xsd:element name="manufacturerPreparationCode" type="PreparationTypeCode"/>
@@ -165,6 +214,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoIngredientDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Food Beverage Tobacco Ingredient is a complex data type that includes an ingredient statement and details.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="ingredientContentPercentage" type="xsd:float"/>
             <xsd:element name="ingredientName" type="xsd:string"/>
@@ -172,6 +224,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoProduct">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A food, beverage or tobacco product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="Product">
                 <xsd:sequence>
@@ -257,6 +312,9 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Footwear">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Outerwear that is worn on the feet such as shoes or boots.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="WearableProduct">
                 <xsd:sequence>
@@ -268,6 +326,9 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="FruitsVegetables">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Contains properties related specifically to fruit and vegetable products.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
@@ -281,6 +342,9 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="GeoCoordinates">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The geographic coordinates of a place or event.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="coordinateReferenceSystem" type="xsd:anyURI"/>
             <xsd:element name="elevation" type="xsd:string"/>
@@ -289,6 +353,11 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="GeoShape">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude
+                pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="circle" type="xsd:string"/>
             <xsd:element name="line" type="xsd:string"/>
@@ -296,6 +365,12 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="LocationID_Details">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Government bodies, trade organisations, and other parties issue identifiers that are associated to locations. Linking these identifiers
+                to GLN and one another supports consolidating records, mapping related, collaborative identifiers, enhances search ability and enables more efficient transitions
+                between identifiers. This class provides a mechanism for connecting and sharing location identifiers.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="locationID" type="xsd:string"/>
             <xsd:element name="locationID_Qualifier" type="xsd:string"/>
@@ -304,12 +379,20 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="LocationStatusHistory">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Over the lifetime of a location, it may go through periods of being active and inactive. gs1:LocationStatusHistory allows changes in
+                status to be communicated in advance and tracked over time.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="locationStatus" type="StatusType"/>
             <xsd:element name="statusTimestamp" type="xsd:dateTime"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="MeatPoultry">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Meat and poultry products.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
@@ -322,6 +405,9 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="MilkButterCreamYogurtCheeseEggsSubstitutes">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Milk butter cream yogurts cheese eggs and any substitutes for these products.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
@@ -337,6 +423,9 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="NutritionMeasurementType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A class providing nutritional value and intake percent.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="QuantitativeValue">
                 <xsd:sequence>
@@ -346,6 +435,11 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="Offer">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">An offer to transfer some rights to an item or to provide a service,for example, an offer to sell tickets to an event, to rent the DVD
+                of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="acceptedPaymentMethod" type="PaymentMethod"/>
             <xsd:element name="availabilityEnds" type="xsd:dateTime"/>
@@ -366,12 +460,20 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="OrganicClaimDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A set of organic claim details for the product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="organicClaimAgency" type="OrganicClaimAgencyCode"/>
             <xsd:element name="organicPercentClaim" type="xsd:float"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Organization">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">An Organization is any legal or physical entity involved at any point in any supply chain and upon which there is a need to retrieve
+                predefined information. An Organization is uniquely identified by a Global Location Number (GLN).
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additionalOrganizationID" type="OrganizationID_Details"/>
             <xsd:element name="additionalOrganizationIdentificationTypeValue" type="xsd:string"/>
@@ -405,6 +507,12 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="OrganizationID_Details">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Government bodies, trade organisations, and other parties issue identifiers that are associated to legal entities and/or functions.
+                Linking these identifiers to GLN and one another supports consolidating records, mapping related, collaborative identifiers, enhances search ability and enables
+                more efficient transitions between identifiers. This class provides a mechanism for connecting and sharing party identifiers.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="organizationID" type="xsd:string"/>
             <xsd:element name="organizationID_Qualifier" type="xsd:string"/>
@@ -413,12 +521,20 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="OrganizationStatusHistory">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Over the lifetime of an organisation, it may go through periods of being active and inactive. gs1:OrganizationStatusHistory allows
+                changes in status to be communicated in advance and tracked over time.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="organizationStatus" type="StatusType"/>
             <xsd:element name="statusTimestamp" type="xsd:dateTime"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="PackagingDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Details on packaging for a product for example packaging type (bottle), materials, features, recycling, etc..</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="hasReturnablePackageDeposit" type="ReturnablePackageDepositDetails"/>
             <xsd:element name="packagingFeature" type="PackagingFeatureCode"/>
@@ -431,6 +547,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="PackagingMaterialDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Information on any material used for packaging.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="packagingMaterialCompositionQuantity" type="QuantitativeValue"/>
             <xsd:element name="packagingMaterialThickness" type="QuantitativeValue"/>
@@ -438,6 +557,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Place">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Entities that have a somewhat fixed, physical location.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additionalLocationID" type="LocationID_Details"/>
             <xsd:element name="address" type="PostalAddress"/>
@@ -470,6 +592,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="PostalAddress">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The location at which a particular organization or person may be found or reached.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="addressCountry" type="Country"/>
             <xsd:element name="addressLocality" type="xsd:string"/>
@@ -488,6 +613,9 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="PriceSpecification">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A structured value representing a monetary amount, consisting of a value and currency code.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="dutyFeeTaxAmount" type="xsd:float"/>
             <xsd:element name="dutyFeeTaxDescription" type="xsd:string"/>
@@ -504,6 +632,11 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Product">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Any item (product or service) upon which there is a need to retrieve pre-defined information and that may be priced, or ordered, or
+                invoiced at any point in any supply chain.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additionalProductClassification" type="AdditionalProductClassificationDetails"/>
             <xsd:element name="additionalProductDescription" type="xsd:string"/>
@@ -583,7 +716,6 @@
             <xsd:element name="productMarketingMessage" type="xsd:string"/>
             <xsd:element name="productName" type="xsd:string"/>
             <xsd:element name="productRange" type="xsd:string"/>
-            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI"/>
             <xsd:element name="productionDate" type="xsd:date"/>
             <xsd:element name="productionDateTime" type="xsd:date"/>
             <xsd:element name="productionVariantDescription" type="xsd:string"/>
@@ -602,6 +734,10 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ProductYieldDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A grouping of properties related to the yield of a food or beverage product according to a specified type of preparation.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="productYield" type="QuantitativeValue"/>
             <xsd:element name="productYieldType" type="ProductYieldTypeCode"/>
@@ -609,12 +745,18 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="QuantitativeValue">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A point value or interval for product characteristics and other purposes. A unit of measurement is also specified.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="unitCode" type="xsd:string"/>
             <xsd:element name="value" type="xsd:float"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ReferencedFileDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Provides URL and other information on a referenced electronic file.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="fileLanguageCode" type="xsd:string"/>
             <xsd:element name="filePixelHeight" type="xsd:integer"/>
@@ -627,12 +769,18 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ReturnablePackageDepositDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Details of the deposit for returnable packaging for a product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="returnablePackageDepositAmount" type="PriceSpecification"/>
             <xsd:element name="returnablePackageDepositRegion" type="Country"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="Seafood">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Seafood Products including fish and shellfish.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
@@ -645,12 +793,19 @@
         </xsd:complexContent>
     </xsd:complexType>
     <xsd:complexType name="SizeCodeDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A grouping of properties related to the representing the size of a product, by specifying a value from a specified code list.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="sizeCodeListCode" type="xsd:string"/>
             <xsd:element name="sizeCodeValue" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="SizeDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A grouping of properties related to the size of a wearable product</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="sizeDimension" type="QuantitativeValue"/>
             <xsd:element name="sizeGroup" type="SizeGroupCode"/>
@@ -659,12 +814,18 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="TargetMarketDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A set of target market details (product release date and associated countries) for the product.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="consumerFirstAvailabilityDateTime" type="xsd:dateTime"/>
             <xsd:element name="targetMarketCountries" type="Country"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="TextileMaterialDetails">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Details on the composition of any materials used to make a product using textiles.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="textileMaterialDescription" type="xsd:string"/>
             <xsd:element name="textileMaterialPercentage" type="xsd:float"/>
@@ -673,17 +834,28 @@
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="TypeCode">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A code list.</xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="originalCodeValue" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="WarrantyPromise">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">An assurance that the product is reliable and that repairs or replacement will be done free of charge within a given time limit and
+                under certain conditions in the event of a defect.
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="durationOfWarranty" type="QuantitativeValue"/>
             <xsd:element name="warrantyScopeDescription" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="WearableProduct">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Products that are worn on the body.</xsd:documentation>
+        </xsd:annotation>
         <xsd:complexContent>
             <xsd:extension base="Product">
                 <xsd:sequence>

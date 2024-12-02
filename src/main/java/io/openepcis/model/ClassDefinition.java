@@ -10,5 +10,6 @@ import java.util.List;
 public class ClassDefinition {
     private Boolean isSubclass;
     private String superClass;
+    private String description;
     private List<PropertyDefinition> properties;
 }

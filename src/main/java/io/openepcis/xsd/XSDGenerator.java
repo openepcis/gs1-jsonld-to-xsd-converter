@@ -79,6 +79,14 @@ public class XSDGenerator {
         final Element complexType = doc.createElement("xsd:complexType");
         complexType.setAttribute("name", typeName);
 
+        //Add the description/documentation for the class in XSD for reference purpose.
+        final Element annotation = doc.createElement("xsd:annotation");
+        final Element documentation = doc.createElement("xsd:documentation");
+        documentation.setAttribute("xml:lang", "en");
+        documentation.setTextContent(classDefinition.getDescription());
+        annotation.appendChild(documentation);
+        complexType.appendChild(annotation);
+
         final Element sequence = doc.createElement("xsd:sequence");
         final List<PropertyDefinition> properties = classDefinition.getProperties();
 

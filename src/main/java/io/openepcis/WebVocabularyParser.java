@@ -25,7 +25,7 @@ import static io.openepcis.constant.Constants.*;
 
 @SuppressWarnings("unchecked")
 public class WebVocabularyParser {
-
+    private static final Property SW_TERM_STATUS = ResourceFactory.createProperty("http://www.w3.org/2003/06/sw-vocab-status/ns#", "term_status");
     private Map<Resource, List<Resource>> allUnionClasses = null;
 
     /**
@@ -165,7 +165,8 @@ public class WebVocabularyParser {
             final Statement subPropertyOfStmt = linkResource.getProperty(RDFS.subPropertyOf);
             final Resource parentResource = subPropertyOfStmt.getObject().asResource();
 
-            if (Objects.requireNonNull((String) getPrefixedName(parentResource)).contains(LINK_TYPE)) {
+            //Ignore all non-matching linkType and deprecated LinkTypes from JSON-LD document
+            if (Objects.requireNonNull((String) getPrefixedName(parentResource)).contains(LINK_TYPE) && !isDeprecated(parentResource)) {
                 final Map<String, Object> linkSchema = new HashMap<>();
 
                 linkSchema.put(LINK_TYPE_ID, linkName);
@@ -175,7 +176,6 @@ public class WebVocabularyParser {
                 linkSchema.put(TYPE, SIMPLE);
                 linkSchema.put(DESCRIPTION, getDescription(linkResource));
                 linkTypes.add(linkSchema);
-
             }
         }
         // Sort linkTypes based on the "property" key
@@ -213,12 +213,15 @@ public class WebVocabularyParser {
                         final StmtIterator codeStmtIterator = code.listProperties(SKOS.prefLabel);
                         final String propertyName = codeStmtIterator.nextStatement().getString();
 
-                        codeSchema.put(PROPERTY, propertyName);
-                        codeSchema.put(RANGE_TYPE, typeCodeName);
-                        codeSchema.put(DATA_TYPE, SIMPLE);
-                        codeSchema.put(TYPE, CODE);
-                        codeSchema.put(DESCRIPTION, getDescription(code));
-                        codes.add(codeSchema);
+                        //Ignore the deprecated TypeCodes and add all the other elements
+                        if (!isDeprecated(parentResource)) {
+                            codeSchema.put(PROPERTY, propertyName);
+                            codeSchema.put(RANGE_TYPE, typeCodeName);
+                            codeSchema.put(DATA_TYPE, SIMPLE);
+                            codeSchema.put(TYPE, CODE);
+                            codeSchema.put(DESCRIPTION, getDescription(code));
+                            codes.add(codeSchema);
+                        }
                     }
 
                     // Sort the codes list based on the "property" value of each codeSchema
@@ -265,11 +268,15 @@ public class WebVocabularyParser {
                     final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
 
                     final Map<String, Object> propertySchema = new LinkedHashMap<>();
-                    propertySchema.put(PROPERTY, propertyName);
-                    propertySchema.put(RANGE_TYPE, rangeType);
-                    propertySchema.put(DOMAIN, getDomainName(property));
-                    propertySchema.put(DESCRIPTION, getDescription(property));
-                    allProperties.add(propertySchema);
+
+                    //Ignore the deprecated properties and add all the other elements
+                    if (!isDeprecated(property)) {
+                        propertySchema.put(PROPERTY, propertyName);
+                        propertySchema.put(RANGE_TYPE, rangeType);
+                        propertySchema.put(DOMAIN, getDomainName(property));
+                        propertySchema.put(DESCRIPTION, getDescription(property));
+                        allProperties.add(propertySchema);
+                    }
                 }
                 // Sort the codes list based on the "property" value of each codeSchema
                 sortMapProperties(allProperties);
@@ -293,10 +300,12 @@ public class WebVocabularyParser {
                 if (isSubClass) {
                     classSchema.put(IS_SUBCLASS, true);  // Indicate that this is a subclass
                     classSchema.put(SUPERCLASS, superClassName);
+                    classSchema.put(DESCRIPTION, getDescription(cls));
                 } else {
                     // No superclass, handle it accordingly
                     classSchema.put(IS_SUBCLASS, false);
                     classSchema.put(SUPERCLASS, null);
+                    classSchema.put(DESCRIPTION, getDescription(cls));
                 }
 
                 // Add the properties to the class schema
@@ -333,11 +342,14 @@ public class WebVocabularyParser {
                 final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
                 final Map<String, Object> propertySchema = new LinkedHashMap<>();
 
-                propertySchema.put(PROPERTY, propertyName);
-                propertySchema.put(RANGE_TYPE, rangeType);
-                propertySchema.put(DOMAIN, getDomainName(property));
-                propertySchema.put(DESCRIPTION, getDescription(property));
-                allProperties.add(propertySchema);
+                //Ignore the deprecated properties and add all the other elements
+                if (!isDeprecated(property)) {
+                    propertySchema.put(PROPERTY, propertyName);
+                    propertySchema.put(RANGE_TYPE, rangeType);
+                    propertySchema.put(DOMAIN, getDomainName(property));
+                    propertySchema.put(DESCRIPTION, getDescription(property));
+                    allProperties.add(propertySchema);
+                }
             }
 
             // Append the property to existing properties in the class-property relation
@@ -485,4 +497,12 @@ public class WebVocabularyParser {
         properties.sort(Comparator.comparing(m -> ((String) (m).get(sortType))));
     }
 
+    //Method to check for the field sw:term_status and decide if deprecated or not
+    private boolean isDeprecated(final Resource resourceProperty) {
+        final String termStatus = Optional.ofNullable(resourceProperty.getProperty(SW_TERM_STATUS))
+                .map(Statement::getString)
+                .orElse("");
+
+        return DEPRECATED.equalsIgnoreCase(termStatus);
+    }
 }

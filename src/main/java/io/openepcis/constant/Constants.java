@@ -26,4 +26,5 @@ public class Constants {
     public static final String DOMAIN = "domain";
     public static final String NAMESPACES = "namespaces";
     public static final String XSD_STRING = "xsd:string";
+    public static final String DEPRECATED = "deprecated";
 }
