@@ -16,18 +16,20 @@
         {
           "property": "additionalProductClassificationCodeDescription",
           "rangeType": "langString",
-        "domain" : "AdditionalProductClassificationDetails",
-        "description" : "A description related to  the additional product classification code value.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "additionalProductClassificationValue",
-        "rangeType" : "string",
-        "domain" : "AdditionalProductClassificationDetails",
-        "description" : "Code specifying an additional product classification other than the GS1 Global Product Classification. The applied classification scheme is specified as additional information together with the classification value.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "AdditionalProductClassificationDetails",
+          "description": "A description related to  the additional product classification code value.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "additionalProductClassificationValue",
+          "rangeType": "string",
+          "domain": "AdditionalProductClassificationDetails",
+          "description": "Code specifying an additional product classification other than the GS1 Global Product Classification. The applied classification scheme is specified as additional information together with the classification value.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "AdditiveDetails" : {
       "isSubclass": false,
@@ -45,11 +47,12 @@
         {
           "property": "additiveName",
           "rangeType": "langString",
-        "domain" : "AdditiveDetails",
-        "description" : "The name of any additive or genetic modification contained or not contained in the product .",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "AdditiveDetails",
+          "description": "The name of any additive or genetic modification contained or not contained in the product .",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "AllergenDetails" : {
       "isSubclass": false,
@@ -67,11 +70,12 @@
         {
           "property": "allergenType",
           "rangeType": "AllergenTypeCode",
-        "domain" : "AllergenDetails",
-        "description" : "Code specifying the type of allergen.",
-        "dataType" : "complex",
-        "type" : "code"
-      } ]
+          "domain": "AllergenDetails",
+          "description": "Code specifying the type of allergen.",
+          "dataType": "complex",
+          "type": "code"
+        }
+      ]
     },
     "AuthenticityDetails" : {
       "isSubclass": false,
@@ -89,26 +93,29 @@
         {
           "property": "authenticitySecurityFeatureInstructionsURL",
           "rangeType": "anyURI",
-        "domain" : "AuthenticityDetails",
-        "description" : "Links to online instructions about how to locate a physical security marking and read a value from it.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "authenticitySecurityFeatureRegularExpression",
-        "rangeType" : "string",
-        "domain" : "AuthenticityDetails",
-        "description" : "Links to a regular expression to be used to perform syntax validation (plausibility checking) of a string value read from a physical security marking.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "authenticitySecurityFeatureType",
-        "rangeType" : "SecurityMarking",
-        "domain" : "AuthenticityDetails",
-        "description" : "Links to a URI code value indicating a particular type of physical security marking.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "authenticitySecurityFeatureValue",
+          "domain": "AuthenticityDetails",
+          "description": "Links to online instructions about how to locate a physical security marking and read a value from it.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "authenticitySecurityFeatureRegularExpression",
+          "rangeType": "string",
+          "domain": "AuthenticityDetails",
+          "description": "Links to a regular expression to be used to perform syntax validation (plausibility checking) of a string value read from a physical security marking.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "authenticitySecurityFeatureType",
+          "rangeType": "SecurityMarking",
+          "domain": "AuthenticityDetails",
+          "description": "Links to a URI code value indicating a particular type of physical security marking.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "authenticitySecurityFeatureValue",
         "rangeType" : "string",
         "domain" : "AuthenticityDetails",
         "description" : "Links to a string value read from a physical security marking.",
@@ -132,26 +139,29 @@
         {
           "property": "awardPrizeCountryCode",
           "rangeType": "Country",
-        "domain" : "AwardPrizeDetails",
-        "description" : "An ISO standard code identifying the country in which a prize or award is given. It is recommended to populate this property with an ISO 3166-1 country code.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "awardPrizeDescription",
-        "rangeType" : "langString",
-        "domain" : "AwardPrizeDetails",
-        "description" : "Text that describes the awards won.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "awardPrizeJury",
-        "rangeType" : "langString",
-        "domain" : "AwardPrizeDetails",
-        "description" : "Free text listing members of the jury that awarded the prize.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "awardPrizeName",
+          "domain": "AwardPrizeDetails",
+          "description": "An ISO standard code identifying the country in which a prize or award is given. It is recommended to populate this property with an ISO 3166-1 country code.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "awardPrizeDescription",
+          "rangeType": "langString",
+          "domain": "AwardPrizeDetails",
+          "description": "Text that describes the awards won.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "awardPrizeJury",
+          "rangeType": "langString",
+          "domain": "AwardPrizeDetails",
+          "description": "Free text listing members of the jury that awarded the prize.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "awardPrizeName",
         "rangeType" : "langString",
         "domain" : "AwardPrizeDetails",
         "description" : "The name of a prize or award which the product has received.",
@@ -182,26 +192,29 @@
         {
           "property": "beverageVintage",
           "rangeType": "string",
-        "domain" : "Beverage",
-        "description" : "The year in which the majority of ingredients are harvested and/or the alcoholic beverage is produced. Determination as to whether the vintage year is the harvest date or production date is according to requirements in the Target Market.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "isCarbonated",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "Beverage",
-        "description" : "Used to identify whether or not a beverage product is naturally effervescent or has been made effervescent by the addition of carbon dioxide gas.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isDecaffeinated",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "Beverage",
-        "description" : "The descriptive term that is used by the product manufacturer to identify whether or not the product contains caffeine.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isFromConcentrate",
+          "domain": "Beverage",
+          "description": "The year in which the majority of ingredients are harvested and/or the alcoholic beverage is produced. Determination as to whether the vintage year is the harvest date or production date is according to requirements in the Target Market.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "isCarbonated",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "Beverage",
+          "description": "Used to identify whether or not a beverage product is naturally effervescent or has been made effervescent by the addition of carbon dioxide gas.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isDecaffeinated",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "Beverage",
+          "description": "The descriptive term that is used by the product manufacturer to identify whether or not the product contains caffeine.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isFromConcentrate",
         "rangeType" : "NonbinaryLogicCode",
         "domain" : "Beverage",
         "description" : "Used to identify whether or not the product claims to be made from a concentrated formulation.",
@@ -246,11 +259,12 @@
         {
           "property": "subBrandName",
           "rangeType": "langString",
-        "domain" : "Brand",
-        "description" : "Second level of brand. Can be a trademark. It is the primary differentiating factor that a brand owner wants to communicate to the consumer or buyer. E.g. Yummy-Cola Classic. In this example Yummy-Cola is the brand and Classic is the sub-brand.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "Brand",
+          "description": "Second level of brand. Can be a trademark. It is the primary differentiating factor that a brand owner wants to communicate to the consumer or buyer. E.g. Yummy-Cola Classic. In this example Yummy-Cola is the brand and Classic is the sub-brand.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "CertificationDetails" : {
       "isSubclass": false,
@@ -268,26 +282,29 @@
         {
           "property": "certificationAgencyURL",
           "rangeType": "Organization",
-        "domain" : "CertificationDetails",
-        "description" : "URL of the organisation issuing the certification standard or other requirement being met. e.g. https://www.msc.org , https://www.fsc.org",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "certificationAuditDate",
-        "rangeType" : "date",
-        "domain" : "CertificationDetails",
-        "description" : "Date of completion of the auditing needed for certification",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "certificationEndDate",
-        "rangeType" : "date",
-        "domain" : "CertificationDetails",
-        "description" : "Last date of validity for the certification. (After this date the certification lapses and would need to be renewed/replaced)",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "certificationIdentification",
+          "domain": "CertificationDetails",
+          "description": "URL of the organisation issuing the certification standard or other requirement being met. e.g. https://www.msc.org , https://www.fsc.org",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "certificationAuditDate",
+          "rangeType": "date",
+          "domain": "CertificationDetails",
+          "description": "Date of completion of the auditing needed for certification",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "certificationEndDate",
+          "rangeType": "date",
+          "domain": "CertificationDetails",
+          "description": "Last date of validity for the certification. (After this date the certification lapses and would need to be renewed/replaced)",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "certificationIdentification",
         "rangeType" : "string",
         "domain" : "CertificationDetails",
         "description" : "A reference (i.e, to a certificate instance) issued to confirm that a product, party or location has passed certification. e.g. 'XSC-C-12345'",
@@ -311,41 +328,46 @@
         "property" : "certificationStatement",
         "rangeType" : "langString",
         "domain" : "CertificationDetails",
-        "description" : "Certification scope statement of the individual certification instance. The same certificationStandard can be issued with different values of certificationStatement in different instances.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "certificationStatus",
-        "rangeType" : "CertificationStatus",
-        "domain" : "CertificationDetails",
-        "description" : "Indicates the current status of the certification, e.g. active or inactive.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "certificationSubject",
-        "rangeType" : "Thing",
-        "domain" : "CertificationDetails",
-        "description" : "References the object (e.g. product, asset, container), party or location being certified. If multiple values are specified, the certification details apply to the logical conjunction (AND) of groups of different types, while a logical disjunction (OR) applies within each group of the same type. For example, two sibling organisations O1 and O2 can process products P1 and P2 at locations L1 and L2: meaning that either organisation can process either product at either location (OR); but the certificate holds for the combinations of organisation (either O1 OR O2) AND product (either P1 OR P2) AND location (either L1 OR L2)",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "certificationType",
-        "rangeType" : "Thing",
-        "domain" : "CertificationDetails",
-        "description" : "Indicates the type of certification",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "certificationURI",
-        "rangeType" : "anyURI",
-        "domain" : "CertificationDetails",
-        "description" : "If gs1:certificationURI is present, it should point to data about this individual certificate within a repository maintained by the certification agency.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "certificationValue",
-        "rangeType" : "langString",
-        "domain" : "CertificationDetails",
+          "description": "Certification scope statement of the individual certification instance. The same certificationStandard can be issued with different values of certificationStatement in different instances.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "certificationStatus",
+          "rangeType": "CertificationStatus",
+          "domain": "CertificationDetails",
+          "description": "Indicates the current status of the certification, e.g. active or inactive.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "certificationSubject",
+          "rangeType": "Thing",
+          "domain": "CertificationDetails",
+          "description": "References the object (e.g. product, asset, container), party or location being certified. If multiple values are specified, the certification details apply to the logical conjunction (AND) of groups of different types, while a logical disjunction (OR) applies within each group of the same type. For example, two sibling organisations O1 and O2 can process products P1 and P2 at locations L1 and L2: meaning that either organisation can process either product at either location (OR); but the certificate holds for the combinations of organisation (either O1 OR O2) AND product (either P1 OR P2) AND location (either L1 OR L2)",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "certificationType",
+          "rangeType": "Thing",
+          "domain": "CertificationDetails",
+          "description": "Indicates the type of certification",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "certificationURI",
+          "rangeType": "anyURI",
+          "domain": "CertificationDetails",
+          "description": "If gs1:certificationURI is present, it should point to data about this individual certificate within a repository maintained by the certification agency.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "certificationValue",
+          "rangeType": "langString",
+          "domain": "CertificationDetails",
         "description" : "The certification's standard value. Example: '4'.",
         "dataType" : "simple",
         "type" : "simple"
@@ -374,25 +396,28 @@
         {
           "property": "collarType",
           "rangeType": "langString",
-        "domain" : "Clothing",
-        "description" : "A free text description of the type of collar on the garment.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "isMaternity",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "Clothing",
-        "description" : "Indicates, with reference to the product branding, labelling or packaging, the descriptive term that is used by the product manufacturer to identify if the product is intended as maternity wear.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "textileMaterial",
-        "rangeType" : "TextileMaterialDetails",
-        "domain" : "Clothing",
-        "description" : "One or more links to information about the materials used in a wearable product.",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "Clothing",
+          "description": "A free text description of the type of collar on the garment.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "isMaternity",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "Clothing",
+          "description": "Indicates, with reference to the product branding, labelling or packaging, the descriptive term that is used by the product manufacturer to identify if the product is intended as maternity wear.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "textileMaterial",
+          "rangeType": "TextileMaterialDetails",
+          "domain": "Clothing",
+          "description": "One or more links to information about the materials used in a wearable product.",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "ColourCodeDetails" : {
       "isSubclass": false,
@@ -410,11 +435,12 @@
         {
           "property": "colourCodeValue",
           "rangeType": "string",
-        "domain" : "ColourCodeDetails",
-        "description" : "A code indicating the colour of an object according to a specific code list. The applied code list is specified as additional information together with the colour code.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "ColourCodeDetails",
+          "description": "A code indicating the colour of an object according to a specific code list. The applied code list is specified as additional information together with the colour code.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "ContactPoint" : {
       "isSubclass": false,
@@ -432,26 +458,29 @@
         {
           "property": "contactTitle",
           "rangeType": "langString",
-        "domain" : "ContactPoint",
-        "description" : "The job title of the person that can be contacted for example Manager.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "contactType",
-        "rangeType" : "langString",
-        "domain" : "ContactPoint",
-        "description" : "The function or role of a contact for example Customer Support.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "email",
-        "rangeType" : "string",
-        "domain" : "ContactPoint",
-        "description" : "Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini-computer or an attached modem and regular telephone line or other electronic transmission media.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "faxNumber",
+          "domain": "ContactPoint",
+          "description": "The job title of the person that can be contacted for example Manager.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "contactType",
+          "rangeType": "langString",
+          "domain": "ContactPoint",
+          "description": "The function or role of a contact for example Customer Support.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "email",
+          "rangeType": "string",
+          "domain": "ContactPoint",
+          "description": "Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini-computer or an attached modem and regular telephone line or other electronic transmission media.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "faxNumber",
         "rangeType" : "string",
         "domain" : "ContactPoint",
         "description" : "A fax number used for transmitting and reproducing fixed graphic material over telephone lines or other electronic transmission media.",
@@ -489,11 +518,12 @@
         {
           "property": "countrySubdivisionCode",
           "rangeType": "string",
-        "domain" : "Country",
-        "description" : "A short text string code (see values defined in ISO 3166_2) specifying the country subdivision in which an activity is performed, for example processing, bottling, manufacturing.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "Country",
+          "description": "A short text string code (see values defined in ISO 3166_2) specifying the country subdivision in which an activity is performed, for example processing, bottling, manufacturing.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "DietTypeCodeDetails" : {
       "isSubclass": false,
@@ -511,11 +541,12 @@
         {
           "property": "dietTypeSubcode",
           "rangeType": "langString",
-        "domain" : "DietTypeCodeDetails",
-        "description" : "Indicates a set of agreements or a certificate name that guarantees the product is permitted in a particular diet. A diet type subcode is a subclassification of a specific diet type. For example, Pareve is a diet type subcode of Kosher.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "DietTypeCodeDetails",
+          "description": "Indicates a set of agreements or a certificate name that guarantees the product is permitted in a particular diet. A diet type subcode is a subclassification of a specific diet type. For example, Pareve is a diet type subcode of Kosher.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "Discount" : {
       "isSubclass": false,
@@ -533,26 +564,29 @@
         {
           "property": "discountType",
           "rangeType": "DiscountTypeCode",
-        "domain" : "Discount",
-        "description" : "A code that specifies the type of payment discount applicable to an offer, for example BOGO.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "eligibleTradeChannel",
-        "rangeType" : "TradeChannelCode",
-        "domain" : "Discount",
-        "description" : "A code determining the location where a user can redeem the offer, for example ONLINE_ONLY. ",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "exactDiscountAmount",
-        "rangeType" : "PriceSpecification",
-        "domain" : "Discount",
-        "description" : "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the exact discount on the sales price associated with a particular gs1:Discount. This property can be used to express '$10 off'.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "exactDiscountPercentage",
+          "domain": "Discount",
+          "description": "A code that specifies the type of payment discount applicable to an offer, for example BOGO.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "eligibleTradeChannel",
+          "rangeType": "TradeChannelCode",
+          "domain": "Discount",
+          "description": "A code determining the location where a user can redeem the offer, for example ONLINE_ONLY. ",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "exactDiscountAmount",
+          "rangeType": "PriceSpecification",
+          "domain": "Discount",
+          "description": "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the exact discount on the sales price associated with a particular gs1:Discount. This property can be used to express '$10 off'.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "exactDiscountPercentage",
         "rangeType" : "float",
         "domain" : "Discount",
         "description" : "A floating-point value indicating an exact percentage discount on the sales price associated with a particular gs1:Discount.  This property can be used to express '15% discount'.",
@@ -744,26 +778,29 @@
         {
           "property": "manufacturerPreparationCode",
           "rangeType": "PreparationTypeCode",
-        "domain" : "FoodAndBeveragePreparationInformation",
-        "description" : "Code indicating the preparation methods that a manufacturer has used in the manufacturing of a product for example DEEP_FRY.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "maximumOptimumConsumptionTemperature",
-        "rangeType" : "QuantitativeValue",
-        "domain" : "FoodAndBeveragePreparationInformation",
-        "description" : "The upper limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "minimumOptimumConsumptionTemperature",
-        "rangeType" : "QuantitativeValue",
-        "domain" : "FoodAndBeveragePreparationInformation",
-        "description" : "The lower limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "preparationCode",
+          "domain": "FoodAndBeveragePreparationInformation",
+          "description": "Code indicating the preparation methods that a manufacturer has used in the manufacturing of a product for example DEEP_FRY.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "maximumOptimumConsumptionTemperature",
+          "rangeType": "QuantitativeValue",
+          "domain": "FoodAndBeveragePreparationInformation",
+          "description": "The upper limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "minimumOptimumConsumptionTemperature",
+          "rangeType": "QuantitativeValue",
+          "domain": "FoodAndBeveragePreparationInformation",
+          "description": "The lower limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "preparationCode",
         "rangeType" : "PreparationTypeCode",
         "domain" : "FoodAndBeveragePreparationInformation",
         "description" : "Code specifying the preparation state of the product for which the nutrient information is valid. PREPARED, UNPREPARED.",
@@ -808,18 +845,20 @@
         {
           "property": "ingredientName",
           "rangeType": "langString",
-        "domain" : "FoodBeverageTobaccoIngredientDetails",
-        "description" : "Free text field describing an ingredient or ingredient group. Ingredients include any additives (colourings, preservatives, e-numbers, etc.) that are encompassed.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "ingredientSequence",
-        "rangeType" : "integer",
-        "domain" : "FoodBeverageTobaccoIngredientDetails",
-        "description" : "Integer (1, 2, 3...) indicating the ingredient order by content percentage of the product. (major ingredient = 1, second ingredient = 2) etc.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "FoodBeverageTobaccoIngredientDetails",
+          "description": "Free text field describing an ingredient or ingredient group. Ingredients include any additives (colourings, preservatives, e-numbers, etc.) that are encompassed.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "ingredientSequence",
+          "rangeType": "integer",
+          "domain": "FoodBeverageTobaccoIngredientDetails",
+          "description": "Integer (1, 2, 3...) indicating the ingredient order by content percentage of the product. (major ingredient = 1, second ingredient = 2) etc.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "FoodBeverageTobaccoProduct" : {
       "isSubclass": true,
@@ -837,26 +876,29 @@
         {
           "property": "allergenSpecificationName",
           "rangeType": "langString",
-        "domain" : "FoodBeverageTobaccoProduct",
-        "description" : "Free text field containing the name and version of the regulation or standard that defines the criteria of allergen containment.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "allergenStatement",
-        "rangeType" : "langString",
-        "domain" : "FoodBeverageTobaccoProduct",
-        "description" : "Textual description of the presence or absence of allergens as governed by local rules and regulations, specified as one string.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "biotinPerNutrientBasis",
-        "rangeType" : "NutritionMeasurementType",
-        "domain" : "FoodBeverageTobaccoProduct",
-        "description" : "Biotin Acid per specified nutrient basis quantity.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "calciumPerNutrientBasis",
+          "domain": "FoodBeverageTobaccoProduct",
+          "description": "Free text field containing the name and version of the regulation or standard that defines the criteria of allergen containment.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "allergenStatement",
+          "rangeType": "langString",
+          "domain": "FoodBeverageTobaccoProduct",
+          "description": "Textual description of the presence or absence of allergens as governed by local rules and regulations, specified as one string.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "biotinPerNutrientBasis",
+          "rangeType": "NutritionMeasurementType",
+          "domain": "FoodBeverageTobaccoProduct",
+          "description": "Biotin Acid per specified nutrient basis quantity.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "calciumPerNutrientBasis",
         "rangeType" : "NutritionMeasurementType",
         "domain" : "FoodBeverageTobaccoProduct",
         "description" : "Calcium per specified nutrient basis quantity.",
@@ -1384,18 +1426,20 @@
         {
           "property": "footwearUpperType",
           "rangeType": "UpperTypeCode",
-        "domain" : "Footwear",
-        "description" : "The descriptive term that is used by the product manufacturer to identify whether the footwear upper is open or closed. Otherwise known as Open or Closed Upper.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "upperMaterialType",
-        "rangeType" : "TextileMaterialDetails",
-        "domain" : "Footwear",
-        "description" : "The material(s) used for the upper part of the footwear product. The upper is the part of a shoe, boot, slipper or other item of footwear that is above the sole.",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "Footwear",
+          "description": "The descriptive term that is used by the product manufacturer to identify whether the footwear upper is open or closed. Otherwise known as Open or Closed Upper.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "upperMaterialType",
+          "rangeType": "TextileMaterialDetails",
+          "domain": "Footwear",
+          "description": "The material(s) used for the upper part of the footwear product. The upper is the part of a shoe, boot, slipper or other item of footwear that is above the sole.",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "FruitsVegetables" : {
       "isSubclass": true,
@@ -1413,26 +1457,29 @@
         {
           "property": "isSeedless",
           "rangeType": "NonbinaryLogicCode",
-        "domain" : "FruitsVegetables",
-        "description" : "Determines whether the product is seedless as grown.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isShelledPeeled",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "FruitsVegetables",
-        "description" : "The descriptive term that is used by the product manufacturer to identify whether or not the product or its contents have been shelled/peeled prior to being offered for sale.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isWashedReadyToEat",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "FruitsVegetables",
-        "description" : "Determines whether product has been prewashed and is ready to eat.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "maturationMethod",
+          "domain": "FruitsVegetables",
+          "description": "Determines whether the product is seedless as grown.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isShelledPeeled",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "FruitsVegetables",
+          "description": "The descriptive term that is used by the product manufacturer to identify whether or not the product or its contents have been shelled/peeled prior to being offered for sale.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isWashedReadyToEat",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "FruitsVegetables",
+          "description": "Determines whether product has been prewashed and is ready to eat.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "maturationMethod",
         "rangeType" : "MaturationMethodCode",
         "domain" : "FruitsVegetables",
         "description" : "The method of maturity for the item for example tree ripened or jet fresh.",
@@ -1456,25 +1503,28 @@
         {
           "property": "elevation",
           "rangeType": "string",
-        "domain" : "GeoCoordinates",
-        "description" : "The elevation of a location (WGS 84). Values may be of the form 'NUMBER UNITOFMEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone SHALL be a value in meters.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "latitude",
-        "rangeType" : "string",
-        "domain" : "GeoCoordinates",
-        "description" : "Angular distance North or South from the earth's equator measured through 90 degrees.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "longitude",
-        "rangeType" : "string",
-        "domain" : "GeoCoordinates",
-        "description" : "The arc or portion of the earth's equator intersected between the meridian of a given place and the prime meridian and expressed in degrees",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "GeoCoordinates",
+          "description": "The elevation of a location (WGS 84). Values may be of the form 'NUMBER UNITOFMEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone SHALL be a value in meters.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "latitude",
+          "rangeType": "string",
+          "domain": "GeoCoordinates",
+          "description": "Angular distance North or South from the earth's equator measured through 90 degrees.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "longitude",
+          "rangeType": "string",
+          "domain": "GeoCoordinates",
+          "description": "The arc or portion of the earth's equator intersected between the meridian of a given place and the prime meridian and expressed in degrees",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "GeoShape" : {
       "isSubclass": false,
@@ -1492,18 +1542,20 @@
         {
           "property": "line",
           "rangeType": "string",
-        "domain" : "GeoShape",
-        "description" : "A line is a point-to-point path consisting of two or more point objects separated by a space. A single line segment (i.e., straight line) is expressed as two points.  A multi-line path (i.e., open polygon) is expressed as a series of three or more points. For a closed shape, gs1:polygon SHALL be used.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "polygon",
-        "rangeType" : "string",
-        "domain" : "GeoShape",
-        "description" : "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "GeoShape",
+          "description": "A line is a point-to-point path consisting of two or more point objects separated by a space. A single line segment (i.e., straight line) is expressed as two points.  A multi-line path (i.e., open polygon) is expressed as a series of three or more points. For a closed shape, gs1:polygon SHALL be used.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "polygon",
+          "rangeType": "string",
+          "domain": "GeoShape",
+          "description": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "LocationID_Details" : {
       "isSubclass": false,
@@ -1521,25 +1573,28 @@
         {
           "property": "locationID_Qualifier",
           "rangeType": "string",
-        "domain" : "LocationID_Details",
-        "description" : "Secondary qualifier to supplement gs1:LocationID_Type meaning. May be used with proprietary ID code values to define identifier administrator.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "locationID_Type",
-        "rangeType" : "LocationID_Type",
-        "domain" : "LocationID_Details",
-        "description" : "Organisation that administers the gs1:locationID or the name of the ID itself.  Value from gs1:LocationID_Type code list.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "locationID_URI",
-        "rangeType" : "anyURI",
-        "domain" : "LocationID_Details",
-        "description" : "A URI that links to information about the gs1:locationID.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "LocationID_Details",
+          "description": "Secondary qualifier to supplement gs1:LocationID_Type meaning. May be used with proprietary ID code values to define identifier administrator.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "locationID_Type",
+          "rangeType": "LocationID_Type",
+          "domain": "LocationID_Details",
+          "description": "Organisation that administers the gs1:locationID or the name of the ID itself.  Value from gs1:LocationID_Type code list.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "locationID_URI",
+          "rangeType": "anyURI",
+          "domain": "LocationID_Details",
+          "description": "A URI that links to information about the gs1:locationID.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "LocationStatusHistory" : {
       "isSubclass": false,
@@ -1557,11 +1612,12 @@
         {
           "property": "statusTimestamp",
           "rangeType": "dateTime",
-        "domain" : "",
-        "description" : "Date and time (including optional timezone) associated to status designations. Timestamps may be future dated to provide advance notice of status changes. For further information about the required lexical representation of date, time, and timezone please see https://www.w3.org/TR/xmlschema-2/#dateTime",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "",
+          "description": "Date and time (including optional timezone) associated to status designations. Timestamps may be future dated to provide advance notice of status changes. For further information about the required lexical representation of date, time, and timezone please see https://www.w3.org/TR/xmlschema-2/#dateTime",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "MeatPoultry" : {
       "isSubclass": true,
@@ -1579,25 +1635,28 @@
         {
           "property": "bonelessClaim",
           "rangeType": "NonbinaryLogicCode",
-        "domain" : "MeatPoultry",
-        "description" : "The descriptive term that is used by the product manufacturer to identify whether the product makes a specific claim to contain no bones.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "meatPoultryType",
-        "rangeType" : "langString",
-        "domain" : "MeatPoultry",
-        "description" : "The fish, meat, or poultry type for this food and beverage item.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "minimumMeatPoultryContent",
-        "rangeType" : "QuantitativeValue",
-        "domain" : "MeatPoultry",
-        "description" : "The minimum amount of fish, meat or poultry contained in a food and beverage product expressed as a measurement.",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "MeatPoultry",
+          "description": "The descriptive term that is used by the product manufacturer to identify whether the product makes a specific claim to contain no bones.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "meatPoultryType",
+          "rangeType": "langString",
+          "domain": "MeatPoultry",
+          "description": "The fish, meat, or poultry type for this food and beverage item.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "minimumMeatPoultryContent",
+          "rangeType": "QuantitativeValue",
+          "domain": "MeatPoultry",
+          "description": "The minimum amount of fish, meat or poultry contained in a food and beverage product expressed as a measurement.",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "MilkButterCreamYogurtCheeseEggsSubstitutes" : {
       "isSubclass": true,
@@ -1615,26 +1674,29 @@
         {
           "property": "cheeseMaturationPeriodDescription",
           "rangeType": "langString",
-        "domain" : "MilkButterCreamYogurtCheeseEggsSubstitutes",
-        "description" : "A descriptive way to specify a date range as some cheeses are matured over a period of time, but not an exact period. For example 3 to 4 weeks, over 1 year etc. The term maturation is also known in other markets as Aged.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "fatInMilkContent",
-        "rangeType" : "float",
-        "domain" : "MilkButterCreamYogurtCheeseEggsSubstitutes",
-        "description" : "The percentage of fat contained in milk content of the product.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "fatpercentageInDryMatter",
-        "rangeType" : "float",
-        "domain" : "MilkButterCreamYogurtCheeseEggsSubstitutes",
-        "description" : "The amount of fat contained in the base product expressed in percentage.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "isHomogenised",
+          "domain": "MilkButterCreamYogurtCheeseEggsSubstitutes",
+          "description": "A descriptive way to specify a date range as some cheeses are matured over a period of time, but not an exact period. For example 3 to 4 weeks, over 1 year etc. The term maturation is also known in other markets as Aged.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "fatInMilkContent",
+          "rangeType": "float",
+          "domain": "MilkButterCreamYogurtCheeseEggsSubstitutes",
+          "description": "The percentage of fat contained in milk content of the product.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "fatpercentageInDryMatter",
+          "rangeType": "float",
+          "domain": "MilkButterCreamYogurtCheeseEggsSubstitutes",
+          "description": "The amount of fat contained in the base product expressed in percentage.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "isHomogenised",
         "rangeType" : "NonbinaryLogicCode",
         "domain" : "MilkButterCreamYogurtCheeseEggsSubstitutes",
         "description" : "A The indication whether or not the milk used was actively homogenised. The homogenisation of milk is a technical process in the dairy. The milk fat is milled to such an extent that further creaming is prevented.",
@@ -1687,26 +1749,29 @@
         {
           "property": "availabilityEnds",
           "rangeType": "dateTime",
-        "domain" : "Offer",
-        "description" : "The date from which the product is no longer available from the information provider, including seasonal or temporary product and services .",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "availabilityStarts",
-        "rangeType" : "dateTime",
-        "domain" : "Offer",
-        "description" : "The date from which the product is available from the information provider, including seasonal or temporary product and services.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "availableAtOrFrom",
-        "rangeType" : "Place",
-        "domain" : "Offer",
-        "description" : "The location the offered product or service is available from.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "eligibleQuantity",
+          "domain": "Offer",
+          "description": "The date from which the product is no longer available from the information provider, including seasonal or temporary product and services .",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "availabilityStarts",
+          "rangeType": "dateTime",
+          "domain": "Offer",
+          "description": "The date from which the product is available from the information provider, including seasonal or temporary product and services.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "availableAtOrFrom",
+          "rangeType": "Place",
+          "domain": "Offer",
+          "description": "The location the offered product or service is available from.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "eligibleQuantity",
         "rangeType" : "QuantitativeValue",
         "domain" : "",
         "description" : "The quantity including unit of measure for which the offer for good or service is valid.  If this is not specified, an eligible quantity of 1 should be assumed.",
@@ -1807,11 +1872,12 @@
         {
           "property": "organicPercentClaim",
           "rangeType": "float",
-        "domain" : "OrganicClaimDetails",
-        "description" : "The percent of actual organic materials per weight of the product. This is usually claimed on the product.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "OrganicClaimDetails",
+          "description": "The percent of actual organic materials per weight of the product. This is usually claimed on the product.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "Organization" : {
       "isSubclass": false,
@@ -1829,26 +1895,29 @@
         {
           "property": "additionalOrganizationIdentificationTypeValue",
           "rangeType": "string",
-        "domain" : "Organization",
-        "description" : "The value associated with the Additional Organization Identification Type Value.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "address",
-        "rangeType" : "PostalAddress",
-        "domain" : "",
-        "description" : "The postal address for an organization or place.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "afterHoursContact",
-        "rangeType" : "ContactPoint",
-        "domain" : "",
-        "description" : "Links to after-hours contact information. For general contact details, gs1:contactPoint SHALL be used.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "certification",
+          "domain": "Organization",
+          "description": "The value associated with the Additional Organization Identification Type Value.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "address",
+          "rangeType": "PostalAddress",
+          "domain": "",
+          "description": "The postal address for an organization or place.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "afterHoursContact",
+          "rangeType": "ContactPoint",
+          "domain": "",
+          "description": "Links to after-hours contact information. For general contact details, gs1:contactPoint SHALL be used.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "certification",
         "rangeType" : "CertificationDetails",
         "domain" : "",
         "description" : "Certification information about a product, organisation or location.",
@@ -2040,25 +2109,28 @@
         {
           "property": "organizationID_Qualifier",
           "rangeType": "string",
-        "domain" : "OrganizationID_Details",
-        "description" : "Secondary qualifier to supplement gs1:organizationID_Type meaning. May be used with proprietary ID code values to define identifier administrator.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "organizationID_Type",
-        "rangeType" : "OrganizationID_Type",
-        "domain" : "OrganizationID_Details",
-        "description" : "Organisation that administers the gs1:organizationID or the name of the ID itself.  Value from gs1:OrganizationID_Type code list.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "organizationID_URI",
-        "rangeType" : "anyURI",
-        "domain" : "OrganizationID_Details",
-        "description" : "A URI that links to information about the gs1:organizationID.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "OrganizationID_Details",
+          "description": "Secondary qualifier to supplement gs1:organizationID_Type meaning. May be used with proprietary ID code values to define identifier administrator.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "organizationID_Type",
+          "rangeType": "OrganizationID_Type",
+          "domain": "OrganizationID_Details",
+          "description": "Organisation that administers the gs1:organizationID or the name of the ID itself.  Value from gs1:OrganizationID_Type code list.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "organizationID_URI",
+          "rangeType": "anyURI",
+          "domain": "OrganizationID_Details",
+          "description": "A URI that links to information about the gs1:organizationID.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "OrganizationStatusHistory" : {
       "isSubclass": false,
@@ -2076,11 +2148,12 @@
         {
           "property": "statusTimestamp",
           "rangeType": "dateTime",
-        "domain" : "",
-        "description" : "Date and time (including optional timezone) associated to status designations. Timestamps may be future dated to provide advance notice of status changes. For further information about the required lexical representation of date, time, and timezone please see https://www.w3.org/TR/xmlschema-2/#dateTime",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "",
+          "description": "Date and time (including optional timezone) associated to status designations. Timestamps may be future dated to provide advance notice of status changes. For further information about the required lexical representation of date, time, and timezone please see https://www.w3.org/TR/xmlschema-2/#dateTime",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "PackagingDetails" : {
       "isSubclass": false,
@@ -2098,26 +2171,29 @@
         {
           "property": "packagingFeature",
           "rangeType": "PackagingFeatureCode",
-        "domain" : "PackagingDetails",
-        "description" : "Code indicating a feature that facilitates the usage of the product by the consumer, for example a handle. Packaging features do not affect the core composition of the packaging type nor modify its usage.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "packagingFunction",
-        "rangeType" : "PackagingFunctionCode",
-        "domain" : "PackagingDetails",
-        "description" : "Code indicating specific functionality for packaging resulting from specific processes or features present in the packaging type,for example, ANTI_TAMPERING.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "packagingMaterial",
-        "rangeType" : "PackagingMaterialDetails",
-        "domain" : "PackagingDetails",
-        "description" : "links to details about packaging material type, quantity and thickness",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "packagingRecyclingProcessType",
+          "domain": "PackagingDetails",
+          "description": "Code indicating a feature that facilitates the usage of the product by the consumer, for example a handle. Packaging features do not affect the core composition of the packaging type nor modify its usage.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "packagingFunction",
+          "rangeType": "PackagingFunctionCode",
+          "domain": "PackagingDetails",
+          "description": "Code indicating specific functionality for packaging resulting from specific processes or features present in the packaging type,for example, ANTI_TAMPERING.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "packagingMaterial",
+          "rangeType": "PackagingMaterialDetails",
+          "domain": "PackagingDetails",
+          "description": "links to details about packaging material type, quantity and thickness",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "packagingRecyclingProcessType",
         "rangeType" : "PackagingRecyclingProcessTypeCode",
         "domain" : "PackagingDetails",
         "description" : "The process the packaging could undertake for recyclable & sustainability programs. Examples COMPOSTABLE, ENERGY_RECOVERABLE, REUSABLE.",
@@ -2162,18 +2238,20 @@
         {
           "property": "packagingMaterialThickness",
           "rangeType": "QuantitativeValue",
-        "domain" : "PackagingMaterialDetails",
-        "description" : "The thickness of a packaging material.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "packagingMaterialType",
-        "rangeType" : "PackagingMaterialTypeCode",
-        "domain" : "PackagingMaterialDetails",
-        "description" : "The materials used for the packaging of the product for example glass or plastic.",
-        "dataType" : "complex",
-        "type" : "code"
-      } ]
+          "domain": "PackagingMaterialDetails",
+          "description": "The thickness of a packaging material.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "packagingMaterialType",
+          "rangeType": "PackagingMaterialTypeCode",
+          "domain": "PackagingMaterialDetails",
+          "description": "The materials used for the packaging of the product for example glass or plastic.",
+          "dataType": "complex",
+          "type": "code"
+        }
+      ]
     },
     "Place" : {
       "isSubclass": false,
@@ -2191,26 +2269,29 @@
         {
           "property": "address",
           "rangeType": "PostalAddress",
-        "domain" : "",
-        "description" : "The postal address for an organization or place.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "afterHoursContact",
-        "rangeType" : "ContactPoint",
-        "domain" : "",
-        "description" : "Links to after-hours contact information. For general contact details, gs1:contactPoint SHALL be used.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "baseLocation",
-        "rangeType" : "Place",
-        "domain" : "Place",
-        "description" : "A fixed physical location where a mobile location most commonly resides. If gs1:glnType is present, gs1:baseLocationGLN SHALL only be used when gs1:glnType is gs1:GLN_TypeCode-MOBILE_PHYSICAL_LOCATION",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "certification",
+          "domain": "",
+          "description": "The postal address for an organization or place.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "afterHoursContact",
+          "rangeType": "ContactPoint",
+          "domain": "",
+          "description": "Links to after-hours contact information. For general contact details, gs1:contactPoint SHALL be used.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "baseLocation",
+          "rangeType": "Place",
+          "domain": "Place",
+          "description": "A fixed physical location where a mobile location most commonly resides. If gs1:glnType is present, gs1:baseLocationGLN SHALL only be used when gs1:glnType is gs1:GLN_TypeCode-MOBILE_PHYSICAL_LOCATION",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "certification",
         "rangeType" : "CertificationDetails",
         "domain" : "",
         "description" : "Certification information about a product, organisation or location.",
@@ -2395,26 +2476,29 @@
         {
           "property": "addressLocality",
           "rangeType": "langString",
-        "domain" : "PostalAddress",
-        "description" : "Text specifying the name of the locality, for example a city.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "addressRegion",
-        "rangeType" : "langString",
-        "domain" : "PostalAddress",
-        "description" : "Text specifying a province or state in abbreviated format for example NJ.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "addressSuburb",
-        "rangeType" : "langString",
-        "domain" : "PostalAddress",
-        "description" : "A suburb within a town or city.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "countyCode",
+          "domain": "PostalAddress",
+          "description": "Text specifying the name of the locality, for example a city.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "addressRegion",
+          "rangeType": "langString",
+          "domain": "PostalAddress",
+          "description": "Text specifying a province or state in abbreviated format for example NJ.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "addressSuburb",
+          "rangeType": "langString",
+          "domain": "PostalAddress",
+          "description": "A suburb within a town or city.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "countyCode",
         "rangeType" : "string",
         "domain" : "PostalAddress",
         "description" : "A code that identifies a county. A county is a territorial division in some countries, forming the chief unit of local administration. In the US, a county is a political and administrative division of a state.",
@@ -2501,26 +2585,29 @@
         {
           "property": "dutyFeeTaxDescription",
           "rangeType": "langString",
-        "domain" : "PriceSpecification",
-        "description" : "A description of tax type for example Taxes sure les supports audio.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "dutyFeeTaxRate",
-        "rangeType" : "float",
-        "domain" : "PriceSpecification",
-        "description" : "The current tax or duty rate percentage applicable to the product.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "eligibleQuantity",
-        "rangeType" : "QuantitativeValue",
-        "domain" : "",
-        "description" : "The quantity including unit of measure for which the offer for good or service is valid.  If this is not specified, an eligible quantity of 1 should be assumed.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "eligibleQuantityMaximum",
+          "domain": "PriceSpecification",
+          "description": "A description of tax type for example Taxes sure les supports audio.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "dutyFeeTaxRate",
+          "rangeType": "float",
+          "domain": "PriceSpecification",
+          "description": "The current tax or duty rate percentage applicable to the product.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "eligibleQuantity",
+          "rangeType": "QuantitativeValue",
+          "domain": "",
+          "description": "The quantity including unit of measure for which the offer for good or service is valid.  If this is not specified, an eligible quantity of 1 should be assumed.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "eligibleQuantityMaximum",
         "rangeType" : "QuantitativeValue",
         "domain" : "",
         "description" : "The maximum quantity including unit of measure for which the offer for good or service is valid.",
@@ -2593,26 +2680,29 @@
         {
           "property": "additionalProductDescription",
           "rangeType": "langString",
-        "domain" : "Product",
-        "description" : "Additional variants necessary to communicate to the industry to help define the product. Multiple variants can be established for each GTIN for e.g. Style, Colour, and Fragrance .",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "additive",
-        "rangeType" : "AdditiveDetails",
-        "domain" : "Product",
-        "description" : "Relates to details about any additives that a product may contain.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "audioFile",
-        "rangeType" : "ReferencedFileDetails",
-        "domain" : "Product",
-        "description" : "Link to a file containing an audio clip which is relevant to the product. Examples are commercials, or instructional/ how to use audio files.",
-        "dataType" : "complex",
-        "type" : "class"
-      }, {
-        "property" : "authenticity",
+          "domain": "Product",
+          "description": "Additional variants necessary to communicate to the industry to help define the product. Multiple variants can be established for each GTIN for e.g. Style, Colour, and Fragrance .",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "additive",
+          "rangeType": "AdditiveDetails",
+          "domain": "Product",
+          "description": "Relates to details about any additives that a product may contain.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "audioFile",
+          "rangeType": "ReferencedFileDetails",
+          "domain": "Product",
+          "description": "Link to a file containing an audio clip which is relevant to the product. Examples are commercials, or instructional/ how to use audio files.",
+          "dataType": "complex",
+          "type": "class"
+        },
+        {
+          "property": "authenticity",
         "rangeType" : "AuthenticityDetails",
         "domain" : "Product",
         "description" : "Links to details of covert/overt security markings that may be used to check authenticity of a product instance.",
@@ -3252,18 +3342,20 @@
         {
           "property": "productYieldType",
           "rangeType": "ProductYieldTypeCode",
-        "domain" : "ProductYieldDetails",
-        "description" : "Code indicating the type of yield measurement specified in productYield. Examples: AFTER_DILUTION, DRAINED_WEIGHT.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "productYieldVariationPercentage",
-        "rangeType" : "float",
-        "domain" : "ProductYieldDetails",
-        "description" : "Indication of range in percent of the given cooking / roasting loss. Percentage that the actual weight of the product differs upward or downward from the average or estimated product yield.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "ProductYieldDetails",
+          "description": "Code indicating the type of yield measurement specified in productYield. Examples: AFTER_DILUTION, DRAINED_WEIGHT.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "productYieldVariationPercentage",
+          "rangeType": "float",
+          "domain": "ProductYieldDetails",
+          "description": "Indication of range in percent of the given cooking / roasting loss. Percentage that the actual weight of the product differs upward or downward from the average or estimated product yield.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "QuantitativeValue" : {
       "isSubclass": false,
@@ -3281,11 +3373,12 @@
         {
           "property": "value",
           "rangeType": "float",
-        "domain" : "QuantitativeValue",
-        "description" : "A floating-point numeric value that is qualified by the corresponding measurement unit code - see gs1:unitCode",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "QuantitativeValue",
+          "description": "A floating-point numeric value that is qualified by the corresponding measurement unit code - see gs1:unitCode",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "ReferencedFileDetails" : {
       "isSubclass": false,
@@ -3303,26 +3396,29 @@
         {
           "property": "filePixelHeight",
           "rangeType": "integer",
-        "domain" : "ReferencedFileDetails",
-        "description" : "The number of pixels along the vertical axis of the image.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "filePixelWidth",
-        "rangeType" : "integer",
-        "domain" : "ReferencedFileDetails",
-        "description" : "The number of pixels along the horizontal axis of the image.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "referencedFileEffectiveEndDateTime",
-        "rangeType" : "dateTime",
-        "domain" : "ReferencedFileDetails",
-        "description" : "The date upon which the target of this external link ceases to be effective for use.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "referencedFileEffectiveStartDateTime",
+          "domain": "ReferencedFileDetails",
+          "description": "The number of pixels along the vertical axis of the image.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "filePixelWidth",
+          "rangeType": "integer",
+          "domain": "ReferencedFileDetails",
+          "description": "The number of pixels along the horizontal axis of the image.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "referencedFileEffectiveEndDateTime",
+          "rangeType": "dateTime",
+          "domain": "ReferencedFileDetails",
+          "description": "The date upon which the target of this external link ceases to be effective for use.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "referencedFileEffectiveStartDateTime",
         "rangeType" : "dateTime",
         "domain" : "ReferencedFileDetails",
         "description" : "The date upon which the target of this external link begins to be effective for use.",
@@ -3367,11 +3463,12 @@
         {
           "property": "returnablePackageDepositRegion",
           "rangeType": "Country",
-        "domain" : "ReturnablePackageDepositDetails",
-        "description" : "The geographic region associated with the returnable package deposit amount.",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "ReturnablePackageDepositDetails",
+          "description": "The geographic region associated with the returnable package deposit amount.",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "Seafood" : {
       "isSubclass": true,
@@ -3389,25 +3486,28 @@
         {
           "property": "fishType",
           "rangeType": "langString",
-        "domain" : "Seafood",
-        "description" : "The type of fish for example Sea bass.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "freshOrSeawaterFarmed",
-        "rangeType" : "FreshOrSeawaterFarmedCode",
-        "domain" : "Seafood",
-        "description" : "A code determining whether the fish originated from the sea or was farmed.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "minimumFishContent",
-        "rangeType" : "QuantitativeValue",
-        "domain" : "Seafood",
-        "description" : "The minimum amount of fish contained in a food and beverage product expressed as a measurement.",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "Seafood",
+          "description": "The type of fish for example Sea bass.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "freshOrSeawaterFarmed",
+          "rangeType": "FreshOrSeawaterFarmedCode",
+          "domain": "Seafood",
+          "description": "A code determining whether the fish originated from the sea or was farmed.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "minimumFishContent",
+          "rangeType": "QuantitativeValue",
+          "domain": "Seafood",
+          "description": "The minimum amount of fish contained in a food and beverage product expressed as a measurement.",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "SizeCodeDetails" : {
       "isSubclass": false,
@@ -3425,11 +3525,12 @@
         {
           "property": "sizeCodeValue",
           "rangeType": "string",
-        "domain" : "SizeCodeDetails",
-        "description" : "A code indicating the size of an object according to a specific code list. The applied code list is specified as additional information together with the size code.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "SizeCodeDetails",
+          "description": "A code indicating the size of an object according to a specific code list. The applied code list is specified as additional information together with the size code.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "SizeDetails" : {
       "isSubclass": false,
@@ -3447,25 +3548,28 @@
         {
           "property": "sizeGroup",
           "rangeType": "SizeGroupCode",
-        "domain" : "SizeDetails",
-        "description" : "Code indicating the type of size that is necessary to uniquely specify the size of the item, for example, BOYS.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "sizeSystem",
-        "rangeType" : "SizeSystemCode",
-        "domain" : "SizeDetails",
-        "description" : "The system that is being used to define the size for example EUROPE. Size system is used in conjunction with size group to define the size dimension.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "sizeType",
-        "rangeType" : "SizeTypeCode",
-        "domain" : "SizeDetails",
-        "description" : "The type of size dimension being specified for example SLEEVE.",
-        "dataType" : "complex",
-        "type" : "code"
-      } ]
+          "domain": "SizeDetails",
+          "description": "Code indicating the type of size that is necessary to uniquely specify the size of the item, for example, BOYS.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "sizeSystem",
+          "rangeType": "SizeSystemCode",
+          "domain": "SizeDetails",
+          "description": "The system that is being used to define the size for example EUROPE. Size system is used in conjunction with size group to define the size dimension.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "sizeType",
+          "rangeType": "SizeTypeCode",
+          "domain": "SizeDetails",
+          "description": "The type of size dimension being specified for example SLEEVE.",
+          "dataType": "complex",
+          "type": "code"
+        }
+      ]
     },
     "TargetMarketDetails" : {
       "isSubclass": false,
@@ -3483,11 +3587,12 @@
         {
           "property": "targetMarketCountries",
           "rangeType": "Country",
-        "domain" : "TargetMarketDetails",
-        "description" : "List of countries representing the target market for a particular release date indicated by gs1:consumerFirstAvailabilityDateTime",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "TargetMarketDetails",
+          "description": "List of countries representing the target market for a particular release date indicated by gs1:consumerFirstAvailabilityDateTime",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "TextileMaterialDetails" : {
       "isSubclass": false,
@@ -3505,25 +3610,28 @@
         {
           "property": "textileMaterialPercentage",
           "rangeType": "float",
-        "domain" : "TextileMaterialDetails",
-        "description" : "Corresponding net weight percentage of the product material specified via gs1:textileMaterialDescription, e.g. 70.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "textileMaterialThreadCount",
-        "rangeType" : "langString",
-        "domain" : "TextileMaterialDetails",
-        "description" : "The quality of material (fabric) of a product based on the total number of vertical and horizontal threads in one square inch.",
-        "dataType" : "simple",
-        "type" : "simple"
-      }, {
-        "property" : "textileMaterialWeight",
-        "rangeType" : "QuantitativeValue",
-        "domain" : "TextileMaterialDetails",
-        "description" : "The measured weight of the material expressed in ounces per square yard or grams per square meter.",
-        "dataType" : "complex",
-        "type" : "class"
-      } ]
+          "domain": "TextileMaterialDetails",
+          "description": "Corresponding net weight percentage of the product material specified via gs1:textileMaterialDescription, e.g. 70.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "textileMaterialThreadCount",
+          "rangeType": "langString",
+          "domain": "TextileMaterialDetails",
+          "description": "The quality of material (fabric) of a product based on the total number of vertical and horizontal threads in one square inch.",
+          "dataType": "simple",
+          "type": "simple"
+        },
+        {
+          "property": "textileMaterialWeight",
+          "rangeType": "QuantitativeValue",
+          "domain": "TextileMaterialDetails",
+          "description": "The measured weight of the material expressed in ounces per square yard or grams per square meter.",
+          "dataType": "complex",
+          "type": "class"
+        }
+      ]
     },
     "TypeCode" : {
       "isSubclass": false,
@@ -3556,11 +3664,12 @@
         {
           "property": "warrantyScopeDescription",
           "rangeType": "langString",
-        "domain" : "WarrantyPromise",
-        "description" : "The description of warranty available for the product. Allows for the representation of the same value in different languages but not for multiple values.",
-        "dataType" : "simple",
-        "type" : "simple"
-      } ]
+          "domain": "WarrantyPromise",
+          "description": "The description of warranty available for the product. Allows for the representation of the same value in different languages but not for multiple values.",
+          "dataType": "simple",
+          "type": "simple"
+        }
+      ]
     },
     "WearableProduct" : {
       "isSubclass": true,
@@ -3578,26 +3687,29 @@
         {
           "property": "isPatterned",
           "rangeType": "NonbinaryLogicCode",
-        "domain" : "WearableProduct",
-        "description" : "The descriptive term that is used by the product manufacturer to identify whether or not the product has a patterned design.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isThermal",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "WearableProduct",
-        "description" : "The descriptive term that is used to identify whether the product is thermal.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isWaterproof",
-        "rangeType" : "NonbinaryLogicCode",
-        "domain" : "WearableProduct",
-        "description" : "The descriptive term that is used to identify whether or not the product claims to provide waterproofing to the applied surface.",
-        "dataType" : "complex",
-        "type" : "code"
-      }, {
-        "property" : "isWearableItemDisposable",
+          "domain": "WearableProduct",
+          "description": "The descriptive term that is used by the product manufacturer to identify whether or not the product has a patterned design.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isThermal",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "WearableProduct",
+          "description": "The descriptive term that is used to identify whether the product is thermal.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isWaterproof",
+          "rangeType": "NonbinaryLogicCode",
+          "domain": "WearableProduct",
+          "description": "The descriptive term that is used to identify whether or not the product claims to provide waterproofing to the applied surface.",
+          "dataType": "complex",
+          "type": "code"
+        },
+        {
+          "property": "isWearableItemDisposable",
         "rangeType" : "NonbinaryLogicCode",
         "domain" : "WearableProduct",
         "description" : "Identifies whether or not the product is intended to be disposed of after single use or a limited period of use.",

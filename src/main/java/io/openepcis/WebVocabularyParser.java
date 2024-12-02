@@ -384,7 +384,7 @@ public class WebVocabularyParser {
                 if (propertyNameObj != null && (propertyNameObj instanceof List || allClassProperties.containsKey(propertyName))) {
                     property.put(DATA_TYPE, COMPLEX);
                     property.put(TYPE, CLASS);
-                } else if (propertyName != null && allTypeCodes.containsKey(propertyName)) {
+                } else if (propertyName != null && (allTypeCodes.containsKey(propertyName) || propertyName.equalsIgnoreCase("Thing"))) {
                     // Check if the property belongs to CODE type in allTypeCodes
                     property.put(DATA_TYPE, COMPLEX);
                     property.put(TYPE, CODE);

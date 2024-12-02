@@ -97,8 +97,8 @@
             <xsd:element name="certificationStartDate" type="xsd:date"/>
             <xsd:element name="certificationStatement" type="xsd:string"/>
             <xsd:element name="certificationStatus" type="CertificationStatus"/>
-            <xsd:element name="certificationSubject" type="xsd:string"/>
-            <xsd:element name="certificationType" type="xsd:string"/>
+            <xsd:element name="certificationSubject" type="Thing"/>
+            <xsd:element name="certificationType" type="Thing"/>
             <xsd:element name="certificationURI" type="xsd:anyURI"/>
             <xsd:element name="certificationValue" type="xsd:string"/>
             <xsd:element name="initialCertificationDate" type="xsd:date"/>
