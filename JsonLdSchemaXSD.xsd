@@ -97,8 +97,8 @@
             <xsd:element name="certificationStartDate" type="xsd:date"/>
             <xsd:element name="certificationStatement" type="xsd:string"/>
             <xsd:element name="certificationStatus" type="CertificationStatus"/>
-            <xsd:element name="certificationSubject" type="Thing"/>
-            <xsd:element name="certificationType" type="Thing"/>
+            <xsd:element name="certificationSubject" type="xsd:anyType"/>
+            <xsd:element name="certificationType" type="xsd:anyType"/>
             <xsd:element name="certificationURI" type="xsd:anyURI"/>
             <xsd:element name="certificationValue" type="xsd:string"/>
             <xsd:element name="initialCertificationDate" type="xsd:date"/>
@@ -2571,68 +2571,68 @@
             <xsd:enumeration value="UNCLASSIFIED"/>
         </xsd:restriction>
     </xsd:simpleType>
-    <xsd:complexType name="Thing">
-        <xsd:choice>
-            <xsd:element name="activityIdeas" type="xsd:anyURI"/>
-            <xsd:element name="allergenInfo" type="xsd:anyURI"/>
-            <xsd:element name="appDownload" type="xsd:anyURI"/>
-            <xsd:element name="brandHomepageClinical" type="xsd:anyURI"/>
-            <xsd:element name="brandHomepagePatient" type="xsd:anyURI"/>
-            <xsd:element name="careersInfo" type="xsd:anyURI"/>
-            <xsd:element name="certificationInfo" type="xsd:anyURI"/>
-            <xsd:element name="consumerHandlingStorageInfo" type="xsd:anyURI"/>
-            <xsd:element name="defaultLink" type="xsd:anyURI"/>
-            <xsd:element name="defaultLinkMulti" type="xsd:anyURI"/>
-            <xsd:element name="epcis" type="xsd:anyURI"/>
-            <xsd:element name="epil" type="xsd:anyURI"/>
-            <xsd:element name="eventsInfo" type="xsd:anyURI"/>
-            <xsd:element name="faqs" type="xsd:anyURI"/>
-            <xsd:element name="handledBy" type="xsd:anyURI"/>
-            <xsd:element name="hasRetailers" type="xsd:anyURI"/>
-            <xsd:element name="homepage" type="xsd:anyURI"/>
-            <xsd:element name="ingredientsInfo" type="xsd:anyURI"/>
-            <xsd:element name="instructions" type="xsd:anyURI"/>
-            <xsd:element name="jws" type="xsd:anyURI"/>
-            <xsd:element name="leaveReview" type="xsd:anyURI"/>
-            <xsd:element name="locationInfo" type="xsd:anyURI"/>
-            <xsd:element name="logisticsInfo" type="xsd:anyURI"/>
-            <xsd:element name="loyaltyProgram" type="xsd:anyURI"/>
-            <xsd:element name="masterData" type="xsd:anyURI"/>
-            <xsd:element name="menuInfo" type="xsd:anyURI"/>
-            <xsd:element name="nutritionalInfo" type="xsd:anyURI"/>
-            <xsd:element name="openingHoursInfo" type="xsd:anyURI"/>
-            <xsd:element name="paymentLink" type="xsd:anyURI"/>
-            <xsd:element name="pip" type="xsd:anyURI"/>
-            <xsd:element name="productSustainabilityInfo" type="xsd:anyURI">
+    <xsd:simpleType name="LinkTypeEnum">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="activityIdeas"/>
+            <xsd:enumeration value="allergenInfo"/>
+            <xsd:enumeration value="appDownload"/>
+            <xsd:enumeration value="brandHomepageClinical"/>
+            <xsd:enumeration value="brandHomepagePatient"/>
+            <xsd:enumeration value="careersInfo"/>
+            <xsd:enumeration value="certificationInfo"/>
+            <xsd:enumeration value="consumerHandlingStorageInfo"/>
+            <xsd:enumeration value="defaultLink"/>
+            <xsd:enumeration value="defaultLinkMulti"/>
+            <xsd:enumeration value="epcis"/>
+            <xsd:enumeration value="epil"/>
+            <xsd:enumeration value="eventsInfo"/>
+            <xsd:enumeration value="faqs"/>
+            <xsd:enumeration value="handledBy"/>
+            <xsd:enumeration value="hasRetailers"/>
+            <xsd:enumeration value="homepage"/>
+            <xsd:enumeration value="ingredientsInfo"/>
+            <xsd:enumeration value="instructions"/>
+            <xsd:enumeration value="jws"/>
+            <xsd:enumeration value="leaveReview"/>
+            <xsd:enumeration value="locationInfo"/>
+            <xsd:enumeration value="logisticsInfo"/>
+            <xsd:enumeration value="loyaltyProgram"/>
+            <xsd:enumeration value="masterData"/>
+            <xsd:enumeration value="menuInfo"/>
+            <xsd:enumeration value="nutritionalInfo"/>
+            <xsd:enumeration value="openingHoursInfo"/>
+            <xsd:enumeration value="paymentLink"/>
+            <xsd:enumeration value="pip"/>
+            <xsd:enumeration value="productSustainabilityInfo">
                 <xsd:annotation>
                     <xsd:documentation>This term has been deprecated. Please use gs1:sustainabilityInfo instead.</xsd:documentation>
                 </xsd:annotation>
-            </xsd:element>
-            <xsd:element name="promotion" type="xsd:anyURI"/>
-            <xsd:element name="purchaseSuppliesOrAccessories" type="xsd:anyURI"/>
-            <xsd:element name="quickStartGuide" type="xsd:anyURI"/>
-            <xsd:element name="recallStatus" type="xsd:anyURI"/>
-            <xsd:element name="recipeInfo" type="xsd:anyURI"/>
-            <xsd:element name="registerProduct" type="xsd:anyURI"/>
-            <xsd:element name="registryEntry" type="xsd:anyURI"/>
-            <xsd:element name="relatedImage" type="xsd:anyURI"/>
-            <xsd:element name="relatedVideo" type="xsd:anyURI"/>
-            <xsd:element name="review" type="xsd:anyURI"/>
-            <xsd:element name="safetyInfo" type="xsd:anyURI"/>
-            <xsd:element name="scheduleTime" type="xsd:anyURI"/>
-            <xsd:element name="serviceInfo" type="xsd:anyURI"/>
-            <xsd:element name="smartLabel" type="xsd:anyURI"/>
-            <xsd:element name="smpc" type="xsd:anyURI"/>
-            <xsd:element name="socialMedia" type="xsd:anyURI"/>
-            <xsd:element name="statisticInfo" type="xsd:anyURI"/>
-            <xsd:element name="subscribe" type="xsd:anyURI"/>
-            <xsd:element name="support" type="xsd:anyURI"/>
-            <xsd:element name="sustainabilityInfo" type="xsd:anyURI"/>
-            <xsd:element name="traceability" type="xsd:anyURI"/>
-            <xsd:element name="tutorial" type="xsd:anyURI"/>
-            <xsd:element name="userAgreement" type="xsd:anyURI"/>
-            <xsd:element name="verificationService" type="xsd:anyURI"/>
-            <xsd:element name="whatsInTheBox" type="xsd:anyURI"/>
-        </xsd:choice>
-    </xsd:complexType>
+            </xsd:enumeration>
+            <xsd:enumeration value="promotion"/>
+            <xsd:enumeration value="purchaseSuppliesOrAccessories"/>
+            <xsd:enumeration value="quickStartGuide"/>
+            <xsd:enumeration value="recallStatus"/>
+            <xsd:enumeration value="recipeInfo"/>
+            <xsd:enumeration value="registerProduct"/>
+            <xsd:enumeration value="registryEntry"/>
+            <xsd:enumeration value="relatedImage"/>
+            <xsd:enumeration value="relatedVideo"/>
+            <xsd:enumeration value="review"/>
+            <xsd:enumeration value="safetyInfo"/>
+            <xsd:enumeration value="scheduleTime"/>
+            <xsd:enumeration value="serviceInfo"/>
+            <xsd:enumeration value="smartLabel"/>
+            <xsd:enumeration value="smpc"/>
+            <xsd:enumeration value="socialMedia"/>
+            <xsd:enumeration value="statisticInfo"/>
+            <xsd:enumeration value="subscribe"/>
+            <xsd:enumeration value="support"/>
+            <xsd:enumeration value="sustainabilityInfo"/>
+            <xsd:enumeration value="traceability"/>
+            <xsd:enumeration value="tutorial"/>
+            <xsd:enumeration value="userAgreement"/>
+            <xsd:enumeration value="verificationService"/>
+            <xsd:enumeration value="whatsInTheBox"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 </xsd:schema>

@@ -24,7 +24,7 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
-import static io.openepcis.constant.Constants.XSD_STRING;
+import static io.openepcis.constant.Constants.*;
 
 public class XSDGenerator {
 
@@ -163,17 +163,16 @@ public class XSDGenerator {
     }
 
     private void processLinkTypes(final Document doc, final Element schemaRoot, final RelationDefinition relationDefinition) {
-        final Element complexType = doc.createElement("xsd:complexType");
-        complexType.setAttribute("name", "Thing");
-        final Element choice = doc.createElement("xsd:choice");
+        final Element linkTypeElement = doc.createElement("xsd:simpleType");
+        linkTypeElement.setAttribute("name", "LinkTypeEnum");
+
+        final Element linkTypeRestrictionElement = doc.createElement("xsd:restriction");
+        linkTypeRestrictionElement.setAttribute("base", XSD_STRING);
 
         if (relationDefinition.getLinkTypes() != null) {
-            for (LinkTypeDefinition linkType : relationDefinition.getLinkTypes()) {
-                final Element element = doc.createElement("xsd:element");
-
-                // Explicitly set the attributes in the desired order
-                element.setAttributeNS(null, "name", linkType.getLinkTypeId());
-                element.setAttributeNS(null, "type", mapSimpleType((String) linkType.getRangeType()));
+            for (final LinkTypeDefinition linkType : relationDefinition.getLinkTypes()) {
+                final Element enumElement = doc.createElement("xsd:enumeration");
+                enumElement.setAttribute("value", linkType.getLinkTypeId());
 
                 // If deprecated property then add the additional annotation with documentation
                 if (linkType.isDeprecated()) {
@@ -181,13 +180,13 @@ public class XSDGenerator {
                     final Element deprecatedDocumentation = doc.createElement("xsd:documentation");
                     deprecatedDocumentation.setTextContent(linkType.getDescription());
                     deprecatedAnnotation.appendChild(deprecatedDocumentation);
-                    element.appendChild(deprecatedAnnotation);
+                    enumElement.appendChild(deprecatedAnnotation);
                 }
-                choice.appendChild(element);
+                linkTypeRestrictionElement.appendChild(enumElement);
             }
         }
-        complexType.appendChild(choice);
-        schemaRoot.appendChild(complexType);
+        linkTypeElement.appendChild(linkTypeRestrictionElement);
+        schemaRoot.appendChild(linkTypeElement);
     }
 
     //Get the respective XSD type based on the definition. Either simple/complex.
@@ -196,7 +195,8 @@ public class XSDGenerator {
             return mapSimpleType((String) property.getRangeType());
         } else if ("complex".equals(property.getDataType())) {
             if (property.getRangeType() instanceof String rangeType) {
-                return rangeType;
+                // For Thing type return the "xsd:anyType" else return rangeType
+                return rangeType.equalsIgnoreCase(THING) ? "xsd:anyType" : rangeType;
             } else if (property.getRangeType() instanceof List) {
                 //If range is of type List then get the domain
                 return property.getDomain();
