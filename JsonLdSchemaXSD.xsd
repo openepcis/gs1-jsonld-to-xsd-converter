@@ -9,6 +9,7 @@
             <xsd:element name="additionalProductClassificationCodeDescription" type="xsd:string"/>
             <xsd:element name="additionalProductClassificationValue" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="AdditiveDetails">
         <xsd:annotation>
@@ -18,6 +19,7 @@
             <xsd:element name="additiveLevelOfContainment" type="LevelOfContainmentCode"/>
             <xsd:element name="additiveName" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="AllergenDetails">
         <xsd:annotation>
@@ -27,6 +29,7 @@
             <xsd:element name="allergenLevelOfContainmentCode" type="LevelOfContainmentCode"/>
             <xsd:element name="allergenType" type="AllergenTypeCode"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="AuthenticityDetails">
         <xsd:annotation>
@@ -41,6 +44,7 @@
             <xsd:element name="authenticitySecurityFeatureType" type="SecurityMarking"/>
             <xsd:element name="authenticitySecurityFeatureValue" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="AwardPrizeDetails">
         <xsd:annotation>
@@ -54,6 +58,7 @@
             <xsd:element name="awardPrizeName" type="xsd:string"/>
             <xsd:element name="awardPrizeYear" type="xsd:gYear"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Beverage">
         <xsd:annotation>
@@ -82,6 +87,7 @@
             <xsd:element name="brandName" type="xsd:string"/>
             <xsd:element name="subBrandName" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="CertificationDetails">
         <xsd:annotation>
@@ -103,6 +109,7 @@
             <xsd:element name="certificationValue" type="xsd:string"/>
             <xsd:element name="initialCertificationDate" type="xsd:date"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Clothing">
         <xsd:annotation>
@@ -127,6 +134,7 @@
             <xsd:element name="colourCodeList" type="ColourCodeListCode"/>
             <xsd:element name="colourCodeValue" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="ContactPoint">
         <xsd:annotation>
@@ -141,6 +149,7 @@
             <xsd:element name="responsibility" type="xsd:string"/>
             <xsd:element name="telephone" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Country">
         <xsd:annotation>
@@ -150,6 +159,7 @@
             <xsd:element name="countryCode" type="xsd:string"/>
             <xsd:element name="countrySubdivisionCode" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="DietTypeCodeDetails">
         <xsd:annotation>
@@ -159,6 +169,7 @@
             <xsd:element name="dietType" type="DietTypeCode"/>
             <xsd:element name="dietTypeSubcode" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Discount">
         <xsd:annotation>
@@ -195,6 +206,7 @@
             <xsd:element name="qualifyingSubBrandName" type="xsd:string"/>
             <xsd:element name="selectedProductsOnly" type="xsd:boolean"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="FoodAndBeveragePreparationInformation">
         <xsd:annotation>
@@ -212,6 +224,7 @@
             <xsd:element name="preparationInstructions" type="xsd:string"/>
             <xsd:element name="yield" type="ProductYieldDetails"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoIngredientDetails">
         <xsd:annotation>
@@ -222,6 +235,7 @@
             <xsd:element name="ingredientName" type="xsd:string"/>
             <xsd:element name="ingredientSequence" type="xsd:integer"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="FoodBeverageTobaccoProduct">
         <xsd:annotation>
@@ -351,6 +365,7 @@
             <xsd:element name="latitude" type="xsd:string"/>
             <xsd:element name="longitude" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="GeoShape">
         <xsd:annotation>
@@ -363,6 +378,7 @@
             <xsd:element name="line" type="xsd:string"/>
             <xsd:element name="polygon" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="LocationID_Details">
         <xsd:annotation>
@@ -377,6 +393,7 @@
             <xsd:element name="locationID_Type" type="LocationID_Type"/>
             <xsd:element name="locationID_URI" type="xsd:anyURI"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="LocationStatusHistory">
         <xsd:annotation>
@@ -388,6 +405,7 @@
             <xsd:element name="locationStatus" type="StatusType"/>
             <xsd:element name="statusTimestamp" type="xsd:dateTime"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="MeatPoultry">
         <xsd:annotation>
@@ -458,6 +476,7 @@
             <xsd:element name="seller" type="Organization"/>
             <xsd:element name="warranty" type="WarrantyPromise"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="OrganicClaimDetails">
         <xsd:annotation>
@@ -467,6 +486,7 @@
             <xsd:element name="organicClaimAgency" type="OrganicClaimAgencyCode"/>
             <xsd:element name="organicPercentClaim" type="xsd:float"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Organization">
         <xsd:annotation>
@@ -505,6 +525,7 @@
             <xsd:element name="subOrganization" type="Organization"/>
             <xsd:element name="usesManagedLocation" type="Place"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="OrganizationID_Details">
         <xsd:annotation>
@@ -519,6 +540,7 @@
             <xsd:element name="organizationID_Type" type="OrganizationID_Type"/>
             <xsd:element name="organizationID_URI" type="xsd:anyURI"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="OrganizationStatusHistory">
         <xsd:annotation>
@@ -530,6 +552,7 @@
             <xsd:element name="organizationStatus" type="StatusType"/>
             <xsd:element name="statusTimestamp" type="xsd:dateTime"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="PackagingDetails">
         <xsd:annotation>
@@ -545,6 +568,7 @@
             <xsd:element name="packagingShape" type="PackagingShapeCode"/>
             <xsd:element name="packagingType" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="PackagingMaterialDetails">
         <xsd:annotation>
@@ -555,6 +579,7 @@
             <xsd:element name="packagingMaterialThickness" type="QuantitativeValue"/>
             <xsd:element name="packagingMaterialType" type="PackagingMaterialTypeCode"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Place">
         <xsd:annotation>
@@ -590,6 +615,7 @@
             <xsd:element name="replacedPlace" type="Place"/>
             <xsd:element name="responsibleOrganization" type="Organization"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="PostalAddress">
         <xsd:annotation>
@@ -611,6 +637,7 @@
             <xsd:element name="streetAddressLine3" type="xsd:string"/>
             <xsd:element name="streetAddressLine4" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="PriceSpecification">
         <xsd:annotation>
@@ -630,6 +657,7 @@
             <xsd:element name="validFrom" type="xsd:dateTime"/>
             <xsd:element name="validThrough" type="xsd:dateTime"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Product">
         <xsd:annotation>
@@ -737,6 +765,7 @@
             <xsd:element name="variantDescription" type="xsd:string"/>
             <xsd:element name="warningCopyDescription" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="ProductYieldDetails">
         <xsd:annotation>
@@ -748,6 +777,7 @@
             <xsd:element name="productYieldType" type="ProductYieldTypeCode"/>
             <xsd:element name="productYieldVariationPercentage" type="xsd:float"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="QuantitativeValue">
         <xsd:annotation>
@@ -757,6 +787,7 @@
             <xsd:element name="unitCode" type="xsd:string"/>
             <xsd:element name="value" type="xsd:float"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="ReferencedFileDetails">
         <xsd:annotation>
@@ -772,6 +803,7 @@
             <xsd:element name="referencedFileType" type="ReferencedFileTypeCode"/>
             <xsd:element name="referencedFileURL" type="xsd:anyURI"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="ReturnablePackageDepositDetails">
         <xsd:annotation>
@@ -781,6 +813,7 @@
             <xsd:element name="returnablePackageDepositAmount" type="PriceSpecification"/>
             <xsd:element name="returnablePackageDepositRegion" type="Country"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="Seafood">
         <xsd:annotation>
@@ -806,6 +839,7 @@
             <xsd:element name="sizeCodeListCode" type="xsd:string"/>
             <xsd:element name="sizeCodeValue" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="SizeDetails">
         <xsd:annotation>
@@ -817,6 +851,7 @@
             <xsd:element name="sizeSystem" type="SizeSystemCode"/>
             <xsd:element name="sizeType" type="SizeTypeCode"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="TargetMarketDetails">
         <xsd:annotation>
@@ -826,6 +861,7 @@
             <xsd:element name="consumerFirstAvailabilityDateTime" type="xsd:dateTime"/>
             <xsd:element name="targetMarketCountries" type="Country"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="TextileMaterialDetails">
         <xsd:annotation>
@@ -837,6 +873,7 @@
             <xsd:element name="textileMaterialThreadCount" type="xsd:string"/>
             <xsd:element name="textileMaterialWeight" type="QuantitativeValue"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="TypeCode">
         <xsd:annotation>
@@ -845,6 +882,7 @@
         <xsd:sequence>
             <xsd:element name="originalCodeValue" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="WarrantyPromise">
         <xsd:annotation>
@@ -856,6 +894,7 @@
             <xsd:element name="durationOfWarranty" type="QuantitativeValue"/>
             <xsd:element name="warrantyScopeDescription" type="xsd:string"/>
         </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
     <xsd:complexType name="WearableProduct">
         <xsd:annotation>

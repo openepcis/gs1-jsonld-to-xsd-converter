@@ -24,7 +24,8 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
-import static io.openepcis.constant.Constants.*;
+import static io.openepcis.constant.Constants.THING;
+import static io.openepcis.constant.Constants.XSD_STRING;
 
 public class XSDGenerator {
 
@@ -122,6 +123,12 @@ public class XSDGenerator {
         } else {
             //If the class is not subclass then directly add
             complexType.appendChild(sequence);
+
+            // Add the XSD attributes with name and type for the class which are not a super class
+            final Element xsdAttribute = doc.createElement("xsd:attribute");
+            xsdAttribute.setAttribute("name", "id");
+            xsdAttribute.setAttribute("type", "xsd:anyURI");
+            complexType.appendChild(xsdAttribute);
         }
         return complexType;
     }
