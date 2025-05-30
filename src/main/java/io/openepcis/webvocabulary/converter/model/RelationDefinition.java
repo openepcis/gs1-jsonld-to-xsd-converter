@@ -1,4 +1,4 @@
-package io.openepcis.model;
+package io.openepcis.webvocabulary.converter.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,10 +1,10 @@
-package io.openepcis.xsd;
+package io.openepcis.webvocabulary.converter.xsd;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.openepcis.model.ClassDefinition;
-import io.openepcis.model.LinkTypeDefinition;
-import io.openepcis.model.PropertyDefinition;
-import io.openepcis.model.RelationDefinition;
+import io.openepcis.webvocabulary.converter.model.ClassDefinition;
+import io.openepcis.webvocabulary.converter.model.LinkTypeDefinition;
+import io.openepcis.webvocabulary.converter.model.PropertyDefinition;
+import io.openepcis.webvocabulary.converter.model.RelationDefinition;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -24,8 +24,8 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
-import static io.openepcis.constant.Constants.THING;
-import static io.openepcis.constant.Constants.XSD_STRING;
+import static io.openepcis.webvocabulary.converter.constant.Constants.*;
+
 
 public class XSDGenerator {
 
@@ -49,6 +49,15 @@ public class XSDGenerator {
             schemaRoot.setAttribute("xmlns:" + key, namespaceUri);
         });
         doc.appendChild(schemaRoot);
+
+        // insert the xml:namespace import for language
+        final Element xmlImport = doc.createElement("xsd:import");
+        xmlImport.setAttribute("namespace", XMLConstants.XML_NS_URI);
+        xmlImport.setAttribute("schemaLocation", "https://www.w3.org/2001/xml.xsd");
+        schemaRoot.appendChild(xmlImport);
+
+        // Build the generic langType complex type
+        addLangStringType(doc, schemaRoot);
 
         //Process all the class and properties and build XSD
         processClasses(doc, schemaRoot, relationDefinition);
@@ -97,7 +106,15 @@ public class XSDGenerator {
             element.setAttribute("name", property.getProperty());
 
             final String xsdType = getXsdType(property);
-            element.setAttribute("type", xsdType);
+
+            if (LANG_STRING.equalsIgnoreCase(xsdType)) {
+                // If the property is of type langString, then create a complex type with simple content
+                element.setAttribute("type", "LangString");
+                element.setAttribute("maxOccurs", "unbounded");
+                element.setAttribute("minOccurs", "0");
+            } else {
+                element.setAttribute("type", xsdType);
+            }
 
             // If deprecated property then add the additional annotation with documentation
             if (property.isDeprecated()) {
@@ -214,6 +231,8 @@ public class XSDGenerator {
 
     //Map the datatype to corresponding XSD datatype.
     private String mapSimpleType(final String rangeType) {
+        if (rangeType == null) return null;
+
         return switch (rangeType) {
             case "xsd:date", "date" -> "xsd:date";
             case "xsd:anyURI", "anyURI" -> "xsd:anyURI";
@@ -222,6 +241,7 @@ public class XSDGenerator {
             case "xsd:integer", "integer" -> "xsd:integer";
             case "xsd:gYear", "gYear" -> "xsd:gYear";
             case "xsd:dateTime", "dateTime" -> "xsd:dateTime";
+            case LANG_STRING -> LANG_STRING;
             default -> XSD_STRING;
         };
     }
@@ -238,7 +258,26 @@ public class XSDGenerator {
         final Transformer transformer = transformerFactory.newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         final DOMSource source = new DOMSource(doc);
-        final StreamResult result = new StreamResult(new File("JsonLdSchemaXSD.xsd"));
+        final StreamResult result = new StreamResult(new File("src/main/resources/schema/JsonLdSchemaXSD.xsd"));
         transformer.transform(source, result);
+    }
+
+    private void addLangStringType(Document doc, Element schemaRoot) {
+        final Element lsComplexType = doc.createElement("xsd:complexType");
+        lsComplexType.setAttribute("name", "LangString");
+
+        final Element lsSimpleContent = doc.createElement("xsd:simpleContent");
+        final Element lsExtension = doc.createElement("xsd:extension");
+        lsExtension.setAttribute("base", "xsd:string");
+
+        final Element lsAttribute = doc.createElement("xsd:attribute");
+        lsAttribute.setAttribute("ref", "xml:lang");
+        lsAttribute.setAttribute("use", "required");
+
+        lsExtension.appendChild(lsAttribute);
+        lsSimpleContent.appendChild(lsExtension);
+        lsComplexType.appendChild(lsSimpleContent);
+
+        schemaRoot.appendChild(lsComplexType);
     }
 }

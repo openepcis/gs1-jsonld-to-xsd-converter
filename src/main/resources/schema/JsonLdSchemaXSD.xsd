@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gs1="https://gs1.org/voc">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cc="http://creativecommons.org/ns" xmlns:cert="http://www.w3.org/ns/auth/cert"
+            xmlns:dbp="http://dbpedia.org/property" xmlns:dc="http://purl.org/dc/elements/1.1" xmlns:dcterms="http://purl.org/dc/elements/1.1"
+            xmlns:doap="http://usefulinc.com/ns/doap" xmlns:exif="http://www.w3.org/2003/12/exif/ns" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+            xmlns:foaf="http://xmlns.com/foaf/0.1" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos" xmlns:geonames="http://www.geonames.org/ontology"
+            xmlns:gr="http://purl.org/goodrelations/v1" xmlns:gs1="https://gs1.org/voc" xmlns:log="http://www.w3.org/2000/10/swap/log" xmlns:owl="http://www.w3.org/2002/07/owl"
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema" xmlns:rei="http://www.w3.org/2004/06/rei"
+            xmlns:rsa="http://www.w3.org/ns/auth/rsa" xmlns:rss="http://purl.org/rss/1.0" xmlns:schema="http://schema.org" xmlns:sfn="http://www.w3.org/ns/sparql"
+            xmlns:sioc="http://rdfs.org/sioc/ns" xmlns:skos="http://www.w3.org/2004/02/skos/core" xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns"
+            xmlns:swrc="http://swrc.ontoware.org/ontology" xmlns:types="http://rdfs.org/sioc/types" xmlns:vann="http://purl.org/vocab/vann"
+            xmlns:vcard="http://www.w3.org/2006/vcard/ns" xmlns:voaf="http://purl.org/vocommons/voaf" xmlns:wot="http://xmlns.com/wot/0.1"
+            xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2001/xml.xsd"/>
+    <xsd:complexType name="LangString">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="xml:lang" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
     <xsd:complexType name="AdditionalProductClassificationDetails">
         <xsd:annotation>
             <xsd:documentation xml:lang="en">A product classification for the product other than the Global Product Classification(GPC brick value).</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additionalProductClassificationCode" type="xsd:string"/>
-            <xsd:element name="additionalProductClassificationCodeDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalProductClassificationCodeDescription" type="LangString"/>
             <xsd:element name="additionalProductClassificationValue" type="xsd:string"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -17,7 +35,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additiveLevelOfContainment" type="LevelOfContainmentCode"/>
-            <xsd:element name="additiveName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="additiveName" type="LangString"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
@@ -38,7 +56,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="authenticitySecurityFeatureInstructions" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="authenticitySecurityFeatureInstructions" type="LangString"/>
             <xsd:element name="authenticitySecurityFeatureInstructionsURL" type="xsd:anyURI"/>
             <xsd:element name="authenticitySecurityFeatureRegularExpression" type="xsd:string"/>
             <xsd:element name="authenticitySecurityFeatureType" type="SecurityMarking"/>
@@ -53,9 +71,9 @@
         <xsd:sequence>
             <xsd:element name="awardPrizeCode" type="xsd:string"/>
             <xsd:element name="awardPrizeCountryCode" type="Country"/>
-            <xsd:element name="awardPrizeDescription" type="xsd:string"/>
-            <xsd:element name="awardPrizeJury" type="xsd:string"/>
-            <xsd:element name="awardPrizeName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="awardPrizeDescription" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="awardPrizeJury" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="awardPrizeName" type="LangString"/>
             <xsd:element name="awardPrizeYear" type="xsd:gYear"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -67,14 +85,14 @@
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
-                    <xsd:element name="alcoholicBeverageSubregion" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="alcoholicBeverageSubregion" type="LangString"/>
                     <xsd:element name="beverageVintage" type="xsd:string"/>
                     <xsd:element name="isCarbonated" type="NonbinaryLogicCode"/>
                     <xsd:element name="isDecaffeinated" type="NonbinaryLogicCode"/>
                     <xsd:element name="isFromConcentrate" type="NonbinaryLogicCode"/>
                     <xsd:element name="isVintage" type="NonbinaryLogicCode"/>
                     <xsd:element name="percentageOfAlcoholByVolume" type="xsd:float"/>
-                    <xsd:element name="vintner" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="vintner" type="LangString"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>
@@ -84,8 +102,8 @@
             <xsd:documentation xml:lang="en">Information on brands and sub-brands for a product.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="brandName" type="xsd:string"/>
-            <xsd:element name="subBrandName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="brandName" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="subBrandName" type="LangString"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
@@ -94,19 +112,19 @@
             <xsd:documentation xml:lang="en">Certification issued by a certifying body to a certification subject (Organization, Place, Product).</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="certificationAgency" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="certificationAgency" type="LangString"/>
             <xsd:element name="certificationAgencyURL" type="Organization"/>
             <xsd:element name="certificationAuditDate" type="xsd:date"/>
             <xsd:element name="certificationEndDate" type="xsd:date"/>
             <xsd:element name="certificationIdentification" type="xsd:string"/>
-            <xsd:element name="certificationStandard" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="certificationStandard" type="LangString"/>
             <xsd:element name="certificationStartDate" type="xsd:date"/>
-            <xsd:element name="certificationStatement" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="certificationStatement" type="LangString"/>
             <xsd:element name="certificationStatus" type="CertificationStatus"/>
             <xsd:element name="certificationSubject" type="xsd:anyType"/>
             <xsd:element name="certificationType" type="xsd:anyType"/>
             <xsd:element name="certificationURI" type="xsd:anyURI"/>
-            <xsd:element name="certificationValue" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="certificationValue" type="LangString"/>
             <xsd:element name="initialCertificationDate" type="xsd:date"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -118,8 +136,8 @@
         <xsd:complexContent>
             <xsd:extension base="WearableProduct">
                 <xsd:sequence>
-                    <xsd:element name="clothingCut" type="xsd:string"/>
-                    <xsd:element name="collarType" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="clothingCut" type="LangString"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="collarType" type="LangString"/>
                     <xsd:element name="isMaternity" type="NonbinaryLogicCode"/>
                     <xsd:element name="textileMaterial" type="TextileMaterialDetails"/>
                 </xsd:sequence>
@@ -142,11 +160,11 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="availableLanguage" type="xsd:string"/>
-            <xsd:element name="contactTitle" type="xsd:string"/>
-            <xsd:element name="contactType" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="contactTitle" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="contactType" type="LangString"/>
             <xsd:element name="email" type="xsd:string"/>
             <xsd:element name="faxNumber" type="xsd:string"/>
-            <xsd:element name="responsibility" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="responsibility" type="LangString"/>
             <xsd:element name="telephone" type="xsd:string"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -167,7 +185,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="dietType" type="DietTypeCode"/>
-            <xsd:element name="dietTypeSubcode" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="dietTypeSubcode" type="LangString"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
@@ -181,7 +199,7 @@
             <xsd:element name="eligibleTradeChannel" type="TradeChannelCode"/>
             <xsd:element name="exactDiscountAmount" type="PriceSpecification"/>
             <xsd:element name="exactDiscountPercentage" type="xsd:float"/>
-            <xsd:element name="exclusionDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="exclusionDescription" type="LangString"/>
             <xsd:element name="isOnlyAvailableThroughRetailer" type="xsd:boolean"/>
             <xsd:element name="isOnlyWithMailingListSignup" type="xsd:boolean"/>
             <xsd:element name="isOnlyWithPaymentCard" type="PaymentMethod"/>
@@ -197,13 +215,13 @@
             <xsd:element name="minimumQualifyingItems" type="xsd:integer"/>
             <xsd:element name="minimumQualifyingSpend" type="PriceSpecification"/>
             <xsd:element name="offerRedemptionType" type="OfferRedemptionTypeCode"/>
-            <xsd:element name="offerRestrictionDescription" type="xsd:string"/>
-            <xsd:element name="qualifyingBrandName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="offerRestrictionDescription" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="qualifyingBrandName" type="LangString"/>
             <xsd:element name="qualifyingGPCs" type="xsd:string"/>
-            <xsd:element name="qualifyingProductCategoryDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="qualifyingProductCategoryDescription" type="LangString"/>
             <xsd:element name="qualifyingProductClassificationCode" type="AdditionalProductClassificationDetails"/>
             <xsd:element name="qualifyingProductGTINs" type="xsd:string"/>
-            <xsd:element name="qualifyingSubBrandName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="qualifyingSubBrandName" type="LangString"/>
             <xsd:element name="selectedProductsOnly" type="xsd:boolean"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -220,8 +238,8 @@
             <xsd:element name="maximumOptimumConsumptionTemperature" type="QuantitativeValue"/>
             <xsd:element name="minimumOptimumConsumptionTemperature" type="QuantitativeValue"/>
             <xsd:element name="preparationCode" type="PreparationTypeCode"/>
-            <xsd:element name="preparationConsumptionPrecautions" type="xsd:string"/>
-            <xsd:element name="preparationInstructions" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="preparationConsumptionPrecautions" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="preparationInstructions" type="LangString"/>
             <xsd:element name="yield" type="ProductYieldDetails"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -232,7 +250,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="ingredientContentPercentage" type="xsd:float"/>
-            <xsd:element name="ingredientName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ingredientName" type="LangString"/>
             <xsd:element name="ingredientSequence" type="xsd:integer"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -244,9 +262,9 @@
         <xsd:complexContent>
             <xsd:extension base="Product">
                 <xsd:sequence>
-                    <xsd:element name="allergenSpecificationAgency" type="xsd:string"/>
-                    <xsd:element name="allergenSpecificationName" type="xsd:string"/>
-                    <xsd:element name="allergenStatement" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="allergenSpecificationAgency" type="LangString"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="allergenSpecificationName" type="LangString"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="allergenStatement" type="LangString"/>
                     <xsd:element name="biotinPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="calciumPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="carbohydratesPerNutrientBasis" type="NutritionMeasurementType"/>
@@ -255,7 +273,7 @@
                     <xsd:element name="chromiumPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="copperPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="dietCode" type="DietTypeCodeDetails"/>
-                    <xsd:element name="dietTypeDescription" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="dietTypeDescription" type="LangString"/>
                     <xsd:element name="drainedWeight" type="QuantitativeValue"/>
                     <xsd:element name="energyFromFatPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="energyPerNutrientBasis" type="NutritionMeasurementType"/>
@@ -268,8 +286,8 @@
                     <xsd:element name="geneticallyModifiedDeclaration" type="LevelOfContainmentCode"/>
                     <xsd:element name="hasAllergen" type="AllergenDetails"/>
                     <xsd:element name="ingredient" type="FoodBeverageTobaccoIngredientDetails"/>
-                    <xsd:element name="ingredientOfConcern" type="xsd:string"/>
-                    <xsd:element name="ingredientStatement" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="ingredientOfConcern" type="LangString"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="ingredientStatement" type="LangString"/>
                     <xsd:element name="iodinePerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="ironPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="irradiatedCode" type="NonbinaryLogicCode"/>
@@ -283,12 +301,12 @@
                     <xsd:element name="niacinPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="numberOfServingsPerPackage" type="xsd:float"/>
                     <xsd:element name="numberOfServingsPerPackageMeasurementPrecision" type="MeasurementPrecisionCode"/>
-                    <xsd:element name="numberOfServingsRangeDescription" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="numberOfServingsRangeDescription" type="LangString"/>
                     <xsd:element name="nutrientBasisQuantity" type="QuantitativeValue"/>
                     <xsd:element name="nutrientBasisQuantityType" type="NutrientBasisQuantityCode"/>
                     <xsd:element name="nutrientMeasurementPrecision" type="MeasurementPrecisionCode"/>
                     <xsd:element name="nutritionalClaim" type="NutritionalClaimTypeCode"/>
-                    <xsd:element name="nutritionalClaimStatement" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="nutritionalClaimStatement" type="LangString"/>
                     <xsd:element name="packagingMarkedDietAllergenType" type="PackagingMarkedDietAllergenCode"/>
                     <xsd:element name="packagingMarkedFreeFrom" type="PackagingMarkedFreeFromCode"/>
                     <xsd:element name="pantothenicAcidPerNutrientBasis" type="NutritionMeasurementType"/>
@@ -305,8 +323,8 @@
                     <xsd:element name="saturatedFatPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="seleniumPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="servingSize" type="QuantitativeValue"/>
-                    <xsd:element name="servingSizeDescription" type="xsd:string"/>
-                    <xsd:element name="servingSuggestion" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="servingSizeDescription" type="LangString"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="servingSuggestion" type="LangString"/>
                     <xsd:element name="sodiumPerNutrientBasis" type="NutritionMeasurementType"/>
                     <xsd:element name="sourceAnimal" type="SourceAnimalCode"/>
                     <xsd:element name="starchPerNutrientBasis" type="NutritionMeasurementType"/>
@@ -416,7 +434,7 @@
                 <xsd:sequence>
                     <xsd:element name="anatomicalForm" type="AnatomicalFormCode"/>
                     <xsd:element name="bonelessClaim" type="NonbinaryLogicCode"/>
-                    <xsd:element name="meatPoultryType" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="meatPoultryType" type="LangString"/>
                     <xsd:element name="minimumMeatPoultryContent" type="QuantitativeValue"/>
                 </xsd:sequence>
             </xsd:extension>
@@ -430,7 +448,7 @@
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
                     <xsd:element name="cheeseFirmness" type="CheeseFirmnessCode"/>
-                    <xsd:element name="cheeseMaturationPeriodDescription" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="cheeseMaturationPeriodDescription" type="LangString"/>
                     <xsd:element name="fatInMilkContent" type="xsd:float"/>
                     <xsd:element name="fatpercentageInDryMatter" type="xsd:float"/>
                     <xsd:element name="isHomogenised" type="NonbinaryLogicCode"/>
@@ -467,7 +485,7 @@
             <xsd:element name="eligibleQuantityMaximum" type="QuantitativeValue"/>
             <xsd:element name="eligibleQuantityMinimum" type="QuantitativeValue"/>
             <xsd:element name="itemOffered" type="Product"/>
-            <xsd:element name="offerDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="offerDescription" type="LangString"/>
             <xsd:element name="offerDiscount" type="Discount"/>
             <xsd:element name="offerRedemptionURL" type="ReferencedFileDetails"/>
             <xsd:element name="paymentTerms" type="xsd:string"/>
@@ -501,7 +519,7 @@
             <xsd:element name="afterHoursContact" type="ContactPoint"/>
             <xsd:element name="certification" type="CertificationDetails"/>
             <xsd:element name="contactPoint" type="ContactPoint"/>
-            <xsd:element name="department" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="department" type="LangString"/>
             <xsd:element name="glnType" type="GLN_TypeCode"/>
             <xsd:element name="globalLocationNumber" type="xsd:string"/>
             <xsd:element name="hasPrimaryLocation" type="Place"/>
@@ -513,7 +531,7 @@
             <xsd:element name="manages" type="Organization"/>
             <xsd:element name="occupies" type="Place"/>
             <xsd:element name="organizationHistory" type="OrganizationStatusHistory"/>
-            <xsd:element name="organizationName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="organizationName" type="LangString"/>
             <xsd:element name="organizationRole" type="OrganizationRoleType"/>
             <xsd:element name="ownedBy" type="Organization"/>
             <xsd:element name="owns" type="Organization"/>
@@ -595,7 +613,7 @@
             <xsd:element name="containedInPlace" type="Place"/>
             <xsd:element name="containsPlace" type="Place"/>
             <xsd:element name="digitalAddress" type="xsd:string"/>
-            <xsd:element name="digitalLocationName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="digitalLocationName" type="LangString"/>
             <xsd:element name="geo" type="Place"/>
             <xsd:element name="glnType" type="GLN_TypeCode"/>
             <xsd:element name="globalLocationNumber" type="xsd:string"/>
@@ -608,7 +626,7 @@
             <xsd:element name="managedFor" type="Organization"/>
             <xsd:element name="occupiedBy" type="Organization"/>
             <xsd:element name="ownedBy" type="Organization"/>
-            <xsd:element name="physicalLocationName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="physicalLocationName" type="LangString"/>
             <xsd:element name="primaryLocationOf" type="Organization"/>
             <xsd:element name="relatedOrganization" type="Organization"/>
             <xsd:element name="replacedByPlace" type="Place"/>
@@ -623,19 +641,19 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="addressCountry" type="Country"/>
-            <xsd:element name="addressLocality" type="xsd:string"/>
-            <xsd:element name="addressRegion" type="xsd:string"/>
-            <xsd:element name="addressSuburb" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="addressLocality" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="addressRegion" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="addressSuburb" type="LangString"/>
             <xsd:element name="countyCode" type="xsd:string"/>
-            <xsd:element name="crossStreet" type="xsd:string"/>
-            <xsd:element name="organizationName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="crossStreet" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="organizationName" type="LangString"/>
             <xsd:element name="postOfficeBoxNumber" type="xsd:string"/>
             <xsd:element name="postalCode" type="xsd:string"/>
-            <xsd:element name="postalName" type="xsd:string"/>
-            <xsd:element name="streetAddress" type="xsd:string"/>
-            <xsd:element name="streetAddressLine2" type="xsd:string"/>
-            <xsd:element name="streetAddressLine3" type="xsd:string"/>
-            <xsd:element name="streetAddressLine4" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="postalName" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="streetAddress" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="streetAddressLine2" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="streetAddressLine3" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="streetAddressLine4" type="LangString"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
@@ -645,7 +663,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="dutyFeeTaxAmount" type="xsd:float"/>
-            <xsd:element name="dutyFeeTaxDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="dutyFeeTaxDescription" type="LangString"/>
             <xsd:element name="dutyFeeTaxRate" type="xsd:float"/>
             <xsd:element name="eligibleQuantity" type="QuantitativeValue"/>
             <xsd:element name="eligibleQuantityMaximum" type="QuantitativeValue"/>
@@ -667,7 +685,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="additionalProductClassification" type="AdditionalProductClassificationDetails"/>
-            <xsd:element name="additionalProductDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalProductDescription" type="LangString"/>
             <xsd:element name="additive" type="AdditiveDetails"/>
             <xsd:element name="audioFile" type="ReferencedFileDetails"/>
             <xsd:element name="authenticity" type="AuthenticityDetails"/>
@@ -677,29 +695,29 @@
             <xsd:element name="brandOwner" type="Organization"/>
             <xsd:element name="certification" type="CertificationDetails"/>
             <xsd:element name="colourCode" type="ColourCodeDetails"/>
-            <xsd:element name="colourDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="colourDescription" type="LangString"/>
             <xsd:element name="consumerHandlingStorage" type="ReferencedFileDetails"/>
-            <xsd:element name="consumerPackageDisclaimer" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="consumerPackageDisclaimer" type="LangString"/>
             <xsd:element name="consumerProductVariant" type="xsd:string"/>
-            <xsd:element name="consumerSafetyInformation" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="consumerSafetyInformation" type="LangString"/>
             <xsd:element name="consumerSalesCondition" type="ConsumerSalesConditionsCode"/>
-            <xsd:element name="consumerStorageInstructions" type="xsd:string"/>
-            <xsd:element name="consumerUsageInstructions" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="consumerStorageInstructions" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="consumerUsageInstructions" type="LangString"/>
             <xsd:element name="countryOfAssembly" type="Country"/>
             <xsd:element name="countryOfLastProcessing" type="Country"/>
             <xsd:element name="countryOfOrigin" type="Country"/>
-            <xsd:element name="countryOfOriginStatement" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="countryOfOriginStatement" type="LangString"/>
             <xsd:element name="customerSupportCentre" type="Organization"/>
             <xsd:element name="dependentProprietaryProduct" type="Product"/>
-            <xsd:element name="descriptiveSize" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="descriptiveSize" type="LangString"/>
             <xsd:element name="dueDate" type="xsd:date"/>
             <xsd:element name="equivalentProduct" type="Product"/>
             <xsd:element name="expirationDate" type="xsd:date"/>
             <xsd:element name="expirationDateTime" type="xsd:date"/>
             <xsd:element name="firstFreezeDate" type="xsd:date"/>
-            <xsd:element name="functionalName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="functionalName" type="LangString"/>
             <xsd:element name="gpcCategoryCode" type="xsd:string"/>
-            <xsd:element name="gpcCategoryDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="gpcCategoryDescription" type="LangString"/>
             <xsd:element name="grossArea" type="QuantitativeValue"/>
             <xsd:element name="grossVolume" type="QuantitativeValue"/>
             <xsd:element name="grossWeight" type="QuantitativeValue"/>
@@ -711,13 +729,13 @@
             <xsd:element name="hasBatchLotNumber" type="xsd:string"/>
             <xsd:element name="hasSerialNumber" type="xsd:string"/>
             <xsd:element name="hasThirdPartyControlledSerialNumber" type="xsd:string"/>
-            <xsd:element name="healthClaimDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="healthClaimDescription" type="LangString"/>
             <xsd:element name="image" type="ReferencedFileDetails"/>
             <xsd:element name="inPackageDepth" type="QuantitativeValue"/>
             <xsd:element name="inPackageDiameter" type="QuantitativeValue"/>
             <xsd:element name="inPackageHeight" type="QuantitativeValue"/>
             <xsd:element name="inPackageWidth" type="QuantitativeValue"/>
-            <xsd:element name="includedAccessories" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="includedAccessories" type="LangString"/>
             <xsd:element name="instructionsForUse" type="ReferencedFileDetails"/>
             <xsd:element name="isProductRecalled" type="xsd:boolean"/>
             <xsd:element name="jws" type="xsd:anyURI"/>
@@ -737,13 +755,13 @@
             <xsd:element name="packagingDate" type="xsd:date"/>
             <xsd:element name="packagingMarkedLabelAccreditation" type="PackagingMarkedLabelAccreditationCode"/>
             <xsd:element name="primaryAlternateProduct" type="Product"/>
-            <xsd:element name="productDescription" type="xsd:string"/>
-            <xsd:element name="productFeatureBenefit" type="xsd:string"/>
-            <xsd:element name="productFormDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productDescription" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productFeatureBenefit" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productFormDescription" type="LangString"/>
             <xsd:element name="productID" type="xsd:string"/>
-            <xsd:element name="productMarketingMessage" type="xsd:string"/>
-            <xsd:element name="productName" type="xsd:string"/>
-            <xsd:element name="productRange" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productMarketingMessage" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productName" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productRange" type="LangString"/>
             <xsd:element name="productSustainabilityInfo" type="xsd:anyURI">
                 <xsd:annotation>
                     <xsd:documentation>This term has been deprecated. Please use gs1:sustainabilityInfo instead.</xsd:documentation>
@@ -751,19 +769,19 @@
             </xsd:element>
             <xsd:element name="productionDate" type="xsd:date"/>
             <xsd:element name="productionDateTime" type="xsd:date"/>
-            <xsd:element name="productionVariantDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="productionVariantDescription" type="LangString"/>
             <xsd:element name="productionVariantEffectiveDateTime" type="xsd:dateTime"/>
-            <xsd:element name="provenanceStatement" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="provenanceStatement" type="LangString"/>
             <xsd:element name="referencedFile" type="ReferencedFileDetails"/>
-            <xsd:element name="regulatedProductName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="regulatedProductName" type="LangString"/>
             <xsd:element name="replacedByProduct" type="Product"/>
             <xsd:element name="replacedProduct" type="Product"/>
             <xsd:element name="sellByDate" type="xsd:date"/>
             <xsd:element name="sizeCode" type="SizeCodeDetails"/>
             <xsd:element name="supplierSpecifiedMinimumConsumerStorageDays" type="xsd:integer"/>
             <xsd:element name="targetMarket" type="TargetMarketDetails"/>
-            <xsd:element name="variantDescription" type="xsd:string"/>
-            <xsd:element name="warningCopyDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variantDescription" type="LangString"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="warningCopyDescription" type="LangString"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
@@ -822,8 +840,8 @@
         <xsd:complexContent>
             <xsd:extension base="FoodBeverageTobaccoProduct">
                 <xsd:sequence>
-                    <xsd:element name="catchZone" type="xsd:string"/>
-                    <xsd:element name="fishType" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="catchZone" type="LangString"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="fishType" type="LangString"/>
                     <xsd:element name="freshOrSeawaterFarmed" type="FreshOrSeawaterFarmedCode"/>
                     <xsd:element name="minimumFishContent" type="QuantitativeValue"/>
                 </xsd:sequence>
@@ -868,9 +886,9 @@
             <xsd:documentation xml:lang="en">Details on the composition of any materials used to make a product using textiles.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="textileMaterialDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="textileMaterialDescription" type="LangString"/>
             <xsd:element name="textileMaterialPercentage" type="xsd:float"/>
-            <xsd:element name="textileMaterialThreadCount" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="textileMaterialThreadCount" type="LangString"/>
             <xsd:element name="textileMaterialWeight" type="QuantitativeValue"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
@@ -892,7 +910,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="durationOfWarranty" type="QuantitativeValue"/>
-            <xsd:element name="warrantyScopeDescription" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="warrantyScopeDescription" type="LangString"/>
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:anyURI"/>
     </xsd:complexType>
@@ -909,14 +927,14 @@
                     <xsd:element name="isWaterproof" type="NonbinaryLogicCode"/>
                     <xsd:element name="isWearableItemDisposable" type="NonbinaryLogicCode"/>
                     <xsd:element name="seasonCalendarYear" type="xsd:gYear"/>
-                    <xsd:element name="seasonName" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="seasonName" type="LangString"/>
                     <xsd:element name="seasonParameter" type="SeasonParameterCode"/>
                     <xsd:element name="size" type="SizeDetails"/>
                     <xsd:element name="sportingActivityType" type="SportingActivityTypeCode"/>
-                    <xsd:element name="styleDescription" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="styleDescription" type="LangString"/>
                     <xsd:element name="targetConsumerAge" type="xsd:string"/>
                     <xsd:element name="targetConsumerGender" type="TargetConsumerGenderCode"/>
-                    <xsd:element name="textileMaterialContent" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="textileMaterialContent" type="LangString"/>
                 </xsd:sequence>
             </xsd:extension>
         </xsd:complexContent>

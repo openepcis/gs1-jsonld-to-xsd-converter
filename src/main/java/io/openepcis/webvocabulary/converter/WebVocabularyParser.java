@@ -1,7 +1,7 @@
-package io.openepcis;
+package io.openepcis.webvocabulary.converter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.openepcis.xsd.XSDGenerator;
+import io.openepcis.webvocabulary.converter.xsd.XSDGenerator;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-import static io.openepcis.constant.Constants.*;
+import static io.openepcis.webvocabulary.converter.constant.Constants.*;
 
 @SuppressWarnings("unchecked")
 public class WebVocabularyParser {
@@ -108,7 +108,7 @@ public class WebVocabularyParser {
         // Build a JSON String and convert to InputStream and finally generate the XSD based on JSON-LD Schema
         final ObjectMapper objectMapper = new ObjectMapper();
         final String jsonString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonLDSchema);
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("./JsonLdSchemaRelations.json"), jsonLDSchema);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("src/main/resources/schema/JsonLdSchemaRelations.json"), jsonLDSchema);
 
 
         // Convert the build JSON-LD schema relations into XSD
@@ -265,7 +265,7 @@ public class WebVocabularyParser {
                     final Resource property = propertyIterator.nextResource();
                     final Statement rangeStmt = property.getProperty(RDFS.range);
                     final String propertyName = (String) getPrefixedName(property);
-                    final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
+                    final Object rangeType = getPrefixedName(rangeStmt != null ? rangeStmt.getObject().asResource() : null);
 
                     final Map<String, Object> propertySchema = new LinkedHashMap<>();
 
@@ -337,7 +337,7 @@ public class WebVocabularyParser {
                 final Resource property = propertyIterator.nextResource();
                 final Statement rangeStmt = property.getProperty(RDFS.range);
                 final String propertyName = (String) getPrefixedName(property);
-                final Object rangeType = getPrefixedName(rangeStmt.getObject().asResource());
+                final Object rangeType = getPrefixedName(rangeStmt != null ? rangeStmt.getObject().asResource() : null);
                 final Map<String, Object> propertySchema = new LinkedHashMap<>();
 
                 propertySchema.put(PROPERTY, propertyName);
@@ -402,6 +402,9 @@ public class WebVocabularyParser {
      * @return return matching Resource as String or List<String> for union classes
      */
     private Object getPrefixedName(final Resource resource) {
+        if (resource == null) {
+            return null;
+        }
         final String uri = resource.getURI();
 
         if (uri == null && allUnionClasses.containsKey(resource)) {

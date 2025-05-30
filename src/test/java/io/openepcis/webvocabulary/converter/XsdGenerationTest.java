@@ -1,4 +1,5 @@
-import io.openepcis.WebVocabularyParser;
+package io.openepcis.webvocabulary.converter;
+
 import org.junit.jupiter.api.Test;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -12,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class XsdGenerationTest {
 
-    File expectedRelationsFile = new File("./JsonLdSchemaRelations.json"); // Define the expected file path
-    File expectedXSDFile = new File("./JsonLdSchemaXSD.xsd"); // Define the expected file path
+    File expectedRelationsFile = new File("src/main/resources/schema/JsonLdSchemaRelations.json"); // Define the expected file path
+    File expectedXSDFile = new File("src/main/resources/schema/JsonLdSchemaXSD.xsd"); // Define the expected file path
 
     @Test
     void generateXsdFromInputStream() throws ParserConfigurationException, IOException, TransformerException {

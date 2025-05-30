@@ -1,6 +1,6 @@
 {
-  "classes" : {
-    "AdditionalProductClassificationDetails" : {
+  "classes": {
+    "AdditionalProductClassificationDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A product classification for the product other than the Global Product Classification(GPC brick value).",
@@ -34,7 +34,7 @@
         }
       ]
     },
-    "AdditiveDetails" : {
+    "AdditiveDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A set of details about one of the additives within the product.",
@@ -59,7 +59,7 @@
         }
       ]
     },
-    "AllergenDetails" : {
+    "AllergenDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Details of an allergen for a product.",
@@ -84,7 +84,7 @@
         }
       ]
     },
-    "AuthenticityDetails" : {
+    "AuthenticityDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A set of details about covert or overt security features that may contribute to checking the authenticity of a product or product instance.",
@@ -136,7 +136,7 @@
         }
       ]
     },
-    "AwardPrizeDetails" : {
+    "AwardPrizeDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Describes a prize or award won by a product or organization.",
@@ -197,7 +197,7 @@
         }
       ]
     },
-    "Beverage" : {
+    "Beverage": {
       "isSubclass": true,
       "superClass": "FoodBeverageTobaccoProduct",
       "description": "Any potable liquid.",
@@ -276,7 +276,7 @@
         }
       ]
     },
-    "Brand" : {
+    "Brand": {
       "isSubclass": false,
       "superClass": null,
       "description": "Information on brands and sub-brands for a product.",
@@ -301,7 +301,7 @@
         }
       ]
     },
-    "CertificationDetails" : {
+    "CertificationDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Certification issued by a certifying body to a certification subject (Organization, Place, Product).",
@@ -434,7 +434,7 @@
         }
       ]
     },
-    "Clothing" : {
+    "Clothing": {
       "isSubclass": true,
       "superClass": "WearableProduct",
       "description": " A product that is worn on the body.",
@@ -477,7 +477,7 @@
         }
       ]
     },
-    "ColourCodeDetails" : {
+    "ColourCodeDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A set of colour code details (colour code, party controlling the code list) for the product.",
@@ -502,7 +502,7 @@
         }
       ]
     },
-    "ContactPoint" : {
+    "ContactPoint": {
       "isSubclass": false,
       "superClass": null,
       "description": "Information on an individual or department acting as point of contact for an organiation.",
@@ -572,7 +572,7 @@
         }
       ]
     },
-    "Country" : {
+    "Country": {
       "isSubclass": false,
       "superClass": null,
       "description": "Country is a complex data type that indicates a country and a country subdivision.",
@@ -581,7 +581,7 @@
           "property": "countryCode",
           "rangeType": "string",
           "domain": "Country",
-          "description": "A short text string code (see values defined in ISO 3166) specifying the country in which a processing or other activity is performed, for example processing, bottling, manufacturing.",
+          "description": "Code specifying the country for the address using ISO 3166-1.",
           "deprecated": false,
           "dataType": "simple",
           "type": "simple"
@@ -597,7 +597,7 @@
         }
       ]
     },
-    "DietTypeCodeDetails" : {
+    "DietTypeCodeDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A set of diet type code details (diet type code and diet type sub code) for the product.",
@@ -622,7 +622,7 @@
         }
       ]
     },
-    "Discount" : {
+    "Discount": {
       "isSubclass": false,
       "superClass": null,
       "description": "Provides information on a discount applicable to an offer for example 2 percent.",
@@ -890,7 +890,7 @@
         }
       ]
     },
-    "FoodAndBeveragePreparationInformation" : {
+    "FoodAndBeveragePreparationInformation": {
       "isSubclass": false,
       "superClass": null,
       "description": "Food and Beverage Preparation Information is a complex data type that indicates a preparation state code and preparation instructions.",
@@ -969,7 +969,7 @@
         }
       ]
     },
-    "FoodBeverageTobaccoIngredientDetails" : {
+    "FoodBeverageTobaccoIngredientDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Food Beverage Tobacco Ingredient is a complex data type that includes an ingredient statement and details.",
@@ -1003,7 +1003,7 @@
         }
       ]
     },
-    "FoodBeverageTobaccoProduct" : {
+    "FoodBeverageTobaccoProduct": {
       "isSubclass": true,
       "superClass": "Product",
       "description": "A food, beverage or tobacco product.",
@@ -1703,7 +1703,7 @@
         }
       ]
     },
-    "Footwear" : {
+    "Footwear": {
       "isSubclass": true,
       "superClass": "WearableProduct",
       "description": " Outerwear that is worn on the feet such as shoes or boots.",
@@ -1737,7 +1737,7 @@
         }
       ]
     },
-    "FruitsVegetables" : {
+    "FruitsVegetables": {
       "isSubclass": true,
       "superClass": "FoodBeverageTobaccoProduct",
       "description": "Contains properties related specifically to fruit and vegetable products.",
@@ -1789,7 +1789,7 @@
         }
       ]
     },
-    "GeoCoordinates" : {
+    "GeoCoordinates": {
       "isSubclass": false,
       "superClass": null,
       "description": "The geographic coordinates of a place or event.",
@@ -1832,7 +1832,7 @@
         }
       ]
     },
-    "GeoShape" : {
+    "GeoShape": {
       "isSubclass": false,
       "superClass": null,
       "description": "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.",
@@ -1866,7 +1866,7 @@
         }
       ]
     },
-    "LocationID_Details" : {
+    "LocationID_Details": {
       "isSubclass": false,
       "superClass": null,
       "description": "Government bodies, trade organisations, and other parties issue identifiers that are associated to locations. Linking these identifiers to GLN and one another supports consolidating records, mapping related, collaborative identifiers, enhances search ability and enables more efficient transitions between identifiers.  This class provides a mechanism for connecting and sharing location identifiers.",
@@ -1909,7 +1909,7 @@
         }
       ]
     },
-    "LocationStatusHistory" : {
+    "LocationStatusHistory": {
       "isSubclass": false,
       "superClass": null,
       "description": "Over the lifetime of a location, it may go through periods of being active and inactive. gs1:LocationStatusHistory allows changes in status to be communicated in advance and tracked over time.",
@@ -1934,7 +1934,7 @@
         }
       ]
     },
-    "MeatPoultry" : {
+    "MeatPoultry": {
       "isSubclass": true,
       "superClass": "FoodBeverageTobaccoProduct",
       "description": "Meat and poultry products.",
@@ -1977,7 +1977,7 @@
         }
       ]
     },
-    "MilkButterCreamYogurtCheeseEggsSubstitutes" : {
+    "MilkButterCreamYogurtCheeseEggsSubstitutes": {
       "isSubclass": true,
       "superClass": "FoodBeverageTobaccoProduct",
       "description": "Milk butter cream yogurts cheese eggs and any substitutes for these products.",
@@ -2047,7 +2047,7 @@
         }
       ]
     },
-    "NutritionMeasurementType" : {
+    "NutritionMeasurementType": {
       "isSubclass": true,
       "superClass": "QuantitativeValue",
       "description": "A class providing nutritional value and intake percent.",
@@ -2063,7 +2063,7 @@
         }
       ]
     },
-    "Offer" : {
+    "Offer": {
       "isSubclass": false,
       "superClass": null,
       "description": "An offer to transfer some rights to an item or to provide a service,for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.",
@@ -2214,7 +2214,7 @@
         }
       ]
     },
-    "OrganicClaimDetails" : {
+    "OrganicClaimDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A set of organic claim details for the product.",
@@ -2239,7 +2239,7 @@
         }
       ]
     },
-    "Organization" : {
+    "Organization": {
       "isSubclass": false,
       "superClass": null,
       "description": "An Organization is any legal or physical entity involved at any point in any supply chain and upon which there is a need to retrieve predefined information. An Organization is uniquely identified by a Global Location Number (GLN).",
@@ -2513,7 +2513,7 @@
         }
       ]
     },
-    "OrganizationID_Details" : {
+    "OrganizationID_Details": {
       "isSubclass": false,
       "superClass": null,
       "description": "Government bodies, trade organisations, and other parties issue identifiers that are associated to legal entities and/or functions. Linking these identifiers to GLN and one another supports consolidating records, mapping related, collaborative identifiers, enhances search ability and enables more efficient transitions between identifiers.  This class provides a mechanism for connecting and sharing party identifiers.",
@@ -2556,7 +2556,7 @@
         }
       ]
     },
-    "OrganizationStatusHistory" : {
+    "OrganizationStatusHistory": {
       "isSubclass": false,
       "superClass": null,
       "description": "Over the lifetime of an organisation, it may go through periods of being active and inactive. gs1:OrganizationStatusHistory allows changes in status to be communicated in advance and tracked over time.",
@@ -2581,7 +2581,7 @@
         }
       ]
     },
-    "PackagingDetails" : {
+    "PackagingDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Details on packaging for a product for example packaging type (bottle), materials, features, recycling, etc..",
@@ -2660,7 +2660,7 @@
         }
       ]
     },
-    "PackagingMaterialDetails" : {
+    "PackagingMaterialDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Information on any material used for packaging.",
@@ -2694,7 +2694,7 @@
         }
       ]
     },
-    "Place" : {
+    "Place": {
       "isSubclass": false,
       "superClass": null,
       "description": "Entities that have a somewhat fixed, physical location.",
@@ -2956,7 +2956,7 @@
         }
       ]
     },
-    "PostalAddress" : {
+    "PostalAddress": {
       "isSubclass": false,
       "superClass": null,
       "description": "The location at which a particular organization or person may be found or reached.",
@@ -3089,7 +3089,7 @@
         }
       ]
     },
-    "PriceSpecification" : {
+    "PriceSpecification": {
       "isSubclass": false,
       "superClass": null,
       "description": "A structured value representing a monetary amount, consisting of a value and currency code.",
@@ -3204,7 +3204,7 @@
         }
       ]
     },
-    "Product" : {
+    "Product": {
       "isSubclass": false,
       "superClass": null,
       "description": "Any item (product or service) upon which there is a need to retrieve pre-defined information and that may be priced, or ordered, or invoiced at any point in any supply chain.",
@@ -4057,7 +4057,7 @@
         }
       ]
     },
-    "ProductYieldDetails" : {
+    "ProductYieldDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A grouping of properties related to the yield of a food or beverage product according to a specified type of preparation.",
@@ -4091,7 +4091,7 @@
         }
       ]
     },
-    "QuantitativeValue" : {
+    "QuantitativeValue": {
       "isSubclass": false,
       "superClass": null,
       "description": "A point value or interval for product characteristics and other purposes. A unit of measurement is also specified.",
@@ -4116,7 +4116,7 @@
         }
       ]
     },
-    "ReferencedFileDetails" : {
+    "ReferencedFileDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Provides URL and other information on a referenced electronic file.",
@@ -4195,7 +4195,7 @@
         }
       ]
     },
-    "ReturnablePackageDepositDetails" : {
+    "ReturnablePackageDepositDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Details of the deposit for returnable packaging for a product.",
@@ -4220,7 +4220,7 @@
         }
       ]
     },
-    "Seafood" : {
+    "Seafood": {
       "isSubclass": true,
       "superClass": "FoodBeverageTobaccoProduct",
       "description": "Seafood Products including fish and shellfish.",
@@ -4263,7 +4263,7 @@
         }
       ]
     },
-    "SizeCodeDetails" : {
+    "SizeCodeDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A grouping of properties related to the representing the size of a product, by specifying a value from a specified code list.",
@@ -4288,7 +4288,7 @@
         }
       ]
     },
-    "SizeDetails" : {
+    "SizeDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A grouping of properties related to the size of a wearable product",
@@ -4331,7 +4331,7 @@
         }
       ]
     },
-    "TargetMarketDetails" : {
+    "TargetMarketDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "A set of target market details (product release date and associated countries) for the product.",
@@ -4356,7 +4356,7 @@
         }
       ]
     },
-    "TextileMaterialDetails" : {
+    "TextileMaterialDetails": {
       "isSubclass": false,
       "superClass": null,
       "description": "Details on the composition of any materials used to make a product using textiles.",
@@ -4399,7 +4399,7 @@
         }
       ]
     },
-    "TypeCode" : {
+    "TypeCode": {
       "isSubclass": false,
       "superClass": null,
       "description": "A code list.",
@@ -4415,7 +4415,7 @@
         }
       ]
     },
-    "WarrantyPromise" : {
+    "WarrantyPromise": {
       "isSubclass": false,
       "superClass": null,
       "description": "An assurance that the product is reliable and that repairs or replacement will be done free of charge within a given time limit and under certain conditions in the event of a defect.",
@@ -4440,7 +4440,7 @@
         }
       ]
     },
-    "WearableProduct" : {
+    "WearableProduct": {
       "isSubclass": true,
       "superClass": "Product",
       "description": "Products that are worn on the body.",
@@ -4574,7 +4574,7 @@
       ]
     }
   },
-  "typeCodes" : {
+  "typeCodes": {
     "AllergenTypeCode": [
       {
         "property": "1,3-BIS-(2,4-DIAMINOPHENOXY)PROPANE",
@@ -14919,7 +14919,7 @@
         "rangeType": "ReferencedFileTypeCode",
         "dataType": "simple",
         "type": "code",
-        "description": "A Mobile Ready Hero Image (MRHI) is a representation of a real world product that may differ from a standard pack shot, but that maintains the majority of the physical pack's key elements of design, shape and colour, and is therefore recognisable on a digital shelf. In addition the image should contain elements of The 4 Ws: Who is the brand,Ã‚Â What it is,Ã‚Â Which variety it isÃ‚Â andÃ‚Â how much. The Mobile Ready Hero Image (MRHI) is specified in the GS1 Mobile Ready Hero Image Guideline https://www.gs1.org/standards/Mobile-Ready-Hero-Image",
+        "description": "A Mobile Ready Hero Image (MRHI) is a representation of a real world product that may differ from a standard pack shot, but that maintains the majority of the physical pack's key elements of design, shape and colour, and is therefore recognisable on a digital shelf. In addition the image should contain elements of The 4 Ws: Who is the brand,Ã‚Â What it is,Ã‚Â Which variety it isÃ‚Â andÃ‚Â how much. The Mobile Ready Hero Image (MRHI) is specified in the GS1 Mobile Ready Hero Image Guideline https://www.gs1.org/standards/Mobile-Ready-Hero-Image",
         "deprecated": false
       },
       {

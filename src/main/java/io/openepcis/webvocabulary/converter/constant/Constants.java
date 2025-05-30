@@ -1,4 +1,4 @@
-package io.openepcis.constant;
+package io.openepcis.webvocabulary.converter.constant;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -28,4 +28,5 @@ public class Constants {
     public static final String NAMESPACES = "namespaces";
     public static final String XSD_STRING = "xsd:string";
     public static final String DEPRECATED = "deprecated";
+    public static final String LANG_STRING = "langString";
 }

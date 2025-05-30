@@ -1,12 +1,29 @@
-<jaxb:bindings xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="3.0">
-    <jaxb:globalBindings typesafeEnumMemberName="generateName">
-        <!-- Map xsd:date to java.time.LocalDate instead of XMLGregorianCalendar during java class generation -->
-        <jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="java.time.LocalDate.parse"/>
+<jaxb:bindings
+	xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    version="3.0">
 
-        <!-- Map xsd:datetime to java.time.LocalDateTime instead of XMLGregorianCalendar during java class generation -->
-        <jaxb:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime" parseMethod="java.time.LocalDateTime.parse"/>
+	<jaxb:globalBindings typesafeEnumMemberName="generateName">
+		<!-- Map xsd:date to java.time.LocalDate instead of XMLGregorianCalendar during java class generation -->
+		<jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="java.time.LocalDate.parse"/>
+		<!-- Map xsd:datetime to java.time.LocalDateTime instead of XMLGregorianCalendar during java class generation -->
+		<jaxb:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime" parseMethod="java.time.LocalDateTime.parse"/>
+		<!-- Map xsd:gYear to java.time.Year instead of XMLGregorianCalendar during java class generation -->
+		<jaxb:javaType name="java.time.Year" xmlType="xs:gYear" parseMethod="java.time.Year.parse"/>
+	</jaxb:globalBindings>
 
-        <!-- Map xsd:gYear to java.time.Year instead of XMLGregorianCalendar during java class generation -->
-        <jaxb:javaType name="java.time.Year" xmlType="xs:gYear" parseMethod="java.time.Year.parse"/>
-    </jaxb:globalBindings>
+    <!-- Modify the LangString complex type in XSD to Map instead of default List -->
+	<jaxb:bindings multiple="true" schemaLocation="JsonLdSchemaXSD.xsd" node="/xs:schema">
+		<!-- For every element of type LangString, use the Map adapter -->
+		<jaxb:bindings node="//xs:complexType[@name='LangString']">
+			<jaxb:property>
+				<jaxb:baseType>
+					<xjc:javaType name="java.util.Map&lt;java.lang.String, java.lang.String&gt;"
+					              adapter="io.openepcis.webvocabulary.converter.xsd.adapter.LangStringAdapter"/>
+				</jaxb:baseType>
+			</jaxb:property>
+		</jaxb:bindings>
+	</jaxb:bindings>
+
 </jaxb:bindings>

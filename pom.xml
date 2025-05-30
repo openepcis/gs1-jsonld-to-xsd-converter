@@ -107,7 +107,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <schemaDirectory>${basedir}</schemaDirectory>
+                    <schemaDirectory>${basedir}/src/main/resources/schema</schemaDirectory>
                     <bindingDirectory>${basedir}/src/main/resources/schema</bindingDirectory>
                     <bindingIncludes>custom-binding.xjb</bindingIncludes>
                 </configuration>

@@ -18706,8 +18706,6 @@
       "@id": "gs1:CheeseFirmnessCode-EXTRA_HARD",
       "@type": "gs1:CheeseFirmnessCode",
       "rdfs:label": {
-
-
         "@language": "en",
         "@value": "Extra Hard"
       },
@@ -26597,7 +26595,7 @@
       },
       "rdfs:label": {
         "@language": "en",
-        "@value": "Regional OrganizationÃ‚Â "
+        "@value": "Regional OrganizationÃ‚Â "
       },
       "skos:prefLabel": "REGIONAL_ORGANIZATION",
       "sw:term_status": "stable"
@@ -32300,7 +32298,7 @@
       },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "A Mobile Ready Hero Image (MRHI) is a representation of a real world product that may differ from a standard pack shot, but that maintains the majority of the physical pack's key elements of design, shape and colour, and is therefore recognisable on a digital shelf. In addition the image should contain elements of The 4 Ws: Who is the brand,Ã‚Â What it is,Ã‚Â Which variety it isÃ‚Â andÃ‚Â how much. The Mobile Ready Hero Image (MRHI) is specified in the GS1 Mobile Ready Hero Image Guideline https://www.gs1.org/standards/Mobile-Ready-Hero-Image"
+        "@value": "A Mobile Ready Hero Image (MRHI) is a representation of a real world product that may differ from a standard pack shot, but that maintains the majority of the physical pack's key elements of design, shape and colour, and is therefore recognisable on a digital shelf. In addition the image should contain elements of The 4 Ws: Who is the brand,Ã‚Â What it is,Ã‚Â Which variety it isÃ‚Â andÃ‚Â how much. The Mobile Ready Hero Image (MRHI) is specified in the GS1 Mobile Ready Hero Image Guideline https://www.gs1.org/standards/Mobile-Ready-Hero-Image"
       },
       "skos:prefLabel": "MOBILE_READY_HERO_IMAGE"
     },
