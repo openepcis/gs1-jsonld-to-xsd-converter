@@ -29,4 +29,5 @@ public class Constants {
     public static final String XSD_STRING = "xsd:string";
     public static final String DEPRECATED = "deprecated";
     public static final String LANG_STRING = "langString";
+    public static final String RANGE_TYPE_LIST = "Range_Type_List";
 }

@@ -528,13 +528,27 @@
             <xsd:element name="location" type="Place"/>
             <xsd:element name="makesOffer" type="Offer"/>
             <xsd:element name="managedBy" type="Organization"/>
-            <xsd:element name="manages" type="Organization"/>
+            <xsd:element name="manages">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="Organization" type="Organization"/>
+                        <xsd:element name="Place" type="Place"/>
+                    </xsd:choice>
+                </xsd:complexType>
+            </xsd:element>
             <xsd:element name="occupies" type="Place"/>
             <xsd:element name="organizationHistory" type="OrganizationStatusHistory"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="organizationName" type="LangString"/>
             <xsd:element name="organizationRole" type="OrganizationRoleType"/>
             <xsd:element name="ownedBy" type="Organization"/>
-            <xsd:element name="owns" type="Organization"/>
+            <xsd:element name="owns">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="Organization" type="Organization"/>
+                        <xsd:element name="Place" type="Place"/>
+                    </xsd:choice>
+                </xsd:complexType>
+            </xsd:element>
             <xsd:element name="parentOrganization" type="Organization"/>
             <xsd:element name="partyGLN" type="xsd:string"/>
             <xsd:element name="replacedByOrganization" type="Organization"/>
@@ -614,7 +628,14 @@
             <xsd:element name="containsPlace" type="Place"/>
             <xsd:element name="digitalAddress" type="xsd:string"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="digitalLocationName" type="LangString"/>
-            <xsd:element name="geo" type="Place"/>
+            <xsd:element name="geo">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="GeoCoordinates" type="GeoCoordinates"/>
+                        <xsd:element name="GeoShape" type="GeoShape"/>
+                    </xsd:choice>
+                </xsd:complexType>
+            </xsd:element>
             <xsd:element name="glnType" type="GLN_TypeCode"/>
             <xsd:element name="globalLocationNumber" type="xsd:string"/>
             <xsd:element name="leasedFrom" type="Organization"/>

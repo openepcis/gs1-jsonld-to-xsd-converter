@@ -112,6 +112,20 @@ public class XSDGenerator {
                 element.setAttribute("type", "LangString");
                 element.setAttribute("maxOccurs", "unbounded");
                 element.setAttribute("minOccurs", "0");
+            } else if (RANGE_TYPE_LIST.equalsIgnoreCase(xsdType) && property.getRangeType() instanceof List<?> listOfRanges && !listOfRanges.isEmpty()) {
+                // For the range type with list "rangeType" : [ "GeoCoordinates", "GeoShape" ] -> build <xsd:choice>
+                final Element annComplexType = doc.createElement("xsd:complexType");
+                final Element choice = doc.createElement("xsd:choice");
+
+                for (Object o : listOfRanges) {
+                    final String rangeType = String.valueOf(o);
+                    final Element choiceElement = doc.createElement("xsd:element");
+                    choiceElement.setAttribute("name", rangeType);
+                    choiceElement.setAttribute("type", rangeType);
+                    choice.appendChild(choiceElement);
+                }
+                annComplexType.appendChild(choice);
+                element.appendChild(annComplexType);
             } else {
                 element.setAttribute("type", xsdType);
             }
@@ -218,12 +232,14 @@ public class XSDGenerator {
         if ("simple".equals(property.getDataType())) {
             return mapSimpleType((String) property.getRangeType());
         } else if ("complex".equals(property.getDataType())) {
-            if (property.getRangeType() instanceof String rangeType) {
+            final Object range = property.getRangeType();
+
+            if (range instanceof String rangeType) {
                 // For Thing type return the "xsd:anyType" else return rangeType
                 return rangeType.equalsIgnoreCase(THING) ? "xsd:anyType" : rangeType;
-            } else if (property.getRangeType() instanceof List) {
-                //If range is of type List then get the domain
-                return property.getDomain();
+            } else if (range instanceof List) {
+                // If range is of type List then return the RANGE_TYPE_LIST string to build the choice in caller
+                return RANGE_TYPE_LIST;
             }
         }
         return null;

@@ -4,11 +4,13 @@
 	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
     version="3.0">
 
-	<jaxb:globalBindings typesafeEnumMemberName="generateName">
+	<jaxb:globalBindings choiceContentProperty="true" typesafeEnumMemberName="generateName">
 		<!-- Map xsd:date to java.time.LocalDate instead of XMLGregorianCalendar during java class generation -->
 		<jaxb:javaType name="java.time.LocalDate" xmlType="xs:date" parseMethod="java.time.LocalDate.parse"/>
+
 		<!-- Map xsd:datetime to java.time.LocalDateTime instead of XMLGregorianCalendar during java class generation -->
 		<jaxb:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime" parseMethod="java.time.LocalDateTime.parse"/>
+
 		<!-- Map xsd:gYear to java.time.Year instead of XMLGregorianCalendar during java class generation -->
 		<jaxb:javaType name="java.time.Year" xmlType="xs:gYear" parseMethod="java.time.Year.parse"/>
 	</jaxb:globalBindings>

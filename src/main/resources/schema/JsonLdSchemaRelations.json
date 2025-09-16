@@ -581,7 +581,7 @@
           "property": "countryCode",
           "rangeType": "string",
           "domain": "Country",
-          "description": "Code specifying the country for the address using ISO 3166-1.",
+          "description": "A short text string code (see values defined in ISO 3166) specifying the country in which a processing or other activity is performed, for example processing, bottling, manufacturing.",
           "deprecated": false,
           "dataType": "simple",
           "type": "simple"
